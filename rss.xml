@@ -1,6 +1,93 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 31 Jan 2021 11:55:35 GMT</lastBuildDate><item><title><![CDATA[gatsby環境設定]]></title><description><![CDATA[Windows編 nvm-win導入 nodeがもう入ってるという人は読み飛ばしていい。 まず、nvmをインストールする。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Feb 2021 12:11:07 GMT</lastBuildDate><item><title><![CDATA[git備忘録]]></title><description><![CDATA[初期設定 名前,メアド,UIの色,エディタの登録 登録した情報の確認 使い方 リポジトリ初期化 版管理の対象を登録 最初のコミット 変更の記録 変更点の確認 する前に、変更点を確認しよう コミットする gitのログメッセージを書く 一行目は変更点を…]]></description><link>https://narazuke.github.io/git-memorandum/</link><guid isPermaLink="false">https://narazuke.github.io/git-memorandum/</guid><content:encoded>&lt;h2&gt;初期設定&lt;/h2&gt;
+&lt;h3&gt;名前,メアド,UIの色,エディタの登録&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.name &lt;span class=&quot;token string&quot;&gt;&quot;Yamada Hanako&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.email &lt;span class=&quot;token string&quot;&gt;&quot;yamahana@takaka.com&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global color.ui auto
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global core.editor &lt;span class=&quot;token string&quot;&gt;&quot;vim&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;登録した情報の確認&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config -l&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;使い方&lt;/h2&gt;
+&lt;h3&gt;リポジトリ初期化&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;版管理の対象を登録&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; index.html
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;#現在のディレクトリ以下全部を登録&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; ls-files		&lt;span class=&quot;token comment&quot;&gt;# git管理下のファイルを一覧表示&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;最初のコミット&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -m &lt;span class=&quot;token string&quot;&gt;&quot;first commit&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;変更の記録&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# index.htmlを適当に変更する&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;diff&lt;/span&gt;	&lt;span class=&quot;token comment&quot;&gt;#最新コミットリクエストと現在のデータを比較&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; index.html	&lt;span class=&quot;token comment&quot;&gt;#最新コミットリクエストに現在のデータをリクエスト&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;diff&lt;/span&gt;	&lt;span class=&quot;token comment&quot;&gt;#出力は空になる&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;変更点の確認&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;git commit&lt;/code&gt;する前に、変更点を確認しよう&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;diff&lt;/span&gt; HEAD	&lt;span class=&quot;token comment&quot;&gt;#最新コミットと現在のデータを比較&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;コミットする&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; -u	&lt;span class=&quot;token comment&quot;&gt;#gitで版管理しているすべてのファイルの現在の状態を次のコミットに記録させる&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit	&lt;span class=&quot;token comment&quot;&gt;#コミット&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;gitのログメッセージを書く&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;日付表示
+	
+各記事の前に日付をyyyy/mm/ddの形式で表示するようにした。
+&lt;span class=&quot;token comment&quot;&gt;# Please enter the commit message for your changes. Lines starting&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# with &apos;#&apos; will be ignored, and an empty message aborts the commit.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# On branch master&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Changes to be committed:&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#	modified index.html&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;一行目は変更点を1行に要約
+二行目は空行
+三行目に詳しい記述&lt;/p&gt;
+&lt;p&gt;が鉄板らしい&lt;/p&gt;
+&lt;h3&gt;怒られる&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Warning: commit message did not conform to UTF-8
+You may want to amend it after fixing the message, or &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; the config
+variable i18n.commitencoding to the encoding your pqoject uses.
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;master XXXXXX&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.文字化け&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;vimrcを直す&lt;/h3&gt;
+&lt;p&gt;参考:&lt;a href=&quot;https://qiita.com/takasianpride/items/0d68fcbbcc3aaf22cf9a&quot; title=&quot;Gitコミット時の文字化け(MacでVimによるコミット)&quot;&gt;Gitコミット時の文字化け(MacでVimによるコミット)&lt;/a&gt;
+~/.vimrcに以下の内容を追加&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;utf8
+&lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;fenc&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;utf-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;うまくいかない…&lt;/p&gt;
+&lt;p&gt;参考:&lt;a href=&quot;http://wadahiro.hatenablog.com/entry/20090506/1241622572&quot;&gt;Git コミットログの文字化けではまる&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&quot; &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;fileencodings&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;iso-2022.jp,euc-jp,utf-8,ucs-2,cp912,sjis
+&lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;fileencoding&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;utf-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;fileencodingの候補が多すぎて勘違いされたらしい。
+UTF-8だけにしたら文字化け消えた。&lt;/p&gt;
+&lt;h3&gt;git add -u と git commit をまとめてやる&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -a&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;備考:&lt;code class=&quot;language-text&quot;&gt;git add -u&lt;/code&gt;はgit管理対象を全部インデックスに登録するコマンド&lt;/p&gt;
+&lt;h3&gt;コミット履歴を見る&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log index.html	&lt;span class=&quot;token comment&quot;&gt;#特定のファイルの履歴を見る&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log --oneline	&lt;span class=&quot;token comment&quot;&gt;#コミットIDと要約したコミットメッセージを1行で表示&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log -3			&lt;span class=&quot;token comment&quot;&gt;#最新の3件のみ&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log -p			&lt;span class=&quot;token comment&quot;&gt;#変更内容も表示&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;テクニカルな使い方&lt;/h2&gt;
+&lt;h3&gt;コミットのメモを書き直す&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit --amend&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;ファイル内の行がどのコミットで生まれたものか表示&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; blame index.html&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;長いファイルだと、長い&lt;/p&gt;
+&lt;h3&gt;過去のコミットの効果を打ち消す&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; reset --hard &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;コミットID&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;commitIDは&lt;code class=&quot;language-text&quot;&gt;git log --oneline&lt;/code&gt;とかで出てくる黄色いハッシュ値
+commitIDは最初の8文字でOK
+コミットオブジェクトをSHA-1でハッシュ化した160ビット(40文字の16進数)の値
+コミットオブジェクトはコミット内容の他に時刻やコミッターやメアドまで含まれるため、同じコミット内容でもハッシュ値は異なる&lt;/p&gt;
+&lt;p&gt;これやったらマジで保存したやつ書き換えられた
+驚き&lt;/p&gt;
+&lt;h3&gt;最後にコミットしたところまで戻る&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; reset --hard HEAD&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;参考&lt;/h2&gt;
+&lt;p&gt;入門Git (秀和システム 2011)&lt;/p&gt;
+&lt;h2&gt;経緯&lt;/h2&gt;
+&lt;p&gt;いい加減gitの使い方くらい覚えないといけないのではないか
+まずひとりで版管理できてから、mergeとかbranchは学んでいこうと思った&lt;/p&gt;</content:encoded></item><item><title><![CDATA[gatsby環境設定]]></title><description><![CDATA[Windows編 nvm-win導入 nodeがもう入ってるという人は読み飛ばしていい。 まず、nvmをインストールする。
 nodeのバージョンを複数管理できて便利。 nvm-windows にアクセスして、をダウンロードする。
-2021/01/3…]]></description><link>https://narazuke.github.io/gatsby環境設定/</link><guid isPermaLink="false">https://narazuke.github.io/gatsby環境設定/</guid><content:encoded>&lt;h1&gt;Windows編&lt;/h1&gt;
+2021/01/3…]]></description><link>https://narazuke.github.io/gatsby-environment-settings/</link><guid isPermaLink="false">https://narazuke.github.io/gatsby-environment-settings/</guid><content:encoded>&lt;h1&gt;Windows編&lt;/h1&gt;
 &lt;h2&gt;nvm-win導入&lt;/h2&gt;
 &lt;p&gt;nodeがもう入ってるという人は読み飛ばしていい。&lt;br&gt;
 まず、nvmをインストールする。
@@ -137,94 +224,52 @@ Done in xx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;xxs&lt;s
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;package-lock.json&lt;/code&gt;と&lt;code class=&quot;language-text&quot;&gt;node_modeles&lt;/code&gt;の中身を全部消して、&lt;code class=&quot;language-text&quot;&gt;npm install&lt;/code&gt;する。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; &lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; node_modules
 &lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; &lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; package&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;lock&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;json
-&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; npm install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[git備忘録]]></title><description><![CDATA[初期設定 名前,メアド,UIの色,エディタの登録 登録した情報の確認 使い方 リポジトリ初期化 版管理の対象を登録 最初のコミット 変更の記録 変更点の確認 する前に、変更点を確認しよう コミットする gitのログメッセージを書く 一行目は変更点を…]]></description><link>https://narazuke.github.io/git備忘録/</link><guid isPermaLink="false">https://narazuke.github.io/git備忘録/</guid><content:encoded>&lt;h2&gt;初期設定&lt;/h2&gt;
-&lt;h3&gt;名前,メアド,UIの色,エディタの登録&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.name &lt;span class=&quot;token string&quot;&gt;&quot;Yamada Hanako&quot;&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.email &lt;span class=&quot;token string&quot;&gt;&quot;yamahana@takaka.com&quot;&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global color.ui auto
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global core.editor &lt;span class=&quot;token string&quot;&gt;&quot;vim&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;登録した情報の確認&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config -l&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;使い方&lt;/h2&gt;
-&lt;h3&gt;リポジトリ初期化&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;版管理の対象を登録&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; index.html
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;#現在のディレクトリ以下全部を登録&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; ls-files		&lt;span class=&quot;token comment&quot;&gt;# git管理下のファイルを一覧表示&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;最初のコミット&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -m &lt;span class=&quot;token string&quot;&gt;&quot;first commit&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;変更の記録&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# index.htmlを適当に変更する&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;diff&lt;/span&gt;	&lt;span class=&quot;token comment&quot;&gt;#最新コミットリクエストと現在のデータを比較&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; index.html	&lt;span class=&quot;token comment&quot;&gt;#最新コミットリクエストに現在のデータをリクエスト&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;diff&lt;/span&gt;	&lt;span class=&quot;token comment&quot;&gt;#出力は空になる&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;変更点の確認&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;git commit&lt;/code&gt;する前に、変更点を確認しよう&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;diff&lt;/span&gt; HEAD	&lt;span class=&quot;token comment&quot;&gt;#最新コミットと現在のデータを比較&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;コミットする&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; -u	&lt;span class=&quot;token comment&quot;&gt;#gitで版管理しているすべてのファイルの現在の状態を次のコミットに記録させる&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit	&lt;span class=&quot;token comment&quot;&gt;#コミット&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;gitのログメッセージを書く&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;日付表示
-	
-各記事の前に日付をyyyy/mm/ddの形式で表示するようにした。
-&lt;span class=&quot;token comment&quot;&gt;# Please enter the commit message for your changes. Lines starting&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;# with &apos;#&apos; will be ignored, and an empty message aborts the commit.&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;# On branch master&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;# Changes to be committed:&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;#	modified index.html&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;一行目は変更点を1行に要約
-二行目は空行
-三行目に詳しい記述&lt;/p&gt;
-&lt;p&gt;が鉄板らしい&lt;/p&gt;
-&lt;h3&gt;怒られる&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Warning: commit message did not conform to UTF-8
-You may want to amend it after fixing the message, or &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; the config
-variable i18n.commitencoding to the encoding your pqoject uses.
-&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;master XXXXXX&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.文字化け&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;vimrcを直す&lt;/h3&gt;
-&lt;p&gt;参考:&lt;a href=&quot;https://qiita.com/takasianpride/items/0d68fcbbcc3aaf22cf9a&quot; title=&quot;Gitコミット時の文字化け(MacでVimによるコミット)&quot;&gt;Gitコミット時の文字化け(MacでVimによるコミット)&lt;/a&gt;
-~/.vimrcに以下の内容を追加&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;utf8
-&lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;fenc&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;utf-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;うまくいかない…&lt;/p&gt;
-&lt;p&gt;参考:&lt;a href=&quot;http://wadahiro.hatenablog.com/entry/20090506/1241622572&quot;&gt;Git コミットログの文字化けではまる&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&quot; &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;fileencodings&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;iso-2022.jp,euc-jp,utf-8,ucs-2,cp912,sjis
-&lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;fileencoding&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;utf-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;fileencodingの候補が多すぎて勘違いされたらしい。
-UTF-8だけにしたら文字化け消えた。&lt;/p&gt;
-&lt;h3&gt;git add -u と git commit をまとめてやる&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -a&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;備考:&lt;code class=&quot;language-text&quot;&gt;git add -u&lt;/code&gt;はgit管理対象を全部インデックスに登録するコマンド&lt;/p&gt;
-&lt;h3&gt;コミット履歴を見る&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log index.html	&lt;span class=&quot;token comment&quot;&gt;#特定のファイルの履歴を見る&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log --oneline	&lt;span class=&quot;token comment&quot;&gt;#コミットIDと要約したコミットメッセージを1行で表示&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log -3			&lt;span class=&quot;token comment&quot;&gt;#最新の3件のみ&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log -p			&lt;span class=&quot;token comment&quot;&gt;#変更内容も表示&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;テクニカルな使い方&lt;/h2&gt;
-&lt;h3&gt;コミットのメモを書き直す&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit --amend&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;ファイル内の行がどのコミットで生まれたものか表示&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; blame index.html&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;長いファイルだと、長い&lt;/p&gt;
-&lt;h3&gt;過去のコミットの効果を打ち消す&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; reset --hard &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;コミットID&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;commitIDは&lt;code class=&quot;language-text&quot;&gt;git log --oneline&lt;/code&gt;とかで出てくる黄色いハッシュ値
-commitIDは最初の8文字でOK
-コミットオブジェクトをSHA-1でハッシュ化した160ビット(40文字の16進数)の値
-コミットオブジェクトはコミット内容の他に時刻やコミッターやメアドまで含まれるため、同じコミット内容でもハッシュ値は異なる&lt;/p&gt;
-&lt;p&gt;これやったらマジで保存したやつ書き換えられた
-驚き&lt;/p&gt;
-&lt;h3&gt;最後にコミットしたところまで戻る&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; reset --hard HEAD&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;参考&lt;/h2&gt;
-&lt;p&gt;入門Git (秀和システム 2011)&lt;/p&gt;
-&lt;h2&gt;経緯&lt;/h2&gt;
-&lt;p&gt;いい加減gitの使い方くらい覚えないといけないのではないか
-まずひとりで版管理できてから、mergeとかbranchは学んでいこうと思った&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
+&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; npm install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[日記]]></title><description><![CDATA[やったこと imageタグ追加 footerにauthor追加 createdにソート 焼肉食べたい.]]></description><link>https://narazuke.github.io/kon20210201/</link><guid isPermaLink="false">https://narazuke.github.io/kon20210201/</guid><content:encoded>&lt;p&gt;やったこと&lt;/p&gt;
+&lt;p&gt;imageタグ追加&lt;/p&gt;
+&lt;p&gt;footerにauthor追加&lt;/p&gt;
+&lt;p&gt;createdにソート&lt;/p&gt;
+&lt;h3&gt;焼肉食べたい.&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[NARADUKE新機能候補]]></title><description><![CDATA[将来的に加えたい機能 必要そう 簡単そう 筆者名 (2/1 完了) タグ カテゴリ --- 日記、哲学、メモ frontmatterの属性詳細 難しそう 画像のcomponent (imageタグの作成) (2/…]]></description><link>https://narazuke.github.io/narazuke-new-feature-candidates/</link><guid isPermaLink="false">https://narazuke.github.io/narazuke-new-feature-candidates/</guid><content:encoded>&lt;h1&gt;将来的に加えたい機能&lt;/h1&gt;
+&lt;h2&gt;必要そう&lt;/h2&gt;
+&lt;h3&gt;簡単そう&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;筆者名&lt;/del&gt; (2/1 完了)&lt;/li&gt;
+&lt;li&gt;タグ&lt;/li&gt;
+&lt;li&gt;カテゴリ --- 日記、哲学、メモ&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;frontmatterの属性詳細&lt;/p&gt;
+&lt;h3&gt;難しそう&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;画像のcomponent (imageタグの作成)&lt;/del&gt; (2/1 完了)&lt;/li&gt;
+&lt;li&gt;ページ機能&lt;/li&gt;
+&lt;li&gt;記事サムネイル&lt;/li&gt;
+&lt;li&gt;最新記事に🆕ってつける&lt;/li&gt;
+&lt;li&gt;カテゴリごとにページ分け&lt;/li&gt;
+&lt;li&gt;タグ検索機能&lt;/li&gt;
+&lt;li&gt;関連記事表示 --- 同カテゴリか同タグのランダム記事表示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;いらなさそう&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;カレンダー&lt;/li&gt;
+&lt;li&gt;シェア機能&lt;/li&gt;
+&lt;li&gt;word検索&lt;/li&gt;
+&lt;li&gt;人気記事表示&lt;/li&gt;
+&lt;li&gt;PC表示対応 2段組みなど&lt;/li&gt;
+&lt;li&gt;コメント機能&lt;/li&gt;
+&lt;li&gt;コメント返信機能&lt;/li&gt;
+&lt;li&gt;ハンバーガーメニュー🍔&lt;/li&gt;
+&lt;li&gt;プライバシーポリシーのページ&lt;/li&gt;
+&lt;li&gt;今日の名言&lt;/li&gt;
+&lt;li&gt;今日のレシピ&lt;/li&gt;
+&lt;li&gt;キリ番おめでとう&lt;/li&gt;
+&lt;li&gt;ログインボーナス&lt;/li&gt;
+&lt;li&gt;質問箱&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;今後一切いらない機能&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;広告&lt;/li&gt;
+&lt;li&gt;キリ番&lt;/li&gt;
+&lt;li&gt;BGM&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://narazuke.github.io/new-beginnings/</link><guid isPermaLink="false">https://narazuke.github.io/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
