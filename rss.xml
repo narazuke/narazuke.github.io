@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Feb 2021 03:00:08 GMT</lastBuildDate><item><title><![CDATA[pyenvとvenvで仮想環境構築 ラズパイ編]]></title><description><![CDATA[pyenvとvenvの違い pyenvはpythonのバージョンの使い分け。 (e.g. python 2.7.13 と python 3.9.0) venvはpythonのパッケージの使い分け。  (e.g. numpyを使う環境 と numpyいらない環境) pyenv…]]></description><link>https://narazuke.github.io/pyenv-venv-virtual-environment/</link><guid isPermaLink="false">https://narazuke.github.io/pyenv-venv-virtual-environment/</guid><content:encoded>&lt;h2&gt;pyenvとvenvの違い&lt;/h2&gt;
+&lt;p&gt;pyenvはpythonのバージョンの使い分け。 (e.g. python 2.7.13 と python 3.9.0)&lt;br&gt;
+venvはpythonのパッケージの使い分け。  (e.g. numpyを使う環境 と numpyいらない環境)&lt;/p&gt;
+&lt;h2&gt;pyenvの導入&lt;/h2&gt;
+&lt;h3&gt;pythonのバージョン確認&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python -V&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;僕の場合、2.7.13でした。これからpyenvでpython3.x系と自由に切り替えられるようにしよう。&lt;/p&gt;
+&lt;h3&gt;導入前に必要なパッケージの導入&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; build-essential libbz2-dev libdb-dev libreadline-dev libffi-dev libgdbm-dev liblzma-dev libncursesw5-dev libsqlite3-dev libssl-dev zlib1g-dev uuid-dev tk-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;正直どれがなんだか分からないけど、とにかく&lt;code class=&quot;language-text&quot;&gt;libffi-dev&lt;/code&gt;は忘れずにインストールしよう。&lt;br&gt;これが無いとvenvの作業でエラーを吐きます。&lt;/p&gt;
+&lt;h3&gt;pyenvのインストール&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone https://github.com/pyenv/pyenv.git ~/.pyenv
+pyenv versions &lt;span class=&quot;token comment&quot;&gt;# インストール可能なpythonのバージョンの確認&lt;/span&gt;
+pyenv &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3.9&lt;/span&gt;.0  &lt;span class=&quot;token comment&quot;&gt;# 3.9.0が最新(2020/11/09)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;[注意] pyenv install 3.9.0 はめちゃめちゃ時間かかるから焦らないように&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;pyenvのPATHを通す&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.bash_profile&lt;/code&gt;に以下の内容を追記しよう&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;PYENV_ROOT&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token environment constant&quot;&gt;$HOME&lt;/span&gt;/.pyenv&quot;&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$PYENV_ROOT&lt;/span&gt;/bin:&lt;span class=&quot;token environment constant&quot;&gt;$PATH&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;pyenv init -&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; -f ~/.bashrc &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt;
+      &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt; ~/.bashrc
+&lt;span class=&quot;token keyword&quot;&gt;fi&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.bash_profile&lt;/code&gt;はログイン時に実行。&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;.bashrc&lt;/code&gt;はbashが開かれる度に実行。&lt;/p&gt;
+&lt;p&gt;最後のif文で&lt;code class=&quot;language-text&quot;&gt;bashrc&lt;/code&gt;を読み込ませる。これが無いと、sshしたときにbashの色が無くなる。&lt;br&gt;
+bashの配色は&lt;code class=&quot;language-text&quot;&gt;bashrc&lt;/code&gt;に担われてるのだ。&lt;/p&gt;
+&lt;p&gt;参考:&lt;a href=&quot;https://www.suzu6.net/posts/31/&quot;&gt;ラズパイのセットアップからpyenvを使ってPython3.6環境を構築するまで&lt;/a&gt;&lt;br&gt;
+参考:&lt;a href=&quot;https://qiita.com/magicant/items/d3bb7ea1192e63fba850&quot;&gt;本当に正しい .bashrc と .bash_profile の使ひ分け&lt;/a&gt;&lt;br&gt;
+参考:&lt;a href=&quot;https://qiita.com/upnt/items/022c5fc916d8a289e326&quot;&gt;Ubuntuで色がなくなる理由と改善策&lt;/a&gt;  &lt;/p&gt;
+&lt;h3&gt;pyenvで2.xと3.xを行き来&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python -V&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;python 2.7.13&lt;/code&gt;と出るはず&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;pyenv global &lt;span class=&quot;token number&quot;&gt;3.9&lt;/span&gt;.0
+python -V&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;python 3.9.0&lt;/code&gt;と出るはず&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;pyenv global system&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;python 2.7.13&lt;/code&gt;と出るはず&lt;/p&gt;
+&lt;p&gt;python2.xと3.xが混在してるとき、python3.xを使いたいときはpython3 とかpip3とか書く必要があった。&lt;br&gt;
+pyenvのおかげで、pythonと打つだけでpython3系が動くようになった。&lt;/p&gt;
+&lt;h2&gt;venvの導入&lt;/h2&gt;
+&lt;h3&gt;venvのインストール&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;venvはインストールする必要がない&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;venvはpython3.3から標準機能になったため、pyenvで3.9.0を導入しているなら必要がない。&lt;/p&gt;
+&lt;h3&gt;venvの仮想環境の作り方&lt;/h3&gt;
+&lt;p&gt;仮想環境はプロジェクトごとに作られるから、まず作業したいディレクトリを作成して移動しよう。&lt;br&gt;
+移動したら次のコマンドを打つ。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python -m venv .venv &lt;span class=&quot;token comment&quot;&gt;# [.venv]は適当なフォルダ名&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;これもちょっと時間がかかる。&lt;br&gt;
+仮想環境のフォルダに.venvと書くのは慣習的なもの。&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;myenv&lt;/code&gt;とかでもいいよ。  &lt;/p&gt;
+&lt;h3&gt;仮想環境の実行&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;source&lt;/span&gt; .venv/bin/activate&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;今まで &lt;code class=&quot;language-text&quot;&gt;pi@raspberrypi&lt;/code&gt; だったやつが、&lt;code class=&quot;language-text&quot;&gt;(.venv) pi@raspberrypi&lt;/code&gt; になってたら成功。&lt;/p&gt;
+&lt;h3&gt;venv環境下でのモジュールのインストール&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python -m pip &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; numpy   &lt;span class=&quot;token comment&quot;&gt;#numpyのインストール&lt;/span&gt;
+pip list    &lt;span class=&quot;token comment&quot;&gt;#インストールされているモジュールの表示&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;numpyがリストに加わってるはず。&lt;/p&gt;
+&lt;h3&gt;仮想環境からの離脱&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;deactivate   &lt;span class=&quot;token comment&quot;&gt;# 仮想環境からの離脱&lt;/span&gt;
+pip list&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;numpyがリストに&lt;strong&gt;無いはず。&lt;/strong&gt;&lt;br&gt;
+それもそのはず、numpyは仮想環境.venvで導入したパッケージだからラズパイのpythonパッケージには加わっていないのだ。&lt;/p&gt;
+&lt;h3&gt;トラブルシュート:ModuleNotFoundError :No module named ‘_ctypes’&lt;/h3&gt;
+&lt;p&gt;numpyをインストールしてる途中で&lt;code class=&quot;language-text&quot;&gt;&amp;quot;ModuleNotFoundError :No module named &amp;#39;_ctypes&amp;#39;&lt;/code&gt;と出ることがあった。    &lt;code class=&quot;language-text&quot;&gt;libffi-dev&lt;/code&gt;が無いと出るエラーらしい。しかし、私の場合、導入してもエラーが消えなかった。あれこれ調べたら、pyenv導入前にlibffi-devがインストールされていないと駄目らしいと判明。&lt;/p&gt;
+&lt;p&gt;参考:&lt;a href=&quot;https://qiita.com/mynkit/items/f8a1a90b99efef4a08a3&quot;&gt;pipenvのinstall時に、No module named ‘_ctypes’が発生する&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;pyenv uninstall &lt;span class=&quot;token number&quot;&gt;3.9&lt;/span&gt;.0
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; libffi-dev
+pyenv &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3.9&lt;/span&gt;.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;このあとでnumpyの導入を試してみよう。きっとうまくいく。&lt;/p&gt;
+&lt;p&gt;参考:&lt;a href=&quot;https://hibiki-press.tech/python/venv/4567&quot;&gt;【Python】venvを使った仮想環境の構築方法&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[アークナイツ]]></title><description><![CDATA[公開求人 星4以上確定タグ <星４> タグ 特殊タイプ 支援 弱化 強制移動 高速再配置 <星５> タグ 選択タグ キャラ 牽制 先鋒cost…]]></description><link>https://narazuke.github.io/arknights/</link><guid isPermaLink="false">https://narazuke.github.io/arknights/</guid><content:encoded>&lt;h2&gt;公開求人&lt;/h2&gt;
+&lt;h3&gt;星4以上確定タグ&lt;/h3&gt;
+&lt;h4&gt;&amp;#x3C;星４&gt;&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;タグ&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;特殊タイプ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;支援&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;弱化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;強制移動&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;高速再配置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;&amp;#x3C;星５&gt;&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;タグ&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;選択タグ&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;キャラ&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;牽制&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;先鋒&lt;br&gt;cost回復&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;テキサス&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;特殊タイプ&lt;br&gt;高速配置&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;レッド&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;遠距離&lt;br&gt;補助タイプ&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;メイヤー&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;召喚&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;メイヤー&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;爆発力&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;ファイヤーウォッチ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;組み合わせによる星４以上確定&lt;/h3&gt;
+&lt;h4&gt;&amp;#x3C;星５&gt;&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;必須タグ&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;選択タグ&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;キャラ&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;特殊タイプ&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;減速&lt;br&gt;火力&lt;br&gt;生存&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;支援&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;a href=&quot;%E5%85%88%E9%8B%92%E3%82%BF%E3%82%A4%E3%83%97%E3%80%81cost%E5%9B%9E%E5%BE%A9&quot;&gt;先鋒系&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;%E5%8C%BB%E7%99%82%E3%82%BF%E3%82%A4%E3%83%97%E3%80%81%E6%B2%BB%E7%99%82&quot;&gt;医療系&lt;/a&gt;&lt;br&gt;遠距離&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;弱化&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;補助タイプ&lt;br&gt;範囲攻撃&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;プラマニクス&lt;br&gt;メテオリーテ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;強制移動&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;減速&lt;br&gt;火力&lt;br&gt;&lt;a href=&quot;%E9%87%8D%E8%A3%85%E3%82%BF%E3%82%A4%E3%83%97%E3%80%81%E9%98%B2%E5%BE%A1&quot;&gt;重装系&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;生存&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;a href=&quot;%E9%87%8D%E8%A3%85%E3%82%BF%E3%82%A4%E3%83%97%E3%80%81%E9%98%B2%E5%BE%A1&quot;&gt;重装系&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;火力&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;a href=&quot;%E9%87%8D%E8%A3%85%E3%82%BF%E3%82%A4%E3%83%97%E3%80%81%E9%98%B2%E5%BE%A1&quot;&gt;重装系&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;リスカム&lt;br&gt;ヴァルカン&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;補助タイプ&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;イースチナ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;火力&lt;br&gt;減速&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;遠距離&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;イースチナ&lt;br&gt;ナイトメア&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;術師タイプ&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;ナイトメア&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;治療&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;術師タイプ&lt;br&gt;減速&lt;br&gt;火力&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;ナイトメア&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;&amp;#x3C;星４&gt;&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;必須タグ&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;選択タグ&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;星５&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;星４&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;減速&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;近距離&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;エフイーター&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;フロストリーフ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;火力&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;イースチナ&lt;br&gt;ナイトメア&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;フロストリーフ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;術師タイプ&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;ナイトメア&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;グレイ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;減速&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;前衛タイプ&lt;br&gt;狙撃タイプ&lt;br&gt;範囲攻撃&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;生存&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;狙撃タイプ&lt;br&gt;遠距離&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</content:encoded></item><item><title><![CDATA[日記]]></title><description><![CDATA[やったこと imageタグ追加 footerにauthor追加 createdにソート 焼肉食べたい.]]></description><link>https://narazuke.github.io/kon20210201/</link><guid isPermaLink="false">https://narazuke.github.io/kon20210201/</guid><content:encoded>&lt;p&gt;やったこと&lt;/p&gt;
+&lt;p&gt;imageタグ追加&lt;/p&gt;
+&lt;p&gt;footerにauthor追加&lt;/p&gt;
+&lt;p&gt;createdにソート&lt;/p&gt;
+&lt;h3&gt;焼肉食べたい.&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[NARADUKE新機能候補]]></title><description><![CDATA[将来的に加えたい機能 必要そう 簡単そう 筆者名 (2/1 完了) タグ カテゴリ --- 日記、哲学、メモ frontmatterの属性詳細 難しそう 画像のcomponent (imageタグの作成) (2/…]]></description><link>https://narazuke.github.io/narazuke-new-feature-candidates/</link><guid isPermaLink="false">https://narazuke.github.io/narazuke-new-feature-candidates/</guid><content:encoded>&lt;h1&gt;将来的に加えたい機能&lt;/h1&gt;
+&lt;h2&gt;必要そう&lt;/h2&gt;
+&lt;h3&gt;簡単そう&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;筆者名&lt;/del&gt; (2/1 完了)&lt;/li&gt;
+&lt;li&gt;タグ&lt;/li&gt;
+&lt;li&gt;カテゴリ --- 日記、哲学、メモ&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;frontmatterの属性詳細&lt;/p&gt;
+&lt;h3&gt;難しそう&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;画像のcomponent (imageタグの作成)&lt;/del&gt; (2/1 完了)&lt;/li&gt;
+&lt;li&gt;ページ機能&lt;/li&gt;
+&lt;li&gt;記事サムネイル&lt;/li&gt;
+&lt;li&gt;最新記事に🆕ってつける&lt;/li&gt;
+&lt;li&gt;カテゴリごとにページ分け&lt;/li&gt;
+&lt;li&gt;タグ検索機能&lt;/li&gt;
+&lt;li&gt;関連記事表示 --- 同カテゴリか同タグのランダム記事表示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;いらなさそう&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;カレンダー&lt;/li&gt;
+&lt;li&gt;シェア機能&lt;/li&gt;
+&lt;li&gt;word検索&lt;/li&gt;
+&lt;li&gt;人気記事表示&lt;/li&gt;
+&lt;li&gt;PC表示対応 2段組みなど&lt;/li&gt;
+&lt;li&gt;コメント機能&lt;/li&gt;
+&lt;li&gt;コメント返信機能&lt;/li&gt;
+&lt;li&gt;ハンバーガーメニュー🍔&lt;/li&gt;
+&lt;li&gt;プライバシーポリシーのページ&lt;/li&gt;
+&lt;li&gt;今日の名言&lt;/li&gt;
+&lt;li&gt;今日のレシピ&lt;/li&gt;
+&lt;li&gt;キリ番おめでとう&lt;/li&gt;
+&lt;li&gt;ログインボーナス&lt;/li&gt;
+&lt;li&gt;質問箱&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;今後一切いらない機能&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;広告&lt;/li&gt;
+&lt;li&gt;キリ番&lt;/li&gt;
+&lt;li&gt;BGM&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[gatsby環境設定]]></title><description><![CDATA[Windows編 nvm-win導入 nodeがもう入ってるという人は読み飛ばしていい。 まず、nvmをインストールする。
+nodeのバージョンを複数管理できて便利。 nvm-windows にアクセスして、をダウンロードする。
+2021/01/3…]]></description><link>https://narazuke.github.io/gatsby-environment-settings/</link><guid isPermaLink="false">https://narazuke.github.io/gatsby-environment-settings/</guid><content:encoded>&lt;h1&gt;Windows編&lt;/h1&gt;
+&lt;h2&gt;nvm-win導入&lt;/h2&gt;
+&lt;p&gt;nodeがもう入ってるという人は読み飛ばしていい。&lt;br&gt;
+まず、nvmをインストールする。
+nodeのバージョンを複数管理できて便利。&lt;br&gt;
+&lt;a href=&quot;https://github.com/coreybutler/nvm-windows/releases&quot;&gt;nvm-windows&lt;/a&gt; にアクセスして、&lt;code class=&quot;language-text&quot;&gt;nvm-setup.zip&lt;/code&gt;をダウンロードする。
+2021/01/31時点での最新版は&lt;code class=&quot;language-text&quot;&gt;1.1.7&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;nvm-setup.exe&lt;/code&gt;を起動して、ウィザードに従う。
+抱き合わせの怪しいソフトは無いので安心。  &lt;/p&gt;
+&lt;p&gt;Finishedが出たらコマンドプロンプトかPowershellを開く。&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;nvm version&lt;/code&gt;と入力して自分がインストールしたnvmのバージョンが出たら成功。  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; nvm version           &lt;span class=&quot;token comment&quot;&gt;# nvmのバージョン表示&lt;/span&gt;
+1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;7&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;nodeをインストール&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;nvm list available&lt;/code&gt;でインストールできるnodeを吟味しよう。&lt;br&gt;
+最新版だとgatsbyが対応していない可能性もあるので、LTSにあるバージョンが盤石に思える。&lt;br&gt;
+選んだら、&lt;code class=&quot;language-text&quot;&gt;nvm install x.y.z&lt;/code&gt;でインストールする。&lt;br&gt;
+自分の環境ではv14.5.0をインストールした。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; nvm list available    &lt;span class=&quot;token comment&quot;&gt;# インストール可能なnodeのversion表示&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; nvm install x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;z     &lt;span class=&quot;token comment&quot;&gt;# バージョンx.y.zをインストールする&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;終わったら&lt;code class=&quot;language-text&quot;&gt;nvm use x.y.x&lt;/code&gt;でバージョンを選択する。
+&lt;code class=&quot;language-text&quot;&gt;node --version&lt;/code&gt;で`x.y.zと表示されたら成功。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; nvm use x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;z         &lt;span class=&quot;token comment&quot;&gt;# nodeのバージョン選択&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; node &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;version        &lt;span class=&quot;token comment&quot;&gt;# nodeのバージョンを表示&lt;/span&gt;
+x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;z&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;参考: &lt;a href=&quot;https://laboradian.com/how-to-use-nvm/&quot;&gt;Node.js のバージョン管理ツール nvm の使い方&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;gatsbyをインストール&lt;/h2&gt;
+&lt;h3&gt;npmを用いたインストール&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; npm install &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;g gatsby&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cli&lt;/span&gt;     &lt;span class=&quot;token comment&quot;&gt;# gatsbyをインストール&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; npm install &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;g yarn     &lt;span class=&quot;token comment&quot;&gt;# gatsbyをインストール&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ちょっとここから、本筋とは無関係なnpmに関する全般的な備忘録が続く。&lt;/p&gt;
+&lt;h3&gt;npmとは？&lt;/h3&gt;
+&lt;p&gt;ここらへんは自分も曖昧なので詳しい人の解説を見よう。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Node.js のパッケージを管理するための CLI であり、パッケージを作成したり、NPM 上のパッケージをローカルにインストールしたり、自分のパッケージを NPM に公開したりと、Node.js の開発に欠かせないツールである。Node.js をインストールすると自動的に npm もインストールされる。  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;引用元: &lt;a href=&quot;https://qiita.com/righteous/items/e5448cb2e7e11ab7d477&quot;&gt;【初心者向け】NPMとpackage.jsonを概念的に理解する&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;pip&lt;/code&gt;が&lt;a href=&quot;https://pypi.org&quot;&gt;pypi.org&lt;/a&gt;で管理されてるのと同様に、&lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt;は&lt;a href=&quot;https://www.npmjs.com&quot;&gt;NPM&lt;/a&gt;で管理されてると考えて良い。  &lt;/p&gt;
+&lt;h3&gt;npmのインストール先&lt;/h3&gt;
+&lt;h4&gt;グローバルインストール&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt;のインストール時、&lt;code class=&quot;language-text&quot;&gt;-g&lt;/code&gt;オプションを付けるとグローバルインストールとなり、どのディレクトリからも使用可能なコマンドとなる。&lt;br&gt;
+グローバルインストールの場合、モジュールは&lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt;と同じ階層のディレクトリにインストールされる。&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;nvm-windows&lt;/code&gt;で&lt;code class=&quot;language-text&quot;&gt;node&lt;/code&gt;を導入した方は、&lt;code class=&quot;language-text&quot;&gt;C:\Users\[username]\AppData\Roaming\nvm\v14.5.0\node_modules&lt;/code&gt;を参照すれば、&lt;code class=&quot;language-text&quot;&gt;gatsby-cli&lt;/code&gt;ディレクトリが確認できるはず。&lt;/p&gt;
+&lt;h4&gt;ローカルインストール&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;-g&lt;/code&gt;を&lt;strong&gt;付けない&lt;/strong&gt;と、カレントディレクトリの&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt;にインストールされる。&lt;/p&gt;
+&lt;h2&gt;gatsby構築環境を作る&lt;/h2&gt;
+&lt;p&gt;サイトのフォルダを置く場所まで移動しよう。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; gatsby new &lt;span class=&quot;token namespace&quot;&gt;[username]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;io https:&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;gatsbyjs&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;gatsby&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;starter&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;blog       &lt;span class=&quot;token comment&quot;&gt;# gatsby謹製スターターキットをローカル環境に作る&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;[username]を自分のgithubのアカウント名にしておくと、Github Pagesで連携できる。  &lt;/p&gt;
+&lt;p&gt;gatsby-starter-blog以外にも素敵なスターターがたくさんある。  &lt;/p&gt;
+&lt;p&gt;なお、gitがWindowsに入ってない場合、このコマンドに失敗する。
+入れよう。&lt;br&gt;
+&lt;a href=&quot;https://qiita.com/kamishi/items/5a3eed06c122f28fe2ea&quot;&gt;自宅PCにGit for Windowsをインストールする手順&lt;/a&gt; というqiitaの記事が分かりやすかった。  &lt;/p&gt;
+&lt;h2&gt;gatsbyをローカル環境で動かす&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby develop&lt;/code&gt;でサーバを起動&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; gatsby develop       &lt;span class=&quot;token comment&quot;&gt;# ローカルのサーバ起動&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ブラウザで&lt;code class=&quot;language-text&quot;&gt;https://localhost:8000&lt;/code&gt;にアクセスすると、スターターブログが公開されているはず。ひとまずおめでとう！
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ead913cb60bf5bf2adba997935ad9f70/6e9ba/blog_01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 120.25316455696202%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAA7DAAAOwwHHb6hkAAACv0lEQVQ4y51VyU7jQBDlE/kGDiCQOCIkIk5c+AJ+ASFxHc1pOM0MEhoQMIRkyOJ4d7zvWRz7TVcTW8FhIJOSXqq70i7X0q+8ASYvLy+QZRmapnG0222YponpdIqnpyc0m02EYcht3W4Xvu/DdV16FEVRcJSyQT9nZ2doNBo4ODjg2NnZwfb2Ns7Pz3F6eord3V3s7+/j+PgYh4eH2Nvbw8XFBXeQ5/myw6urK1xeXqLVavFoKZJer8ejzbIMSZLAtm2kaYrJZMKjI3sZ4aJwh42jI2xtbeHk5ASbm5vV2z+TMt3FtDfqb6AaUYTrCPniEepCB4YkwGGplOmpigxD1+DYFjzHhu+5cJl22d51HX7GITgOdF3nz1Upf/v6BbfXP3jNqIZ/Ol00NRcPso17xcWj6qFl+GjpPu5kF0GcYjwaIWE1HTEdxzGvbeWwmCPPC+QFAcjmmObL+DDleg1rR2rrV9SbsdQUKZxC8Kd4tkboOCO0rBTeKHu3kx/hNWW2aOsefrNa/VICdNwxHoYprDRbr8v0o8kiDEWCa+oIHAu+ZcA0dAyHQ95BgmEYXFPjSFuWxW0EOldedN4UgxkkWcFAFJmWIUoyJEni/BaZTVVVvqd1aVcUpfqfeL5iU9ZM+XGY4EaNWe0S3OkJrpUIajh5w9V/NWHRWdVlxbQhGjbMIEY8yRGOZ+y+FUuH60KTZnHaVNQTBwP0e10M+j20npvoMrYIQp9PHJqN/X6fM4j2BNqTvWxSFEVvHcbM4HsePM5XB0EQ8CFKNq7nA5V4SyjXZWeXUh7NCqSMZyxTtn7Lj1VHWBUhcfdWj/FdinCjJfgpR6yOs5VZUq/x68Vmo0oa9OGzsVTy9r3Dqwh3GIYRq5/PdV4sd/d/nM4dhpxKNDRNRiXBjiAEk3e/ap86LO8TfTKpazOGcTZjyNdy+BcufCnUvIlJpwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;blog&quot;
+        title=&quot;blog&quot;
+        src=&quot;/static/ead913cb60bf5bf2adba997935ad9f70/f058b/blog_01.png&quot;
+        srcset=&quot;/static/ead913cb60bf5bf2adba997935ad9f70/c26ae/blog_01.png 158w,
+/static/ead913cb60bf5bf2adba997935ad9f70/6bdcf/blog_01.png 315w,
+/static/ead913cb60bf5bf2adba997935ad9f70/f058b/blog_01.png 630w,
+/static/ead913cb60bf5bf2adba997935ad9f70/6e9ba/blog_01.png 731w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Github Pagesを使って公開する&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt;を導入してDeployする&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; yarn add &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;dev gh&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;pages   &lt;span class=&quot;token comment&quot;&gt;# package.jsonのdevDependenciesにgh-pagesをインストール&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; yarn run deploy           &lt;span class=&quot;token comment&quot;&gt;# gh-pagesを使って[username].github.ioにdeploy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;すると、WindowsならGithubのアカウント認証のポップアップが出てくる。
+メールアドレスとパスワード、もしくはアクセストークンで認証する。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+Published
+Done in xx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;xxs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;と表示されたら完了。&lt;/p&gt;
+&lt;p&gt;[username].github.ioにアクセスするとdeployしたサイトが公開されている。
+おめでとう！&lt;/p&gt;
+&lt;h2&gt;トラブルシュート: ERROR #11321 PLUGIN&lt;/h2&gt;
+&lt;h3&gt;問題&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;yarn run deploy&lt;/code&gt;する時に、エラーが吐かれることがある。  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;gatsby-plugin-manifest&quot;&lt;/span&gt; threw an error &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; running the onPostBootstrap lifecycle:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7b63ae617fc03403f8c08481c97a65b6/31aff/error_01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 108.86075949367088%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACdklEQVQ4y5VVwXKbMBDNj7ROMZKQBLIwYGyTzLSZpK2bTDq99tiZnpL/v27fLsExjknSw/PuCHh6z7tanf3yNf3xHf32a+q8p+gNuVyTn0ARMsoLIzlH5xVp84lMlgjOqmZB7WZJdVsi1lTVQT6KpadFZDjJy2UusaoXtKyKp7WCQrBjwgILZZnvSXhX61JK0xmlakZKn4/Aa8frTMSkjDPvtSwMD5dQstk22KQAOT973n0KI4U5CFkRL2ZOUVx4UVvCVhHM6OVTBC8ImcxaEMKGjbDe5OT9R7HMigcrhzhFuicM+NNtyCkLETEiBoFDngO+YCyAING6bJKsL0qmqDYZVQKD3FCD3GdQLS/N37Q8IryKJT02X+ihu6aHyxv621zR48WOtlCd6BkZk/yf5cwlVK+hcq0p1ooMCpPliiwaljuAG9cdFO5NhZmdo1ED1U0kBzJWlL2zRU4SWihctQpI0X9WTkKzinJieDPpAoDz19rlQGEChRrHSCHycQpyzHqrsO5OW56yLwq3nab1RlG7tlAXECtpbibpSXuF77EvhM0K7dJkgMIw4LyksLBCJlPG86TpJ4zz/dR5xfJcpgdPncHWsbUpTFrebFPYhOVNCnUO9hsUqaQ8N09FUXvrA96wrEGkUVkFeGkhVu283mOwO5BPEjqfUHehqUNhNltNbesQV0LKHwuBe674oPiQcDRtDNomllwMhULMUd1UJvUwaI+vgL5QZlT18fjCj7X9S9yDESNsuDsKkCbzDy8m9XEcTewK46nbtrT7cUO3d9/o/uctfd9d0939jq6/fkaBaml0vj9qnKI+z+Wu4c5gN9qc7xX+A4GqjmPY+vAUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;error&quot;
+        title=&quot;error&quot;
+        src=&quot;/static/7b63ae617fc03403f8c08481c97a65b6/f058b/error_01.png&quot;
+        srcset=&quot;/static/7b63ae617fc03403f8c08481c97a65b6/c26ae/error_01.png 158w,
+/static/7b63ae617fc03403f8c08481c97a65b6/6bdcf/error_01.png 315w,
+/static/7b63ae617fc03403f8c08481c97a65b6/f058b/error_01.png 630w,
+/static/7b63ae617fc03403f8c08481c97a65b6/31aff/error_01.png 823w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;対処法&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;package-lock.json&lt;/code&gt;と&lt;code class=&quot;language-text&quot;&gt;node_modeles&lt;/code&gt;の中身を全部消して、&lt;code class=&quot;language-text&quot;&gt;npm install&lt;/code&gt;する。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; &lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; node_modules
+&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; &lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; package&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;lock&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;json
+&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; npm install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[git備忘録]]></title><description><![CDATA[初期設定 名前,メアド,UIの色,エディタの登録 登録した情報の確認 使い方 リポジトリ初期化 版管理の対象を登録 最初のコミット 変更の記録 変更点の確認 する前に、変更点を確認しよう コミットする gitのログメッセージを書く 一行目は変更点を…]]></description><link>https://narazuke.github.io/git-memorandum/</link><guid isPermaLink="false">https://narazuke.github.io/git-memorandum/</guid><content:encoded>&lt;h2&gt;初期設定&lt;/h2&gt;
+&lt;h3&gt;名前,メアド,UIの色,エディタの登録&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.name &lt;span class=&quot;token string&quot;&gt;&quot;Yamada Hanako&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.email &lt;span class=&quot;token string&quot;&gt;&quot;yamahana@takaka.com&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global color.ui auto
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global core.editor &lt;span class=&quot;token string&quot;&gt;&quot;vim&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;登録した情報の確認&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config -l&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;使い方&lt;/h2&gt;
+&lt;h3&gt;リポジトリ初期化&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;版管理の対象を登録&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; index.html
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;#現在のディレクトリ以下全部を登録&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; ls-files		&lt;span class=&quot;token comment&quot;&gt;# git管理下のファイルを一覧表示&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;最初のコミット&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -m &lt;span class=&quot;token string&quot;&gt;&quot;first commit&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;変更の記録&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# index.htmlを適当に変更する&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;diff&lt;/span&gt;	&lt;span class=&quot;token comment&quot;&gt;#最新コミットリクエストと現在のデータを比較&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; index.html	&lt;span class=&quot;token comment&quot;&gt;#最新コミットリクエストに現在のデータをリクエスト&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;diff&lt;/span&gt;	&lt;span class=&quot;token comment&quot;&gt;#出力は空になる&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;変更点の確認&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;git commit&lt;/code&gt;する前に、変更点を確認しよう&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;diff&lt;/span&gt; HEAD	&lt;span class=&quot;token comment&quot;&gt;#最新コミットと現在のデータを比較&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;コミットする&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; -u	&lt;span class=&quot;token comment&quot;&gt;#gitで版管理しているすべてのファイルの現在の状態を次のコミットに記録させる&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit	&lt;span class=&quot;token comment&quot;&gt;#コミット&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;gitのログメッセージを書く&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;日付表示
+	
+各記事の前に日付をyyyy/mm/ddの形式で表示するようにした。
+&lt;span class=&quot;token comment&quot;&gt;# Please enter the commit message for your changes. Lines starting&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# with &apos;#&apos; will be ignored, and an empty message aborts the commit.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# On branch master&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Changes to be committed:&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#	modified index.html&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;一行目は変更点を1行に要約
+二行目は空行
+三行目に詳しい記述&lt;/p&gt;
+&lt;p&gt;が鉄板らしい&lt;/p&gt;
+&lt;h3&gt;怒られる&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Warning: commit message did not conform to UTF-8
+You may want to amend it after fixing the message, or &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; the config
+variable i18n.commitencoding to the encoding your pqoject uses.
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;master XXXXXX&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.文字化け&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;vimrcを直す&lt;/h3&gt;
+&lt;p&gt;参考:&lt;a href=&quot;https://qiita.com/takasianpride/items/0d68fcbbcc3aaf22cf9a&quot; title=&quot;Gitコミット時の文字化け(MacでVimによるコミット)&quot;&gt;Gitコミット時の文字化け(MacでVimによるコミット)&lt;/a&gt;
+~/.vimrcに以下の内容を追加&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;utf8
+&lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;fenc&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;utf-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;うまくいかない…&lt;/p&gt;
+&lt;p&gt;参考:&lt;a href=&quot;http://wadahiro.hatenablog.com/entry/20090506/1241622572&quot;&gt;Git コミットログの文字化けではまる&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&quot; &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;fileencodings&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;iso-2022.jp,euc-jp,utf-8,ucs-2,cp912,sjis
+&lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;fileencoding&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;utf-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;fileencodingの候補が多すぎて勘違いされたらしい。
+UTF-8だけにしたら文字化け消えた。&lt;/p&gt;
+&lt;h3&gt;git add -u と git commit をまとめてやる&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -a&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;備考:&lt;code class=&quot;language-text&quot;&gt;git add -u&lt;/code&gt;はgit管理対象を全部インデックスに登録するコマンド&lt;/p&gt;
+&lt;h3&gt;コミット履歴を見る&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log index.html	&lt;span class=&quot;token comment&quot;&gt;#特定のファイルの履歴を見る&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log --oneline	&lt;span class=&quot;token comment&quot;&gt;#コミットIDと要約したコミットメッセージを1行で表示&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log -3			&lt;span class=&quot;token comment&quot;&gt;#最新の3件のみ&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log -p			&lt;span class=&quot;token comment&quot;&gt;#変更内容も表示&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;テクニカルな使い方&lt;/h2&gt;
+&lt;h3&gt;コミットのメモを書き直す&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit --amend&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;ファイル内の行がどのコミットで生まれたものか表示&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; blame index.html&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;長いファイルだと、長い&lt;/p&gt;
+&lt;h3&gt;過去のコミットの効果を打ち消す&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; reset --hard &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;コミットID&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;commitIDは&lt;code class=&quot;language-text&quot;&gt;git log --oneline&lt;/code&gt;とかで出てくる黄色いハッシュ値
+commitIDは最初の8文字でOK
+コミットオブジェクトをSHA-1でハッシュ化した160ビット(40文字の16進数)の値
+コミットオブジェクトはコミット内容の他に時刻やコミッターやメアドまで含まれるため、同じコミット内容でもハッシュ値は異なる&lt;/p&gt;
+&lt;p&gt;これやったらマジで保存したやつ書き換えられた
+驚き&lt;/p&gt;
+&lt;h3&gt;最後にコミットしたところまで戻る&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; reset --hard HEAD&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;参考&lt;/h2&gt;
+&lt;p&gt;入門Git (秀和システム 2011)&lt;/p&gt;
+&lt;h2&gt;経緯&lt;/h2&gt;
+&lt;p&gt;いい加減gitの使い方くらい覚えないといけないのではないか
+まずひとりで版管理できてから、mergeとかbranchは学んでいこうと思った&lt;/p&gt;</content:encoded></item></channel></rss>
