@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Feb 2021 10:17:01 GMT</lastBuildDate><item><title><![CDATA[pyenvとvenvで仮想環境構築 ラズパイ編]]></title><description><![CDATA[pyenvとvenvの違い pyenvはpythonのバージョンの使い分け。 (e.g. python 2.7.13 と python 3.9.0) venvはpythonのパッケージの使い分け。  (e.g. numpyを使う環境 と numpyいらない環境) pyenv…]]></description><link>https://narazuke.github.io/pyenv-venv-virtual-environment/</link><guid isPermaLink="false">https://narazuke.github.io/pyenv-venv-virtual-environment/</guid><content:encoded>&lt;h2&gt;pyenvとvenvの違い&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Feb 2021 15:33:10 GMT</lastBuildDate><item><title><![CDATA[ブログサービス所感]]></title><description><![CDATA[ブログを作る手段 Twitter Twitterをブログとして活用する方法がある。 煩雑な操作を必要とせず、無料で自分のページを作って文章を投稿できるといった利便性では最も優秀である。
+芸能人のTwitterをイメージすると分かりやすい。日記や単純な感想を述べるだけなら、14…]]></description><link>https://narazuke.github.io/blog_service_impression/</link><guid isPermaLink="false">https://narazuke.github.io/blog_service_impression/</guid><content:encoded>&lt;h2&gt;ブログを作る手段&lt;/h2&gt;
+&lt;h3&gt;&lt;a href=&quot;https://twitter.com&quot;&gt;Twitter&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Twitterをブログとして活用する方法がある。&lt;br&gt;
+煩雑な操作を必要とせず、無料で自分のページを作って文章を投稿できるといった利便性では最も優秀である。
+芸能人のTwitterをイメージすると分かりやすい。日記や単純な感想を述べるだけなら、140字の文と画像を4枚投稿できれば十分である。
+フォローすることで最新の投稿をタイムラインに表示できる点も優秀だ。この点はよくRSSリーダと比較される。RSSリーダが衰退した理由は、ソーシャルメディアがその役割を奪ってしまったためだと言われている。RSSリーダがWEBサイト側とユーザ側でそれぞれ設定する必要がある一方、ソーシャルメディアはその両方を同じ媒体で実現しているため、読者は簡単に更新情報を得ることが可能であり、WEBサイトを行き来する必要もない。
+シェア機能もTwitterの長所である。フォローしていないユーザにも最新の投稿を共有でき、拡散されることが見込める。&lt;br&gt;
+Twitterはニュースサイトやコミュニケーションツール、エッチな画像クローラなど多岐にわたる活用が見込める万能ツールである。現代的なブログとしての運用も選択肢として多いにあり得る。&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://note.com&quot;&gt;note&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;noteはクリエイターが文章や画像、音声、動画を投稿して、ユーザーがそのコンテンツを楽しんで応援できるメディアプラットフォームです。だれもが創作を楽しんで続けられるよう、安心できる雰囲気や、多様性を大切にしています。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;引用元:&lt;a href=&quot;https://note.com/info/n/nea1b96233fbf&quot;&gt;noteの使い方、機能紹介&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;noteは無料で始められるブログサービスである。&lt;br&gt;
+htmlやcssによる文字装飾や画像の自由な配置などはできないが、清潔感のあるフォーマットなので、記事を執筆してそのまま公開する人には向いている。他の無料ブログサービスと決定的に異なるのが、広告が無い点である。noteはより予約投稿や独自ドメインを設定できる有料会員と、有料noteの売上のマージンから収益を得ているため、無料会員でも広告なしでブログが作成可能である。&lt;br&gt;
+有料noteについては、私が収益を目的としたブログ運営を目指していないので、特に触れない。情報商材ビジネスにはnote運営も手を焼いているように伺える。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一方で、「ノウハウの販売」そのものは、なかなか判断が難しいグレーゾーンです。「1日30分であなたも絶対に月収100万円」は高確率でアウトな一方で、「生産性の上がるフォトショップテク」はどうなのか？「実際に上場した人の起業論」は実現不可能な商法に分類できるのか？…といったものですね。これはもう個別に判断するしかありません。  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;このバランスはとても難しいものです。noteの理念としては、「投稿物の多様性」も担保しなければいけませんが、同時に緩くしすぎると「健全性」が守れなくなりそうです。内容確認では、このバランスが常にせめぎあっています。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;引用元:&lt;a href=&quot;https://note.com/fladdict/n/nf94f80fdad34?magazine_key=mdc2a0ebb5ee8&quot;&gt;noteにおける情報商材についての雑感&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://hatenablog.com&quot;&gt;はてなブログ&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;はてなブログは無料で運営できるブログサービスである。&lt;br&gt;
+noteは広告がなくてデザインが固定されている一方、はてなブログは広告が出るがサイトのデザインをカスタマイズすることが可能だ。もちろん、広告無しで独自ドメインの設定ができる有料プランも存在する。また、読者登録やはてなブロググループなどのはてなユーザ同士のシェア機能もあり、こういった点はTwitterと類似する。
+GoogleアドセンスやAmazonアフィリエイトの登録が可能な点は、noteとの決定的な差になる。一方規約も厳しいらしいので気になった人は自分で調べよう。&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://qiita.com&quot;&gt;Qiita&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Qiitaはエンジニア向けの知識共有サービスである。ブログサービスではないので夢々お忘れなきように。&lt;br&gt;
+技術ブログを主目的とするなら選択肢として最適だと考える。このサイトにはプログラマやエンジニアが多数おり、ポッと出でも良質な記事はしっかり評価されるし、誤りや不明瞭な点にはやさしく指摘コメントが入るはすだ。ただ、QiitaはSEOがきちんとしていて、関連する情報を検索すると上位にくることが非常に多い。公開する情報はできるだけ正確にしないと、誤った情報を流布することに繋がるため、注意が必要だ。僕もQiitaは情報源として頻繁に利用するため、低品質な記事はできれば見たくないし、自分が投稿するのもはばかれる。&lt;br&gt;
+Qiitaのちょっとうれしい点はmarkdown記法が使用できることだ。Qiitaの記事のURLの末尾に&lt;code class=&quot;language-text&quot;&gt;.md&lt;/code&gt;と付けて確認してみよう。&lt;/p&gt;
+&lt;h2&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;既存のプラットフォームを利用したブログサービスについての考察をした。
+共通して言えるのは、規約を遵守すれば無料で十分ブログができるということだ。
+逆に言えば、運営者にとって気に入らない投稿は消されてしまうという点も見過ごせない。&lt;a href=&quot;https://www.bbc.com/japanese/55583622&quot;&gt;トランプのTwitterアカウントが削除&lt;/a&gt;されたり、&lt;a href=&quot;https://www.itmedia.co.jp/news/articles/1912/26/news121.html&quot;&gt;さくらのレンタルサーバの批判するQiitaの投稿が非公開&lt;/a&gt;になったりする。&lt;a href=&quot;https://asia.nikkei.com/Spotlight/Myanmar-Coup/Myanmar-military-blocks-Facebook-as-activists-call-for-protests&quot;&gt;ミャンマー軍事政権がFacebookの通信を遮断した&lt;/a&gt;のも記憶に新しい。インターネットの自由は、誰かに作られた自由になっていないだろうか。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[日記]]></title><description><![CDATA[…]]></description><link>https://narazuke.github.io/kon20210204/</link><guid isPermaLink="false">https://narazuke.github.io/kon20210204/</guid><content:encoded>&lt;p&gt;最後の方支離滅裂になってます。&lt;/p&gt;
+&lt;h3&gt;自分が幸せになるには&lt;/h3&gt;
+&lt;p&gt;昨日の日記では、幸せになるためには閾値を下げ、領域を広げ、重みが高いものを優先すればよいと考えた。ここでは具体的に重みが高いものが何であるかを考える。&lt;/p&gt;
+&lt;h3&gt;生きていて何が楽しいか&lt;/h3&gt;
+&lt;p&gt;まずは生きていて何が楽しいかを考える。具体的に生きている間の行動をあげて、楽しいかどうか、またその場合どの部分に快楽を感じているかを考える。&lt;/p&gt;
+&lt;h4&gt;対戦ゲーム（ソロプレイ）&lt;/h4&gt;
+&lt;p&gt;スマブラ、クラロワ、DbD(キラー)が挙げられる。勝てた時は確かに気分はいいが、負けた時は悔しい。勝った時の達成感がくせになり続けてしまうことがある。また負けるのが怖くて始めるのを躊躇うこともある。これは挑戦心が弱いことを表しているかもしれない。しかし新しいことを始めることにためらいはないため、マイナスの感情を恐れているという方が正しい。後でどこにマイナスの感情を抱くかを考えるべきである。話を戻す。なにが楽しいかというとやはり、徐々にうまくなっているという実感が確かに楽しいと思う。これは勝ち負けの感情とは別に存在する。ゲームのスキル向上スピードに慣れてしまい現実のスキル向上スピードに満足できなくなっている気がして怖い。ゲームはやりすぎないようにしよう。対戦ゲームは好きかというと、そうでもない。やはり負けるのを怖がっている節がある。負けず嫌いだが勝つための努力が大変だからそもそも負けたくないという理論があるのかもしれない。努力が嫌いなのだろうか。おそらくコスパを考えて嫌になっているかもしれない。本当のコスパなんてわからないのにね。努力についても後で考える。結局対戦ゲームはそこまで好きじゃないのかもしれない。それでもよくやるのは勝ちを気軽に味わえるのはここだけだからだろう。ゲームジャンルは協力ゲーム、パズルゲーム、アクションゲームの順に好きである。だから次はこの他上位二つについて考える。アクションゲームは単純にうまくなるのが早く楽しいから好きだ。&lt;/p&gt;
+&lt;h4&gt;協力ゲーム&lt;/h4&gt;
+&lt;p&gt;明らかに他のゲームジャンルより好きである。自分が役に立っていることや他人が助けてくれることがすごい楽しい。これは自己肯定感と感謝というプラスの感情を感じられるからだと思われる。もし何もできなかったら逆に罪悪感でさいなまれるかもしれないと考えるが実際あまりそういうことはない。そもそも協力ゲームは単純なものが多く迷惑をかけることがあまりないからかもしれない。他に罪悪感自体感じにくいのかもしれない。どこで罪悪感を感じるかも後で考える。&lt;/p&gt;
+&lt;h4&gt;パズルゲーム&lt;/h4&gt;
+&lt;p&gt;解くのが好きである。数学も好き。クイズも好き。謎解きも好き。解けると達成感がある。わかる瞬間はとても快い。解けなくても答えがあるので納得できる。ボードゲームなど答えのないものには時間がかかるのは答えのあるものに慣れてしまったせいかもしれない。このゲームにはマイナスの感情がほぼない。そこが好きなのだろう。結局ゲーム関連はどのような感情を生じるかというのが好き嫌いの条件になっている。（まあ好き嫌いは感情で決まるのは当たり前か。）ということはなおさらどこにプラスの感情とマイナスの感情を感じるかを考えなければいけない。&lt;/p&gt;
+&lt;h4&gt;人との会話&lt;/h4&gt;
+&lt;p&gt;友達や親しい人と話す時は楽しいがそうでない人と会話はつらい。友達との会話は嫌われるという心配をすることなく気軽にしゃべれるから好き。また会話だけでなく友達と一緒に何かをすること自体好きである。それは一緒にいてくれる安心感（自分を認識してくれる安心感や手助けがいるという安心感）があるのだろう。孤独は寂しい。ただ大人数での行動となると結局一人になる可能性があり、安心できなくなる。4人までが最適。例えばそれ以上だとどこかへ行っても誰いたっけってなる。&lt;/p&gt;
+&lt;h3&gt;プラスの感情&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;勝つ(対戦ゲーム)&lt;/li&gt;
+&lt;li&gt;自分が役に立つ(協力ゲーム)&lt;/li&gt;
+&lt;li&gt;感謝する(協力ゲーム)&lt;/li&gt;
+&lt;li&gt;答えを解く(数学、クイズ、パズル)&lt;/li&gt;
+&lt;li&gt;何を言っても嫌われないという安心(友達との会話)&lt;/li&gt;
+&lt;li&gt;自分を認識してくれる安心感(友達との行動) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;マイナスの感情&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;負ける(対戦ゲーム)&lt;/li&gt;
+&lt;li&gt;対人不安(初対面の人になにを思われるかわからない)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;話は変わって自分のいいところ&lt;/h3&gt;
+&lt;p&gt;いろいろ書いたけど何も特出するものを書いてない。人との違いを考えるのが早いと思い、自分のいいところを考える。書いたこととほとんど関係ないけど、ひとと違っていい部分は「感謝」をよく感じるということがあると思う。食事をするときも食べる命に感謝することは結構あるし、寝る時にこの環境に感謝することはよくある。「ありがてぇありがてぇ」って思いながら布団ごろごろしてる。罪悪感を感じない分感謝を感じているのかもしれない。この感謝を恩返ししようとする気持ちでなら仕事を頑張れる気がする。&lt;/p&gt;
+&lt;h3&gt;自分の悪いところ&lt;/h3&gt;
+&lt;p&gt;罪悪感を感じにくいところ。相手が感情的になって初めて罪悪感を感じる。どこかで許してもらえるだろうという甘えが存在する。社会人になってからはそれが命取りになりそうである。&lt;/p&gt;
+&lt;h3&gt;やりたいこと&lt;/h3&gt;
+&lt;p&gt;自分の生活をより便利なものにしたい。&lt;/p&gt;
+&lt;h3&gt;志望理由&lt;/h3&gt;
+&lt;p&gt;自分が役に立ち感謝されることに幸せを感じるので、できるだけ多くの人に役に立つようなものを作りたい。という口上でES書こうかと思う。そうなるとメーカーとかになるんかね。&lt;/p&gt;
+&lt;p&gt;最後適当になったからまた編集すると思う。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[pyenvとvenvで仮想環境構築 ラズパイ編]]></title><description><![CDATA[pyenvとvenvの違い pyenvはpythonのバージョンの使い分け。 (e.g. python 2.7.13 と python 3.9.0) venvはpythonのパッケージの使い分け。  (e.g. numpyを使う環境 と numpyいらない環境) pyenv…]]></description><link>https://narazuke.github.io/pyenv-venv-virtual-environment/</link><guid isPermaLink="false">https://narazuke.github.io/pyenv-venv-virtual-environment/</guid><content:encoded>&lt;h2&gt;pyenvとvenvの違い&lt;/h2&gt;
 &lt;p&gt;pyenvはpythonのバージョンの使い分け。 (e.g. python 2.7.13 と python 3.9.0)&lt;br&gt;
 venvはpythonのパッケージの使い分け。  (e.g. numpyを使う環境 と numpyいらない環境)&lt;/p&gt;
 &lt;h2&gt;pyenvの導入&lt;/h2&gt;
