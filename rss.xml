@@ -1,4 +1,229 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Feb 2021 15:33:10 GMT</lastBuildDate><item><title><![CDATA[ブログサービス所感]]></title><description><![CDATA[ブログを作る手段 Twitter Twitterをブログとして活用する方法がある。 煩雑な操作を必要とせず、無料で自分のページを作って文章を投稿できるといった利便性では最も優秀である。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 05 Feb 2021 16:05:14 GMT</lastBuildDate><item><title><![CDATA[gitのブランチ名をPowerShellで表示する]]></title><description><![CDATA[経緯 「気づいたらdevelopブランチで作業してたわ、すまん」 「俺もだったわ」 posh-gitとは posh-git is a PowerShell module that integrates Git and PowerShell by providing Git…]]></description><link>https://narazuke.github.io/posh-git-settings/</link><guid isPermaLink="false">https://narazuke.github.io/posh-git-settings/</guid><content:encoded>&lt;h2&gt;経緯&lt;/h2&gt;
+&lt;p&gt;「気づいたらdevelopブランチで作業してたわ、すまん」&lt;br&gt;
+「俺もだったわ」&lt;/p&gt;
+&lt;h2&gt;posh-gitとは&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;posh-git is a PowerShell module that integrates Git and PowerShell by providing Git status summary information that can be displayed in the PowerShell prompt&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;引用元:&lt;a href=&quot;https://github.com/dahlbyk/posh-git&quot;&gt;https://github.com/dahlbyk/posh-git&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;posh-gitとは、PowerShellにgitのステータスを出せるモジュールである。ブランチ名が表示されるので、ヒューマンエラーの削減に期待できる。ブランチ名やアンステージドなファイルをtabキー補完してくれる機能も搭載。gitユーザ垂涎のモジュールだ。&lt;br&gt;
+私の実行環境はPowerShell 7.1.1。 posh-gitは6.xとあったが問題なく導入できた。&lt;/p&gt;
+&lt;h2&gt;PowerShellのプロファイルの場所&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$profile&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;D:\Documents\PowerShell\Microsoft\PowerShell_profile.ps1&lt;/code&gt;だった。君はどうだ？  &lt;/p&gt;
+&lt;h2&gt;Gitのパス確認&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;gcm git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;posh-gitを導入&lt;/h2&gt;
+&lt;p&gt;READMEに従って、&lt;code class=&quot;language-text&quot;&gt;~/git&lt;/code&gt;の中に入れることにしました。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; ~/git
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone git@github.com:dahlbyk/posh-git.git   &lt;span class=&quot;token comment&quot;&gt;# posh-gitをgit clone&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;プロファイルに追記する&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;code &lt;span class=&quot;token variable&quot;&gt;$profile&lt;/span&gt;       &lt;span class=&quot;token comment&quot;&gt;# VScodeでMicrosoft.PowerShell.ps1を編集する&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;vimでもemacでもnanoでも良いよ。
+エディタで以下の内容を追記する。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;Import-Module&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;~/git/posh-git/src/posh-git.psd1&apos;&lt;/span&gt;        &lt;span class=&quot;token comment&quot;&gt;# posh-gitを読み込ませる&lt;/span&gt;
+&lt;span class=&quot;token variable&quot;&gt;$GitPromptSettings&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;DefaultPromptBeforeSuffix&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Text = &lt;span class=&quot;token string&quot;&gt;&apos;`n&apos;&lt;/span&gt;    &lt;span class=&quot;token comment&quot;&gt;# ブランチ名の後、改行する&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;プロファイルを読み込む&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$profile&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 579px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f0cb31b736ed5bbdcb59b56a7c586e05/c08bc/powershell_screenshot_01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 8.227848101265824%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAbUlEQVQI11XKWw6DIBRFUccCER9XQfuAioBx/oPakqZp2o+V7JycppyJnF/ksnEckZTDu0uVUmBP/iMQo6/fwOO5EnaDPxXLpliD5ta33LuWRiaDtQOz7b/cMmLd//ZLxCCzRpximCpRjH3VaS5FoD6w1C0xTAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;powershell_screenshot_01&quot;
+        title=&quot;powershell_screenshot_01&quot;
+        src=&quot;/static/f0cb31b736ed5bbdcb59b56a7c586e05/c08bc/powershell_screenshot_01.png&quot;
+        srcset=&quot;/static/f0cb31b736ed5bbdcb59b56a7c586e05/c26ae/powershell_screenshot_01.png 158w,
+/static/f0cb31b736ed5bbdcb59b56a7c586e05/6bdcf/powershell_screenshot_01.png 315w,
+/static/f0cb31b736ed5bbdcb59b56a7c586e05/c08bc/powershell_screenshot_01.png 579w&quot;
+        sizes=&quot;(max-width: 579px) 100vw, 579px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;br&gt;
+表示がこうなってたら成功  &lt;/p&gt;
+&lt;h2&gt;表示の意味&lt;/h2&gt;
+&lt;h3&gt;ローカル&lt;/h3&gt;
+&lt;p&gt;解説を見るより、手を動かして仕様を確認したほうが断然理解が早い。&lt;br&gt;
+空っぽのディレクトリに&lt;code class=&quot;language-text&quot;&gt;git init&lt;/code&gt;して適当なファイルを3つ作ると、以下のような表示が出る。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/cb503189d3f17d94d19e0409a4258e0c/1cfc2/git_status_display_01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABiklEQVQoz21R207bQBT0h5QkhN2wudhAEuK92XFqNYqdXUVKy0sb+pCXfhCqeAYhviCWUH8sqF5xeuzwUBAPoxmdMxodzfGyLHs0xt5Za+8/Au7u7Tu8mb36MOdhsViMvPl8DkoJEIKDVBw1sjzoiqtdrWuIV89/jB4hBVQ5WZb/9qJIwQn5tB8ErZJ0WuUJaZSUtWtNT4/LNm2Up6RZUtosCe4YbdWzignOuwzRP9prrcAYc+MpFP1eo0yzsxe9/QXy+wbCb1cgf/wEPxIw7FCwvTGMGYNF7wIydg79LoGr7gSCDoHYpy9R0v6rlAJrMVAfLnz2z5puMApcOFWO69D543N3TI4c67RcOtWOsbabaeEuh4Eb9KlLY+VG6E8T7vyg+ay0xEB7gx1+wf5CCPkEBL8EKSZ1j7WWIUSxhukshgShY1l3J3AuNYckieFzOgPOQ6hysMNbD7/zB7+2w/TCVDAVTM2r1arYbK6La8R2uy3W66/FMl8ePEtT5KjzPC/w2zvMecIvq38uIt5U5CIohAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;git_status_display_01.png&quot;
+        title=&quot;git_status_display_01.png&quot;
+        src=&quot;/static/cb503189d3f17d94d19e0409a4258e0c/f058b/git_status_display_01.png&quot;
+        srcset=&quot;/static/cb503189d3f17d94d19e0409a4258e0c/c26ae/git_status_display_01.png 158w,
+/static/cb503189d3f17d94d19e0409a4258e0c/6bdcf/git_status_display_01.png 315w,
+/static/cb503189d3f17d94d19e0409a4258e0c/f058b/git_status_display_01.png 630w,
+/static/cb503189d3f17d94d19e0409a4258e0c/1cfc2/git_status_display_01.png 900w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;作成したファイルのうち、一つを&lt;code class=&quot;language-text&quot;&gt;git add&lt;/code&gt;してやると、以下のような表示になる。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/54c1cdc8b82716fab0f50f94d065c770/1cfc2/git_status_display_02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVQoz3WR3UrDQBCF8xyCrTbZNP1J0zZNsps1SWk1NDWRioI3FX0nEa8V8QksiC9mcZeOs9sqInjxcWZmh7PDjFEUxUtVVY/I0w/ljr/5f2AP+jzPZjPfyPMc4pgC5wiqimPONIyhMvaTb6HAEMqpjrcwUD5FMb830pQDceofpn0gFFbzUFh2TdP1a6Lt1YVJ9gXBnBCsWzXhWQ0RWkQ4Vl0QxLb3P5TP6Wl5Z0zGEWSLTNDLqw2/uAAff+oHJgxjG3juQJASCDMHRsyEyGtC1vYg7biQdwaQdF3gTXeTRNbn9JjjhGiYJDGQZn09CPoyiIbSaVvS67dkEHoyokPp9hytTqshW21TUurLoe/ie1/6o54cDLrysLG3VhOWJRqe5CdAWQhRNNJQGgKLI43aZ5odQZYlMJmOt/vbvWmY6tmq8pnP5w8GXue9LKvXqjpbKTDW4D5Wi8VitVxeI8vVzc0t5ue6/t3zi1f0ecMr8y+X/913HjNshgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;git_status_display_02.png&quot;
+        title=&quot;git_status_display_02.png&quot;
+        src=&quot;/static/54c1cdc8b82716fab0f50f94d065c770/f058b/git_status_display_02.png&quot;
+        srcset=&quot;/static/54c1cdc8b82716fab0f50f94d065c770/c26ae/git_status_display_02.png 158w,
+/static/54c1cdc8b82716fab0f50f94d065c770/6bdcf/git_status_display_02.png 315w,
+/static/54c1cdc8b82716fab0f50f94d065c770/f058b/git_status_display_02.png 630w,
+/static/54c1cdc8b82716fab0f50f94d065c770/1cfc2/git_status_display_02.png 900w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;残り2つも&lt;code class=&quot;language-text&quot;&gt;git init&lt;/code&gt;すると、以下のような表示に変わる。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/afd53f6fc94af3909f84e878f13e158e/1cfc2/git_status_display_03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABgUlEQVQoz22S3U7CQBCF+yBSfkopUFok/LTdLaUFRVq3IQG9MeAFNz4QMV5rjE9AE+OLQeyGcbZVo9GLyflmpz3ZnqkUhuELY/FjHMdP/xXOcmZ/z9iPM/R5ns1mXWk6nQKlDjiODYTayKgkZ6FiRggW6hf/UvEusvAJw+heGg4pKNWTfcsspdVaKVWqcqrWKxmrWvmzl7HHUuW01iimiiI07zWtkDb1wt51KTDGthJF0JtyOgnbR3dzB+RmBdbVNZDVLZiUgNEpgxdrYPYUoBc1IDMVmq0qjJcq6D0dOrR39LzSO6EU4hgN3fyGB6Nd5K2uya0R5bZrcaPX5mWlwLV6iQdnhNcbFe4FFu/2Da4bKvcnDvIpzlxumPJBXAyz3GKG55ifBZY9AMfuA3EGWY4ZEws8zwXf9yAIRiA+i2T52VmGvj+E8dgH27ZA+GCGDxJu5w23tUP3hIliolim8/k8Wa3WyXq9TjabTbJYLJMouvx+RnAURQn+ATv0ecUt0w9/S96iATRk0gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;git_status_display_03.png&quot;
+        title=&quot;git_status_display_03.png&quot;
+        src=&quot;/static/afd53f6fc94af3909f84e878f13e158e/f058b/git_status_display_03.png&quot;
+        srcset=&quot;/static/afd53f6fc94af3909f84e878f13e158e/c26ae/git_status_display_03.png 158w,
+/static/afd53f6fc94af3909f84e878f13e158e/6bdcf/git_status_display_03.png 315w,
+/static/afd53f6fc94af3909f84e878f13e158e/f058b/git_status_display_03.png 630w,
+/static/afd53f6fc94af3909f84e878f13e158e/1cfc2/git_status_display_03.png 900w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;リモート&lt;/h3&gt;
+&lt;p&gt;githubでリポジトリを作る。  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;git remote add origin git@github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com:nozzlex3&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;posh&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;git_test&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;git     &lt;span class=&quot;token comment&quot;&gt;# リモートリポジトリを指定し、originと名付ける&lt;/span&gt;
+git push &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;u origin master   &lt;span class=&quot;token comment&quot;&gt;# プッシュ先をoriginのmasterブランチ&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;表示がこうなる。&lt;br&gt;
+≡はローカルブランチとリモートブランチが同一であることを表している。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2602f6201fa4386be3c947c3974cbb50/1cfc2/git_status_display_04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABV0lEQVQoz22R20rDQBCG8yC1qd0kPWhRjGmT3W1TeghNSGhzJUKqWH0jEa8V8QkaEF9MMYvjbE70wouPmWX+/99lR/F9/z0Mo5cojF7Dkij6n8NZrS0r5rytVitT8TwPGHMQu6wOONQGSoszLfviXPVOra18Msf3gydlPGbQJo0vTW9mEqI1s9OBmnV6rYyQo0zvHGea0cor0dSsf6Jmvb6a6yqP9MucMAwf80ADxd0e+UWwb8NsYQC7vgJ+9wDDOAaa3ILpLeDcD2G24WCZKugGAamXPvT/1IG8eOE33iQkeLMYnKmiO9CFyR1hUUtc0qEgRkvQCRPcvRCdbkO0tUIvkf46cOkt8c9G4DijoiK2jYwsoLYFrsvBnTCYumOYz6fAOcP5sNZWPg9z8A+fFdzOJ25pj6QVuMW8rtebNEmSdLu9SXe7+zSO4zQIgnp+wB5zPnDL7A8/z9w1Q/NPOwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;git_status_display_04.png&quot;
+        title=&quot;git_status_display_04.png&quot;
+        src=&quot;/static/2602f6201fa4386be3c947c3974cbb50/f058b/git_status_display_04.png&quot;
+        srcset=&quot;/static/2602f6201fa4386be3c947c3974cbb50/c26ae/git_status_display_04.png 158w,
+/static/2602f6201fa4386be3c947c3974cbb50/6bdcf/git_status_display_04.png 315w,
+/static/2602f6201fa4386be3c947c3974cbb50/f058b/git_status_display_04.png 630w,
+/static/2602f6201fa4386be3c947c3974cbb50/1cfc2/git_status_display_04.png 900w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;ローカルブランチで新しくコミットがあると、↑+数字で何コミット進んでいるかが表示される。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/407bb289c282e8a9a27e47c12d995c9e/1cfc2/git_status_display_05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABRklEQVQoz4WRzU7CQBSF+yCkRPoDSGEhAp2phVqloWaa2oU72PBKxrjWGJ+ASYwvprETr2f6Q3Tl4su903vOmWaukabpqxDZUyayZ9GQZf9z1DYVOS+bzWZqJElCQcCA31RGjPvEed3ryoMGXqPnrbb16Zw0vXkwwjCgntX5sB2z1Fi2WXrjbtkfoLfM0unju4vq1v3g1CxHXrfStR7t1zlCiPsq0O2flIOh9Q3QW3R17VB061B851KQoi9cmsc2TUOb+BrnyK50Wq998H8dAy/qP/zETUqDm9V40lVDz1QzPlJzNlEzNlaW21ELdqZWl+fVvGfXeo32HwPXyRpvsiDGFnUFvq+ZE2c+rVZhRRQtKY4j9Evyf2lbX4IcvOGjge28Y0sHIFuwRVQh8zyX2+1W7nY7ud/vZVEUEqZm/ocDct6w5eAHv63a2whz2ZYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;git_status_display_05.png&quot;
+        title=&quot;git_status_display_05.png&quot;
+        src=&quot;/static/407bb289c282e8a9a27e47c12d995c9e/f058b/git_status_display_05.png&quot;
+        srcset=&quot;/static/407bb289c282e8a9a27e47c12d995c9e/c26ae/git_status_display_05.png 158w,
+/static/407bb289c282e8a9a27e47c12d995c9e/6bdcf/git_status_display_05.png 315w,
+/static/407bb289c282e8a9a27e47c12d995c9e/f058b/git_status_display_05.png 630w,
+/static/407bb289c282e8a9a27e47c12d995c9e/1cfc2/git_status_display_05.png 900w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;トラブルシュート:追加したファイル数とposh-gitの表示数が合わない、足りない&lt;/h2&gt;
+&lt;h3&gt;対処法&lt;/h3&gt;
+&lt;p&gt;正しい表示なので問題ない。  &lt;/p&gt;
+&lt;h3&gt;解説&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;posh-git&lt;/code&gt;の表示はおそらく、&lt;code class=&quot;language-text&quot;&gt;git status&lt;/code&gt;の結果を表示している。そのため、複数ファイルを追加していてもそれらが同一のディレクトリに追加されている場合、&lt;code class=&quot;language-text&quot;&gt;git add&lt;/code&gt;するのはそのディレクトリ1つで済む。まずは&lt;code class=&quot;language-text&quot;&gt;git status&lt;/code&gt;の出力と表示数を見比べてみよう。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ブログサービス所感]]></title><description><![CDATA[ブログを作る手段 Twitter Twitterをブログとして活用する方法がある。 煩雑な操作を必要とせず、無料で自分のページを作って文章を投稿できるといった利便性では最も優秀である。
 芸能人のTwitterをイメージすると分かりやすい。日記や単純な感想を述べるだけなら、14…]]></description><link>https://narazuke.github.io/blog_service_impression/</link><guid isPermaLink="false">https://narazuke.github.io/blog_service_impression/</guid><content:encoded>&lt;h2&gt;ブログを作る手段&lt;/h2&gt;
 &lt;h3&gt;&lt;a href=&quot;https://twitter.com&quot;&gt;Twitter&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Twitterをブログとして活用する方法がある。&lt;br&gt;
