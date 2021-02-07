@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 07 Feb 2021 13:41:26 GMT</lastBuildDate><item><title><![CDATA[日記]]></title><description><![CDATA[7th Feb 2021 今年初めて駅まで歩いた。 ドン・キホーテでキシリトールのガムボトルを 3 つ買った。1 つ 430 円だった。 丸善で GatsbyJS の本を買った。3500 円した。 夕飯は鍋だった。 8th Feb 202…]]></description><link>https://narazuke.github.io/noz20210207/</link><guid isPermaLink="false">https://narazuke.github.io/noz20210207/</guid><content:encoded>&lt;h2&gt;7th Feb 2021&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 07 Feb 2021 13:45:44 GMT</lastBuildDate><item><title><![CDATA[日記]]></title><description><![CDATA[6th Feb 2021 今年初めて駅まで歩いた。 ドン・キホーテでキシリトールのガムボトルを 3 つ買った。1 つ 430 円だった。 丸善で GatsbyJS の本を買った。3500 円した。 夕飯は鍋だった。 7th Feb 202…]]></description><link>https://narazuke.github.io/noz20210207/</link><guid isPermaLink="false">https://narazuke.github.io/noz20210207/</guid><content:encoded>&lt;h2&gt;6th Feb 2021&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;今年初めて駅まで歩いた。&lt;/li&gt;
 &lt;li&gt;ドン・キホーテでキシリトールのガムボトルを 3 つ買った。1 つ 430 円だった。&lt;/li&gt;
 &lt;li&gt;丸善で GatsbyJS の本を買った。3500 円した。&lt;/li&gt;
 &lt;li&gt;夕飯は鍋だった。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;8th Feb 2021&lt;/h2&gt;
+&lt;h2&gt;7th Feb 2021&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;一日家にいた。&lt;/li&gt;
 &lt;li&gt;ならづけにタグ機能を付けた。今後タグをまとめたページ作成に取り組みたい。&lt;/li&gt;
@@ -257,7 +257,7 @@ Twitter はニュースサイトやコミュニケーションツール、エッ
 &lt;/blockquote&gt;
 &lt;p&gt;引用元:&lt;a href=&quot;https://note.com/info/n/nea1b96233fbf&quot;&gt;note の使い方、機能紹介&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;note は無料で始められるブログサービスである。&lt;br&gt;
-html や css による文字装飾や画像の自由な配置などはできないが、清潔感のあるフォーマットなので、記事を執筆してそのまま公開する人には向いている。他の無料ブログサービスと決定的に異なるのが、広告が無い点である。note はより予約投稿や独自ドメインを設定できる有料会員と、有料 note の売上のマージンから収益を得ているため、無料会員でも広告なしでブログが作成可能である。&lt;br&gt;
+html や css による文字装飾や画像の自由な配置などはできないが、清潔感のあるフォーマットなので、記事を執筆してそのまま公開する人には向いている。他の無料ブログサービスと決定的に異なるのが、広告が無い点である。note は予約投稿や独自ドメインを設定できる有料会員と、有料 note の売上のマージンから収益を得ているため、無料会員でも広告なしでブログが作成可能である。&lt;br&gt;
 有料 note については、私が収益を目的としたブログ運営を目指していないので、特に触れない。情報商材ビジネスには note 運営も手を焼いているように伺える。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;一方で、「ノウハウの販売」そのものは、なかなか判断が難しいグレーゾーンです。「1 日 30 分であなたも絶対に月収 100 万円」は高確率でアウトな一方で、「生産性の上がるフォトショップテク」はどうなのか？「実際に上場した人の起業論」は実現不可能な商法に分類できるのか？…といったものですね。これはもう個別に判断するしかありません。&lt;/p&gt;
