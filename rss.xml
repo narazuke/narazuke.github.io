@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 07 Feb 2021 12:05:31 GMT</lastBuildDate><item><title><![CDATA[トラブルシュート：npm installすると、"Error EPERM operation not permitted, unlink ..."が出る]]></title><description><![CDATA[対象者 VScode を立ち上げていて、このエラーに遭遇している方。 対処法 PC を再起動すると治る。 解説 VScode を立ち上げていると、node-modules ディレクトリの何かと絶えず操作をするせいで、link dependencies…]]></description><link>https://narazuke.github.io/trouble-shooting-EPERM-npm-install/</link><guid isPermaLink="false">https://narazuke.github.io/trouble-shooting-EPERM-npm-install/</guid><content:encoded>&lt;h2&gt;対象者&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 07 Feb 2021 13:41:26 GMT</lastBuildDate><item><title><![CDATA[日記]]></title><description><![CDATA[7th Feb 2021 今年初めて駅まで歩いた。 ドン・キホーテでキシリトールのガムボトルを 3 つ買った。1 つ 430 円だった。 丸善で GatsbyJS の本を買った。3500 円した。 夕飯は鍋だった。 8th Feb 202…]]></description><link>https://narazuke.github.io/noz20210207/</link><guid isPermaLink="false">https://narazuke.github.io/noz20210207/</guid><content:encoded>&lt;h2&gt;7th Feb 2021&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今年初めて駅まで歩いた。&lt;/li&gt;
+&lt;li&gt;ドン・キホーテでキシリトールのガムボトルを 3 つ買った。1 つ 430 円だった。&lt;/li&gt;
+&lt;li&gt;丸善で GatsbyJS の本を買った。3500 円した。&lt;/li&gt;
+&lt;li&gt;夕飯は鍋だった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;8th Feb 2021&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;一日家にいた。&lt;/li&gt;
+&lt;li&gt;ならづけにタグ機能を付けた。今後タグをまとめたページ作成に取り組みたい。&lt;/li&gt;
+&lt;li&gt;フィリオプシスが出た。&lt;/li&gt;
+&lt;li&gt;夕飯はお好み焼きだった。&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[トラブルシュート：npm installすると、"Error EPERM operation not permitted, unlink ..."が出る]]></title><description><![CDATA[対象者 VScode を立ち上げていて、このエラーに遭遇している方。 対処法 PC を再起動すると治る。 解説 VScode を立ち上げていると、node-modules ディレクトリの何かと絶えず操作をするせいで、link dependencies…]]></description><link>https://narazuke.github.io/trouble-shooting-EPERM-npm-install/</link><guid isPermaLink="false">https://narazuke.github.io/trouble-shooting-EPERM-npm-install/</guid><content:encoded>&lt;h2&gt;対象者&lt;/h2&gt;
 &lt;p&gt;VScode を立ち上げていて、このエラーに遭遇している方。&lt;/p&gt;
 &lt;h2&gt;対処法&lt;/h2&gt;
 &lt;p&gt;PC を再起動すると治る。&lt;/p&gt;
