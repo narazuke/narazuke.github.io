@@ -1,32 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 06 Feb 2021 12:45:58 GMT</lastBuildDate><item><title><![CDATA[トラブルシュート：npm installすると、"Error EPERM operation not permitted, unlink ..."が出る]]></title><description><![CDATA[対象者 VScode を立ち上げていて、このエラーに遭遇している方。 対処法 PC を再起動すると治る。 解説 VScode を立ち上げていると、node-modules ディレクトリの何かと絶えず操作をするせいで、link dependencies…]]></description><link>https://narazuke.github.io/trouble-shooting-EPERM-npm-install/</link><guid isPermaLink="false">https://narazuke.github.io/trouble-shooting-EPERM-npm-install/</guid><content:encoded>&lt;h2&gt;対象者&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 07 Feb 2021 12:05:31 GMT</lastBuildDate><item><title><![CDATA[トラブルシュート：npm installすると、"Error EPERM operation not permitted, unlink ..."が出る]]></title><description><![CDATA[対象者 VScode を立ち上げていて、このエラーに遭遇している方。 対処法 PC を再起動すると治る。 解説 VScode を立ち上げていると、node-modules ディレクトリの何かと絶えず操作をするせいで、link dependencies…]]></description><link>https://narazuke.github.io/trouble-shooting-EPERM-npm-install/</link><guid isPermaLink="false">https://narazuke.github.io/trouble-shooting-EPERM-npm-install/</guid><content:encoded>&lt;h2&gt;対象者&lt;/h2&gt;
 &lt;p&gt;VScode を立ち上げていて、このエラーに遭遇している方。&lt;/p&gt;
 &lt;h2&gt;対処法&lt;/h2&gt;
 &lt;p&gt;PC を再起動すると治る。&lt;/p&gt;
 &lt;h2&gt;解説&lt;/h2&gt;
 &lt;p&gt;VScode を立ち上げていると、node-modules ディレクトリの何かと絶えず操作をするせいで、link dependencies がうまくいかないことがあるらしい。
-VScode だけ終了しても裏で生き残ってるせいかうまくいかないので、PC 再起動して、VScode を立ち上げる前に PowerShell とかで&lt;code class=&quot;language-text&quot;&gt;npm install&lt;/code&gt;などを試そう。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[gitのブランチ名をPowerShellで表示する]]></title><description><![CDATA[経緯 「気づいたらdevelopブランチで作業してたわ、すまん」 「俺もだったわ」 posh-gitとは posh-git is a PowerShell module that integrates Git and PowerShell by providing Git…]]></description><link>https://narazuke.github.io/posh-git-settings/</link><guid isPermaLink="false">https://narazuke.github.io/posh-git-settings/</guid><content:encoded>&lt;h2&gt;経緯&lt;/h2&gt;
-&lt;p&gt;「気づいたらdevelopブランチで作業してたわ、すまん」&lt;br&gt;
+VScode だけ終了しても裏で生き残ってるせいかうまくいかないので、PC 再起動して、VScode を立ち上げる前に PowerShell とかで&lt;code class=&quot;language-text&quot;&gt;npm install&lt;/code&gt;などを試そう。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[gitのブランチ名をPowerShellで表示する]]></title><description><![CDATA[経緯 「気づいたら develop ブランチで作業してたわ、すまん」 「俺もだったわ」 posh-git とは posh-git is a PowerShell module that integrates Git and PowerShell by providing Git…]]></description><link>https://narazuke.github.io/posh-git-settings/</link><guid isPermaLink="false">https://narazuke.github.io/posh-git-settings/</guid><content:encoded>&lt;h2&gt;経緯&lt;/h2&gt;
+&lt;p&gt;「気づいたら develop ブランチで作業してたわ、すまん」&lt;br&gt;
 「俺もだったわ」&lt;/p&gt;
-&lt;h2&gt;posh-gitとは&lt;/h2&gt;
+&lt;h2&gt;posh-git とは&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;posh-git is a PowerShell module that integrates Git and PowerShell by providing Git status summary information that can be displayed in the PowerShell prompt&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;引用元:&lt;a href=&quot;https://github.com/dahlbyk/posh-git&quot;&gt;https://github.com/dahlbyk/posh-git&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;posh-gitとは、PowerShellにgitのステータスを出せるモジュールである。ブランチ名が表示されるので、ヒューマンエラーの削減に期待できる。ブランチ名やアンステージドなファイルをtabキー補完してくれる機能も搭載。gitユーザ垂涎のモジュールだ。&lt;br&gt;
-私の実行環境はPowerShell 7.1.1。 posh-gitは6.xとあったが問題なく導入できた。&lt;/p&gt;
-&lt;h2&gt;PowerShellのプロファイルの場所&lt;/h2&gt;
+&lt;p&gt;posh-git とは、PowerShell に git のステータスを出せるモジュールである。ブランチ名が表示されるので、ヒューマンエラーの削減に期待できる。ブランチ名やアンステージドなファイルを tab キー補完してくれる機能も搭載。git ユーザ垂涎のモジュールだ。&lt;br&gt;
+私の実行環境は PowerShell 7.1.1。 posh-git は 6.x とあったが問題なく導入できた。&lt;/p&gt;
+&lt;h2&gt;PowerShell のプロファイルの場所&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$profile&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;D:\Documents\PowerShell\Microsoft\PowerShell_profile.ps1&lt;/code&gt;だった。君はどうだ？  &lt;/p&gt;
-&lt;h2&gt;Gitのパス確認&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;D:\Documents\PowerShell\Microsoft\PowerShell_profile.ps1&lt;/code&gt;だった。君はどうだ？&lt;/p&gt;
+&lt;h2&gt;Git のパス確認&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;gcm git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;posh-gitを導入&lt;/h2&gt;
-&lt;p&gt;READMEに従って、&lt;code class=&quot;language-text&quot;&gt;~/git&lt;/code&gt;の中に入れることにしました。&lt;/p&gt;
+&lt;h2&gt;posh-git を導入&lt;/h2&gt;
+&lt;p&gt;README に従って、&lt;code class=&quot;language-text&quot;&gt;~/git&lt;/code&gt;の中に入れることにしました。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt;
 &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; ~/git
 &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone git@github.com:dahlbyk/posh-git.git   &lt;span class=&quot;token comment&quot;&gt;# posh-gitをgit clone&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;プロファイルに追記する&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;code &lt;span class=&quot;token variable&quot;&gt;$profile&lt;/span&gt;       &lt;span class=&quot;token comment&quot;&gt;# VScodeでMicrosoft.PowerShell.ps1を編集する&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;vimでもemacでもnanoでも良いよ。
+&lt;p&gt;vim でも emac でも nano でも良いよ。
 エディタで以下の内容を追記する。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;Import-Module&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;~/git/posh-git/src/posh-git.psd1&apos;&lt;/span&gt;        &lt;span class=&quot;token comment&quot;&gt;# posh-gitを読み込ませる&lt;/span&gt;
 &lt;span class=&quot;token variable&quot;&gt;$GitPromptSettings&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;DefaultPromptBeforeSuffix&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Text = &lt;span class=&quot;token string&quot;&gt;&apos;`n&apos;&lt;/span&gt;    &lt;span class=&quot;token comment&quot;&gt;# ブランチ名の後、改行する&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -61,11 +61,11 @@ VScode だけ終了しても裏で生き残ってるせいかうまくいかな�
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;br&gt;
-表示がこうなってたら成功  &lt;/p&gt;
+表示がこうなってたら成功&lt;/p&gt;
 &lt;h2&gt;表示の意味&lt;/h2&gt;
 &lt;h3&gt;ローカル&lt;/h3&gt;
 &lt;p&gt;解説を見るより、手を動かして仕様を確認したほうが断然理解が早い。&lt;br&gt;
-空っぽのディレクトリに&lt;code class=&quot;language-text&quot;&gt;git init&lt;/code&gt;して適当なファイルを3つ作ると、以下のような表示が出る。
+空っぽのディレクトリに&lt;code class=&quot;language-text&quot;&gt;git init&lt;/code&gt;して適当なファイルを 3 つ作ると、以下のような表示が出る。
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -127,7 +127,7 @@ VScode だけ終了しても裏で生き残ってるせいかうまくいかな�
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;残り2つも&lt;code class=&quot;language-text&quot;&gt;git init&lt;/code&gt;すると、以下のような表示に変わる。
+&lt;p&gt;残り 2 つも&lt;code class=&quot;language-text&quot;&gt;git init&lt;/code&gt;すると、以下のような表示に変わる。
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -159,11 +159,11 @@ VScode だけ終了しても裏で生き残ってるせいかうまくいかな�
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;リモート&lt;/h3&gt;
-&lt;p&gt;githubでリポジトリを作る。  &lt;/p&gt;
+&lt;p&gt;github でリポジトリを作る。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;git remote add origin git@github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com:nozzlex3&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;posh&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;git_test&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;git     &lt;span class=&quot;token comment&quot;&gt;# リモートリポジトリを指定し、originと名付ける&lt;/span&gt;
 git push &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;u origin master   &lt;span class=&quot;token comment&quot;&gt;# プッシュ先をoriginのmasterブランチ&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;表示がこうなる。&lt;br&gt;
-≡はローカルブランチとリモートブランチが同一であることを表している。
+≡ はローカルブランチとリモートブランチが同一であることを表している。
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -225,46 +225,46 @@ git push &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;u origin mas
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;トラブルシュート:追加したファイル数とposh-gitの表示数が合わない、足りない&lt;/h2&gt;
+&lt;h2&gt;トラブルシュート:追加したファイル数と posh-git の表示数が合わない、足りない&lt;/h2&gt;
 &lt;h3&gt;対処法&lt;/h3&gt;
-&lt;p&gt;正しい表示なので問題ない。  &lt;/p&gt;
+&lt;p&gt;正しい表示なので問題ない。&lt;/p&gt;
 &lt;h3&gt;解説&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;posh-git&lt;/code&gt;の表示はおそらく、&lt;code class=&quot;language-text&quot;&gt;git status&lt;/code&gt;の結果を表示している。そのため、複数ファイルを追加していてもそれらが同一のディレクトリに追加されている場合、&lt;code class=&quot;language-text&quot;&gt;git add&lt;/code&gt;するのはそのディレクトリ1つで済む。まずは&lt;code class=&quot;language-text&quot;&gt;git status&lt;/code&gt;の出力と表示数を見比べてみよう。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ブログサービス所感]]></title><description><![CDATA[ブログを作る手段 Twitter Twitterをブログとして活用する方法がある。 煩雑な操作を必要とせず、無料で自分のページを作って文章を投稿できるといった利便性では最も優秀である。
-芸能人のTwitterをイメージすると分かりやすい。日記や単純な感想を述べるだけなら、14…]]></description><link>https://narazuke.github.io/blog_service_impression/</link><guid isPermaLink="false">https://narazuke.github.io/blog_service_impression/</guid><content:encoded>&lt;h2&gt;ブログを作る手段&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;posh-git&lt;/code&gt;の表示はおそらく、&lt;code class=&quot;language-text&quot;&gt;git status&lt;/code&gt;の結果を表示している。そのため、複数ファイルを追加していてもそれらが同一のディレクトリに追加されている場合、&lt;code class=&quot;language-text&quot;&gt;git add&lt;/code&gt;するのはそのディレクトリ 1 つで済む。まずは&lt;code class=&quot;language-text&quot;&gt;git status&lt;/code&gt;の出力と表示数を見比べてみよう。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ブログサービス所感]]></title><description><![CDATA[ブログを作る手段 Twitter Twitter をブログとして活用する方法がある。 煩雑な操作を必要とせず、無料で自分のページを作って文章を投稿できるといった利便性では最も優秀である。
+芸能人の Twitter…]]></description><link>https://narazuke.github.io/blog_service_impression/</link><guid isPermaLink="false">https://narazuke.github.io/blog_service_impression/</guid><content:encoded>&lt;h2&gt;ブログを作る手段&lt;/h2&gt;
 &lt;h3&gt;&lt;a href=&quot;https://twitter.com&quot;&gt;Twitter&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Twitterをブログとして活用する方法がある。&lt;br&gt;
+&lt;p&gt;Twitter をブログとして活用する方法がある。&lt;br&gt;
 煩雑な操作を必要とせず、無料で自分のページを作って文章を投稿できるといった利便性では最も優秀である。
-芸能人のTwitterをイメージすると分かりやすい。日記や単純な感想を述べるだけなら、140字の文と画像を4枚投稿できれば十分である。
-フォローすることで最新の投稿をタイムラインに表示できる点も優秀だ。この点はよくRSSリーダと比較される。RSSリーダが衰退した理由は、ソーシャルメディアがその役割を奪ってしまったためだと言われている。RSSリーダがWEBサイト側とユーザ側でそれぞれ設定する必要がある一方、ソーシャルメディアはその両方を同じ媒体で実現しているため、読者は簡単に更新情報を得ることが可能であり、WEBサイトを行き来する必要もない。
-シェア機能もTwitterの長所である。フォローしていないユーザにも最新の投稿を共有でき、拡散されることが見込める。&lt;br&gt;
-Twitterはニュースサイトやコミュニケーションツール、エッチな画像クローラなど多岐にわたる活用が見込める万能ツールである。現代的なブログとしての運用も選択肢として多いにあり得る。&lt;/p&gt;
+芸能人の Twitter をイメージすると分かりやすい。日記や単純な感想を述べるだけなら、140 字の文と画像を 4 枚投稿できれば十分である。
+フォローすることで最新の投稿をタイムラインに表示できる点も優秀だ。この点はよく RSS リーダと比較される。RSS リーダが衰退した理由は、ソーシャルメディアがその役割を奪ってしまったためだと言われている。RSS リーダが WEB サイト側とユーザ側でそれぞれ設定する必要がある一方、ソーシャルメディアはその両方を同じ媒体で実現しているため、読者は簡単に更新情報を得ることが可能であり、WEB サイトを行き来する必要もない。
+シェア機能も Twitter の長所である。フォローしていないユーザにも最新の投稿を共有でき、拡散されることが見込める。&lt;br&gt;
+Twitter はニュースサイトやコミュニケーションツール、エッチな画像クローラなど多岐にわたる活用が見込める万能ツールである。現代的なブログとしての運用も選択肢として多いにあり得る。&lt;/p&gt;
 &lt;h3&gt;&lt;a href=&quot;https://note.com&quot;&gt;note&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;noteはクリエイターが文章や画像、音声、動画を投稿して、ユーザーがそのコンテンツを楽しんで応援できるメディアプラットフォームです。だれもが創作を楽しんで続けられるよう、安心できる雰囲気や、多様性を大切にしています。&lt;/p&gt;
+&lt;p&gt;note はクリエイターが文章や画像、音声、動画を投稿して、ユーザーがそのコンテンツを楽しんで応援できるメディアプラットフォームです。だれもが創作を楽しんで続けられるよう、安心できる雰囲気や、多様性を大切にしています。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;引用元:&lt;a href=&quot;https://note.com/info/n/nea1b96233fbf&quot;&gt;noteの使い方、機能紹介&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;noteは無料で始められるブログサービスである。&lt;br&gt;
-htmlやcssによる文字装飾や画像の自由な配置などはできないが、清潔感のあるフォーマットなので、記事を執筆してそのまま公開する人には向いている。他の無料ブログサービスと決定的に異なるのが、広告が無い点である。noteはより予約投稿や独自ドメインを設定できる有料会員と、有料noteの売上のマージンから収益を得ているため、無料会員でも広告なしでブログが作成可能である。&lt;br&gt;
-有料noteについては、私が収益を目的としたブログ運営を目指していないので、特に触れない。情報商材ビジネスにはnote運営も手を焼いているように伺える。&lt;/p&gt;
+&lt;p&gt;引用元:&lt;a href=&quot;https://note.com/info/n/nea1b96233fbf&quot;&gt;note の使い方、機能紹介&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;note は無料で始められるブログサービスである。&lt;br&gt;
+html や css による文字装飾や画像の自由な配置などはできないが、清潔感のあるフォーマットなので、記事を執筆してそのまま公開する人には向いている。他の無料ブログサービスと決定的に異なるのが、広告が無い点である。note はより予約投稿や独自ドメインを設定できる有料会員と、有料 note の売上のマージンから収益を得ているため、無料会員でも広告なしでブログが作成可能である。&lt;br&gt;
+有料 note については、私が収益を目的としたブログ運営を目指していないので、特に触れない。情報商材ビジネスには note 運営も手を焼いているように伺える。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;一方で、「ノウハウの販売」そのものは、なかなか判断が難しいグレーゾーンです。「1日30分であなたも絶対に月収100万円」は高確率でアウトな一方で、「生産性の上がるフォトショップテク」はどうなのか？「実際に上場した人の起業論」は実現不可能な商法に分類できるのか？…といったものですね。これはもう個別に判断するしかありません。  &lt;/p&gt;
+&lt;p&gt;一方で、「ノウハウの販売」そのものは、なかなか判断が難しいグレーゾーンです。「1 日 30 分であなたも絶対に月収 100 万円」は高確率でアウトな一方で、「生産性の上がるフォトショップテク」はどうなのか？「実際に上場した人の起業論」は実現不可能な商法に分類できるのか？…といったものですね。これはもう個別に判断するしかありません。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;このバランスはとても難しいものです。noteの理念としては、「投稿物の多様性」も担保しなければいけませんが、同時に緩くしすぎると「健全性」が守れなくなりそうです。内容確認では、このバランスが常にせめぎあっています。&lt;/p&gt;
+&lt;p&gt;このバランスはとても難しいものです。note の理念としては、「投稿物の多様性」も担保しなければいけませんが、同時に緩くしすぎると「健全性」が守れなくなりそうです。内容確認では、このバランスが常にせめぎあっています。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;引用元:&lt;a href=&quot;https://note.com/fladdict/n/nf94f80fdad34?magazine_key=mdc2a0ebb5ee8&quot;&gt;noteにおける情報商材についての雑感&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;引用元:&lt;a href=&quot;https://note.com/fladdict/n/nf94f80fdad34?magazine_key=mdc2a0ebb5ee8&quot;&gt;note における情報商材についての雑感&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;&lt;a href=&quot;https://hatenablog.com&quot;&gt;はてなブログ&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;はてなブログは無料で運営できるブログサービスである。&lt;br&gt;
-noteは広告がなくてデザインが固定されている一方、はてなブログは広告が出るがサイトのデザインをカスタマイズすることが可能だ。もちろん、広告無しで独自ドメインの設定ができる有料プランも存在する。また、読者登録やはてなブロググループなどのはてなユーザ同士のシェア機能もあり、こういった点はTwitterと類似する。
-GoogleアドセンスやAmazonアフィリエイトの登録が可能な点は、noteとの決定的な差になる。一方規約も厳しいらしいので気になった人は自分で調べよう。&lt;/p&gt;
+note は広告がなくてデザインが固定されている一方、はてなブログは広告が出るがサイトのデザインをカスタマイズすることが可能だ。もちろん、広告無しで独自ドメインの設定ができる有料プランも存在する。また、読者登録やはてなブロググループなどのはてなユーザ同士のシェア機能もあり、こういった点は Twitter と類似する。
+Google アドセンスや Amazon アフィリエイトの登録が可能な点は、note との決定的な差になる。一方規約も厳しいらしいので気になった人は自分で調べよう。&lt;/p&gt;
 &lt;h3&gt;&lt;a href=&quot;https://qiita.com&quot;&gt;Qiita&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Qiitaはエンジニア向けの知識共有サービスである。ブログサービスではないので夢々お忘れなきように。&lt;br&gt;
-技術ブログを主目的とするなら選択肢として最適だと考える。このサイトにはプログラマやエンジニアが多数おり、ポッと出でも良質な記事はしっかり評価されるし、誤りや不明瞭な点にはやさしく指摘コメントが入るはすだ。ただ、QiitaはSEOがきちんとしていて、関連する情報を検索すると上位にくることが非常に多い。公開する情報はできるだけ正確にしないと、誤った情報を流布することに繋がるため、注意が必要だ。僕もQiitaは情報源として頻繁に利用するため、低品質な記事はできれば見たくないし、自分が投稿するのもはばかれる。&lt;br&gt;
-Qiitaのちょっとうれしい点はmarkdown記法が使用できることだ。Qiitaの記事のURLの末尾に&lt;code class=&quot;language-text&quot;&gt;.md&lt;/code&gt;と付けて確認してみよう。&lt;/p&gt;
+&lt;p&gt;Qiita はエンジニア向けの知識共有サービスである。ブログサービスではないので夢々お忘れなきように。&lt;br&gt;
+技術ブログを主目的とするなら選択肢として最適だと考える。このサイトにはプログラマやエンジニアが多数おり、ポッと出でも良質な記事はしっかり評価されるし、誤りや不明瞭な点にはやさしく指摘コメントが入るはすだ。ただ、Qiita は SEO がきちんとしていて、関連する情報を検索すると上位にくることが非常に多い。公開する情報はできるだけ正確にしないと、誤った情報を流布することに繋がるため、注意が必要だ。僕も Qiita は情報源として頻繁に利用するため、低品質な記事はできれば見たくないし、自分が投稿するのもはばかれる。&lt;br&gt;
+Qiita のちょっとうれしい点は markdown 記法が使用できることだ。Qiita の記事の URL の末尾に&lt;code class=&quot;language-text&quot;&gt;.md&lt;/code&gt;と付けて確認してみよう。&lt;/p&gt;
 &lt;h2&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;既存のプラットフォームを利用したブログサービスについての考察をした。
 共通して言えるのは、規約を遵守すれば無料で十分ブログができるということだ。
-逆に言えば、運営者にとって気に入らない投稿は消されてしまうという点も見過ごせない。&lt;a href=&quot;https://www.bbc.com/japanese/55583622&quot;&gt;トランプのTwitterアカウントが削除&lt;/a&gt;されたり、&lt;a href=&quot;https://www.itmedia.co.jp/news/articles/1912/26/news121.html&quot;&gt;さくらのレンタルサーバの批判するQiitaの投稿が非公開&lt;/a&gt;になったりする。&lt;a href=&quot;https://asia.nikkei.com/Spotlight/Myanmar-Coup/Myanmar-military-blocks-Facebook-as-activists-call-for-protests&quot;&gt;ミャンマー軍事政権がFacebookの通信を遮断した&lt;/a&gt;のも記憶に新しい。インターネットの自由は、誰かに作られた自由になっていないだろうか。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[日記]]></title><description><![CDATA[…]]></description><link>https://narazuke.github.io/kon20210204/</link><guid isPermaLink="false">https://narazuke.github.io/kon20210204/</guid><content:encoded>&lt;p&gt;最後の方支離滅裂になってます。&lt;/p&gt;
+逆に言えば、運営者にとって気に入らない投稿は消されてしまうという点も見過ごせない。&lt;a href=&quot;https://www.bbc.com/japanese/55583622&quot;&gt;トランプの Twitter アカウントが削除&lt;/a&gt;されたり、&lt;a href=&quot;https://www.itmedia.co.jp/news/articles/1912/26/news121.html&quot;&gt;さくらのレンタルサーバの批判する Qiita の投稿が非公開&lt;/a&gt;になったりする。&lt;a href=&quot;https://asia.nikkei.com/Spotlight/Myanmar-Coup/Myanmar-military-blocks-Facebook-as-activists-call-for-protests&quot;&gt;ミャンマー軍事政権が Facebook の通信を遮断した&lt;/a&gt;のも記憶に新しい。インターネットの自由は、誰かに作られた自由になっていないだろうか。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[日記]]></title><description><![CDATA[…]]></description><link>https://narazuke.github.io/kon20210204/</link><guid isPermaLink="false">https://narazuke.github.io/kon20210204/</guid><content:encoded>&lt;p&gt;最後の方支離滅裂になってます。&lt;/p&gt;
 &lt;h3&gt;自分が幸せになるには&lt;/h3&gt;
 &lt;p&gt;昨日の日記では、幸せになるためには閾値を下げ、領域を広げ、重みが高いものを優先すればよいと考えた。ここでは具体的に重みが高いものが何であるかを考える。&lt;/p&gt;
 &lt;h3&gt;生きていて何が楽しいか&lt;/h3&gt;
@@ -299,22 +299,22 @@ Qiitaのちょっとうれしい点はmarkdown記法が使用できることだ�
 &lt;p&gt;自分の生活をより便利なものにしたい。&lt;/p&gt;
 &lt;h3&gt;志望理由&lt;/h3&gt;
 &lt;p&gt;自分が役に立ち感謝されることに幸せを感じるので、できるだけ多くの人に役に立つようなものを作りたい。という口上でES書こうかと思う。そうなるとメーカーとかになるんかね。&lt;/p&gt;
-&lt;p&gt;最後適当になったからまた編集すると思う。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[pyenvとvenvで仮想環境構築 ラズパイ編]]></title><description><![CDATA[pyenvとvenvの違い pyenvはpythonのバージョンの使い分け。 (e.g. python 2.7.13 と python 3.9.0) venvはpythonのパッケージの使い分け。  (e.g. numpyを使う環境 と numpyいらない環境) pyenv…]]></description><link>https://narazuke.github.io/pyenv-venv-virtual-environment/</link><guid isPermaLink="false">https://narazuke.github.io/pyenv-venv-virtual-environment/</guid><content:encoded>&lt;h2&gt;pyenvとvenvの違い&lt;/h2&gt;
-&lt;p&gt;pyenvはpythonのバージョンの使い分け。 (e.g. python 2.7.13 と python 3.9.0)&lt;br&gt;
-venvはpythonのパッケージの使い分け。  (e.g. numpyを使う環境 と numpyいらない環境)&lt;/p&gt;
-&lt;h2&gt;pyenvの導入&lt;/h2&gt;
-&lt;h3&gt;pythonのバージョン確認&lt;/h3&gt;
+&lt;p&gt;最後適当になったからまた編集すると思う。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[pyenvとvenvで仮想環境構築 ラズパイ編]]></title><description><![CDATA[pyenv と venv の違い pyenv は python のバージョンの使い分け。 (e.g. python 2.7.13 と python 3.9.0) venv は python のパッケージの使い分け。 (e.g. numpy を使う環境 と numpy…]]></description><link>https://narazuke.github.io/pyenv-venv-virtual-environment/</link><guid isPermaLink="false">https://narazuke.github.io/pyenv-venv-virtual-environment/</guid><content:encoded>&lt;h2&gt;pyenv と venv の違い&lt;/h2&gt;
+&lt;p&gt;pyenv は python のバージョンの使い分け。 (e.g. python 2.7.13 と python 3.9.0)&lt;br&gt;
+venv は python のパッケージの使い分け。 (e.g. numpy を使う環境 と numpy いらない環境)&lt;/p&gt;
+&lt;h2&gt;pyenv の導入&lt;/h2&gt;
+&lt;h3&gt;python のバージョン確認&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python -V&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;僕の場合、2.7.13でした。これからpyenvでpython3.x系と自由に切り替えられるようにしよう。&lt;/p&gt;
+&lt;p&gt;僕の場合、2.7.13 でした。これから pyenv で python3.x 系と自由に切り替えられるようにしよう。&lt;/p&gt;
 &lt;h3&gt;導入前に必要なパッケージの導入&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; build-essential libbz2-dev libdb-dev libreadline-dev libffi-dev libgdbm-dev liblzma-dev libncursesw5-dev libsqlite3-dev libssl-dev zlib1g-dev uuid-dev tk-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;正直どれがなんだか分からないけど、とにかく&lt;code class=&quot;language-text&quot;&gt;libffi-dev&lt;/code&gt;は忘れずにインストールしよう。&lt;br&gt;これが無いとvenvの作業でエラーを吐きます。&lt;/p&gt;
-&lt;h3&gt;pyenvのインストール&lt;/h3&gt;
+&lt;p&gt;正直どれがなんだか分からないけど、とにかく&lt;code class=&quot;language-text&quot;&gt;libffi-dev&lt;/code&gt;は忘れずにインストールしよう。&lt;br&gt;これが無いと venv の作業でエラーを吐きます。&lt;/p&gt;
+&lt;h3&gt;pyenv のインストール&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone https://github.com/pyenv/pyenv.git ~/.pyenv
 pyenv versions &lt;span class=&quot;token comment&quot;&gt;# インストール可能なpythonのバージョンの確認&lt;/span&gt;
 pyenv &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3.9&lt;/span&gt;.0  &lt;span class=&quot;token comment&quot;&gt;# 3.9.0が最新(2020/11/09)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;[注意] pyenv install 3.9.0 はめちゃめちゃ時間かかるから焦らないように&lt;/strong&gt;&lt;/p&gt;
-&lt;h3&gt;pyenvのPATHを通す&lt;/h3&gt;
+&lt;h3&gt;pyenv の PATH を通す&lt;/h3&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.bash_profile&lt;/code&gt;に以下の内容を追記しよう&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;PYENV_ROOT&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token environment constant&quot;&gt;$HOME&lt;/span&gt;/.pyenv&quot;&lt;/span&gt;
 &lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$PYENV_ROOT&lt;/span&gt;/bin:&lt;span class=&quot;token environment constant&quot;&gt;$PATH&lt;/span&gt;&quot;&lt;/span&gt;
@@ -323,13 +323,13 @@ pyenv &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span
       &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt; ~/.bashrc
 &lt;span class=&quot;token keyword&quot;&gt;fi&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.bash_profile&lt;/code&gt;はログイン時に実行。&lt;br&gt;
-&lt;code class=&quot;language-text&quot;&gt;.bashrc&lt;/code&gt;はbashが開かれる度に実行。&lt;/p&gt;
-&lt;p&gt;最後のif文で&lt;code class=&quot;language-text&quot;&gt;bashrc&lt;/code&gt;を読み込ませる。これが無いと、sshしたときにbashの色が無くなる。&lt;br&gt;
-bashの配色は&lt;code class=&quot;language-text&quot;&gt;bashrc&lt;/code&gt;に担われてるのだ。&lt;/p&gt;
-&lt;p&gt;参考:&lt;a href=&quot;https://www.suzu6.net/posts/31/&quot;&gt;ラズパイのセットアップからpyenvを使ってPython3.6環境を構築するまで&lt;/a&gt;&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;.bashrc&lt;/code&gt;は bash が開かれる度に実行。&lt;/p&gt;
+&lt;p&gt;最後の if 文で&lt;code class=&quot;language-text&quot;&gt;bashrc&lt;/code&gt;を読み込ませる。これが無いと、ssh したときに bash の色が無くなる。&lt;br&gt;
+bash の配色は&lt;code class=&quot;language-text&quot;&gt;bashrc&lt;/code&gt;に担われてるのだ。&lt;/p&gt;
+&lt;p&gt;参考:&lt;a href=&quot;https://www.suzu6.net/posts/31/&quot;&gt;ラズパイのセットアップから pyenv を使って Python3.6 環境を構築するまで&lt;/a&gt;&lt;br&gt;
 参考:&lt;a href=&quot;https://qiita.com/magicant/items/d3bb7ea1192e63fba850&quot;&gt;本当に正しい .bashrc と .bash_profile の使ひ分け&lt;/a&gt;&lt;br&gt;
-参考:&lt;a href=&quot;https://qiita.com/upnt/items/022c5fc916d8a289e326&quot;&gt;Ubuntuで色がなくなる理由と改善策&lt;/a&gt;  &lt;/p&gt;
-&lt;h3&gt;pyenvで2.xと3.xを行き来&lt;/h3&gt;
+参考:&lt;a href=&quot;https://qiita.com/upnt/items/022c5fc916d8a289e326&quot;&gt;Ubuntu で色がなくなる理由と改善策&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;pyenv で 2.x と 3.x を行き来&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python -V&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;python 2.7.13&lt;/code&gt;と出るはず&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;pyenv global &lt;span class=&quot;token number&quot;&gt;3.9&lt;/span&gt;.0
@@ -337,39 +337,39 @@ python -V&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;python 3.9.0&lt;/code&gt;と出るはず&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;pyenv global system&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;python 2.7.13&lt;/code&gt;と出るはず&lt;/p&gt;
-&lt;p&gt;python2.xと3.xが混在してるとき、python3.xを使いたいときはpython3 とかpip3とか書く必要があった。&lt;br&gt;
-pyenvのおかげで、pythonと打つだけでpython3系が動くようになった。&lt;/p&gt;
-&lt;h2&gt;venvの導入&lt;/h2&gt;
-&lt;h3&gt;venvのインストール&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;venvはインストールする必要がない&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;venvはpython3.3から標準機能になったため、pyenvで3.9.0を導入しているなら必要がない。&lt;/p&gt;
-&lt;h3&gt;venvの仮想環境の作り方&lt;/h3&gt;
+&lt;p&gt;python2.x と 3.x が混在してるとき、python3.x を使いたいときは python3 とか pip3 とか書く必要があった。&lt;br&gt;
+pyenv のおかげで、python と打つだけで python3 系が動くようになった。&lt;/p&gt;
+&lt;h2&gt;venv の導入&lt;/h2&gt;
+&lt;h3&gt;venv のインストール&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;venv はインストールする必要がない&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;venv は python3.3 から標準機能になったため、pyenv で 3.9.0 を導入しているなら必要がない。&lt;/p&gt;
+&lt;h3&gt;venv の仮想環境の作り方&lt;/h3&gt;
 &lt;p&gt;仮想環境はプロジェクトごとに作られるから、まず作業したいディレクトリを作成して移動しよう。&lt;br&gt;
 移動したら次のコマンドを打つ。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python -m venv .venv &lt;span class=&quot;token comment&quot;&gt;# [.venv]は適当なフォルダ名&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;これもちょっと時間がかかる。&lt;br&gt;
-仮想環境のフォルダに.venvと書くのは慣習的なもの。&lt;br&gt;
-&lt;code class=&quot;language-text&quot;&gt;myenv&lt;/code&gt;とかでもいいよ。  &lt;/p&gt;
+仮想環境のフォルダに.venv と書くのは慣習的なもの。&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;myenv&lt;/code&gt;とかでもいいよ。&lt;/p&gt;
 &lt;h3&gt;仮想環境の実行&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;source&lt;/span&gt; .venv/bin/activate&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;今まで &lt;code class=&quot;language-text&quot;&gt;pi@raspberrypi&lt;/code&gt; だったやつが、&lt;code class=&quot;language-text&quot;&gt;(.venv) pi@raspberrypi&lt;/code&gt; になってたら成功。&lt;/p&gt;
-&lt;h3&gt;venv環境下でのモジュールのインストール&lt;/h3&gt;
+&lt;h3&gt;venv 環境下でのモジュールのインストール&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;python -m pip &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; numpy   &lt;span class=&quot;token comment&quot;&gt;#numpyのインストール&lt;/span&gt;
 pip list    &lt;span class=&quot;token comment&quot;&gt;#インストールされているモジュールの表示&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;numpyがリストに加わってるはず。&lt;/p&gt;
+&lt;p&gt;numpy がリストに加わってるはず。&lt;/p&gt;
 &lt;h3&gt;仮想環境からの離脱&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;deactivate   &lt;span class=&quot;token comment&quot;&gt;# 仮想環境からの離脱&lt;/span&gt;
 pip list&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;numpyがリストに&lt;strong&gt;無いはず。&lt;/strong&gt;&lt;br&gt;
-それもそのはず、numpyは仮想環境.venvで導入したパッケージだからラズパイのpythonパッケージには加わっていないのだ。&lt;/p&gt;
-&lt;h3&gt;トラブルシュート:ModuleNotFoundError :No module named ‘_ctypes’&lt;/h3&gt;
-&lt;p&gt;numpyをインストールしてる途中で&lt;code class=&quot;language-text&quot;&gt;&amp;quot;ModuleNotFoundError :No module named &amp;#39;_ctypes&amp;#39;&lt;/code&gt;と出ることがあった。    &lt;code class=&quot;language-text&quot;&gt;libffi-dev&lt;/code&gt;が無いと出るエラーらしい。しかし、私の場合、導入してもエラーが消えなかった。あれこれ調べたら、pyenv導入前にlibffi-devがインストールされていないと駄目らしいと判明。&lt;/p&gt;
-&lt;p&gt;参考:&lt;a href=&quot;https://qiita.com/mynkit/items/f8a1a90b99efef4a08a3&quot;&gt;pipenvのinstall時に、No module named ‘_ctypes’が発生する&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;numpy がリストに&lt;strong&gt;無いはず。&lt;/strong&gt;&lt;br&gt;
+それもそのはず、numpy は仮想環境.venv で導入したパッケージだからラズパイの python パッケージには加わっていないのだ。&lt;/p&gt;
+&lt;h3&gt;トラブルシュート:ModuleNotFoundError :No module named ’_ctypes’&lt;/h3&gt;
+&lt;p&gt;numpy をインストールしてる途中で&lt;code class=&quot;language-text&quot;&gt;&amp;quot;ModuleNotFoundError :No module named &amp;#39;_ctypes&amp;#39;&lt;/code&gt;と出ることがあった。 &lt;code class=&quot;language-text&quot;&gt;libffi-dev&lt;/code&gt;が無いと出るエラーらしい。しかし、私の場合、導入してもエラーが消えなかった。あれこれ調べたら、pyenv 導入前に libffi-dev がインストールされていないと駄目らしいと判明。&lt;/p&gt;
+&lt;p&gt;参考:&lt;a href=&quot;https://qiita.com/mynkit/items/f8a1a90b99efef4a08a3&quot;&gt;pipenv の install 時に、No module named ’_ctypes’が発生する&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;pyenv uninstall &lt;span class=&quot;token number&quot;&gt;3.9&lt;/span&gt;.0
 &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; libffi-dev
 pyenv &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3.9&lt;/span&gt;.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;このあとでnumpyの導入を試してみよう。きっとうまくいく。&lt;/p&gt;
-&lt;p&gt;参考:&lt;a href=&quot;https://hibiki-press.tech/python/venv/4567&quot;&gt;【Python】venvを使った仮想環境の構築方法&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[日記]]></title><description><![CDATA[…]]></description><link>https://narazuke.github.io/kon20210203/</link><guid isPermaLink="false">https://narazuke.github.io/kon20210203/</guid><content:encoded>&lt;h3&gt;自分はなぜ生きるのか&lt;/h3&gt;
+&lt;p&gt;このあとで numpy の導入を試してみよう。きっとうまくいく。&lt;/p&gt;
+&lt;p&gt;参考:&lt;a href=&quot;https://hibiki-press.tech/python/venv/4567&quot;&gt;【Python】venv を使った仮想環境の構築方法&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[日記]]></title><description><![CDATA[…]]></description><link>https://narazuke.github.io/kon20210203/</link><guid isPermaLink="false">https://narazuke.github.io/kon20210203/</guid><content:encoded>&lt;h3&gt;自分はなぜ生きるのか&lt;/h3&gt;
 &lt;p&gt;今日シャワーを浴びている間に自分はなぜ生きるのだろうかと考えた。
 そこでの思考とその続きをまとめる。&lt;/p&gt;
 &lt;h3&gt;生きたいという欲求について&lt;/h3&gt;
@@ -669,21 +669,21 @@ pyenv &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span
 &lt;p&gt;imageタグ追加&lt;/p&gt;
 &lt;p&gt;footerにauthor追加&lt;/p&gt;
 &lt;p&gt;createdにソート&lt;/p&gt;
-&lt;h3&gt;焼肉食べたい.&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[NARADUKE新機能候補]]></title><description><![CDATA[将来的に加えたい機能 必要そう 簡単そう 筆者名 (2/1 k完了) タグ カテゴリ --- 日記、哲学、メモ frontmatterの属性詳細 (2/2 k完了) 難しそう 画像のcomponent (imageタグの作成) (2/1 k…]]></description><link>https://narazuke.github.io/narazuke-new-feature-candidates/</link><guid isPermaLink="false">https://narazuke.github.io/narazuke-new-feature-candidates/</guid><content:encoded>&lt;h1&gt;将来的に加えたい機能&lt;/h1&gt;
+&lt;h3&gt;焼肉食べたい.&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[NARADUKE新機能候補]]></title><description><![CDATA[将来的に加えたい機能 必要そう 簡単そう 筆者名 (2/1 k 完了) タグ カテゴリ --- 日記、哲学、メモ frontmatter の属性詳細 (2/2 k 完了) 難しそう 画像の component (image タグの作成) (2/1 k…]]></description><link>https://narazuke.github.io/narazuke-new-feature-candidates/</link><guid isPermaLink="false">https://narazuke.github.io/narazuke-new-feature-candidates/</guid><content:encoded>&lt;h1&gt;将来的に加えたい機能&lt;/h1&gt;
 &lt;h2&gt;必要そう&lt;/h2&gt;
 &lt;h3&gt;簡単そう&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;del&gt;筆者名&lt;/del&gt; (2/1 k完了)&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;筆者名&lt;/del&gt; (2/1 k 完了)&lt;/li&gt;
 &lt;li&gt;タグ&lt;/li&gt;
 &lt;li&gt;カテゴリ --- 日記、哲学、メモ&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;frontmatterの属性詳細 (2/2 k完了)&lt;/p&gt;
+&lt;li&gt;frontmatter の属性詳細 (2/2 k 完了)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3&gt;難しそう&lt;/h3&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;画像のcomponent (imageタグの作成)&lt;/del&gt; (2/1 k完了)&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;画像の component (image タグの作成)&lt;/del&gt; (2/1 k 完了)&lt;/li&gt;
 &lt;li&gt;ページ機能&lt;/li&gt;
 &lt;li&gt;記事サムネイル&lt;/li&gt;
-&lt;li&gt;最新記事に🆕ってつける&lt;/li&gt;
+&lt;li&gt;最新記事に 🆕 ってつける&lt;/li&gt;
 &lt;li&gt;カテゴリごとにページ分け&lt;/li&gt;
 &lt;li&gt;タグ検索機能&lt;/li&gt;
 &lt;li&gt;関連記事表示 --- 同カテゴリか同タグのランダム記事表示&lt;/li&gt;
@@ -692,12 +692,12 @@ pyenv &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span
 &lt;ul&gt;
 &lt;li&gt;カレンダー&lt;/li&gt;
 &lt;li&gt;シェア機能&lt;/li&gt;
-&lt;li&gt;word検索&lt;/li&gt;
+&lt;li&gt;word 検索&lt;/li&gt;
 &lt;li&gt;人気記事表示&lt;/li&gt;
-&lt;li&gt;PC表示対応 2段組みなど&lt;/li&gt;
+&lt;li&gt;PC 表示対応 2 段組みなど&lt;/li&gt;
 &lt;li&gt;コメント機能&lt;/li&gt;
 &lt;li&gt;コメント返信機能&lt;/li&gt;
-&lt;li&gt;ハンバーガーメニュー🍔&lt;/li&gt;
+&lt;li&gt;ハンバーガーメニュー 🍔&lt;/li&gt;
 &lt;li&gt;プライバシーポリシーのページ&lt;/li&gt;
 &lt;li&gt;今日の名言&lt;/li&gt;
 &lt;li&gt;今日のレシピ&lt;/li&gt;
@@ -710,62 +710,62 @@ pyenv &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span
 &lt;li&gt;広告&lt;/li&gt;
 &lt;li&gt;キリ番&lt;/li&gt;
 &lt;li&gt;BGM&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[gatsby環境設定]]></title><description><![CDATA[Windows編 nvm-win導入 nodeがもう入ってるという人は読み飛ばしていい。 まず、nvmをインストールする。
-nodeのバージョンを複数管理できて便利。 nvm-windows にアクセスして、をダウンロードする。
-2021/01/3…]]></description><link>https://narazuke.github.io/gatsby-environment-settings/</link><guid isPermaLink="false">https://narazuke.github.io/gatsby-environment-settings/</guid><content:encoded>&lt;h1&gt;Windows編&lt;/h1&gt;
-&lt;h2&gt;nvm-win導入&lt;/h2&gt;
-&lt;p&gt;nodeがもう入ってるという人は読み飛ばしていい。&lt;br&gt;
-まず、nvmをインストールする。
-nodeのバージョンを複数管理できて便利。&lt;br&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[gatsby環境設定]]></title><description><![CDATA[Windows 編 nvm-win 導入 node がもう入ってるという人は読み飛ばしていい。 まず、nvm をインストールする。
+node のバージョンを複数管理できて便利。 nvm-windows にアクセスして、をダウンロードする。
+2021/01/3…]]></description><link>https://narazuke.github.io/gatsby-environment-settings/</link><guid isPermaLink="false">https://narazuke.github.io/gatsby-environment-settings/</guid><content:encoded>&lt;h1&gt;Windows 編&lt;/h1&gt;
+&lt;h2&gt;nvm-win 導入&lt;/h2&gt;
+&lt;p&gt;node がもう入ってるという人は読み飛ばしていい。&lt;br&gt;
+まず、nvm をインストールする。
+node のバージョンを複数管理できて便利。&lt;br&gt;
 &lt;a href=&quot;https://github.com/coreybutler/nvm-windows/releases&quot;&gt;nvm-windows&lt;/a&gt; にアクセスして、&lt;code class=&quot;language-text&quot;&gt;nvm-setup.zip&lt;/code&gt;をダウンロードする。
-2021/01/31時点での最新版は&lt;code class=&quot;language-text&quot;&gt;1.1.7&lt;/code&gt;  &lt;/p&gt;
+2021/01/31 時点での最新版は&lt;code class=&quot;language-text&quot;&gt;1.1.7&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;nvm-setup.exe&lt;/code&gt;を起動して、ウィザードに従う。
-抱き合わせの怪しいソフトは無いので安心。  &lt;/p&gt;
-&lt;p&gt;Finishedが出たらコマンドプロンプトかPowershellを開く。&lt;br&gt;
-&lt;code class=&quot;language-text&quot;&gt;nvm version&lt;/code&gt;と入力して自分がインストールしたnvmのバージョンが出たら成功。  &lt;/p&gt;
+抱き合わせの怪しいソフトは無いので安心。&lt;/p&gt;
+&lt;p&gt;Finished が出たらコマンドプロンプトか Powershell を開く。&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;nvm version&lt;/code&gt;と入力して自分がインストールした nvm のバージョンが出たら成功。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; nvm version           &lt;span class=&quot;token comment&quot;&gt;# nvmのバージョン表示&lt;/span&gt;
 1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;7&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;nodeをインストール&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;nvm list available&lt;/code&gt;でインストールできるnodeを吟味しよう。&lt;br&gt;
-最新版だとgatsbyが対応していない可能性もあるので、LTSにあるバージョンが盤石に思える。&lt;br&gt;
+&lt;h2&gt;node をインストール&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;nvm list available&lt;/code&gt;でインストールできる node を吟味しよう。&lt;br&gt;
+最新版だと gatsby が対応していない可能性もあるので、LTS にあるバージョンが盤石に思える。&lt;br&gt;
 選んだら、&lt;code class=&quot;language-text&quot;&gt;nvm install x.y.z&lt;/code&gt;でインストールする。&lt;br&gt;
-自分の環境ではv14.5.0をインストールした。&lt;/p&gt;
+自分の環境では v14.5.0 をインストールした。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; nvm list available    &lt;span class=&quot;token comment&quot;&gt;# インストール可能なnodeのversion表示&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; nvm install x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;z     &lt;span class=&quot;token comment&quot;&gt;# バージョンx.y.zをインストールする&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;終わったら&lt;code class=&quot;language-text&quot;&gt;nvm use x.y.x&lt;/code&gt;でバージョンを選択する。
-&lt;code class=&quot;language-text&quot;&gt;node --version&lt;/code&gt;で`x.y.zと表示されたら成功。&lt;/p&gt;
+&lt;code class=&quot;language-text&quot;&gt;node --version&lt;/code&gt;で`x.y.z と表示されたら成功。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; nvm use x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;z         &lt;span class=&quot;token comment&quot;&gt;# nodeのバージョン選択&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; node &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;version        &lt;span class=&quot;token comment&quot;&gt;# nodeのバージョンを表示&lt;/span&gt;
 x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;z&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;参考: &lt;a href=&quot;https://laboradian.com/how-to-use-nvm/&quot;&gt;Node.js のバージョン管理ツール nvm の使い方&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;gatsbyをインストール&lt;/h2&gt;
-&lt;h3&gt;npmを用いたインストール&lt;/h3&gt;
+&lt;h2&gt;gatsby をインストール&lt;/h2&gt;
+&lt;h3&gt;npm を用いたインストール&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; npm install &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;g gatsby&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cli&lt;/span&gt;     &lt;span class=&quot;token comment&quot;&gt;# gatsbyをインストール&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; npm install &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;g yarn     &lt;span class=&quot;token comment&quot;&gt;# gatsbyをインストール&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;ちょっとここから、本筋とは無関係なnpmに関する全般的な備忘録が続く。&lt;/p&gt;
-&lt;h3&gt;npmとは？&lt;/h3&gt;
+&lt;p&gt;ちょっとここから、本筋とは無関係な npm に関する全般的な備忘録が続く。&lt;/p&gt;
+&lt;h3&gt;npm とは？&lt;/h3&gt;
 &lt;p&gt;ここらへんは自分も曖昧なので詳しい人の解説を見よう。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Node.js のパッケージを管理するための CLI であり、パッケージを作成したり、NPM 上のパッケージをローカルにインストールしたり、自分のパッケージを NPM に公開したりと、Node.js の開発に欠かせないツールである。Node.js をインストールすると自動的に npm もインストールされる。  &lt;/p&gt;
+&lt;p&gt;Node.js のパッケージを管理するための CLI であり、パッケージを作成したり、NPM 上のパッケージをローカルにインストールしたり、自分のパッケージを NPM に公開したりと、Node.js の開発に欠かせないツールである。Node.js をインストールすると自動的に npm もインストールされる。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;引用元: &lt;a href=&quot;https://qiita.com/righteous/items/e5448cb2e7e11ab7d477&quot;&gt;【初心者向け】NPMとpackage.jsonを概念的に理解する&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;pip&lt;/code&gt;が&lt;a href=&quot;https://pypi.org&quot;&gt;pypi.org&lt;/a&gt;で管理されてるのと同様に、&lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt;は&lt;a href=&quot;https://www.npmjs.com&quot;&gt;NPM&lt;/a&gt;で管理されてると考えて良い。  &lt;/p&gt;
-&lt;h3&gt;npmのインストール先&lt;/h3&gt;
+&lt;p&gt;引用元: &lt;a href=&quot;https://qiita.com/righteous/items/e5448cb2e7e11ab7d477&quot;&gt;【初心者向け】NPM と package.json を概念的に理解する&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;pip&lt;/code&gt;が&lt;a href=&quot;https://pypi.org&quot;&gt;pypi.org&lt;/a&gt;で管理されてるのと同様に、&lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt;は&lt;a href=&quot;https://www.npmjs.com&quot;&gt;NPM&lt;/a&gt;で管理されてると考えて良い。&lt;/p&gt;
+&lt;h3&gt;npm のインストール先&lt;/h3&gt;
 &lt;h4&gt;グローバルインストール&lt;/h4&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt;のインストール時、&lt;code class=&quot;language-text&quot;&gt;-g&lt;/code&gt;オプションを付けるとグローバルインストールとなり、どのディレクトリからも使用可能なコマンドとなる。&lt;br&gt;
 グローバルインストールの場合、モジュールは&lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt;と同じ階層のディレクトリにインストールされる。&lt;br&gt;
 &lt;code class=&quot;language-text&quot;&gt;nvm-windows&lt;/code&gt;で&lt;code class=&quot;language-text&quot;&gt;node&lt;/code&gt;を導入した方は、&lt;code class=&quot;language-text&quot;&gt;C:\Users\[username]\AppData\Roaming\nvm\v14.5.0\node_modules&lt;/code&gt;を参照すれば、&lt;code class=&quot;language-text&quot;&gt;gatsby-cli&lt;/code&gt;ディレクトリが確認できるはず。&lt;/p&gt;
 &lt;h4&gt;ローカルインストール&lt;/h4&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;-g&lt;/code&gt;を&lt;strong&gt;付けない&lt;/strong&gt;と、カレントディレクトリの&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt;にインストールされる。&lt;/p&gt;
-&lt;h2&gt;gatsby構築環境を作る&lt;/h2&gt;
+&lt;h2&gt;gatsby 構築環境を作る&lt;/h2&gt;
 &lt;p&gt;サイトのフォルダを置く場所まで移動しよう。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; gatsby new &lt;span class=&quot;token namespace&quot;&gt;[username]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;io https:&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;gatsbyjs&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;gatsby&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;starter&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;blog       &lt;span class=&quot;token comment&quot;&gt;# gatsby謹製スターターキットをローカル環境に作る&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;[username]を自分のgithubのアカウント名にしておくと、Github Pagesで連携できる。  &lt;/p&gt;
-&lt;p&gt;gatsby-starter-blog以外にも素敵なスターターがたくさんある。  &lt;/p&gt;
-&lt;p&gt;なお、gitがWindowsに入ってない場合、このコマンドに失敗する。
+&lt;p&gt;[username]を自分の github のアカウント名にしておくと、Github Pages で連携できる。&lt;/p&gt;
+&lt;p&gt;gatsby-starter-blog 以外にも素敵なスターターがたくさんある。&lt;/p&gt;
+&lt;p&gt;なお、git が Windows に入ってない場合、このコマンドに失敗する。
 入れよう。&lt;br&gt;
-&lt;a href=&quot;https://qiita.com/kamishi/items/5a3eed06c122f28fe2ea&quot;&gt;自宅PCにGit for Windowsをインストールする手順&lt;/a&gt; というqiitaの記事が分かりやすかった。  &lt;/p&gt;
-&lt;h2&gt;gatsbyをローカル環境で動かす&lt;/h2&gt;
+&lt;a href=&quot;https://qiita.com/kamishi/items/5a3eed06c122f28fe2ea&quot;&gt;自宅 PC に Git for Windows をインストールする手順&lt;/a&gt; という qiita の記事が分かりやすかった。&lt;/p&gt;
+&lt;h2&gt;gatsby をローカル環境で動かす&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby develop&lt;/code&gt;でサーバを起動&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; gatsby develop       &lt;span class=&quot;token comment&quot;&gt;# ローカルのサーバ起動&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;ブラウザで&lt;code class=&quot;language-text&quot;&gt;https://localhost:8000&lt;/code&gt;にアクセスすると、スターターブログが公開されているはず。ひとまずおめでとう！
@@ -799,21 +799,21 @@ x&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y&lt;span class=&
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;Github Pagesを使って公開する&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt;を導入してDeployする&lt;/p&gt;
+&lt;h2&gt;Github Pages を使って公開する&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt;を導入して Deploy する&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; yarn add &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;dev gh&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;pages   &lt;span class=&quot;token comment&quot;&gt;# package.jsonのdevDependenciesにgh-pagesをインストール&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; yarn run deploy           &lt;span class=&quot;token comment&quot;&gt;# gh-pagesを使って[username].github.ioにdeploy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;すると、WindowsならGithubのアカウント認証のポップアップが出てくる。
+&lt;p&gt;すると、Windows なら Github のアカウント認証のポップアップが出てくる。
 メールアドレスとパスワード、もしくはアクセストークンで認証する。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
 Published
 Done in xx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;xxs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;と表示されたら完了。&lt;/p&gt;
-&lt;p&gt;[username].github.ioにアクセスするとdeployしたサイトが公開されている。
+&lt;p&gt;[username].github.io にアクセスすると deploy したサイトが公開されている。
 おめでとう！&lt;/p&gt;
 &lt;h2&gt;トラブルシュート: ERROR #11321 PLUGIN&lt;/h2&gt;
 &lt;h3&gt;問題&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;yarn run deploy&lt;/code&gt;する時に、エラーが吐かれることがある。  &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;yarn run deploy&lt;/code&gt;する時に、エラーが吐かれることがある。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;gatsby-plugin-manifest&quot;&lt;/span&gt; threw an error &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; running the onPostBootstrap lifecycle:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -849,8 +849,8 @@ Done in xx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;xxs&lt;s
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;package-lock.json&lt;/code&gt;と&lt;code class=&quot;language-text&quot;&gt;node_modeles&lt;/code&gt;の中身を全部消して、&lt;code class=&quot;language-text&quot;&gt;npm install&lt;/code&gt;する。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; &lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; node_modules
 &lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; &lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; package&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;lock&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;json
-&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; npm install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[git備忘録]]></title><description><![CDATA[初期設定 名前,メアド,UIの色,エディタの登録 登録した情報の確認 使い方 リポジトリ初期化 版管理の対象を登録 最初のコミット 変更の記録 変更点の確認 する前に、変更点を確認しよう コミットする gitのログメッセージを書く 一行目は変更点を…]]></description><link>https://narazuke.github.io/git-memorandum/</link><guid isPermaLink="false">https://narazuke.github.io/git-memorandum/</guid><content:encoded>&lt;h2&gt;初期設定&lt;/h2&gt;
-&lt;h3&gt;名前,メアド,UIの色,エディタの登録&lt;/h3&gt;
+&lt;span class=&quot;token function&quot;&gt;PS&lt;/span&gt; C:¥Users¥hoge&gt; npm install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[git備忘録]]></title><description><![CDATA[初期設定 名前,メアド,UI の色,エディタの登録 登録した情報の確認 使い方 リポジトリ初期化 版管理の対象を登録 最初のコミット 変更の記録 変更点の確認 する前に、変更点を確認しよう コミットする git のログメッセージを書く 一行目は変更点を…]]></description><link>https://narazuke.github.io/git-memorandum/</link><guid isPermaLink="false">https://narazuke.github.io/git-memorandum/</guid><content:encoded>&lt;h2&gt;初期設定&lt;/h2&gt;
+&lt;h3&gt;名前,メアド,UI の色,エディタの登録&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.name &lt;span class=&quot;token string&quot;&gt;&quot;Yamada Hanako&quot;&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.email &lt;span class=&quot;token string&quot;&gt;&quot;yamahana@takaka.com&quot;&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global color.ui auto
@@ -877,9 +877,9 @@ Done in xx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;xxs&lt;s
 &lt;h3&gt;コミットする&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; -u	&lt;span class=&quot;token comment&quot;&gt;#gitで版管理しているすべてのファイルの現在の状態を次のコミットに記録させる&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit	&lt;span class=&quot;token comment&quot;&gt;#コミット&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;gitのログメッセージを書く&lt;/h3&gt;
+&lt;h3&gt;git のログメッセージを書く&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;日付表示
-	
+
 各記事の前に日付をyyyy/mm/ddの形式で表示するようにした。
 &lt;span class=&quot;token comment&quot;&gt;# Please enter the commit message for your changes. Lines starting&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# with &apos;#&apos; will be ignored, and an empty message aborts the commit.&lt;/span&gt;
@@ -887,7 +887,7 @@ Done in xx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;xxs&lt;s
 &lt;span class=&quot;token comment&quot;&gt;# Changes to be committed:&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;#	modified index.html&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;一行目は変更点を1行に要約
+&lt;p&gt;一行目は変更点を 1 行に要約
 二行目は空行
 三行目に詳しい記述&lt;/p&gt;
 &lt;p&gt;が鉄板らしい&lt;/p&gt;
@@ -896,20 +896,20 @@ Done in xx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;xxs&lt;s
 You may want to amend it after fixing the message, or &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; the config
 variable i18n.commitencoding to the encoding your pqoject uses.
 &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;master XXXXXX&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.文字化け&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;vimrcを直す&lt;/h3&gt;
-&lt;p&gt;参考:&lt;a href=&quot;https://qiita.com/takasianpride/items/0d68fcbbcc3aaf22cf9a&quot; title=&quot;Gitコミット時の文字化け(MacでVimによるコミット)&quot;&gt;Gitコミット時の文字化け(MacでVimによるコミット)&lt;/a&gt;
-~/.vimrcに以下の内容を追加&lt;/p&gt;
+&lt;h3&gt;vimrc を直す&lt;/h3&gt;
+&lt;p&gt;参考:&lt;a href=&quot;https://qiita.com/takasianpride/items/0d68fcbbcc3aaf22cf9a&quot; title=&quot;Gitコミット時の文字化け(MacでVimによるコミット)&quot;&gt;Git コミット時の文字化け(Mac で Vim によるコミット)&lt;/a&gt;
+~/.vimrc に以下の内容を追加&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;utf8
 &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;fenc&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;utf-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;うまくいかない…&lt;/p&gt;
 &lt;p&gt;参考:&lt;a href=&quot;http://wadahiro.hatenablog.com/entry/20090506/1241622572&quot;&gt;Git コミットログの文字化けではまる&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&quot; &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;fileencodings&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;iso-2022.jp,euc-jp,utf-8,ucs-2,cp912,sjis
 &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;fileencoding&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;utf-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;fileencodingの候補が多すぎて勘違いされたらしい。
-UTF-8だけにしたら文字化け消えた。&lt;/p&gt;
+&lt;p&gt;fileencoding の候補が多すぎて勘違いされたらしい。
+UTF-8 だけにしたら文字化け消えた。&lt;/p&gt;
 &lt;h3&gt;git add -u と git commit をまとめてやる&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -a&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;備考:&lt;code class=&quot;language-text&quot;&gt;git add -u&lt;/code&gt;はgit管理対象を全部インデックスに登録するコマンド&lt;/p&gt;
+&lt;p&gt;備考:&lt;code class=&quot;language-text&quot;&gt;git add -u&lt;/code&gt;は git 管理対象を全部インデックスに登録するコマンド&lt;/p&gt;
 &lt;h3&gt;コミット履歴を見る&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log
 &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; log index.html	&lt;span class=&quot;token comment&quot;&gt;#特定のファイルの履歴を見る&lt;/span&gt;
@@ -924,16 +924,16 @@ UTF-8だけにしたら文字化け消えた。&lt;/p&gt;
 &lt;p&gt;長いファイルだと、長い&lt;/p&gt;
 &lt;h3&gt;過去のコミットの効果を打ち消す&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; reset --hard &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;コミットID&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;commitIDは&lt;code class=&quot;language-text&quot;&gt;git log --oneline&lt;/code&gt;とかで出てくる黄色いハッシュ値
-commitIDは最初の8文字でOK
-コミットオブジェクトをSHA-1でハッシュ化した160ビット(40文字の16進数)の値
+&lt;p&gt;commitID は&lt;code class=&quot;language-text&quot;&gt;git log --oneline&lt;/code&gt;とかで出てくる黄色いハッシュ値
+commitID は最初の 8 文字で OK
+コミットオブジェクトを SHA-1 でハッシュ化した 160 ビット(40 文字の 16 進数)の値
 コミットオブジェクトはコミット内容の他に時刻やコミッターやメアドまで含まれるため、同じコミット内容でもハッシュ値は異なる&lt;/p&gt;
 &lt;p&gt;これやったらマジで保存したやつ書き換えられた
 驚き&lt;/p&gt;
 &lt;h3&gt;最後にコミットしたところまで戻る&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; reset --hard HEAD&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
-&lt;p&gt;入門Git (秀和システム 2011)&lt;/p&gt;
+&lt;p&gt;入門 Git (秀和システム 2011)&lt;/p&gt;
 &lt;h2&gt;経緯&lt;/h2&gt;
-&lt;p&gt;いい加減gitの使い方くらい覚えないといけないのではないか
-まずひとりで版管理できてから、mergeとかbranchは学んでいこうと思った&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;いい加減 git の使い方くらい覚えないといけないのではないか
+まずひとりで版管理できてから、merge とか branch は学んでいこうと思った&lt;/p&gt;</content:encoded></item></channel></rss>
