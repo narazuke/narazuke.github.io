@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 07 Feb 2021 13:45:44 GMT</lastBuildDate><item><title><![CDATA[日記]]></title><description><![CDATA[6th Feb 2021 今年初めて駅まで歩いた。 ドン・キホーテでキシリトールのガムボトルを 3 つ買った。1 つ 430 円だった。 丸善で GatsbyJS の本を買った。3500 円した。 夕飯は鍋だった。 7th Feb 202…]]></description><link>https://narazuke.github.io/noz20210207/</link><guid isPermaLink="false">https://narazuke.github.io/noz20210207/</guid><content:encoded>&lt;h2&gt;6th Feb 2021&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 08 Feb 2021 12:47:15 GMT</lastBuildDate><item><title><![CDATA[日記]]></title><description><![CDATA[youtubeの埋め込みについては https://takumon.com/2018/10/0…]]></description><link>https://narazuke.github.io/kon20210208/</link><guid isPermaLink="false">https://narazuke.github.io/kon20210208/</guid><content:encoded>&lt;p&gt;youtubeの埋め込みについては&lt;br&gt;
+&lt;a href=&quot;https://takumon.com/2018/10/07/&quot;&gt;https://takumon.com/2018/10/07/&lt;/a&gt;&lt;br&gt;
+このサイトによればプラグインをインストールすればできそう&lt;/p&gt;
+&lt;p&gt;以下日記&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;最近筋トレをしていないから、やる時間をきめたい。&lt;/p&gt;
+&lt;p&gt;とりあえず今日は今から腹筋やる。&lt;/p&gt;
+&lt;p&gt;明日以降は朝にスクワットする。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[日記]]></title><description><![CDATA[6th Feb 2021 今年初めて駅まで歩いた。 ドン・キホーテでキシリトールのガムボトルを 3 つ買った。1 つ 430 円だった。 丸善で GatsbyJS の本を買った。3500 円した。 夕飯は鍋だった。 7th Feb 202…]]></description><link>https://narazuke.github.io/noz20210207/</link><guid isPermaLink="false">https://narazuke.github.io/noz20210207/</guid><content:encoded>&lt;h2&gt;6th Feb 2021&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;今年初めて駅まで歩いた。&lt;/li&gt;
 &lt;li&gt;ドン・キホーテでキシリトールのガムボトルを 3 つ買った。1 つ 430 円だった。&lt;/li&gt;
@@ -277,7 +284,292 @@ Qiita のちょっとうれしい点は markdown 記法が使用できること�
 &lt;h2&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;既存のプラットフォームを利用したブログサービスについての考察をした。
 共通して言えるのは、規約を遵守すれば無料で十分ブログができるということだ。
-逆に言えば、運営者にとって気に入らない投稿は消されてしまうという点も見過ごせない。&lt;a href=&quot;https://www.bbc.com/japanese/55583622&quot;&gt;トランプの Twitter アカウントが削除&lt;/a&gt;されたり、&lt;a href=&quot;https://www.itmedia.co.jp/news/articles/1912/26/news121.html&quot;&gt;さくらのレンタルサーバの批判する Qiita の投稿が非公開&lt;/a&gt;になったりする。&lt;a href=&quot;https://asia.nikkei.com/Spotlight/Myanmar-Coup/Myanmar-military-blocks-Facebook-as-activists-call-for-protests&quot;&gt;ミャンマー軍事政権が Facebook の通信を遮断した&lt;/a&gt;のも記憶に新しい。インターネットの自由は、誰かに作られた自由になっていないだろうか。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[日記]]></title><description><![CDATA[…]]></description><link>https://narazuke.github.io/kon20210204/</link><guid isPermaLink="false">https://narazuke.github.io/kon20210204/</guid><content:encoded>&lt;p&gt;最後の方支離滅裂になってます。&lt;/p&gt;
+逆に言えば、運営者にとって気に入らない投稿は消されてしまうという点も見過ごせない。&lt;a href=&quot;https://www.bbc.com/japanese/55583622&quot;&gt;トランプの Twitter アカウントが削除&lt;/a&gt;されたり、&lt;a href=&quot;https://www.itmedia.co.jp/news/articles/1912/26/news121.html&quot;&gt;さくらのレンタルサーバの批判する Qiita の投稿が非公開&lt;/a&gt;になったりする。&lt;a href=&quot;https://asia.nikkei.com/Spotlight/Myanmar-Coup/Myanmar-military-blocks-Facebook-as-activists-call-for-protests&quot;&gt;ミャンマー軍事政権が Facebook の通信を遮断した&lt;/a&gt;のも記憶に新しい。インターネットの自由は、誰かに作られた自由になっていないだろうか。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[アークナイツ周回の自動化(Mac,C++)]]></title><description><![CDATA[アークナイツ自動化のツールを作る際の履歴をメモしたもの。 pythonでpyautogui(pyscreeze)を使って作ったがどうやら時に毎回screenshotをとっていて、非効率だしpcに負担かかりそう。なのでせっかくの機会なのでc…]]></description><link>https://narazuke.github.io/arknights_auto/</link><guid isPermaLink="false">https://narazuke.github.io/arknights_auto/</guid><content:encoded>&lt;p&gt;アークナイツ自動化のツールを作る際の履歴をメモしたもの。&lt;/p&gt;
+&lt;p&gt;pythonでpyautogui(pyscreeze)を使って作ったがどうやら&lt;code class=&quot;language-text&quot;&gt;locateOnScreen&lt;/code&gt;時に毎回screenshotをとっていて、非効率だしpcに負担かかりそう。なのでせっかくの機会なのでc++を使って新しく自動化機能を作りたいと思う。ちなみに下のコードがpythonで作ったコード。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; time&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;pyautogui
+
+start &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; time&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;time&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+flag &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;time&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;time&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;start&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;秒経過&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    autoPos &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pyautogui&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;locateCenterOnScreen&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./image/auto.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; grayscale&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    stageDecidePos &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pyautogui&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;locateCenterOnScreen&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./image/stage_decide.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; grayscale&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    stageStartPos &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pyautogui&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;locateCenterOnScreen&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./image/stage_start.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; grayscale&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    resultPos &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pyautogui&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;locateCenterOnScreen&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./image/result.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; grayscale&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; autoPos &lt;span class=&quot;token keyword&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        pyautogui&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;click&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;stageDecidePos&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;stageDecidePos&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;click stageDecide&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        flag &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;elif&lt;/span&gt; stageStartPos &lt;span class=&quot;token keyword&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        pyautogui&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;click&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;stageStartPos&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;stageStartPos&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;click stageStart&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        time&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sleep&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        flag &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;elif&lt;/span&gt; resultPos &lt;span class=&quot;token keyword&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        pyautogui&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;click&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;resultPos&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;resultPos&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;click result&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        flag &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        flag &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; flag &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;
+    time&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sleep&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;openCVを動かす&lt;/h3&gt;
+&lt;p&gt;いろいろつまづいたが次の手順でやれば良い&lt;/p&gt;
+&lt;p&gt;1.Homebrewでインストール&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;brew install opencv
+brew install pkg-config&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;2.コードを書く&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;cpp&quot;&gt;&lt;pre class=&quot;language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;stdio.h&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;opencv2/opencv.hpp&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+ cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;Mat img&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+ img &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;imread&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;example.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+ cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;imshow&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; img&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+ cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;waitKey&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+ &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;3.コンパイル &amp;#x26; 実行&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;g++ -std=c++11 main.cpp `pkg-config --cflags opencv4` `pkg-config --libs opencv4`
+./a.out&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;マウスのポジションとクリック&lt;/h3&gt;
+&lt;p&gt;CoreGraphics.hをつかいたいが以下のエラーが出る&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Undefined symbols for architecture x86_64:
+  &amp;quot;_CFRelease&amp;quot;, referenced from:
+      _main in main-63de17.o
+  &amp;quot;_CGEventCreate&amp;quot;, referenced from:
+      _main in main-63de17.o
+  &amp;quot;_CGEventGetLocation&amp;quot;, referenced from:
+      _main in main-63de17.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;このエラーはopencvの場合ではpkg-configを入れることで治った。ヘッダファイルの場所の指定、ライブラリの場所の指定、リンクするライブラリの指定をしているらしい。
+(参考)&lt;a href=&quot;https://ja.stackoverflow.com/questions/53767/macos-c%E3%81%A7opencv%E3%81%8C%E5%AE%9F%E8%A1%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84&quot;&gt;MacOS c++でopenCVが実行できない&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;だがCoreGraphicsではpkg-configが使えないため直接オプションを指定する必要がありそうだ。&lt;a href=&quot;https://stackoverflow.com/questions/18882483/implement-part-of-c-source-code&quot;&gt;https://stackoverflow.com/questions/18882483/implement-part-of-c-source-code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最終的には&lt;code class=&quot;language-text&quot;&gt;-framework&lt;/code&gt;によって無事コンパイルできた。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;g++ -std=c++11 -framework CoreGraphics -framework CoreFoundation main.cpp `pkg-config --cflags opencv4` `pkg-config --libs opencv4`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;実際のコードは以下のリンクを参考にした。&lt;/p&gt;
+&lt;p&gt;（ポジションについて）&lt;a href=&quot;https://gist.github.com/mhamilt/7209c809c03e42a7027e9fe5b18fdfa2&quot;&gt;mhamilt/get&lt;em&gt;mouse&lt;/em&gt;position_macos.cpp&lt;/a&gt;&lt;br&gt;
+（クリックについて）&lt;a href=&quot;https://stackoverflow.com/questions/1483657/performing-a-double-click-using-cgeventcreatemouseevent&quot;&gt;Performing a double click using CGEventCreateMouseEvent()&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;画像認識について&lt;/h3&gt;
+&lt;p&gt;マウスのポジションを指定してクリックすることはできたので次は指定する画像が存在するか、またどこにあるかを認識できるようにしないといけない。どうしよう。
+OpenCVでそういうことできないか調べた。
+&lt;a href=&quot;https://qiita.com/anzanshi/items/82fc4c7a3a1f84137aef&quot;&gt;Python OpenCVで画像を検索、判定結果を返してみた&lt;/a&gt;
+pythonだけど参考になった。どうやら&lt;code class=&quot;language-text&quot;&gt;matchTemplate&lt;/code&gt;が画像の一部が指定の画像と一致するかを判定する関数のようだ。&lt;/p&gt;
+&lt;h3&gt;構造体&lt;/h3&gt;
+&lt;p&gt;構造体関連でつまづいた。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;main.cpp:120:25: error: member access into incomplete type &amp;#39;struct CGImage&amp;#39;
+    CGFloat cols = image-&amp;gt;width;
+                        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGImage.h:12:36: note: 
+      forward declaration of &amp;#39;CGImage&amp;#39;
+typedef struct CF_BRIDGED_TYPE(id) CGImage *CGImageRef;
+                                   ^&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;結局&lt;code class=&quot;language-text&quot;&gt;CGImageGetWidth()&lt;/code&gt;というライブライ関数を使ってどうにかなったけど上のエラーはよくわからないまま。&lt;/p&gt;
+&lt;h3&gt;ウィンドウ探索&lt;/h3&gt;
+&lt;p&gt;CoreGraphicsでのwindow探索について
+(参考)&lt;a href=&quot;https://gist.github.com/Recognition101/1e28655eece7f1169951&quot;&gt;Recognition101/appNames.cpp&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;CoreGraphics&lt;/h3&gt;
+&lt;p&gt;CoreGraphics関連がわからなすぎるのでまとめる。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;func name&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;return&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;やること&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CGMainDisplayID()&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CGDirectDisplayID&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;main_displayのIDを返す&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CGDisplayBounds(CGDirectDisplayID)&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CGRect&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;displayのrectを返す&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CGDisplayCreateImage(CGDirectDisplayID)&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CGImage&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;cgimageを返す&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CGDisplayCreateImage(CGDirectDisplayID, CGRect)&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CGImage&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;範囲指定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CGImageGetColorSpace(CGImageRef)&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CGColorSpaceRef&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;わからん&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CGBitmapContextCreate(...)&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CGContextRef&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;CoreGraphicsの画像をopencvのMatに変換する関数をつくったがでうまく書き込めず真っ黒になる。。。&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+CoreGraphicsを使う方法を諦めた。諦めたらすっきりした。
+&lt;p&gt;スクリーンショットを&lt;code class=&quot;language-text&quot;&gt;system()&lt;/code&gt;でとる方法に切り替える。&lt;/p&gt;
+&lt;h3&gt;構成&lt;/h3&gt;
+&lt;p&gt;以下のような順番の構成で自動化ツールを作った。  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;スクリーンショットをとる&lt;/li&gt;
+&lt;li&gt;用意した画像が存在するか調べる&lt;/li&gt;
+&lt;li&gt;存在する場合、位置を調べる&lt;/li&gt;
+&lt;li&gt;その位置をクリックする&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;cpp&quot;&gt;&lt;pre class=&quot;language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;ApplicationServices/ApplicationServices.h&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;opencv2/opencv.hpp&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;iostream&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;string&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;time.h&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;unistd.h&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token macro property&quot;&gt;&lt;span class=&quot;token directive-hash&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;token directive keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&amp;lt;chrono&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;namespace&lt;/span&gt; std&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;chrono&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;CGPoint&lt;/span&gt; CGPoint&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// g++ -std=c++11 -03 -framework CoreGraphics -framework CoreFoundation main.cpp `pkg-config --cflags opencv4` `pkg-config --libs opencv4`&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;CGPoint&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    clock_t p_start &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;clock&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;auto&lt;/span&gt; start &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; std&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;chrono&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;system_clock&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;double&lt;/span&gt; maxVal&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;Point maxLoc&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;Mat result&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;Mat screen&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    CGPoint location&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;Mat img_auto&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;Mat img_result&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;Mat img_stage_decide&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;Mat img_stage_start&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;Mat img_line&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    img_auto &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;imread&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./image/auto.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    img_result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;imread&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./image/result.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    img_stage_decide &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;imread&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./image/stage_decide.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    img_stage_start &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;imread&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./image/stage_start.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;double&lt;/span&gt; threshold &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.999&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;start\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; flag_end &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; flag_click &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;screencapture -x ./image/screenshot.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        screen &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;imread&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./image/screenshot.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;matchTemplate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;screen&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; img_auto&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;TM_CCORR_NORMED&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;minMaxLoc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;result&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;maxVal &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;maxVal &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; threshold&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;matchTemplate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;screen&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; img_stage_decide&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;TM_CCORR_NORMED&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;minMaxLoc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;result&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;maxLoc&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; maxLoc&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; maxLoc&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token function&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;location&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            std&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;cout &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;clicked stage_desicde\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            flag_click&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;flag_click&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;matchTemplate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;screen&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; img_stage_start&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;TM_CCORR_NORMED&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;minMaxLoc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;result&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;maxVal &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;maxLoc&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;maxVal &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; threshold&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; maxLoc&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+                location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; maxLoc&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;token function&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;location&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+                std&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;cout &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;clicked stage_start\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+                flag_click&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;token function&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; 
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;flag_click&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;matchTemplate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;screen&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; img_result&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;TM_CCORR_NORMED&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            cv&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;minMaxLoc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;result&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;maxVal &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;maxLoc&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;maxVal &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; threshold&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; maxLoc&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+                location&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; maxLoc&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;token function&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;location&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+                std&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;cout &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;clicked result\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+                flag_click&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; 
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;flag_click&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            flag_end&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;flag_end &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            flag_click &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            flag_end &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;auto&lt;/span&gt; end &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; system_clock&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;auto&lt;/span&gt; dur &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; end &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; start&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;        &lt;span class=&quot;token comment&quot;&gt;// 要した時間を計算&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;auto&lt;/span&gt; msec &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; duration_cast&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;milliseconds&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dur&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// 要した時間をミリ秒（1/1000秒）に変換して表示&lt;/span&gt;
+        std&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;cout &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; msec&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1000.0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        clock_t p_end &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;clock&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        std&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;cout &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;(&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;p_end &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; p_start&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; CLOCKS_PER_SEC &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;) 秒経過\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;CGPoint location&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    CGEventRef event &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;CGEventCreateMouseEvent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; kCGEventLeftMouseDown&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; location&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; kCGMouseButtonLeft&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    &lt;span class=&quot;token function&quot;&gt;CGEventSetIntegerValueField&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;event&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; kCGMouseEventClickState&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    &lt;span class=&quot;token function&quot;&gt;CGEventPost&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;kCGHIDEventTap&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; event&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    &lt;span class=&quot;token function&quot;&gt;CGEventSetType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;event&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; kCGEventLeftMouseUp&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    &lt;span class=&quot;token function&quot;&gt;CGEventPost&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;kCGHIDEventTap&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; event&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    &lt;span class=&quot;token function&quot;&gt;CFRelease&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;event&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;    
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;結果&lt;/h3&gt;
+&lt;p&gt;前のプログラムより断然早くなった^_^&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 356px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/87902347d7c4426824de61967f554029/50ac3/result.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 82.27848101265823%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACcUlEQVQ4y4VU2XLaQBDUDzg2vjjMfSOBxAohcZrDgAGfieNU/v9HOtNTFkVcFedhajXapZk+Vlbk9dCqteCaPoJwouWaCDe5OuqNLmoND6VKG9W6h1yhiWLZRqFka1+pucgXWyhXO3omfVOF1XUH8Lyh/NDIixqy+aZunF/mkLjI4ttZGmfnN/p8lSzi4iqvxX3W5XXh8I77lmtGGE3WUis07R6cdh+mN0bLCbSfL/eYzrZwOn0FTqbLuE6V/llWEN4i6N9i//iO8XSNnjwvV0+YLXb6fjBa4uHpXffbbqRTfQloehP0o7lM8qBgHS8SHWcCvpF+ikbLx+LuEbuHn4iGS6X+1ZQW6XlCe7V5UeoEJQB70iRdTvf4/EuMcFWrzyDU7gAYDubqZOwa3ao3jepHV+lgTdzmpJ8nO+6T6Q/AZLoiuhRwcpoR0elsTtasGsA6TWS0Tk5TB2dJm8X92HH2dNxqGw+ub2ACg3rLRsN2UG3YMmlHpaARdN4PprBl7XgDuN0hjD9WrcmMbNhn8w1YAz9At+1iPJsjHEzQC0cCFKop1PR2vhUgRshXSUifINSXf3AsSSZbkwmbPmxp1vffsZHa7t7kcKQ/Kn7cCGpDSseBTnzQPA66BtsEEwzHKwF7xXb/A8+vvyWD+8PB+AZ8lb2/YkOdnE6Iu/Uz7ncy5fYVK3nmXf7s5P9KJ6SwMeBu/6ZTrmVaAtHF+K6SXnx3uR5TPWZhMf28x2sJ8kJuC4GZTQpO50oVR0WPmfBLQ0P4JWJeeY77/KDohLSa7tF6OsU1L4GmGa5EhOHmPqNSb3a1JzDdjSNTLDtIZSoK+AcgGdT9kbf5hgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;result&quot;
+        title=&quot;result&quot;
+        src=&quot;/static/87902347d7c4426824de61967f554029/50ac3/result.png&quot;
+        srcset=&quot;/static/87902347d7c4426824de61967f554029/c26ae/result.png 158w,
+/static/87902347d7c4426824de61967f554029/6bdcf/result.png 315w,
+/static/87902347d7c4426824de61967f554029/50ac3/result.png 356w&quot;
+        sizes=&quot;(max-width: 356px) 100vw, 356px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;一回のループに対して今回のコードでは約0.15sであるのに対して、以前のコードでは約1.4sであるためほぼ10倍早くなっている。&lt;/p&gt;
+&lt;p&gt;現在は一つのステージだけを周回するプログラムだが、改良することで基地や任務なども自動化できそうのでいつかやるかもしれない。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[日記]]></title><description><![CDATA[…]]></description><link>https://narazuke.github.io/kon20210204/</link><guid isPermaLink="false">https://narazuke.github.io/kon20210204/</guid><content:encoded>&lt;p&gt;最後の方支離滅裂になってます。&lt;/p&gt;
 &lt;h3&gt;自分が幸せになるには&lt;/h3&gt;
 &lt;p&gt;昨日の日記では、幸せになるためには閾値を下げ、領域を広げ、重みが高いものを優先すればよいと考えた。ここでは具体的に重みが高いものが何であるかを考える。&lt;/p&gt;
 &lt;h3&gt;生きていて何が楽しいか&lt;/h3&gt;
@@ -506,7 +798,7 @@ pyenv &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3&gt;参考&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://qiita.com/colorrabbit/items/755cfbb0e97d48280775&quot;&gt;覚えておきたい Vim コマンド 備忘録&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[アークナイツの公開求人]]></title><description><![CDATA[公開求人 星4以上確定タグ <星４> タグ 特殊タイプ 支援 弱化 強制移動 高速再配置 <星５> タグ 選択タグ キャラ 牽制 先鋒cost…]]></description><link>https://narazuke.github.io/arknights/</link><guid isPermaLink="false">https://narazuke.github.io/arknights/</guid><content:encoded>&lt;h2&gt;公開求人&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://qiita.com/colorrabbit/items/755cfbb0e97d48280775&quot;&gt;覚えておきたい Vim コマンド 備忘録&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[アークナイツの公開求人]]></title><description><![CDATA[公開求人 星4以上確定タグ <星４> タグ 特殊タイプ 支援 弱化 強制移動 高速再配置 <星５> タグ 選択タグ キャラ 牽制 先鋒cost…]]></description><link>https://narazuke.github.io/arknights_recruit/</link><guid isPermaLink="false">https://narazuke.github.io/arknights_recruit/</guid><content:encoded>&lt;h2&gt;公開求人&lt;/h2&gt;
 &lt;h3&gt;星4以上確定タグ&lt;/h3&gt;
 &lt;h4&gt;&amp;#x3C;星４&gt;&lt;/h4&gt;
 &lt;table&gt;
