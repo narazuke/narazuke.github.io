@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 08 Feb 2021 12:47:15 GMT</lastBuildDate><item><title><![CDATA[日記]]></title><description><![CDATA[youtubeの埋め込みについては https://takumon.com/2018/10/0…]]></description><link>https://narazuke.github.io/kon20210208/</link><guid isPermaLink="false">https://narazuke.github.io/kon20210208/</guid><content:encoded>&lt;p&gt;youtubeの埋め込みについては&lt;br&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 08 Feb 2021 17:13:36 GMT</lastBuildDate><item><title><![CDATA[Linuxのファイルシステムコマンドまとめ]]></title><description><![CDATA[fstab と mount の違い mount… コマンド, 一時的に作用, 再起動したらリセット
+fstab… 設定ファイル, 起動時に自動でマウントさせるための記述 厳密には違うかもしれないが、通常使用ならこの理解でいいだろ、みんなごめん
+fstab…]]></description><link>https://narazuke.github.io/linux-command-filesystem/</link><guid isPermaLink="false">https://narazuke.github.io/linux-command-filesystem/</guid><content:encoded>&lt;h2&gt;fstab と mount の違い&lt;/h2&gt;
+&lt;p&gt;mount… コマンド, 一時的に作用, 再起動したらリセット
+fstab… 設定ファイル, 起動時に自動でマウントさせるための記述&lt;/p&gt;
+&lt;p&gt;厳密には違うかもしれないが、通常使用ならこの理解でいいだろ、みんなごめん
+fstab でマウントしたデバイスは umount を使ってアンマウントできない
+f オプションで強制的にアンマウントできるらしいが、危険らしい&lt;/p&gt;
+&lt;h3&gt;fstab の書き方&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;less&lt;/span&gt; /etc/fstab		&lt;span class=&quot;token comment&quot;&gt;#fstabの設定を見ることができる&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;proc				/proc		proc	defaults			0	0
+/dev/hoge			/boot		vfat	defaults			0	2
+PARTUUID=hogehoge	/			ext4	defaults,noatime	0	1
+# a swapfile is not a swap partition, no line here
+#	use dphys-swapfile swap[on|off] for that
+UUID=&amp;quot;hogehoge&amp;quot;	/mnt/ssd		ext4	defaults			0	1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;1 列目…&lt;strong&gt;デバイス名&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;proc&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;/dev/hoge&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;UUID=hogehoge&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;PARTUUID=hogehoge&lt;/code&gt;
+&lt;strong&gt;デバイス名は後に説明する blkid で調べられる&lt;/strong&gt;
+気になる人は ↓ へ GO&lt;/p&gt;
+&lt;h4&gt;2 列目…&lt;strong&gt;マウントポイント&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;/proc&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;/boot&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;/mnt/ssd&lt;/code&gt;
+どこにファイルシステムを置くか決められる
+&lt;code class=&quot;language-text&quot;&gt;/mnt&lt;/code&gt;じゃなくて&lt;code class=&quot;language-text&quot;&gt;/media&lt;/code&gt;を使う人もいる&lt;/p&gt;
+&lt;h4&gt;3 列目…&lt;strong&gt;ファイルシステム名&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;proc&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;vfat&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;ext4&lt;/code&gt;
+windows なら NTFD が、linux なら ext4 が主流らしい
+proc は仮想ファイルシステムだし、vfat は virtual FAT らしいしややこしいから深入りしないでおくね&lt;/p&gt;
+&lt;h4&gt;4 列目…&lt;strong&gt;オプション&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;defaults&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;defaults,noatime&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;defaults,nofail&lt;/code&gt;
+&lt;code class=&quot;language-text&quot;&gt;defaults&lt;/code&gt;は&lt;code class=&quot;language-text&quot;&gt;async,auto,dev,nouser,rw,suid,exec,noexec&lt;/code&gt;をまとめたものらしい&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;noatime&lt;/code&gt;で linux がファイルアクセス時に記録するタイムスタンプ&lt;code class=&quot;language-text&quot;&gt;atime&lt;/code&gt;を無効化できる。膨大なファイルにアクセスするときに使える。普段使いならつけなくていい
+&lt;code class=&quot;language-text&quot;&gt;nofail&lt;/code&gt;でマウントに失敗しても boot する。ただのメディア用だったら基本これつけていいと思う。やらずに USB 抜いて起動すると、emergency モードに入るらしい。&lt;/p&gt;
+&lt;p&gt;参考:&lt;a href=&quot;http://g-network.boo.jp/wiki/2018/03/etcfstab/&quot; title=&quot;/etc/fstab | ゆるっとエンジニアブログ&quot;&gt;/etc/fstab | ゆるっとエンジニアブログ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考:&lt;a href=&quot;https://qiita.com/nishemon/items/a967b950c4bbca08fd88&quot; title=&quot;CentOS7の/etc/fstabのnofailオプション（あるいはsystemd）&quot;&gt;CentOS7 の/etc/fstab の nofail オプション（あるいは systemd）&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;5 列目…dump 対象&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;0&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;1&lt;/code&gt;
+バックアップの対象にするなら 1
+しないなら 0
+既存の&lt;code class=&quot;language-text&quot;&gt;proc&lt;/code&gt;とか&lt;code class=&quot;language-text&quot;&gt;boot&lt;/code&gt;でさえバックアップ対象にしてないから 0 でいんじゃね？&lt;/p&gt;
+&lt;h4&gt;6 列目…fsck の設定&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;0&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;1&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;2&lt;/code&gt;…
+システム起動時にファイルシステムの検査と修復をしてくれる fsck の対象にするか設定できる。
+&lt;code class=&quot;language-text&quot;&gt;0&lt;/code&gt;なら対象外
+&lt;code class=&quot;language-text&quot;&gt;1&lt;/code&gt;なら 1 番目に検査,&lt;code class=&quot;language-text&quot;&gt;2&lt;/code&gt;なら 2 番目 &lt;code class=&quot;language-text&quot;&gt;3&lt;/code&gt;なら…と続く
+重くなるから基本 0 で OK&lt;/p&gt;
+&lt;h3&gt;mount の使い方&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mount&lt;/span&gt; -t ext4 /dev/sda1 /mnt`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;mount -t ファイルシステム デバイス名 マウントポイント&lt;/p&gt;
+&lt;p&gt;個々の説明はもうしたしいいよね&lt;/p&gt;
+&lt;h2&gt;df blkid&lt;/h2&gt;
+&lt;p&gt;df… 現在使用中のファイルシステムについて調べる(マウントしたものを表示)
+blkid… 使用可能なファイルシステムについて調べる(接続したものを表示)&lt;/p&gt;
+&lt;h3&gt;df の使い方&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;df&lt;/span&gt; -h		&lt;span class=&quot;token comment&quot;&gt;#hコマンドで単位がGBになって見やすくなる&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;df&lt;/span&gt; --total	&lt;span class=&quot;token comment&quot;&gt;#totalで空き容量の合計が見れる&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;blkid の使い方&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; blkid	&lt;span class=&quot;token comment&quot;&gt;#現在のファイルシステムを調べて表示、こっちを使おう&lt;/span&gt;
+blkid		&lt;span class=&quot;token comment&quot;&gt;#管理者が行ったキャッシュを参照して表示、状況によって表示がでないことも&lt;/span&gt;
+blkid -o list	&lt;span class=&quot;token comment&quot;&gt;#見やすいけどPARTUUIDが見えなくなるのが気になるところ&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;おまけ&lt;/h2&gt;
+&lt;h3&gt;アンマウントのコマンド、umount の使い方&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;umount&lt;/span&gt; /mnt/hoge&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;umount&lt;/span&gt; /sda/hoge&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;マウントポイントでもデバイス名でもいける
+どっちでもいいってのは便利でもあり、ややこしくもある&lt;/p&gt;
+&lt;h3&gt;フォーマットのコマンド、mkfs の使い方&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo mkfs -t ext4 dev/sda/hoge&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;フォーマットしてファイルシステムを作るコマンド
+こちらはデバイス名のみ、当たり前か&lt;/p&gt;
+&lt;h3&gt;パーティションを作る&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;fdisk&lt;/span&gt; /dev/sda&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;sda とか sda1 とかあるじゃん&lt;br&gt;
+sd は USB ストレージ&lt;br&gt;
+a は 1 台目のストレージ&lt;br&gt;
+1 は一つめのパーティションを表している&lt;/p&gt;</content:encoded></item><item><title><![CDATA[日記]]></title><description><![CDATA[youtubeの埋め込みについては https://takumon.com/2018/10/0…]]></description><link>https://narazuke.github.io/kon20210208/</link><guid isPermaLink="false">https://narazuke.github.io/kon20210208/</guid><content:encoded>&lt;p&gt;youtubeの埋め込みについては&lt;br&gt;
 &lt;a href=&quot;https://takumon.com/2018/10/07/&quot;&gt;https://takumon.com/2018/10/07/&lt;/a&gt;&lt;br&gt;
 このサイトによればプラグインをインストールすればできそう&lt;/p&gt;
 &lt;p&gt;以下日記&lt;/p&gt;
@@ -974,12 +1049,12 @@ pyenv &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span
 &lt;p&gt;imageタグ追加&lt;/p&gt;
 &lt;p&gt;footerにauthor追加&lt;/p&gt;
 &lt;p&gt;createdにソート&lt;/p&gt;
-&lt;h3&gt;焼肉食べたい.&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[NARADUKE新機能候補]]></title><description><![CDATA[将来的に加えたい機能 必要そう 簡単そう 筆者名 (2/1 k 完了) タグ カテゴリ --- 日記、哲学、メモ frontmatter の属性詳細 (2/2 k 完了) 難しそう 画像の component (image タグの作成) (2/1 k…]]></description><link>https://narazuke.github.io/narazuke-new-feature-candidates/</link><guid isPermaLink="false">https://narazuke.github.io/narazuke-new-feature-candidates/</guid><content:encoded>&lt;h1&gt;将来的に加えたい機能&lt;/h1&gt;
+&lt;h3&gt;焼肉食べたい.&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[NARADUKE新機能候補]]></title><description><![CDATA[将来的に加えたい機能 必要そう 簡単そう 筆者名 (2/1 k 完了) タグ (2/7 n&k 完了) カテゴリ --- 日記、哲学、メモ frontmatter の属性詳細 (2/2 k 完了) 難しそう 画像の component (image タグの作成) (2/1 k…]]></description><link>https://narazuke.github.io/narazuke-new-feature-candidates/</link><guid isPermaLink="false">https://narazuke.github.io/narazuke-new-feature-candidates/</guid><content:encoded>&lt;h1&gt;将来的に加えたい機能&lt;/h1&gt;
 &lt;h2&gt;必要そう&lt;/h2&gt;
 &lt;h3&gt;簡単そう&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;del&gt;筆者名&lt;/del&gt; (2/1 k 完了)&lt;/li&gt;
-&lt;li&gt;タグ&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;タグ&lt;/del&gt; (2/7 n&amp;#x26;k 完了)&lt;/li&gt;
 &lt;li&gt;カテゴリ --- 日記、哲学、メモ&lt;/li&gt;
 &lt;li&gt;frontmatter の属性詳細 (2/2 k 完了)&lt;/li&gt;
 &lt;/ul&gt;
