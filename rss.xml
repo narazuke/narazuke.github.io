@@ -1,4 +1,202 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 09 Feb 2021 16:34:23 GMT</lastBuildDate><item><title><![CDATA[Linuxのファイルシステムコマンドまとめ]]></title><description><![CDATA[fstab と mount の違い mount… コマンド, 一時的に作用, 再起動したらリセット
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[NARAZUKE]]></title><description><![CDATA[narazuke saiko-]]></description><link>https://narazuke.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 10 Feb 2021 06:42:58 GMT</lastBuildDate><item><title><![CDATA[gatsbyの特定のimgにCSSを適用]]></title><description><![CDATA[経緯 CSS がコンフリクトした
+ 理由 markdown に画像をアップロードしても自由にクラスを指定できず細かい設定ができない!!! 引用元:gatsby の image について 解決策 CSS の部分文字セレクタを使って alt 属性の部分一致を使う。 解説  : foo…]]></description><link>https://narazuke.github.io/gatsby-markdown-image-decoration/</link><guid isPermaLink="false">https://narazuke.github.io/gatsby-markdown-image-decoration/</guid><content:encoded>&lt;h2&gt;経緯&lt;/h2&gt;
+&lt;p&gt;CSS がコンフリクトした
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; [object Object]&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/93045bd9552d93d388473a85c7797b6d/2c288/blog-image_02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 118.9873417721519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAA7DAAAOwwHHb6hkAAACvElEQVQ4y6VVy27TQBT1t/A9fA3/wIIFC1Qkmq4oC0QrsUS0IIGEEC190oSWlLaheTSJk8bv8Xj8mMMdP1K3DY0rLF3PjD06PveeM9caZlxSylvz8rO7Lq3b7WLh2QJeLi+jVlvC6uoKXr9ZwdJSDS9qNXiMTQGLuOsDGucc21tb2N/fR71ex97eHprHx2g0GhQ/EUXRFcANwFmgWpU0piAzSjITsL65iC/vHsH3hooE4jhGkiRpSJmkG/VOE1/fPsd40MlBk2tlKEJDwlF7+hCLjx/A0jdzCkmJXTY/3PyA9VdP8Gv7c/Hi3ww7rQ20m6tUr4AiTusWUiTJVb0s00Dr5BCOY0GEEQIhIEQIzgMEgQAPAiSKoesxNM+HMN0Iam47LkzbgWHZKai61Afa3R7OOxdwaA9jfrrXo9F2HJp7sF03LZGmUAP6oiylOU03Z6eY6pYLj4v5PgwpxYnrQ9CowONcjCxk+kyNal8U58/K70tjKopaZAyrnYS5DC2P49vpAN/Phjhoj9DSLZwMDPyguRp3WjpOh1b67nhg4nffwNbZALt/dIwc/9Yp0hip1B6OMbYc+CJCRNRVajyM0zJwYu8FYTqKPG1GaxWqPDeNrgmS37as1FeqDsrUsbIMjfc5RVeihCEMkt8gu1gkvUkWGOe2uZlOldBkFEK0zuAYJhIyKIitnEyyRlAA3kcUqdLs9SBHOsKdHfC19/DX1iCFmLqx8GJqoTsiY0g3ThQYieD6ATgVPSQYP8wEUcVXYlRNX5uQ9B8bbXw66mLjhOxDFlo/OMdua4j22MZR7xImCyp3bc2nBtvXRzCohsxj83viPIaCVB5fTmCSqt2LPgzTAvP9dM18XqntX2OovKdakEN2UVaxyDLqP6KA/RJgZdsUTZT5bPr/+K+zLAvJaZHIcifJQ8pqkWQM/wK2PEgkjKLzswAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;blog image 02&quot;
+        title=&quot;blog image 02&quot;
+        src=&quot;/static/93045bd9552d93d388473a85c7797b6d/f058b/blog-image_02.png&quot;
+        srcset=&quot;/static/93045bd9552d93d388473a85c7797b6d/c26ae/blog-image_02.png 158w,
+/static/93045bd9552d93d388473a85c7797b6d/6bdcf/blog-image_02.png 315w,
+/static/93045bd9552d93d388473a85c7797b6d/f058b/blog-image_02.png 630w,
+/static/93045bd9552d93d388473a85c7797b6d/2c288/blog-image_02.png 684w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;理由&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;markdown に画像をアップロードしても自由にクラスを指定できず細かい設定ができない!!!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;引用元:&lt;a href=&quot;https://narazuke.github.io/gatsby_image/&quot;&gt;gatsby の image について&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;解決策&lt;/h2&gt;
+&lt;p&gt;CSS の部分文字セレクタを使って alt 属性の部分一致を使う。&lt;/p&gt;
+&lt;h2&gt;解説&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;[foo^=&amp;quot;bar&amp;quot;]{}&lt;/code&gt; : foo 属性の bar 前方一致&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;[foo$=&amp;quot;bar&amp;quot;]{}&lt;/code&gt; : foo 属性の bar 後方一致&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;[foo*=&amp;quot;bar&amp;quot;]{}&lt;/code&gt; : foo 属性の bar 部分一致&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;使用例&lt;/h2&gt;
+&lt;h3&gt;基本&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token url&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;[&lt;span class=&quot;token content&quot;&gt;lenna&lt;/span&gt;](&lt;span class=&quot;token url&quot;&gt;lenna.jpg&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 512px; [object Object]&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/aa84bc36cfd33497d494427e7f231f1f/36dd4/lenna.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 93.67088607594937%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQBAwX/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQIE/9oADAMBAAIQAxAAAAHO8XSNWLSnzLSnMGf/xAAeEAACAAYDAAAAAAAAAAAAAAABAgADERIhMjEzQf/aAAgBAQABBQL2giy+G4OZYC0mbL1Pt//EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BZop//8QAFxEBAQEBAAAAAAAAAAAAAAAAAAERQf/aAAgBAgEBPwHGrxH/xAAeEAACAgEFAQAAAAAAAAAAAAAAAQIRcRASITGBgv/aAAgBAQAGPwIuLybm6s8IxXTOZUfI8af/xAAbEAADAQADAQAAAAAAAAAAAAAAAREhQVFhMf/aAAgBAQABPyGt34iqlzl8E+3wJdD42VWxlgGEmHRUaIMeND7P/9oADAMBAAIAAwAAABAL4ID/xAAZEQEAAgMAAAAAAAAAAAAAAAABADEQEUH/2gAIAQMBAT8QS1yaSjj/xAAZEQACAwEAAAAAAAAAAAAAAAAAMQERIUH/2gAIAQIBAT8QXS/BQkH/xAAfEAEAAgICAgMAAAAAAAAAAAABABEhMWGBQVGRseH/2gAIAQEAAT8Qt1VrvcCQaUlhz+Szu5dH0+d9xUihCbqozCGUGDDeZbXU0TGiJSfD6hAAVS4Rwxm+sAGNFE//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;lenna&quot;
+        title=&quot;lenna&quot;
+        src=&quot;/static/aa84bc36cfd33497d494427e7f231f1f/36dd4/lenna.jpg&quot;
+        srcset=&quot;/static/aa84bc36cfd33497d494427e7f231f1f/ff44c/lenna.jpg 158w,
+/static/aa84bc36cfd33497d494427e7f231f1f/a6688/lenna.jpg 315w,
+/static/aa84bc36cfd33497d494427e7f231f1f/36dd4/lenna.jpg 512w&quot;
+        sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;反転&lt;/h3&gt;
+&lt;p&gt;src/style.css に、alt 属性に&lt;code class=&quot;language-text&quot;&gt;--reverse&lt;/code&gt;が含まれると反転する CSS を書く。&lt;br&gt;
+img と[]の間に空白があると失敗します。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/* alt属性に--reverseを含むと左右反転する */&lt;/span&gt;
+&lt;span class=&quot;token selector&quot;&gt;img[alt*=&quot;--reverse&quot;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;-1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token url&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;[&lt;span class=&quot;token content&quot;&gt;lenna --reverse&lt;/span&gt;](&lt;span class=&quot;token url&quot;&gt;lenna.jpg&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 512px; [object Object]&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/aa84bc36cfd33497d494427e7f231f1f/36dd4/lenna.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 93.67088607594937%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQBAwX/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQIE/9oADAMBAAIQAxAAAAHO8XSNWLSnzLSnMGf/xAAeEAACAAYDAAAAAAAAAAAAAAABAgADERIhMjEzQf/aAAgBAQABBQL2giy+G4OZYC0mbL1Pt//EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BZop//8QAFxEBAQEBAAAAAAAAAAAAAAAAAAERQf/aAAgBAgEBPwHGrxH/xAAeEAACAgEFAQAAAAAAAAAAAAAAAQIRcRASITGBgv/aAAgBAQAGPwIuLybm6s8IxXTOZUfI8af/xAAbEAADAQADAQAAAAAAAAAAAAAAAREhQVFhMf/aAAgBAQABPyGt34iqlzl8E+3wJdD42VWxlgGEmHRUaIMeND7P/9oADAMBAAIAAwAAABAL4ID/xAAZEQEAAgMAAAAAAAAAAAAAAAABADEQEUH/2gAIAQMBAT8QS1yaSjj/xAAZEQACAwEAAAAAAAAAAAAAAAAAMQERIUH/2gAIAQIBAT8QXS/BQkH/xAAfEAEAAgICAgMAAAAAAAAAAAABABEhMWGBQVGRseH/2gAIAQEAAT8Qt1VrvcCQaUlhz+Szu5dH0+d9xUihCbqozCGUGDDeZbXU0TGiJSfD6hAAVS4Rwxm+sAGNFE//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;lenna --reverse&quot;
+        title=&quot;lenna --reverse&quot;
+        src=&quot;/static/aa84bc36cfd33497d494427e7f231f1f/36dd4/lenna.jpg&quot;
+        srcset=&quot;/static/aa84bc36cfd33497d494427e7f231f1f/ff44c/lenna.jpg 158w,
+/static/aa84bc36cfd33497d494427e7f231f1f/a6688/lenna.jpg 315w,
+/static/aa84bc36cfd33497d494427e7f231f1f/36dd4/lenna.jpg 512w&quot;
+        sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;反転できている。&lt;/p&gt;
+&lt;h3&gt;パディング&lt;/h3&gt;
+&lt;p&gt;src/style.css に、alt 属性に&lt;code class=&quot;language-text&quot;&gt;--my-padding&lt;/code&gt; を含むと padding を設ける CSS を書く&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/* alt属性に--my-paddingを含むと上下に10%, 左右に25%の空白を作る */&lt;/span&gt;
+&lt;span class=&quot;token selector&quot;&gt;img[alt*=&quot;--my-padding&quot;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 10% 25%&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token url&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;[&lt;span class=&quot;token content&quot;&gt;lenna --my-padding&lt;/span&gt;](&lt;span class=&quot;token url&quot;&gt;lenna.jpg&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 512px; [object Object]&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/aa84bc36cfd33497d494427e7f231f1f/36dd4/lenna.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 93.67088607594937%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQBAwX/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQIE/9oADAMBAAIQAxAAAAHO8XSNWLSnzLSnMGf/xAAeEAACAAYDAAAAAAAAAAAAAAABAgADERIhMjEzQf/aAAgBAQABBQL2giy+G4OZYC0mbL1Pt//EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BZop//8QAFxEBAQEBAAAAAAAAAAAAAAAAAAERQf/aAAgBAgEBPwHGrxH/xAAeEAACAgEFAQAAAAAAAAAAAAAAAQIRcRASITGBgv/aAAgBAQAGPwIuLybm6s8IxXTOZUfI8af/xAAbEAADAQADAQAAAAAAAAAAAAAAAREhQVFhMf/aAAgBAQABPyGt34iqlzl8E+3wJdD42VWxlgGEmHRUaIMeND7P/9oADAMBAAIAAwAAABAL4ID/xAAZEQEAAgMAAAAAAAAAAAAAAAABADEQEUH/2gAIAQMBAT8QS1yaSjj/xAAZEQACAwEAAAAAAAAAAAAAAAAAMQERIUH/2gAIAQIBAT8QXS/BQkH/xAAfEAEAAgICAgMAAAAAAAAAAAABABEhMWGBQVGRseH/2gAIAQEAAT8Qt1VrvcCQaUlhz+Szu5dH0+d9xUihCbqozCGUGDDeZbXU0TGiJSfD6hAAVS4Rwxm+sAGNFE//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;lenna --my-padding&quot;
+        title=&quot;lenna --my-padding&quot;
+        src=&quot;/static/aa84bc36cfd33497d494427e7f231f1f/36dd4/lenna.jpg&quot;
+        srcset=&quot;/static/aa84bc36cfd33497d494427e7f231f1f/ff44c/lenna.jpg 158w,
+/static/aa84bc36cfd33497d494427e7f231f1f/a6688/lenna.jpg 315w,
+/static/aa84bc36cfd33497d494427e7f231f1f/36dd4/lenna.jpg 512w&quot;
+        sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;できている。&lt;br&gt;
+このページを再読み込みしてほしい。padding した領域に一瞬ブラーの残像が表示されるのが分かると思う。
+gatsby-image の blur-up で読込中にブラーを表示する設定にしているためである。この時表示される base64 の画像には CSS が適用されないため、このような表示になってしまう。&lt;/p&gt;
+&lt;h3&gt;マージン&lt;/h3&gt;
+&lt;p&gt;src/style.css に、alt 属性に&lt;code class=&quot;language-text&quot;&gt;--my-margin&lt;/code&gt; を含むと margin を設ける CSS を書く&lt;br&gt;
+通常の場合 gatsby-image の CSS が優先されてしまうため、CSS に&lt;code class=&quot;language-text&quot;&gt;!important&lt;/code&gt;をつけて、style.css を優先させる。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/* alt属性に--my-marginを含むと上下左右15%の空白を作る */&lt;/span&gt;
+&lt;span class=&quot;token selector&quot;&gt;img[alt*=&quot;--my-margin&quot;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 15% &lt;span class=&quot;token important&quot;&gt;!important&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token url&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;[&lt;span class=&quot;token content&quot;&gt;lenna --my-margin&lt;/span&gt;](&lt;span class=&quot;token url&quot;&gt;lenna.jpg&lt;/span&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 512px; [object Object]&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/aa84bc36cfd33497d494427e7f231f1f/36dd4/lenna.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 93.67088607594937%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQBAwX/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQIE/9oADAMBAAIQAxAAAAHO8XSNWLSnzLSnMGf/xAAeEAACAAYDAAAAAAAAAAAAAAABAgADERIhMjEzQf/aAAgBAQABBQL2giy+G4OZYC0mbL1Pt//EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BZop//8QAFxEBAQEBAAAAAAAAAAAAAAAAAAERQf/aAAgBAgEBPwHGrxH/xAAeEAACAgEFAQAAAAAAAAAAAAAAAQIRcRASITGBgv/aAAgBAQAGPwIuLybm6s8IxXTOZUfI8af/xAAbEAADAQADAQAAAAAAAAAAAAAAAREhQVFhMf/aAAgBAQABPyGt34iqlzl8E+3wJdD42VWxlgGEmHRUaIMeND7P/9oADAMBAAIAAwAAABAL4ID/xAAZEQEAAgMAAAAAAAAAAAAAAAABADEQEUH/2gAIAQMBAT8QS1yaSjj/xAAZEQACAwEAAAAAAAAAAAAAAAAAMQERIUH/2gAIAQIBAT8QXS/BQkH/xAAfEAEAAgICAgMAAAAAAAAAAAABABEhMWGBQVGRseH/2gAIAQEAAT8Qt1VrvcCQaUlhz+Szu5dH0+d9xUihCbqozCGUGDDeZbXU0TGiJSfD6hAAVS4Rwxm+sAGNFE//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;lenna --my-margin&quot;
+        title=&quot;lenna --my-margin&quot;
+        src=&quot;/static/aa84bc36cfd33497d494427e7f231f1f/36dd4/lenna.jpg&quot;
+        srcset=&quot;/static/aa84bc36cfd33497d494427e7f231f1f/ff44c/lenna.jpg 158w,
+/static/aa84bc36cfd33497d494427e7f231f1f/a6688/lenna.jpg 315w,
+/static/aa84bc36cfd33497d494427e7f231f1f/36dd4/lenna.jpg 512w&quot;
+        sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+…&lt;br&gt;
+…&lt;br&gt;
+…&lt;br&gt;
+…&lt;br&gt;
+blur-up の画像がずれて、読み込み中とは思えないおかしな挙動に見える。&lt;/p&gt;
+&lt;h2&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;alt 属性を利用した Markdown の画像への CSS の適用法は、個々の記事ですこしだけ装飾したい時などに便利である。 もしこの方法で padding や margin を作るときは、blur-up の設定は削除したほうが良いかもしれない。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Linuxのファイルシステムコマンドまとめ]]></title><description><![CDATA[fstab と mount の違い mount… コマンド, 一時的に作用, 再起動したらリセット
 fstab… 設定ファイル, 起動時に自動でマウントさせるための記述 厳密には違うかもしれないが、通常使用ならこの理解でいいだろ、みんなごめん
 fstab…]]></description><link>https://narazuke.github.io/linux-command-filesystem/</link><guid isPermaLink="false">https://narazuke.github.io/linux-command-filesystem/</guid><content:encoded>&lt;h2&gt;fstab と mount の違い&lt;/h2&gt;
 &lt;p&gt;mount… コマンド, 一時的に作用, 再起動したらリセット
@@ -112,8 +310,8 @@ a は 1 台目のストレージ&lt;br&gt;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;rhine lab&quot;
-        title=&quot;rhine lab&quot;
+        alt=&quot;--arknights-logo&quot;
+        title=&quot;--arknights-logo&quot;
         src=&quot;/static/1b75be8a2752e7844d7da62b53e04da8/4ee7f/rhine_lab.png&quot;
         srcset=&quot;/static/1b75be8a2752e7844d7da62b53e04da8/c26ae/rhine_lab.png 158w,
 /static/1b75be8a2752e7844d7da62b53e04da8/6bdcf/rhine_lab.png 315w,
@@ -141,8 +339,8 @@ a は 1 台目のストレージ&lt;br&gt;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;arduino&quot;
-        title=&quot;arduino&quot;
+        alt=&quot;--arknights-logo&quot;
+        title=&quot;--arknights-logo&quot;
         src=&quot;/static/9fd7abcaeca284a4ff1ad388392f0642/f058b/arduino.png&quot;
         srcset=&quot;/static/9fd7abcaeca284a4ff1ad388392f0642/c26ae/arduino.png 158w,
 /static/9fd7abcaeca284a4ff1ad388392f0642/6bdcf/arduino.png 315w,
@@ -173,8 +371,8 @@ a は 1 台目のストレージ&lt;br&gt;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;closure&quot;
-        title=&quot;closure&quot;
+        alt=&quot;--arknights-logo&quot;
+        title=&quot;--arknights-logo&quot;
         src=&quot;/static/c35be9b7c36d00cc5669ea99cc1b6b10/2519b/closure.png&quot;
         srcset=&quot;/static/c35be9b7c36d00cc5669ea99cc1b6b10/2519b/closure.png 113w&quot;
         sizes=&quot;(max-width: 113px) 100vw, 113px&quot;
@@ -200,8 +398,8 @@ a は 1 台目のストレージ&lt;br&gt;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;github&quot;
-        title=&quot;github&quot;
+        alt=&quot;--arknights-logo&quot;
+        title=&quot;--arknights-logo&quot;
         src=&quot;/static/ef7a02b69836dc8b6a732a54c4200dcb/070ae/github.png&quot;
         srcset=&quot;/static/ef7a02b69836dc8b6a732a54c4200dcb/070ae/github.png 120w&quot;
         sizes=&quot;(max-width: 120px) 100vw, 120px&quot;
@@ -229,8 +427,8 @@ a は 1 台目のストレージ&lt;br&gt;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;ursus&quot;
-        title=&quot;ursus&quot;
+        alt=&quot;--arknights-logo&quot;
+        title=&quot;--arknights-logo&quot;
         src=&quot;/static/3598a8ba6b7c4646a597a04cd55a1d79/01e7c/ursus.png&quot;
         srcset=&quot;/static/3598a8ba6b7c4646a597a04cd55a1d79/c26ae/ursus.png 158w,
 /static/3598a8ba6b7c4646a597a04cd55a1d79/6bdcf/ursus.png 315w,
@@ -258,8 +456,8 @@ a は 1 台目のストレージ&lt;br&gt;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;russia&quot;
-        title=&quot;russia&quot;
+        alt=&quot;--arknights-logo&quot;
+        title=&quot;--arknights-logo&quot;
         src=&quot;/static/c3dc2eae52cb1d270a8a2e81f812b3ee/f058b/russia.png&quot;
         srcset=&quot;/static/c3dc2eae52cb1d270a8a2e81f812b3ee/c26ae/russia.png 158w,
 /static/c3dc2eae52cb1d270a8a2e81f812b3ee/6bdcf/russia.png 315w,
@@ -291,8 +489,8 @@ a は 1 台目のストレージ&lt;br&gt;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;victoria&quot;
-        title=&quot;victoria&quot;
+        alt=&quot;--arknights-logo&quot;
+        title=&quot;--arknights-logo&quot;
         src=&quot;/static/08d0abee3e684da44094d3c25c6e4cd1/222b7/victoria.png&quot;
         srcset=&quot;/static/08d0abee3e684da44094d3c25c6e4cd1/c26ae/victoria.png 158w,
 /static/08d0abee3e684da44094d3c25c6e4cd1/222b7/victoria.png 163w&quot;
@@ -319,8 +517,8 @@ a は 1 台目のストレージ&lt;br&gt;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;uk&quot;
-        title=&quot;uk&quot;
+        alt=&quot;--arknights-logo&quot;
+        title=&quot;--arknights-logo&quot;
         src=&quot;/static/2931f2d86185e7ec14188c156bf73e35/f058b/uk.png&quot;
         srcset=&quot;/static/2931f2d86185e7ec14188c156bf73e35/c26ae/uk.png 158w,
 /static/2931f2d86185e7ec14188c156bf73e35/6bdcf/uk.png 315w,
@@ -352,8 +550,8 @@ a は 1 台目のストレージ&lt;br&gt;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;sito&quot;
-        title=&quot;sito&quot;
+        alt=&quot;--arknights-logo&quot;
+        title=&quot;--arknights-logo&quot;
         src=&quot;/static/11fceb5cea028bfc6924d6e0494a9297/f93b5/sito.jpg&quot;
         srcset=&quot;/static/11fceb5cea028bfc6924d6e0494a9297/ff44c/sito.jpg 158w,
 /static/11fceb5cea028bfc6924d6e0494a9297/f93b5/sito.jpg 300w&quot;
@@ -380,8 +578,8 @@ a は 1 台目のストレージ&lt;br&gt;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;star of life&quot;
-        title=&quot;star of life&quot;
+        alt=&quot;--arknights-logo&quot;
+        title=&quot;--arknights-logo&quot;
         src=&quot;/static/7a9e7a4c2dd2c142f1d5478a603b26fb/f058b/star_of_life.png&quot;
         srcset=&quot;/static/7a9e7a4c2dd2c142f1d5478a603b26fb/c26ae/star_of_life.png 158w,
 /static/7a9e7a4c2dd2c142f1d5478a603b26fb/6bdcf/star_of_life.png 315w,
@@ -413,8 +611,8 @@ a は 1 台目のストレージ&lt;br&gt;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;lynx&quot;
-        title=&quot;lynx&quot;
+        alt=&quot;--arknights-logo&quot;
+        title=&quot;--arknights-logo&quot;
         src=&quot;/static/7c99607148a45fe22268765fd67cbc62/30592/lynx.png&quot;
         srcset=&quot;/static/7c99607148a45fe22268765fd67cbc62/c26ae/lynx.png 158w,
 /static/7c99607148a45fe22268765fd67cbc62/6bdcf/lynx.png 315w,
@@ -442,8 +640,8 @@ a は 1 台目のストレージ&lt;br&gt;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;star of life&quot;
-        title=&quot;star of life&quot;
+        alt=&quot;--arknights-logo&quot;
+        title=&quot;--arknights-logo&quot;
         src=&quot;/static/7a9e7a4c2dd2c142f1d5478a603b26fb/f058b/star_of_life.png&quot;
         srcset=&quot;/static/7a9e7a4c2dd2c142f1d5478a603b26fb/c26ae/star_of_life.png 158w,
 /static/7a9e7a4c2dd2c142f1d5478a603b26fb/6bdcf/star_of_life.png 315w,
@@ -661,8 +859,8 @@ git push &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;u origin mas
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;git_status_display_04.png&quot;
-        title=&quot;git_status_display_04.png&quot;
+        alt=&quot;git_status_display_04.png -reverse&quot;
+        title=&quot;git_status_display_04.png -reverse&quot;
         src=&quot;/static/2602f6201fa4386be3c947c3974cbb50/f058b/git_status_display_04.png&quot;
         srcset=&quot;/static/2602f6201fa4386be3c947c3974cbb50/c26ae/git_status_display_04.png 158w,
 /static/2602f6201fa4386be3c947c3974cbb50/6bdcf/git_status_display_04.png 315w,
