@@ -369,7 +369,9 @@ small a {
   margin-right: 10px;
   font-size: var(--fontSize-1);
 }
-
+.category {
+  padding-bottom: 8px;
+}
 .category a {
   margin-bottom: 15px;
   vertical-align: middle;
@@ -377,7 +379,7 @@ small a {
   /* border: solid 2px var(--color-text-light); */
   background-color: #7f6cd8;
   border-radius: 3px;
-  padding: 0 5px;
+  padding: 1px 5px;
   margin-right: 10px;
   font-size: var(--fontSize-1);
   /* font-weight: var(--fontWeight-medium); */
@@ -385,7 +387,7 @@ small a {
 .tech a {
   /* font-weight: var(--fontWeight-black); */
   color: #ffffff;
-  background-color: #4950b3;
+  background-color: #7f6cd8;
 }
 .diary a {
   /* font-weight: var(--fontWeight-black); */

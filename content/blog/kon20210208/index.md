@@ -1,11 +1,11 @@
 ---
 title: 日記
 created: 2021-02-08 21:21
-updated: 2021-02-15T18:09
+updated: 2021-02-15T18:23
 description: youtubeの埋め込みについてもかく
 tag: []
 author: [konnyaku]
-category: [diary]
+category: diary
 ---
 
 youtube の埋め込みについては  
