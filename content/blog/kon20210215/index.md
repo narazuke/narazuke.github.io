@@ -1,8 +1,8 @@
 ---
 title: 日記
 created: 2021-02-14 15:19
-updated: 2021-02-15 19:02
-description: 中国語で
+updated: 2021-02-15 22:23
+description: 今食べたいものと新機能について
 category: diary
 tag: [chinese]
 author: [konnyaku]
@@ -25,5 +25,10 @@ https://ren-3.com/chinese-yao/
 ‘要’比‘想’是有力的說法。
 
 ‘要’ 》 ‘想要’ 》 ‘想’
+
+
+-----
+
+ならづけの機能にyoutube,twitterの埋め込みを追加したい。
 
 
