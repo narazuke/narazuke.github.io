@@ -32,7 +32,7 @@ const BlogIndex = ({ data, location }) => {
       <Link to="/tags">All tags</Link>
       <ol style={{ listStyle: `none` }}>
         {edges.map(({ node }) => {
-          return <PostColumn node={node} />
+          return <PostColumn key={"postcolumn-list"} node={node} />
         })}
       </ol>
     </Layout>
