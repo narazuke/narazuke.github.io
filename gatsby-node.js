@@ -1,22 +1,23 @@
 const path = require(`path`)
+const fs = require(`fs`);
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const _ = require("lodash")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-
+  
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const tagTemplate = path.resolve("src/templates/tags.js")
   const authorTemplate = path.resolve("src/templates/author.js")
-
+  
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
-      {
-        postsRemark: allMarkdownRemark(
-          sort: { fields: [frontmatter___created], order: ASC }
-          limit: 10000
+    {
+      postsRemark: allMarkdownRemark(
+        sort: { fields: [frontmatter___created], order: ASC }
+        limit: 10000
         ) {
           edges {
             node {
@@ -41,39 +42,44 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-    `
-  )
-
+      `
+      )
+      
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
       result.errors
-    )
-    return
+      )
+      return
   }
-
+        
   const posts = result.data.postsRemark.edges
-
-  // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-  // `context` is available in the template as a prop and as a variable in GraphQL
-
+    
+    // Create blog posts pages
+    // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
+    // `context` is available in the template as a prop and as a variable in GraphQL
+  
+  var post_table = require(`./post_table.json`)
+  const post_table_path = './post_table.json'
   if (posts.length > 0) {
     posts.forEach((post, index) => {
+      if (!post_table.hasOwnProperty(post.node.id)) {
+        post_table[post.node.id] = Object.keys(post_table).length
+      }
       const previousPostId = index === 0 ? null : posts[index - 1].node.id
-      const nextPostId =
-        index === posts.length - 1 ? null : posts[index + 1].node.id
+      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].node.id
       createPage({
         path: post.node.fields.slug,
         component: blogPost,
         context: {
-          index,
+          index: post_table[post.node.id],
           id: post.node.id,
           previousPostId,
           nextPostId,
         },
       })
     })
+    fs.writeFileSync(post_table_path,JSON.stringify(post_table))
   }
 
   // {URL}/tags/hoge のページを作る
