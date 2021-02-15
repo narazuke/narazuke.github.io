@@ -8,6 +8,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "./image"
+import { Link } from "gatsby"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -37,12 +38,14 @@ const Bio = () => {
         return (
           <div key={'bio-list'} style={{ width: "50%" }}>
             <div style={{ width: "100px" }}>
-              <Image
-                filename={src_path}
-                style={{
-                  borderRadius: `50%`,
-                }}
-              />
+              <Link to={`/author/${name}/`}>
+                <Image
+                  filename={src_path}
+                  style={{
+                    borderRadius: `50%`,
+                  }}
+                />
+              </Link>
             </div>
             {author?.name && (
               <p>

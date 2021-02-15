@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import Image from "./image"
 
 const PostColumnTemplate = ({ node }) => {
-  //   const { node } = data.allMarkdownRemark.edges
   return (
     <li className="post-list" key={node.fields.slug}>
       <article
@@ -12,6 +11,13 @@ const PostColumnTemplate = ({ node }) => {
         itemType="http://schema.org/Article"
       >
         <header>
+          <small>
+            <div className={`category ${node.frontmatter.category}`}>
+              <Link to={`/category/${node.frontmatter.category}/`}>
+                {node.frontmatter.category}
+              </Link>
+            </div>
+          </small>
           <h2>
             <Link to={node.fields.slug} itemProp="url">
               <span itemProp="headline">{node.frontmatter.title}</span>
@@ -21,7 +27,7 @@ const PostColumnTemplate = ({ node }) => {
           <div className="tag-list">
             {node.frontmatter.tag?.map(tag => {
               return (
-                <small key={'post-list'}>
+                <small key={"post-list"}>
                   <div className="tag">
                     <Link to={`/tags/${tag}/`}>{tag}</Link>
                   </div>
@@ -38,24 +44,22 @@ const PostColumnTemplate = ({ node }) => {
             itemProp="description"
           />
         </section>
-            {node.frontmatter.author?.map(name => {
-              return(
-                <small key={"author-list"} className="profile-mini">
-                  <figure>
-                    <Image
-                      filename={"profile-pic-" + name + ".jpg"}
-                      style={{
-                        borderRadius: `50%`,
-                      }}
-                      fixed={true}
-                    />
-                  </figure>
-                  <div>
-                    {name}
-                  </div>
-                </small>
-              )
-            })}
+        {node.frontmatter.author?.map(name => {
+          return (
+            <small key={"author-list"} className="profile-mini">
+              <figure>
+                <Image
+                  filename={"profile-pic-" + name + ".jpg"}
+                  style={{
+                    borderRadius: `50%`,
+                  }}
+                  fixed={true}
+                />
+              </figure>
+              <div>{name}</div>
+            </small>
+          )
+        })}
       </article>
       <hr />
     </li>

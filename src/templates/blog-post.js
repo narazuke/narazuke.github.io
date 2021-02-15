@@ -12,6 +12,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  console.log(post.frontmatter)
   let gitalkConfig = {
     id: post.fields.slug,
     title: post.frontmatter.title,
@@ -29,6 +30,13 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
+          <small>
+            <div className="category">
+              <Link to={`/tags/${post.frontmatter.category}/`}>
+                {post.frontmatter.category}
+              </Link>
+            </div>
+          </small>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.created}</p>
           <div className="tag-list">
@@ -42,18 +50,23 @@ const BlogPostTemplate = ({ data, location }) => {
               )
             })}
           </div>
-          <small className="profile-mini">
-            <figure>
-              <Image
-                filename={"profile-pic-" + post.frontmatter.author + ".jpg"}
-                style={{
-                  borderRadius: `50%`,
-                  height: `100%`,
-                }}
-                fixed={true}
-              />
-            </figure>
-            <div>{post.frontmatter.author}</div>
+          <small className="profile-mini-list">
+            {post.frontmatter.author?.map(name => {
+              return (
+                <Link to={`/author/${name}/`} className="profile-mini">
+                  <figure>
+                    <Image
+                      filename={"profile-pic-" + name + ".jpg"}
+                      style={{
+                        borderRadius: `50%`,
+                      }}
+                      fixed={true}
+                    />
+                  </figure>
+                  <div>{name}</div>
+                </Link>
+              )
+            })}
           </small>
         </header>
         <hr />
@@ -127,6 +140,7 @@ export const pageQuery = graphql`
         description
         tag
         author
+        category
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

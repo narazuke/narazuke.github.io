@@ -9,7 +9,6 @@ import PostColumn from "../components/post-column"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { edges } = data.allMarkdownRemark
-
   if (edges.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -71,6 +70,7 @@ export const pageQuery = graphql`
             tag
             created(formatString: "Y-M-D ddd")
             author
+            category
           }
         }
       }

@@ -251,7 +251,7 @@ a {
 }
 a:hover {
   /* color: var(--color-link); */
-  opacity: 0.7;
+  opacity: 0.9;
 }
 a:hover,
 a:focus {
@@ -364,19 +364,53 @@ small a {
   vertical-align: middle;
   color: #333333;
   background-color: #eeeeee;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 0 5px;
-  margin-right: 5px;
+  margin-right: 10px;
   font-size: var(--fontSize-1);
 }
 
+.category a {
+  margin-bottom: 15px;
+  vertical-align: middle;
+  color: #ffffff;
+  /* border: solid 2px var(--color-text-light); */
+  background-color: #7f6cd8;
+  border-radius: 3px;
+  padding: 0 5px;
+  margin-right: 10px;
+  font-size: var(--fontSize-1);
+  /* font-weight: var(--fontWeight-medium); */
+}
+.tech a {
+  /* font-weight: var(--fontWeight-black); */
+  color: #ffffff;
+  background-color: #4950b3;
+}
+.diary a {
+  /* font-weight: var(--fontWeight-black); */
+  color: #ffffff;
+  background-color: #2f9e35;
+}
+.thought a {
+  /* font-weight: var(--fontWeight-black); */
+  color: #ffffff;
+  background-color: #9e6e2f;
+}
+.memo a {
+  /* font-weight: var(--fontWeight-black); */
+  color: #ffffff;
+  background-color: #9e2f95;
+}
 svg {
   max-height: 100%;
   width: auto;
 }
+
 .profile-mini {
   display: inline-flex;
   align-items: center;
+  margin-right: 10px;
 }
 /* .profile-mini img {
   vertical-align: middle;
