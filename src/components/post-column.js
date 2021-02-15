@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Image from "./image"
 
 const PostColumnTemplate = ({ node }) => {
+  console.log(node.frontmatter)
   //   const { node } = data.allMarkdownRemark.edges
   return (
     <li className="post-list" key={node.fields.slug}>
@@ -19,7 +20,13 @@ const PostColumnTemplate = ({ node }) => {
           </h2>
           <small>{node.frontmatter.created}</small>
           <div className="tag-list">
-            {node.frontmatter.tag?.map(tag => {
+            <small>
+              <div className="category">
+                <Link>{node.frontmatter.category}</Link>
+              </div>
+            </small>
+            {node.frontmatter.tag?.map((tag, index) => {
+              if (index === 0) return null
               return (
                 <small>
                   <div className="tag">

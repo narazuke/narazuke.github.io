@@ -358,16 +358,27 @@ small a {
   display: flex;
   height: var(--fontSize-1);
   padding-bottom: 30px;
+  vertical-align: bottom;
 }
 .tag {
   display: flex;
   vertical-align: middle;
   color: #333333;
   background-color: #eeeeee;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 0 5px;
   margin-right: 5px;
-  font-size: var(--fontSize-1);
+  font-size: var(--fontSize-2);
+}
+.category a {
+  vertical-align: middle;
+  color: #f3f3f3;
+  /* border: solid 2px var(--color-text-light); */
+  background-color: #979797;
+  border-radius: 3px;
+  padding: 0 5px;
+  margin-right: 10px;
+  font-size: var(--fontSize-2);
 }
 
 svg {

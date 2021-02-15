@@ -71,6 +71,7 @@ export const pageQuery = graphql`
             tag
             created(formatString: "Y-M-D ddd")
             author
+            category
           }
         }
       }
