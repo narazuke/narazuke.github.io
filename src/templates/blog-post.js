@@ -42,18 +42,23 @@ const BlogPostTemplate = ({ data, location }) => {
               )
             })}
           </div>
-          <small className="profile-mini">
-            <figure>
-              <Image
-                filename={"profile-pic-" + post.frontmatter.author + ".jpg"}
-                style={{
-                  borderRadius: `50%`,
-                  height: `100%`,
-                }}
-                fixed={true}
-              />
-            </figure>
-            <div>{post.frontmatter.author}</div>
+          <small className="profile-mini-list">
+            {post.frontmatter.author?.map(name => {
+              return (
+                <Link to={`/author/${name}/`} className="profile-mini">
+                  <figure>
+                    <Image
+                      filename={"profile-pic-" + name + ".jpg"}
+                      style={{
+                        borderRadius: `50%`,
+                      }}
+                      fixed={true}
+                    />
+                  </figure>
+                  <div>{name}</div>
+                </Link>
+              )
+            })}
           </small>
         </header>
         <hr />

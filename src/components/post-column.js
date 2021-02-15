@@ -38,24 +38,24 @@ const PostColumnTemplate = ({ node }) => {
             itemProp="description"
           />
         </section>
-            {node.frontmatter.author?.map(name => {
-              return(
-                <small className="profile-mini">
-                  <figure>
-                    <Image
-                      filename={"profile-pic-" + name + ".jpg"}
-                      style={{
-                        borderRadius: `50%`,
-                      }}
-                      fixed={true}
-                    />
-                  </figure>
-                  <div>
-                    {name}
-                  </div>
-                </small>
-              )
-            })}
+        {node.frontmatter.author?.map(name => {
+          return (
+            <small>
+              <Link to={`/author/${name}/`} className="profile-mini">
+                <figure>
+                  <Image
+                    filename={"profile-pic-" + name + ".jpg"}
+                    style={{
+                      borderRadius: `50%`,
+                    }}
+                    fixed={true}
+                  />
+                </figure>
+                <div>{name}</div>
+              </Link>
+            </small>
+          )
+        })}
       </article>
       <hr />
     </li>
