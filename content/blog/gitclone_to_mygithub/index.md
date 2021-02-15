@@ -1,8 +1,8 @@
 ---
-title: gitで別のリポジトリからファイルをうつす
+title: gitで別のリポジトリからファイルをコピーする
 created: 2021-02-04 19:29
-updated: 2021-02-14 20:06
-description: うつします
+updated: 2021-02-15 09:37
+description: コピーします
 author: [konnyaku]
 tag: [git,computer,memo]
 ---
@@ -19,7 +19,14 @@ git remote add <name> <url>
 ```
 これでlocalにurl先のデータがくる
 
-2.
+2. mergeする
+```
+git merge <name>/<branch>
+```
+`fatal: refusing to merge unrelated histories`というエラーは`--allow-unrelated-histories`というオプションで解決できた
+
+### 今後
+これでnarazukeのデータをwabetarouにも表示できるようにしたが、自分の記事だけをfilterして表示してもいいかも
 
 
 

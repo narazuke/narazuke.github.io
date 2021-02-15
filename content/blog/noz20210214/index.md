@@ -1,8 +1,8 @@
 ---
 title: 日記
-author: nozzle
+author: [nozzle]
 created: 2021-02-14T17:33
-updated: 2021-02-14T20:12
+updated: 2021-02-15 09:41
 description: 日記の語源は「日曜の記録」らしい
 tag: [日記]
 ---
