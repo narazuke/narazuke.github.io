@@ -12,7 +12,6 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-  console.log(post.frontmatter)
   let gitalkConfig = {
     id: post.fields.slug,
     title: post.frontmatter.title,
@@ -31,8 +30,8 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <small>
-            <div className="category">
-              <Link to={`/tags/${post.frontmatter.category}/`}>
+            <div className={`category ${post.frontmatter.category}`}>
+              <Link to={`/category/${post.frontmatter.category}/`}>
                 {post.frontmatter.category}
               </Link>
             </div>
@@ -44,7 +43,7 @@ const BlogPostTemplate = ({ data, location }) => {
               return (
                 <small>
                   <div className="tag">
-                    <Link to={`/tags/${tag}/`}>{tag}</Link>
+                    <Link to={`/tag/${tag}/`}>{tag}</Link>
                   </div>
                 </small>
               )
