@@ -36,7 +36,7 @@ const Bio = () => {
         const name = author.name
         const src_path = "profile-pic-" + name + ".jpg"
         return (
-          <div style={{ width: "50%" }}>
+          <div key={'bio-list'} style={{ width: "50%" }}>
             <div style={{ width: "100px" }}>
               <Link to={`/author/${name}/`}>
                 <Image

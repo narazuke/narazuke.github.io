@@ -6,7 +6,7 @@ import kebabCase from "lodash/kebabCase"
 import Layout from "../components/layout"
 
 // Components
-import { Helmet } from "react-helmet"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 import { Link, graphql } from "gatsby"
 
 const AuthorPage = ({
@@ -19,7 +19,9 @@ const AuthorPage = ({
   },
 }) => (
   <Layout location={location} title={title}>
-    <Helmet title={title} />
+    <HelmetProvider>
+      <Helmet title={title} />
+    </HelmetProvider>
     <div>
       <h1>Authors</h1>
       <ul>
