@@ -1,5 +1,4 @@
 const path = require(`path`)
-const fs = require(`fs`);
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const _ = require("lodash")
 
@@ -59,27 +58,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
     // `context` is available in the template as a prop and as a variable in GraphQL
   
-  var post_table = require(`./post_table.json`)
-  const post_table_path = './post_table.json'
   if (posts.length > 0) {
     posts.forEach((post, index) => {
-      if (!post_table.hasOwnProperty(post.node.id)) {
-        post_table[post.node.id] = Object.keys(post_table).length
-      }
       const previousPostId = index === 0 ? null : posts[index - 1].node.id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].node.id
       createPage({
         path: post.node.fields.slug,
         component: blogPost,
         context: {
-          index: post_table[post.node.id],
           id: post.node.id,
           previousPostId,
           nextPostId,
         },
       })
     })
-    fs.writeFileSync(post_table_path,JSON.stringify(post_table))
   }
 
   // {URL}/tags/hoge のページを作る
@@ -120,18 +112,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes, createFieldExtension } = actions
-
-  createFieldExtension({
-    name: 'shout',
-    extend: () => (
-      {
-        resolve(source, args, context, info) {
-          return context.index
-        }
-      }
-    )
-  })
+  const { createTypes } = actions
 
   // Explicitly define the siteMetadata {} object
   // This way those will always be defined even if removed from gatsby-config.js
@@ -169,7 +150,6 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       author: [String]
       tag: [String]
-      index: String @shout
     }
 
     type Fields {
