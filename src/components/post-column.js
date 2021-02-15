@@ -3,8 +3,6 @@ import { Link } from "gatsby"
 import Image from "./image"
 
 const PostColumnTemplate = ({ node }) => {
-  console.log(node.frontmatter)
-  //   const { node } = data.allMarkdownRemark.edges
   return (
     <li className="post-list" key={node.fields.slug}>
       <article
@@ -13,6 +11,13 @@ const PostColumnTemplate = ({ node }) => {
         itemType="http://schema.org/Article"
       >
         <header>
+          <small>
+            <div className={`category ${node.frontmatter.category}`}>
+              <Link to={`/category/${node.frontmatter.category}/`}>
+                {node.frontmatter.category}
+              </Link>
+            </div>
+          </small>
           <h2>
             <Link to={node.fields.slug} itemProp="url">
               <span itemProp="headline">{node.frontmatter.title}</span>
@@ -20,13 +25,7 @@ const PostColumnTemplate = ({ node }) => {
           </h2>
           <small>{node.frontmatter.created}</small>
           <div className="tag-list">
-            <small>
-              <div className="category">
-                <Link>{node.frontmatter.category}</Link>
-              </div>
-            </small>
-            {node.frontmatter.tag?.map((tag, index) => {
-              if (index === 0) return null
+            {node.frontmatter.tag?.map(tag => {
               return (
                 <small>
                   <div className="tag">

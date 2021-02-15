@@ -9,7 +9,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const tagTemplate = path.resolve("src/templates/tags.js")
   const authorTemplate = path.resolve("src/templates/author.js")
-
+  const categoryTemplate = path.resolve("src/templates/category.js")
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
@@ -25,6 +25,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 slug
               }
               frontmatter {
+                category
                 tag
               }
             }
@@ -37,6 +38,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
         authorsGroup: allMarkdownRemark(limit: 2000) {
           group(field: frontmatter___author) {
+            fieldValue
+          }
+        }
+        categoriesGroup: allMarkdownRemark(limit: 2000) {
+          group(field: frontmatter___category) {
             fieldValue
           }
         }
@@ -63,7 +69,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const previousPostId = index === 0 ? null : posts[index - 1].node.id
       const nextPostId =
         index === posts.length - 1 ? null : posts[index + 1].node.id
-      const category = post.node.frontmatter.tag[0]
       createPage({
         path: post.node.fields.slug,
         component: blogPost,
@@ -71,7 +76,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: post.node.id,
           previousPostId,
           nextPostId,
-          category,
         },
       })
     })
@@ -98,6 +102,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+  const categories = result.data.categoriesGroup.group
+  categories.forEach(category => {
+    createPage({
+      path: `/category/${_.kebabCase(category.fieldValue)}/`,
+      component: categoryTemplate,
+      context: {
+        category: category.fieldValue,
+      },
+    })
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -116,15 +130,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes, createFieldExtension } = actions
-
-  createFieldExtension({
-    name: "shout",
-    extend: () => ({
-      resolve(source, args, context, info) {
-        return context.category
-      },
-    }),
-  })
 
   // Explicitly define the siteMetadata {} object
   // This way those will always be defined even if removed from gatsby-config.js
@@ -162,7 +167,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       author: [String]
       tag: [String]
-      category: String @shout
+      category: String
     }
 
     type Fields {

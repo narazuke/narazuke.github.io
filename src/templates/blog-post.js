@@ -30,16 +30,17 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
+          <small>
+            <div className="category">
+              <Link to={`/tags/${post.frontmatter.category}/`}>
+                {post.frontmatter.category}
+              </Link>
+            </div>
+          </small>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.created}</p>
           <div className="tag-list">
-            <small>
-              <div className="category">
-                <Link>{post.frontmatter.category}</Link>
-              </div>
-            </small>
-            {post.frontmatter.tag?.map((tag, index) => {
-              if (index === 0) return null
+            {post.frontmatter.tag?.map(tag => {
               return (
                 <small>
                   <div className="tag">
