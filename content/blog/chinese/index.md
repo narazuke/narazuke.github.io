@@ -1,7 +1,7 @@
 ---
 title: 中国語メモ
 created: 2021-02-14 16:40
-updated: 2021-02-15 19:25
+updated: 2021-02-15 19:40
 description: 単語や熟語の拼音と意味をまとめる
 tag: [language, chinese, memo]
 author: [konnyaku]
@@ -40,4 +40,8 @@ category: memo
 |:---:|:---:|:---:|
 |火鍋|huǒguō|火鍋|
 |玉米狗|yùmǐgǒu|アメリカンドッグ|
+<<<<<<< Updated upstream
 |說法|shuōfǎ|言い方|
+=======
+|說法|shuōfǎ|言い方|
+>>>>>>> Stashed changes
