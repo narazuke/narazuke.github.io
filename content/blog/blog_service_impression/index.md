@@ -1,10 +1,11 @@
 ---
 title: ブログサービス所感
+created: 2021-02-04T17:14
+updated: 2021-02-15T18:01
 tag: [impression, blog]
 author: [nozzle]
-created: 2021-02-04T17:14
-updated:
 description: Gatsbyの魅力を理解するために、他のブログサービスを知る。
+category: thought
 ---
 
 ## ブログを作る手段

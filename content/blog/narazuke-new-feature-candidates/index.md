@@ -1,10 +1,11 @@
 ---
 title: NARADUKE新機能候補
 created: 2021-01-31T22:54
-updated: 2021-02-13T14:55
+updated: 2021-02-15T18:05
 description: NARADUKEの新機能候補です
 author: [nozzle, konnyaku]
 tag: [blog]
+category: memo
 ---
 
 # 将来的に加えたい機能

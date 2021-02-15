@@ -1,10 +1,11 @@
 ---
 title: 日記
 created: 2021-02-14 15:19
-updated: 2021-02-14 18:50
+updated: 2021-02-15T18:09
 description: 中国語の勉強
-tag: [日記]
+tag: []
 author: [konnyaku]
+category: diary
 ---
 
 中国語の勉強ということで日記を中国語で書く

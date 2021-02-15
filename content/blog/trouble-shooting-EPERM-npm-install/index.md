@@ -1,10 +1,11 @@
 ---
 title: トラブルシュート：npm installすると、"Error EPERM operation not permitted, unlink ..."が出る
 created: 2021-02-06T21:19
-updated: 2021-02-10 21:58
+updated: 2021-02-15T18:07
 description: PCを再起動すると治る
 author: [nozzle]
 tag: [node, vscode, trouble-shooting]
+category: tech
 ---
 
 ## 対象者

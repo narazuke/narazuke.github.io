@@ -2,8 +2,8 @@
 title: 日記
 author: [nozzle]
 created: 2021-02-15T08:30
-updated: 2021-02-15T17:05
-tag: [日記, 生活記録]
+updated: 2021-02-15T18:09
+tag: [生活記録]
 description: 続けたい
 category: diary
 ---
@@ -39,7 +39,7 @@ _ほうれんそうの胡麻和えみたいなサボテン_
 
 ### English
 
-[Restaurant Owner Goes Viral after Responding to Influencers | Daily News Artible](https://www.rarejob.com/dna/2021/02/15/restaurant-owner-goes-viral-after-responding-to-influencers)
+[Restaurant Owner Goes Viral after Responding to Influencers | Daily News Article](https://www.rarejob.com/dna/2021/02/15/restaurant-owner-goes-viral-after-responding-to-influencers)
 
 #### My summary
 

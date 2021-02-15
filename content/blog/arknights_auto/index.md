@@ -1,15 +1,16 @@
 ---
 title: アークナイツ周回の自動化(Mac,C++)
 created: 2021-02-04 19:29
-updated: 2021-02-10 21:59
+updated: 2021-02-15T18:00
 description: C++,openCVを使って自動化
 author: [konnyaku]
-tag: [game,arknights,computer,memo]
+tag: [game, arknights, memo]
+category: tech
 ---
 
 アークナイツ自動化のツールを作る際の履歴をメモしたもの。
 
-pythonでpyautogui(pyscreeze)を使って作ったがどうやら`locateOnScreen`時に毎回screenshotをとっていて、非効率だしpcに負担かかりそう。なのでせっかくの機会なのでc++を使って新しく自動化機能を作りたいと思う。ちなみに下のコードがpythonで作ったコード。
+python で pyautogui(pyscreeze)を使って作ったがどうやら`locateOnScreen`時に毎回 screenshot をとっていて、非効率だし pc に負担かかりそう。なのでせっかくの機会なので c++を使って新しく自動化機能を作りたいと思う。ちなみに下のコードが python で作ったコード。
 
 ```python
 import time,pyautogui
@@ -42,16 +43,19 @@ while(1):
     time.sleep(3)
 ```
 
-### openCVを動かす
+### openCV を動かす
+
 いろいろつまづいたが次の手順でやれば良い
 
-1.Homebrewでインストール
+1.Homebrew でインストール
+
 ```
 brew install opencv
 brew install pkg-config
 ```
 
 2.コードを書く
+
 ```cpp
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
@@ -69,13 +73,16 @@ int main() {
 ```
 
 3.コンパイル & 実行
+
 ```
 g++ -std=c++11 main.cpp `pkg-config --cflags opencv4` `pkg-config --libs opencv4`
 ./a.out
 ```
 
 ### マウスのポジションとクリック
-CoreGraphics.hをつかいたいが以下のエラーが出る
+
+CoreGraphics.h をつかいたいが以下のエラーが出る
+
 ```
 Undefined symbols for architecture x86_64:
   "_CFRelease", referenced from:
@@ -88,56 +95,64 @@ ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
 
-このエラーはopencvの場合ではpkg-configを入れることで治った。ヘッダファイルの場所の指定、ライブラリの場所の指定、リンクするライブラリの指定をしているらしい。
-(参考)[MacOS c++でopenCVが実行できない](https://ja.stackoverflow.com/questions/53767/macos-cでopencvが実行できない)
+このエラーは opencv の場合では pkg-config を入れることで治った。ヘッダファイルの場所の指定、ライブラリの場所の指定、リンクするライブラリの指定をしているらしい。
+(参考)[MacOS c++で openCV が実行できない](https://ja.stackoverflow.com/questions/53767/macos-cでopencvが実行できない)
 
-だがCoreGraphicsではpkg-configが使えないため直接オプションを指定する必要がありそうだ。https://stackoverflow.com/questions/18882483/implement-part-of-c-source-code
+だが CoreGraphics では pkg-config が使えないため直接オプションを指定する必要がありそうだ。https://stackoverflow.com/questions/18882483/implement-part-of-c-source-code
 
 最終的には`-framework`によって無事コンパイルできた。
+
 ```
 g++ -std=c++11 -framework CoreGraphics -framework CoreFoundation main.cpp `pkg-config --cflags opencv4` `pkg-config --libs opencv4`
 ```
+
 実際のコードは以下のリンクを参考にした。
 
 （ポジションについて）[mhamilt/get_mouse_position_macos.cpp](https://gist.github.com/mhamilt/7209c809c03e42a7027e9fe5b18fdfa2)  
 （クリックについて）[Performing a double click using CGEventCreateMouseEvent()](https://stackoverflow.com/questions/1483657/performing-a-double-click-using-cgeventcreatemouseevent)
 
 ### 画像認識について
+
 マウスのポジションを指定してクリックすることはできたので次は指定する画像が存在するか、またどこにあるかを認識できるようにしないといけない。どうしよう。
-OpenCVでそういうことできないか調べた。
-[Python OpenCVで画像を検索、判定結果を返してみた](https://qiita.com/anzanshi/items/82fc4c7a3a1f84137aef)
-pythonだけど参考になった。どうやら`matchTemplate`が画像の一部が指定の画像と一致するかを判定する関数のようだ。
+OpenCV でそういうことできないか調べた。
+[Python OpenCV で画像を検索、判定結果を返してみた](https://qiita.com/anzanshi/items/82fc4c7a3a1f84137aef)
+python だけど参考になった。どうやら`matchTemplate`が画像の一部が指定の画像と一致するかを判定する関数のようだ。
 
 ### 構造体
+
 構造体関連でつまづいた。
+
 ```
 main.cpp:120:25: error: member access into incomplete type 'struct CGImage'
     CGFloat cols = image->width;
                         ^
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGImage.h:12:36: note: 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGImage.h:12:36: note:
       forward declaration of 'CGImage'
 typedef struct CF_BRIDGED_TYPE(id) CGImage *CGImageRef;
                                    ^
 ```
+
 結局`CGImageGetWidth()`というライブライ関数を使ってどうにかなったけど上のエラーはよくわからないまま。
 
 ### ウィンドウ探索
-CoreGraphicsでのwindow探索について
+
+CoreGraphics での window 探索について
 (参考)[Recognition101/appNames.cpp](https://gist.github.com/Recognition101/1e28655eece7f1169951)
 
 ### CoreGraphics
-CoreGraphics関連がわからなすぎるのでまとめる。
 
-|func name|return|やること|
-|:---:|:---:|:---:|
-|`CGMainDisplayID()`|`CGDirectDisplayID`|main_displayのIDを返す|
-|`CGDisplayBounds(CGDirectDisplayID)`|`CGRect`|displayのrectを返す|
-|`CGDisplayCreateImage(CGDirectDisplayID)`|`CGImage`|cgimageを返す|
-|`CGDisplayCreateImage(CGDirectDisplayID, CGRect)`|`CGImage`|範囲指定|
-|`CGImageGetColorSpace(CGImageRef)`|`CGColorSpaceRef`|わからん|
-|`CGBitmapContextCreate(...)`|`CGContextRef`||
+CoreGraphics 関連がわからなすぎるのでまとめる。
 
-CoreGraphicsの画像をopencvのMatに変換する関数をつくったがでうまく書き込めず真っ黒になる。。。
+|                     func name                     |       return        |         やること          |
+| :-----------------------------------------------: | :-----------------: | :-----------------------: |
+|                `CGMainDisplayID()`                | `CGDirectDisplayID` | main_display の ID を返す |
+|       `CGDisplayBounds(CGDirectDisplayID)`        |      `CGRect`       |  display の rect を返す   |
+|     `CGDisplayCreateImage(CGDirectDisplayID)`     |      `CGImage`      |      cgimage を返す       |
+| `CGDisplayCreateImage(CGDirectDisplayID, CGRect)` |      `CGImage`      |         範囲指定          |
+|        `CGImageGetColorSpace(CGImageRef)`         |  `CGColorSpaceRef`  |         わからん          |
+|           `CGBitmapContextCreate(...)`            |   `CGContextRef`    |                           |
+
+CoreGraphics の画像を opencv の Mat に変換する関数をつくったがでうまく書き込めず真っ黒になる。。。
 
 <br>
 <br>
@@ -151,7 +166,9 @@ CoreGraphicsを使う方法を諦めた。諦めたらすっきりした。
 スクリーンショットを`system()`でとる方法に切り替える。
 
 ### 構成
-以下のような順番の構成で自動化ツールを作った。  
+
+以下のような順番の構成で自動化ツールを作った。
+
 1. スクリーンショットをとる
 2. 用意した画像が存在するか調べる
 3. 存在する場合、位置を調べる
@@ -223,7 +240,7 @@ int main(void) {
                 std::cout << "clicked stage_start\n";
                 flag_click++;
                 sleep(90);
-            } 
+            }
         }
         if (!flag_click) {
             cv::matchTemplate(screen, img_result, result, cv::TM_CCORR_NORMED);
@@ -234,7 +251,7 @@ int main(void) {
                 click(location);
                 std::cout << "clicked result\n";
                 flag_click++;
-            } 
+            }
         }
         if (!flag_click) {
             flag_end++;
@@ -254,20 +271,21 @@ int main(void) {
     }
 }
 void click(CGPoint location) {
-    CGEventRef event = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, location, kCGMouseButtonLeft);  
-    CGEventSetIntegerValueField(event, kCGMouseEventClickState, 1);  
-    CGEventPost(kCGHIDEventTap, event);  
-    CGEventSetType(event, kCGEventLeftMouseUp);  
-    CGEventPost(kCGHIDEventTap, event);  
-    CFRelease(event);    
+    CGEventRef event = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, location, kCGMouseButtonLeft);
+    CGEventSetIntegerValueField(event, kCGMouseEventClickState, 1);
+    CGEventPost(kCGHIDEventTap, event);
+    CGEventSetType(event, kCGEventLeftMouseUp);
+    CGEventPost(kCGHIDEventTap, event);
+    CFRelease(event);
 }
 ```
 
 ### 結果
-前のプログラムより断然早くなった^_^
+
+前のプログラムより断然早くなった^\_^
 
 ![](./result.png)
 
-一回のループに対して今回のコードでは約0.15sであるのに対して、以前のコードでは約1.4sであるためほぼ10倍早くなっている。
+一回のループに対して今回のコードでは約 0.15s であるのに対して、以前のコードでは約 1.4s であるためほぼ 10 倍早くなっている。
 
 現在は一つのステージだけを周回するプログラムだが、改良することで基地や任務なども自動化できそうのでいつかやるかもしれない。

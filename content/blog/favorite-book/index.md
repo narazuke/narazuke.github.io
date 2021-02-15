@@ -1,10 +1,11 @@
 ---
 title: 好きな本
 created: 2021-02-10T21:48
-updated: 2021-02-13T15:17
+updated: 2021-02-15T18:00
 author: [nozzle]
 tag: [book]
 description: 増えたら随時更新するかも
+category: thought
 ---
 
 ## しろくまちゃんのほっとけーき

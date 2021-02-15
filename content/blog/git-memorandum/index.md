@@ -1,10 +1,11 @@
 ---
 title: git備忘録
 created: 2021-01-31T13:52
-updated: 2021-02-10 21:58
+updated: 2021-02-15T18:03
 description: 忘れがちなgitのコマンドを多数収録ｖ
 tag: [git]
 author: [nozzle]
+category: tech
 ---
 
 ## 初期設定

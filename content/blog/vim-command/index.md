@@ -1,10 +1,11 @@
 ---
 title: Vimのコマンド
 created: 2021-02-03 12:46
-updated: 2021-02-10 21:59
+updated: 2021-02-15T18:07
 description: Vimコマンドのメモ
 author: [konnyaku]
-tag: [computer, vim, memo]
+tag: [vim, memo]
+category: diary
 ---
 
 <br>

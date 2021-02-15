@@ -2,9 +2,10 @@
 title: 日記
 author: [nozzle]
 created: 2021-02-07T22:20
-updated: 2021-02-10 21:58
-tag: [日記]
+updated: 2021-02-15T18:09
+tag: []
 description: 昨日の日記も書いていい？ありがとう
+category: diary
 ---
 
 ## 6th Feb 2021

@@ -1,23 +1,23 @@
 ---
 title: 日記
 created: 2021-02-08 21:21
-updated: 2021-02-10 21:57
+updated: 2021-02-15T18:09
 description: youtubeの埋め込みについてもかく
-tag: [日記]
+tag: []
 author: [konnyaku]
+category: [diary]
 ---
 
-youtubeの埋め込みについては  
+youtube の埋め込みについては  
 https://takumon.com/2018/10/07/  
 このサイトによればプラグインをインストールすればできそう
 
 以下日記
 
------
+---
 
 最近筋トレをしていないから、やる時間をきめたい。
 
 とりあえず今日は今から腹筋やる。
 
 明日以降は朝にスクワットする。
-
