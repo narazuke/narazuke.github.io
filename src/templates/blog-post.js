@@ -13,7 +13,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
   let gitalkConfig = {
-    id: post.frontmatter.index,
+    id: post.fields.slug,
     title: post.frontmatter.title,
   }
 
@@ -61,15 +61,6 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <footer>
-          by
-          {post.frontmatter.author.map((name, index) => {
-            if (index === post.frontmatter.author.length - 1) {
-              return " " + name
-            }
-            return " " + name + ","
-          })}
-        </footer>
       </article>
       <nav className="blog-post-nav">
         <ul
@@ -136,7 +127,6 @@ export const pageQuery = graphql`
         description
         tag
         author
-        index
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
