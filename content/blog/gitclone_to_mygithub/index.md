@@ -1,7 +1,7 @@
 ---
 title: gitで別のリポジトリからファイルをコピーする
-created: 2021-02-04 19:29
-updated: 2021-02-15T18:03
+created: 2021-02-15T18:03
+updated: 2021-02-15T19:39
 description: コピーします
 author: [konnyaku]
 tag: [git, memo]

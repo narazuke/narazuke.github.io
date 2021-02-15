@@ -81,11 +81,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   }
 
-  // {URL}/tags/hoge のページを作る
+  // {URL}/tag/hoge のページを作る
   const tags = result.data.tagsGroup.group
   tags.forEach(tag => {
     createPage({
-      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      path: `/tag/${_.kebabCase(tag.fieldValue)}/`,
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,

@@ -29,7 +29,7 @@ const PostColumnTemplate = ({ node }) => {
               return (
                 <small key={"post-list"}>
                   <div className="tag">
-                    <Link to={`/tags/${tag}/`}>{tag}</Link>
+                    <Link to={`/tag/${tag}/`}>{tag}</Link>
                   </div>
                 </small>
               )
@@ -46,17 +46,19 @@ const PostColumnTemplate = ({ node }) => {
         </section>
         {node.frontmatter.author?.map(name => {
           return (
-            <small key={"author-list"} className="profile-mini">
-              <figure>
-                <Image
-                  filename={"profile-pic-" + name + ".jpg"}
-                  style={{
-                    borderRadius: `50%`,
-                  }}
-                  fixed={true}
-                />
-              </figure>
-              <div>{name}</div>
+            <small key={"author-list"}>
+              <Link to={`/author/${name}/`} className="profile-mini">
+                <figure>
+                  <Image
+                    filename={"profile-pic-" + name + ".jpg"}
+                    style={{
+                      borderRadius: `50%`,
+                    }}
+                    fixed={true}
+                  />
+                </figure>
+                <div>{name}</div>
+              </Link>
             </small>
           )
         })}
