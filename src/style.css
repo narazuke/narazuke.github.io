@@ -408,7 +408,7 @@ table .gatsby-resp-image-wrapper {
   max-height: 150px;
 }
 
-table .gatsby-resp-image-image {
+.gatsby-resp-image-image {
   object-fit: contain;
 }
 
