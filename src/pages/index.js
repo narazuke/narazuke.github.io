@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostColumn from "../components/post-column"
 import LatestCommentsDisplay from "../components/latest-comments"
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { edges } = data.allMarkdownRemark
@@ -65,6 +66,7 @@ export const pageQuery = graphql`
             issues {
               nodes {
                 comments {
+                  totalCount
                   nodes {
                     body
                     updatedAt(formatString: "YYYY-MM-D ddd HH:mm z")
