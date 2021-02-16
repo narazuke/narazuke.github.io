@@ -458,3 +458,31 @@ table .gatsby-resp-image-wrapper {
   border-radius: 4px 4px 0 0;
   font-family: var(--fontFamily-sans);
 }
+
+.comments-list li {
+  list-style: none;
+}
+.comment-block a {
+  color: var(--color-text-light);
+}
+.comment-body {
+  font-size: var(--fontSize-1);
+  font-weight: var(--fontWeight-bold);
+  margin: 0;
+}
+.comment-info {
+  font-size: var(--fontSize-0);
+  font-weight: var(--fontWeight-normal);
+  margin: 0;
+}
+.comment-info {
+  display: flex;
+}
+.github-avatar img {
+  width: 60px;
+  margin-right: 10px;
+}
+.comment-main {
+  display: flex;
+  margin: 3px 0px;
+}

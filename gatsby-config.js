@@ -45,8 +45,8 @@ module.exports = {
             resolve: "gatsby-remark-embed-youtube",
             options: {
               width: 800,
-              height: 400
-            }
+              height: 450,
+            },
           },
           {
             resolve: `gatsby-remark-images`,
@@ -74,7 +74,7 @@ module.exports = {
       resolve: `gatsby-transformer-sharp`,
       options: {
         checkSupportedExtensions: false,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -100,9 +100,52 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet-async`,
-    `gatsby-plugin-twitter`
+    `gatsby-plugin-twitter`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        // url: API URL to use. Defaults to  https://api.github.com/graphql
+        url: "https://api.github.com/graphql",
+
+        // token: required by the GitHub API
+        token: `${secret.githubTokenNozzlex3}`,
+
+        // GraphQLquery: defaults to a search query
+        variables: {},
+        graphQLQuery: `query {
+          organization(login: "narazuke") {
+            repository(name: "narazuke.github.io") {
+              issues(orderBy: {field: COMMENTS, direction: DESC}, last: 30) {
+                nodes {
+                  comments(last: 1, orderBy: {field: UPDATED_AT, direction: ASC}) {
+                    totalCount
+                    nodes {
+                      body
+                      author {
+                        avatarUrl(size: 10)
+                        login
+                        url
+                      }
+                      updatedAt
+                    }
+                  }
+                  body
+                  title
+                }
+              }
+            }
+          }
+        }`,
+      },
+    },
+
+    // variables: defaults to variables needed for a search query
+    // variables: {
+    //   q: "author:nozzlex3 sort:comments",
+    //   nFirst: 2,
+    // },
   ],
 }
