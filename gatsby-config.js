@@ -45,8 +45,8 @@ module.exports = {
             resolve: "gatsby-remark-embed-youtube",
             options: {
               width: 800,
-              height: 400
-            }
+              height: 450,
+            },
           },
           {
             resolve: `gatsby-remark-images`,
@@ -100,7 +100,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet-async`,
-    `gatsby-plugin-twitter`
+    `gatsby-plugin-twitter`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
@@ -111,7 +111,7 @@ module.exports = {
         url: "https://api.github.com/graphql",
 
         // token: required by the GitHub API
-        token: "6f2a6ea13aca860a5e728c14fa0e0ec95274fa50",
+        token: `${secret.githubTokenNozzlex3}`,
 
         // GraphQLquery: defaults to a search query
         variables: {},
