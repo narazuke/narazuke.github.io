@@ -2,7 +2,7 @@
 title: GitalkでGatsbyにコメント欄を導入
 author: [nozzle]
 created: 2021-02-15T16:33
-updated: 2021-02-15T23:10
+updated: 2021-02-16T09:01
 tag: [gatsby, gitalk, github]
 category: tech
 description: Githubのissueをコメント代わりに使う
@@ -123,7 +123,7 @@ let gitalkConfig = {
 
 参考：[4 plugins to add comments to your Gatsby.js blog](https://blog.logrocket.com/4-plugins-to-add-comments-to-your-gatsbyjs-blog/)
 
-### おわり
+### おわり？
 
 公式の説明だとこれでできるようになるはずだが、2021 年 2 月時点でこの設定だけでは Gitalk が使用できない。次のトラブルシュートを参照してほしい。
 
