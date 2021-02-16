@@ -42,6 +42,13 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-embed-youtube",
+            options: {
+              width: 800,
+              height: 400
+            }
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
@@ -93,6 +100,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet-async`,
+    `gatsby-plugin-twitter`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
