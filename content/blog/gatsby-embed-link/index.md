@@ -1,7 +1,7 @@
 ---
 title: gatsbyにyoutube,twitterのリンクを埋め込む
 created: 2021-02-16 16:06
-updated: 2021-02-16 20:01
+updated: 2021-02-16T20:39
 description: gatsby-pluginの導入
 tag: [gatsby]
 author: [konnyaku]
@@ -61,11 +61,11 @@ plugins: [`gatsby-plugin-twitter`]
 npm install gatsby-plugin-twitter
 ```
 3. markdownでの書き方
-twitterの右上のボタン(v)から埋め込みリンクを取得する
+twitterの右上のボタン(v)から埋め込みリンクを取得し、そのまま書くだけ。
 ```md:title=md
-<blockquote class="twitter-tweet"><p lang="und" dir="ltr">10:48AM <a href="https://twitter.com/hashtag/Arknights?src=hash&amp;ref_src=twsrc%5Etfw">#Arknights</a> <a href="https://twitter.com/hashtag/%E3%82%A2%E3%83%BC%E3%82%AF%E3%83%8A%E3%82%A4%E3%83%84?src=hash&amp;ref_src=twsrc%5Etfw">#アークナイツ</a> <a href="https://t.co/FZ9GqN5OlZ">pic.twitter.com/FZ9GqN5OlZ</a></p>&mdash; Kuroduki (@kurodukimajaja) <a href="https://twitter.com/kurodukimajaja/status/1358377545503174656?ref_src=twsrc%5Etfw">February 7, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="und" dir="ltr">10:48AM <a href="https://twitter.com/hashtag/Arknights?src=hash&amp;ref_src=twsrc%5Etfw">#Arknights</a> <a href="https://twitter.com/hashtag/%E3%82%A2%E3%83%BC%E3%82%AF%E3%83%8A%E3%82%A4%E3%83%84?src=hash&amp;ref_src=twsrc%5Etfw">#アークナイツ</a> <a href="https://t.co/FZ9GqN5OlZ">pic.twitter.com/FZ9GqN5OlZ</a></p>&mdash; Kuroduki (@kurodukimajaja) <a href="https://twitter.com/kurodukimajaja/status/1358377545503174656?ref_src=twsrc%5Etfw">February 7, 2021</a></blockquote>
 ```
-<blockquote class="twitter-tweet"><p lang="und" dir="ltr">10:48AM <a href="https://twitter.com/hashtag/Arknights?src=hash&amp;ref_src=twsrc%5Etfw">#Arknights</a> <a href="https://twitter.com/hashtag/%E3%82%A2%E3%83%BC%E3%82%AF%E3%83%8A%E3%82%A4%E3%83%84?src=hash&amp;ref_src=twsrc%5Etfw">#アークナイツ</a> <a href="https://t.co/FZ9GqN5OlZ">pic.twitter.com/FZ9GqN5OlZ</a></p>&mdash; Kuroduki (@kurodukimajaja) <a href="https://twitter.com/kurodukimajaja/status/1358377545503174656?ref_src=twsrc%5Etfw">February 7, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="und" dir="ltr">10:48AM <a href="https://twitter.com/hashtag/Arknights?src=hash&amp;ref_src=twsrc%5Etfw">#Arknights</a> <a href="https://twitter.com/hashtag/%E3%82%A2%E3%83%BC%E3%82%AF%E3%83%8A%E3%82%A4%E3%83%84?src=hash&amp;ref_src=twsrc%5Etfw">#アークナイツ</a> <a href="https://t.co/FZ9GqN5OlZ">pic.twitter.com/FZ9GqN5OlZ</a></p>&mdash; Kuroduki (@kurodukimajaja) <a href="https://twitter.com/kurodukimajaja/status/1358377545503174656?ref_src=twsrc%5Etfw">February 7, 2021</a></blockquote>
 
 ### 参考
 全部公式に書いてある。
