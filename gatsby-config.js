@@ -42,13 +42,6 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-embed-youtube",
-            options: {
-              width: 800,
-              height: 450,
-            },
-          },
-          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
@@ -100,7 +93,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet-async`,
-    `gatsby-plugin-twitter`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
@@ -111,14 +103,14 @@ module.exports = {
         url: "https://api.github.com/graphql",
 
         // token: required by the GitHub API
-        token: `${secret.githubTokenNozzlex3}`,
+        token: `${secret.githubTokenNarapickle}`,
 
         // GraphQLquery: defaults to a search query
         variables: {},
         graphQLQuery: `query {
           organization(login: "narazuke") {
             repository(name: "narazuke.github.io") {
-              issues(orderBy: {field: COMMENTS, direction: DESC}, last: 30) {
+              issues(orderBy: {field:UPDATED_AT, direction: DESC}, last: 30) {
                 nodes {
                   comments(last: 1, orderBy: {field: UPDATED_AT, direction: ASC}) {
                     totalCount
