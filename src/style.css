@@ -486,3 +486,17 @@ table .gatsby-resp-image-wrapper {
   display: flex;
   margin: 3px 0px;
 }
+.categories-mini {
+  display: flex;
+}
+
+.footer-info {
+  display: flex;
+}
+.footer-info a {
+  text-align: right;
+  font-weight: var(--fontWeight-normal);
+  margin: 5px 10px;
+  font-size: var(--fontSize-0);
+  color: #bfc7d4;
+}

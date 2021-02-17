@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostColumn from "../components/post-column"
 import LatestCommentsDisplay from "../components/latest-comments"
+// import CategoriesMini from "../components/categories-mini"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -25,12 +26,12 @@ const BlogIndex = ({ data, location }) => {
       </Layout>
     )
   }
-
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
       <Link to="/tags">All tags</Link>
+      {/* <CategoriesMini data={data} /> */}
       <hr />
 
       <ol style={{ listStyle: `none` }}>
@@ -103,6 +104,12 @@ export const pageQuery = graphql`
             category
           }
         }
+      }
+    }
+    categoriesGroup: allMarkdownRemark(limit: 2000) {
+      group(field: frontmatter___category) {
+        fieldValue
+        totalCount
       }
     }
   }

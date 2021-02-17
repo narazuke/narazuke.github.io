@@ -2,7 +2,7 @@
 title: 日記
 author: [nozzle]
 created: 2021-02-15T08:30
-updated: 2021-02-17T10:16
+updated: 2021-02-17T10:17
 tag: [生活記録, english]
 description: 続けたい
 category: diary
@@ -56,7 +56,7 @@ Yes, I think so. He has right to choose appropriate influencers to promote the r
 No, I don't. I suppose that having meal for free is not so attractive for the influencers. They are just interested in how to go viral on the Internet.
 
 **If you had a business, would you hire an influencer to promote it? Why or why not?**  
-Yes I would. Many people has social media accounts and use it everyday. Influencer post to promote a business will be spread widely. It is a good advertising.
+Yes I would. Many people have social media accounts and use it everyday. Influencer post to promote a business will be spread widely. It is a good advertising.
 
 #### New words
 
