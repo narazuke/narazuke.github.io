@@ -2,8 +2,8 @@
 title: 日記
 author: [nozzle]
 created: 2021-02-16T09:01
-updated: 2021-02-16T09:53
-tag: [生活記録, English]
+updated: 2021-02-17T10:06
+tag: [生活記録, english]
 description: 続くのか!?
 category: diary
 ---
@@ -50,7 +50,7 @@ The study found that users who went to the doctor after getting abnormal reading
 #### Discussion
 
 **If you were one of the people who got a defective smartwatch, would you rather receive a replacement or a refund? Why?**  
-Yes I would. Once I received a defective product, I wouldn't be able to trust their product anymore.
+I'd like to get a refund. Once I received a defective product, I wouldn't be able to trust their product anymore.
 
 **Which smartwatch feature interests you the most (e.g. reminders to drink water, blood pressure monitor)? Why?**  
 Reading heatbeat feature interests me the most. I want to monitor the changes in my heartbeat when I exercise.

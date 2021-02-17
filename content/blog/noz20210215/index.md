@@ -2,8 +2,8 @@
 title: 日記
 author: [nozzle]
 created: 2021-02-15T08:30
-updated: 2021-02-15T18:09
-tag: [生活記録]
+updated: 2021-02-17T10:16
+tag: [生活記録, english]
 description: 続けたい
 category: diary
 ---
