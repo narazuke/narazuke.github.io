@@ -49,7 +49,7 @@ function LatestCommentsDisplay ({ updatedIssues }) {
                             day:"numeric",
                             hour:"numeric",
                             minute:"numeric"
-                          })
+                          }).replace(/\//g,'-')
                         }</div>
                       </div>
                     </div>

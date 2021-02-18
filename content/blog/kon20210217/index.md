@@ -1,7 +1,7 @@
 ---
 title: 日記
 created: 2021-02-17T07:23
-updated: 2021-02-18T00:05
+updated: 2021-02-18T14:57
 description: 
 category: diary
 tag: []
@@ -15,6 +15,8 @@ author: [konnyaku]
 我第一次吃釜虎。
 
 釜虎好吃。
+
+![](./kamatora.png)
 
 今日朝洗濯物干したんですが風が強すぎて飛ばされました。
 遠くまで飛ばされましたがちゃんと拾えたのでよかったです。
