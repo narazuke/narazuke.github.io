@@ -70,7 +70,7 @@ export const pageQuery = graphql`
                   totalCount
                   nodes {
                     body
-                    updatedAt(formatString: "YYYY-MM-D ddd HH:mm z")
+                    updatedAt
                     author {
                       login
                       avatarUrl

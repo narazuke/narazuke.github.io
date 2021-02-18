@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const LatestCommentsDisplay = ({ updatedIssues }) => {
+function LatestCommentsDisplay ({ updatedIssues }) {
   let displayCommentsCount = 0
   return (
     <div className="recent-comments">
@@ -19,6 +19,7 @@ const LatestCommentsDisplay = ({ updatedIssues }) => {
                 <div className="comment-info">{updatedIssue.title}</div>
               </Link> */}
               {comments.nodes.map(comment => {
+                let commentDate = new Date(comment.updatedAt)
                 return (
                   <div>
                     <div className="comment-main">
@@ -35,14 +36,21 @@ const LatestCommentsDisplay = ({ updatedIssues }) => {
                       <div className="comment-body">
                         <div className="comment-info">
                           {/* <a href={`https://github.com/${comment.author.login || ``}`} */}
-
                           {comment.author.login}
                           {/* </a> */}
                         </div>
                         <Link to={`/${updatedIssue.body.split("/")[3]}`}>
                           {comment.body}
                         </Link>
-                        <div className="comment-info">{comment.updatedAt}</div>
+                        <div className="comment-info">{
+                          commentDate.toLocaleString("jp",{
+                            year:"numeric",
+                            month:"numeric",
+                            day:"numeric",
+                            hour:"numeric",
+                            minute:"numeric"
+                          })
+                        }</div>
                       </div>
                     </div>
                   </div>
