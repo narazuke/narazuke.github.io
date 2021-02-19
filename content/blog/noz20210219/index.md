@@ -1,8 +1,8 @@
 ---
 title: 日記
 author: [nozzle]
-created: 2021-02-18T11:30
-updated: 2021-02-19T09:41
+created: 2021-02-19T09:42
+updated: 2021-02-19T09:53
 tag: [生活記録, english]
 description: ﾌﾝ......
 category: diary
@@ -38,7 +38,7 @@ _誰か教えて下さい_
 
 #### My summary
 
-With the new update, Google Street View allows to users take and submit photos using their smartphones.  
+With the new update, Google Street View allows users to take and submit photos using their smartphones.  
 The update aims to cover unmapped areas and keep Google's database up-to-date.  
 Google's augmented reality (AR) technology help it orient the images correctly on the map.  
 When faces and licence plates are appeared in the photo, Google blurs them to protect their privacy.
