@@ -2,7 +2,7 @@
 title: 日記
 author: [nozzle]
 created: 2021-02-18T11:30
-updated: 2021-02-18T14:55
+updated: 2021-02-19T08:27
 tag: [生活記録, english]
 description: だめでした
 category: diary
@@ -17,7 +17,7 @@ category: diary
 2:30 に寝たのがそもそも悪い。目覚ましは 6:30 に止めたが、布団から出たのは 8:00 だった。  
 体操もしてない。反省。
 
-![](./IMG_20210217_084704.JPG)
+![](./IMG_20210218_120117.JPG)
 
 ### 散歩
 
