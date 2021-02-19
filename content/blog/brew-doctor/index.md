@@ -1,16 +1,16 @@
 ---
-title: 'brew doctor'をやってみた
+title: brew doctorをやってみた
 created: 2021-02-19T16:12
-updated: 2021-02-19T17:32
+updated: 2021-02-19T23:38
 description: いっぱい警告出たので一応めも
-tag: [brew,mac]
+tag: [brew, mac]
 author: [konnyaku]
 category: tech
 ---
 
-`brew doctor`はbrew関連のインストールの問題をチェックしてくれるみたい
+`brew doctor`は brew 関連のインストールの問題をチェックしてくれるみたい
 
-[brew doctor で警告が出た！warningとの奮闘記](https://info-wcn.com/brewdoctor-warning01/)
+[brew doctor で警告が出た！warning との奮闘記](https://info-wcn.com/brewdoctor-warning01/)
 
 なのでやってみる
 
@@ -118,23 +118,20 @@ those kegs to fail to run properly once built. Run `brew link` on these:
 Error: unknown or unsupported macOS version: :mountain_lion
 ```
 
-
 多すぎぃ
 
-`Warning: Some installed formulae are deprecated or disabled.`と`need to be deleted`と言われたものは削除することでwarningが消えた。
+`Warning: Some installed formulae are deprecated or disabled.`と`need to be deleted`と言われたものは削除することで warning が消えた。
 
-configの重複の問題はbrew実行時に最低限必要な場所でできるようにした。[pyenv をインストールしてると brew doctor で出る Warning を消す方法](https://qiita.com/takuya0301/items/695f42f6904e979f0152)
+config の重複の問題は brew 実行時に最低限必要な場所でできるようにした。[pyenv をインストールしてると brew doctor で出る Warning を消す方法](https://qiita.com/takuya0301/items/695f42f6904e979f0152)
+
 ```zsh:title=./zshrc
 alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
 ```
 
-linkの問題はlinkすれば直る[HomebrewでdoctorしたらWarning: You have unlinked kegs in your Cellarとなった時の対応方法](https://qiita.com/ponsuke0531/items/80f716c803ac23c7849d)
+link の問題は link すれば直る[Homebrew で doctor したら Warning: You have unlinked kegs in your Cellar となった時の対応方法](https://qiita.com/ponsuke0531/items/80f716c803ac23c7849d)
 
 いらないやつは削除して、必要なものはリンクする。
 
 全部解決したらすっきりした
 
 ![](./result.png)
-
-
-
