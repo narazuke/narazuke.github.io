@@ -111,7 +111,7 @@ module.exports = {
         graphQLQuery: `query {
           organization(login: "narazuke") {
             repository(name: "narazuke.github.io") {
-              issues(orderBy: {field:UPDATED_AT, direction: DESC}, last: 30) {
+              issues(orderBy: {field:UPDATED_AT, direction: DESC}, last: 100) {
                 nodes {
                   comments(last: 1, orderBy: {field: UPDATED_AT, direction: ASC}) {
                     totalCount
