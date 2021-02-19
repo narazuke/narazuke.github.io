@@ -1,7 +1,7 @@
 ---
 title: 中国語メモ
 created: 2021-02-14 16:40
-updated: 2021-02-16T20:48
+updated: 2021-02-19T22:56
 description: 単語や熟語の拼音と意味をまとめる
 tag: [language, chinese, memo]
 author: [konnyaku]
@@ -20,6 +20,11 @@ category: memo
 |可能|kěnéng|たぶん、かもしれない|
 |比…|bǐ|…より|
 
+## 会話
+|単語|拼音|意味|
+|:---:|:---:|:---:|
+|有什麼區別|yòu shenme qubie|違いはなんですか|
+
 ## それ以外（名詞以外）
 
 |単語|拼音|意味|
@@ -33,7 +38,7 @@ category: memo
 |查找|cházhǎo|検索する|
 |寫日記|xiě rìjì|日記を書く
 |花|huā|使う、費やす|
-|||
+|睡覺|shuìjiáo|寝る|
 
 ## それ以外（名詞）
 |単語|拼音|意味|
@@ -41,3 +46,4 @@ category: memo
 |火鍋|huǒguō|火鍋|
 |玉米狗|yùmǐgǒu|アメリカンドッグ|
 |說法|shuōfǎ|言い方|
+|木糖醇膠|mùtángchúnjiāo|キシリトールガム|
