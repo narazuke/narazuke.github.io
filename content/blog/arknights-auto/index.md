@@ -1,7 +1,7 @@
 ---
 title: アークナイツ周回の自動化(Mac,C++)
 created: 2021-02-04 19:29
-updated: 2021-02-15T18:00
+updated: 2021-02-20T09:42
 description: C++,openCVを使って自動化
 author: [konnyaku]
 tag: [game, arknights, memo]
@@ -289,3 +289,30 @@ void click(CGPoint location) {
 一回のループに対して今回のコードでは約 0.15s であるのに対して、以前のコードでは約 1.4s であるためほぼ 10 倍早くなっている。
 
 現在は一つのステージだけを周回するプログラムだが、改良することで基地や任務なども自動化できそうのでいつかやるかもしれない。
+
+
+### 追記（2021/2/20）
+`brew doctor`を実行して解決したせいか、次のエラーがでる
+```shell
+kg-config --cflags opencv` `pkg-config --libs opencv` 
+Package opencv was not found in the pkg-config search path.
+Perhaps you should add the directory containing `opencv.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'opencv' found
+Package opencv was not found in the pkg-config search path.
+Perhaps you should add the directory containing `opencv.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'opencv' found
+main.cpp:2:10: fatal error: 'opencv2/opencv.hpp' file not found
+#include <opencv2/opencv.hpp>
+         ^~~~~~~~~~~~~~~~~~~~
+1 error generated.
+```
+configのpathが通っていないのでそれを設定すればいいようだ
+
+(参考)[LinuxでOpencvのpkg-configを使おうとするとPackage opencv was not found in the pkg-config search path.](https://compmemo.wordpress.com/2014/07/21/linuxでopencvのpkg-configを使おうとするとpackage-opencv-was-not-found-in-the-pkg-config-search-path/)
+
+```shell
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+```
+これで解決した
