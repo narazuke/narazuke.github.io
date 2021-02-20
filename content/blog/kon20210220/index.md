@@ -1,7 +1,7 @@
 ---
 title: 日記
 created: 2021-02-20T23:48
-updated: 2021-02-21T00:22
+updated: 2021-02-21T00:49
 description: なにかこう
 category: diary
 tag: []
@@ -20,4 +20,6 @@ author: [konnyaku]
 12時に寝て大体8時に起きる
 
 続けたい
+
+とか言って日記書いてたら一時になってた
 
