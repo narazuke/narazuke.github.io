@@ -50,7 +50,7 @@ const BlogIndex = ({ data, location }) => {
           } else {
             btime = b.node.frontmatter.updated
           }
-          return Date.parse(atime) < Date.parse(btime)
+          return Date.parse(btime) - Date.parse(atime)
         }).map(({ node }) => {
           return <PostColumn key={"postcolumn-list"} node={node} />
         })}
