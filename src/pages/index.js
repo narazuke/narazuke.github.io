@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
+import Search from "../components/search"
 import SEO from "../components/seo"
 import PostColumn from "../components/post-column"
 import LatestComments from "../components/latest-comments"
@@ -11,6 +12,7 @@ import LatestComments from "../components/latest-comments"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { edges } = data.allMarkdownRemark
+  const [word, setWord] = useState("")
   const {
     nodes: issuesNodes,
   } = data.githubData.data.organization.repository.issues
@@ -33,20 +35,20 @@ const BlogIndex = ({ data, location }) => {
       <Bio />
       <Link to="/tags">All tags</Link>
       {/* <CategoriesMini data={data} /> */}
+      <Search setWord={setWord}/>
       <hr />
-
       <ol style={{ listStyle: `none` }}>
-        {edges.sort(function (a, b) {
+        {edges.filter(node => node.node.frontmatter.title.includes(word)).sort(function (a, b) {
           let atime,btime
-          if(a.node?.frontmatter.category === "diary") {
-            atime = a.node?.frontmatter.created
+          if(a.node.frontmatter.category === "diary") {
+            atime = a.node.frontmatter.created
           } else {
-            atime = a.node?.frontmatter.updated
+            atime = a.node.frontmatter.updated
           }
-          if(b.node?.frontmatter.category === "diary") {
-            btime = b.node?.frontmatter.created
+          if(b.node.frontmatter.category === "diary") {
+            btime = b.node.frontmatter.created
           } else {
-            btime = b.node?.frontmatter.updated
+            btime = b.node.frontmatter.updated
           }
           return Date.parse(atime) < Date.parse(btime)
         }).map(({ node }) => {
