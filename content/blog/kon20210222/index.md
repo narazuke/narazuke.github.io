@@ -1,8 +1,8 @@
 ---
 title: 日記
 created: 2021-02-22T09:22
-updated: 2021-02-22T22:14
-description: 
+updated: 2021-02-22T22:15
+description: チャーハン食べたかったけどお腹いっぱいになったら収まった
 category: diary
 tag: []
 author: [konnyaku]
