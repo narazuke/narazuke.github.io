@@ -7,6 +7,7 @@ import Search from "../components/search"
 import SEO from "../components/seo"
 import PostColumn from "../components/post-column"
 import LatestComments from "../components/latest-comments"
+
 // import CategoriesMini from "../components/categories-mini"
 
 const BlogIndex = ({ data, location }) => {
@@ -35,27 +36,35 @@ const BlogIndex = ({ data, location }) => {
       <Bio />
       <Link to="/tags">All tags</Link>
       {/* <CategoriesMini data={data} /> */}
-      <Search setWord={setWord}/>
+      <Search setWord={setWord} />
       <hr />
       <ol style={{ listStyle: `none` }}>
-        {edges.filter(node => node.node.frontmatter.title.includes(word)).sort(function (a, b) {
-          let atime,btime
-          if(a.node.frontmatter.category === "diary") {
-            atime = a.node.frontmatter.created
-          } else {
-            atime = a.node.frontmatter.updated
-          }
-          if(b.node.frontmatter.category === "diary") {
-            btime = b.node.frontmatter.created
-          } else {
-            btime = b.node.frontmatter.updated
-          }
-          return Date.parse(btime) - Date.parse(atime)
-        }).map(({ node }) => {
-          return <PostColumn key={"postcolumn-list"} node={node} />
-        })}
+        {edges
+          .filter(
+            edge =>
+              edge.node.frontmatter.title.includes(word) ||
+              edge.node.frontmatter.description?.includes(word) ||
+              edge.node.frontmatter.tag.includes(word)
+          )
+          .sort(function (a, b) {
+            let atime, btime
+            if (a.node.frontmatter.category === "diary") {
+              atime = a.node.frontmatter.created
+            } else {
+              atime = a.node.frontmatter.updated
+            }
+            if (b.node.frontmatter.category === "diary") {
+              btime = b.node.frontmatter.created
+            } else {
+              btime = b.node.frontmatter.updated
+            }
+            return Date.parse(btime) - Date.parse(atime)
+          })
+          .map(({ node }) => {
+            return <PostColumn key={"postcolumn-list"} node={node} />
+          })}
       </ol>
-      <LatestComments issues={issuesNodes} />
+      <LatestComments issuesNodes={issuesNodes} />
     </Layout>
   )
 }

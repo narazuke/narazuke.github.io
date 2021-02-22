@@ -81,7 +81,8 @@ export const pageQuery = graphql`
           frontmatter {
             title
             description
-            created(formatString: "Y-M-D ddd")
+            created
+            updated
             tag
             author
             category
