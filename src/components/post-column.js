@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Image from "./image"
 
 const PostColumnTemplate = ({ node }) => {
+  let commentDate = new Date(node.frontmatter.created)
   return (
     <li className="post-list" key={node.fields.slug}>
       <article
@@ -23,7 +24,29 @@ const PostColumnTemplate = ({ node }) => {
               <span itemProp="headline">{node.frontmatter.title}</span>
             </Link>
           </h2>
-          <small>{node.frontmatter.created}</small>
+          <small>
+            {commentDate
+              .toLocaleString("ja", {
+                year: "numeric",
+                month: "numeric",
+                day: "numeric",
+                timeZone: "Asia/Tokyo",
+              })
+              .replace(/\//g, "-")}{" "}
+            {commentDate
+              .toLocaleString("en", {
+                weekday: "short",
+                timeZone: "Asia/Tokyo",
+              })
+              .replace(/\//g, "-")}{" "}
+            {commentDate
+              .toLocaleString("ja", {
+                hour: "numeric",
+                minute: "numeric",
+                timeZone: "Asia/Tokyo",
+              })
+              .replace(/\//g, "-")}
+          </small>
           <div className="tag-list">
             {node.frontmatter.tag?.map(tag => {
               return (
