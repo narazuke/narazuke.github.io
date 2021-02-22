@@ -35,7 +35,20 @@ const BlogIndex = ({ data, location }) => {
       <hr />
 
       <ol style={{ listStyle: `none` }}>
-        {edges.map(({ node }) => {
+        {edges.sort(function (a, b) {
+          let atime,btime
+          if(a.node?.frontmatter.category === "diary") {
+            atime = a.node?.frontmatter.created
+          } else {
+            atime = a.node?.frontmatter.updated
+          }
+          if(b.node?.frontmatter.category === "diary") {
+            btime = b.node?.frontmatter.created
+          } else {
+            btime = b.node?.frontmatter.updated
+          }
+          return Date.parse(atime) < Date.parse(btime)
+        }).map(({ node }) => {
           return <PostColumn key={"postcolumn-list"} node={node} />
         })}
       </ol>
@@ -99,7 +112,8 @@ export const pageQuery = graphql`
             title
             description
             tag
-            created(formatString: "Y-M-D ddd")
+            updated
+            created
             author
             category
           }
