@@ -2,8 +2,16 @@ import React from "react"
 import { Link } from "gatsby"
 import Image from "./image"
 
+import DateStr2Date from "../components/date"
+
 const PostColumnTemplate = ({ node }) => {
-  let commentDate = new Date(node.frontmatter.created)
+  // let commentDate = new Date(node.frontmatter.created)
+  let date = null
+  if (node.frontmatter.category === "diary") {
+    date = node.frontmatter.created
+  } else {
+    date = node.frontmatter.updated
+  }
   return (
     <li className="post-list" key={node.fields.slug}>
       <article
@@ -25,27 +33,7 @@ const PostColumnTemplate = ({ node }) => {
             </Link>
           </h2>
           <small>
-            {commentDate
-              .toLocaleString("ja", {
-                year: "numeric",
-                month: "numeric",
-                day: "numeric",
-                timeZone: "Asia/Tokyo",
-              })
-              .replace(/\//g, "-")}{" "}
-            {commentDate
-              .toLocaleString("en", {
-                weekday: "short",
-                timeZone: "Asia/Tokyo",
-              })
-              .replace(/\//g, "-")}{" "}
-            {commentDate
-              .toLocaleString("ja", {
-                hour: "numeric",
-                minute: "numeric",
-                timeZone: "Asia/Tokyo",
-              })
-              .replace(/\//g, "-")}
+            <DateStr2Date dateStr={date} />
           </small>
           <div className="tag-list">
             {node.frontmatter.tag?.map(tag => {

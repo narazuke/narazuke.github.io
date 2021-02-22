@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import DateStr2Date from "../components/date"
+
 function LatestComments({ issuesNodes }) {
   let commentsCount = 0
   return (
@@ -16,7 +18,6 @@ function LatestComments({ issuesNodes }) {
           return (
             <li className="comment-block">
               {commentsNodes.map(comment => {
-                let commentDate = new Date(comment.updatedAt)
                 return (
                   <div>
                     <div className="comment-main">
@@ -37,27 +38,7 @@ function LatestComments({ issuesNodes }) {
                           {comment.body}
                         </Link>
                         <div className="comment-info">
-                          {commentDate
-                            .toLocaleString("ja", {
-                              year: "numeric",
-                              month: "numeric",
-                              day: "numeric",
-                              timeZone: "Asia/Tokyo",
-                            })
-                            .replace(/\//g, "-")}{" "}
-                          {commentDate
-                            .toLocaleString("en", {
-                              weekday: "short",
-                              timeZone: "Asia/Tokyo",
-                            })
-                            .replace(/\//g, "-")}{" "}
-                          {commentDate
-                            .toLocaleString("ja", {
-                              hour: "numeric",
-                              minute: "numeric",
-                              timeZone: "Asia/Tokyo",
-                            })
-                            .replace(/\//g, "-")}
+                          <DateStr2Date dateStr={comment.updatedAt} />
                         </div>
                       </div>
                     </div>

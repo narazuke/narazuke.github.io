@@ -2,7 +2,7 @@
 title: GitalkでGatsbyにコメント欄を導入
 author: [nozzle]
 created: 2021-02-15T16:33
-updated: 2021-02-16T09:01
+updated: 2021-02-22T20:55
 tag: [gatsby, gitalk, github]
 category: tech
 description: Githubのissueをコメント代わりに使う
@@ -142,8 +142,8 @@ let gitalkConfig = {
 あるサイトから別のサイトの情報を利用することを crosssite origin resource share と呼び、略して CORS と言う。  
 なんでもかんでも別のサイトから利用されては悪用されるリスクがあるので、通常は CORS が制限されている。CORS するにはアクセストークンで 2 つのサイトを紐付ける必要がある。  
 cors-anywhere があれば、どのサイトへどこからでも CORS で入手できる。すごい  
-これを使っている cors-anywhere.herokuapp.com は親切な人が動かしてくれてる heroku のアプリで、誰でも無料で使うことができたが、悪用される恐れからこれの利用にも制限がかかった。2020 年 1 月末以降、利用には WEB で一時的に利用制限を解く処理をしなければならなくなった。  
-Gitalk は 2020 年 2 月現在特にこの事態に対する処理を追加していないため、Gitalk が使えなくなってしまっている人が出ている。
+これを使っている cors-anywhere.herokuapp.com は親切な人が動かしてくれてる heroku のアプリで、誰でも無料で使うことができたが、悪用される恐れからこれの利用にも制限がかかった。2021 年 1 月末以降、利用には WEB で一時的に利用制限を解く処理をしなければならなくなった。  
+Gitalk は 2021 年 2 月現在特にこの事態に対する処理を追加していないため、Gitalk が使えなくなってしまっている人が出ている。
 
 ### 対処法
 
