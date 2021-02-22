@@ -1,21 +1,21 @@
 import React from "react"
 import { Link } from "gatsby"
 
-function LatestComments({ issues }) {
+function LatestComments({ issuesNodes }) {
   let commentsCount = 0
   return (
     <div className="recent-comments">
       <h6>最新のコメント</h6>
       <ol className="comments-list">
-        {issues.map(issue => {
-          const comments = issue.comments
-          if (comments.totalCount > 0) {
+        {issuesNodes.map(issue => {
+          const { nodes: commentsNodes } = issue.comments
+          if (issue.comments.totalCount > 0) {
             commentsCount += 1
           }
           if (commentsCount > 5) return null
           return (
             <li className="comment-block">
-              {comments.nodes.map(comment => {
+              {commentsNodes.map(comment => {
                 let commentDate = new Date(comment.updatedAt)
                 return (
                   <div>
@@ -26,7 +26,6 @@ function LatestComments({ issues }) {
                             comment.author.login || ``
                           }`}
                         >
-                          {" "}
                           <img src={`${comment.author.avatarUrl}`} alt=""></img>
                         </a>
                       </div>
@@ -39,12 +38,24 @@ function LatestComments({ issues }) {
                         </Link>
                         <div className="comment-info">
                           {commentDate
-                            .toLocaleString("jp", {
+                            .toLocaleString("ja", {
                               year: "numeric",
                               month: "numeric",
                               day: "numeric",
+                              timeZone: "Asia/Tokyo",
+                            })
+                            .replace(/\//g, "-")}{" "}
+                          {commentDate
+                            .toLocaleString("en", {
+                              weekday: "short",
+                              timeZone: "Asia/Tokyo",
+                            })
+                            .replace(/\//g, "-")}{" "}
+                          {commentDate
+                            .toLocaleString("ja", {
                               hour: "numeric",
                               minute: "numeric",
+                              timeZone: "Asia/Tokyo",
                             })
                             .replace(/\//g, "-")}
                         </div>

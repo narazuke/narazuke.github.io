@@ -40,7 +40,7 @@ const BlogIndex = ({ data, location }) => {
           return <PostColumn key={"postcolumn-list"} node={node} />
         })}
       </ol>
-      <LatestComments issues={issuesNodes} />
+      <LatestComments issuesNodes={issuesNodes} />
     </Layout>
   )
 }
