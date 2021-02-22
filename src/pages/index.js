@@ -41,10 +41,10 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {edges
           .filter(
-            node =>
-              node.node.frontmatter.title.includes(word) ||
-              node.node.frontmatter.description?.includes(word) ||
-              node.node.frontmatter.tag.includes(word)
+            edge =>
+              edge.node.frontmatter.title.includes(word) ||
+              edge.node.frontmatter.description?.includes(word) ||
+              edge.node.frontmatter.tag.includes(word)
           )
           .sort(function (a, b) {
             let atime, btime
@@ -58,7 +58,7 @@ const BlogIndex = ({ data, location }) => {
             } else {
               btime = b.node.frontmatter.updated
             }
-            return Date.parse(atime) < Date.parse(btime)
+            return Date.parse(btime) - Date.parse(atime)
           })
           .map(({ node }) => {
             return <PostColumn key={"postcolumn-list"} node={node} />
