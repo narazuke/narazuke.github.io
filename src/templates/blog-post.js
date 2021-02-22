@@ -8,6 +8,8 @@ import SEO from "../components/seo"
 import "@suziwen/gitalk/dist/gitalk.css"
 import Gitalk from "gatsby-plugin-gitalk"
 
+import DateStr2Date from "../components/date"
+
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -15,6 +17,12 @@ const BlogPostTemplate = ({ data, location }) => {
   let gitalkConfig = {
     id: post.fields.slug,
     title: post.frontmatter.title,
+  }
+  let date = null
+  if (post.frontmatter.category === "diary") {
+    date = post.frontmatter.created
+  } else {
+    date = post.frontmatter.updated
   }
   return (
     <Layout location={location} title={siteTitle}>
@@ -36,7 +44,9 @@ const BlogPostTemplate = ({ data, location }) => {
             </div>
           </small>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.created}</p>
+          <p>
+            <DateStr2Date dateStr={date} />
+          </p>
           <div className="tag-list">
             {post.frontmatter.tag?.map(tag => {
               return (
@@ -133,8 +143,8 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        created(formatString: "Y-M-D ddd")
-        updated(formatString: "Y-M-D ddd")
+        created
+        updated
         description
         tag
         author
