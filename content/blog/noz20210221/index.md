@@ -2,13 +2,13 @@
 title: 日記
 author: [nozzle]
 created: 2021-02-21T21:17
-updated: 2021-02-21T21:54
+updated: 2021-02-22T18:23
 category: diary
 tag: [生活記録]
 description: 昨日の日記も書いていい？だめか
 ---
 
-## 日課 (20th Feb 2020)
+## 日課 (20th Feb 2021)
 
 ### 早起き
 
@@ -38,7 +38,7 @@ _おいしそう_
 
 やらなかった。
 
-## 日課 (21st Feb 2020)
+## 日課 (21st Feb 2021)
 
 ### 早起き
 
