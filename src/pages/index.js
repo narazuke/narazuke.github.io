@@ -6,15 +6,16 @@ import Layout from "../components/layout"
 import Search from "../components/search"
 import SEO from "../components/seo"
 import PostColumn from "../components/post-column"
-import LatestCommentsDisplay from "../components/latest-comments"
+import LatestComments from "../components/latest-comments"
 // import CategoriesMini from "../components/categories-mini"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { edges } = data.allMarkdownRemark
   const [word, setWord] = useState("")
-  const updatedIssues =
-    data.githubData.data.organization.repository.issues.nodes
+  const {
+    nodes: issuesNodes,
+  } = data.githubData.data.organization.repository.issues
   if (edges.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -54,7 +55,7 @@ const BlogIndex = ({ data, location }) => {
           return <PostColumn key={"postcolumn-list"} node={node} />
         })}
       </ol>
-      <LatestCommentsDisplay updatedIssues={updatedIssues} />
+      <LatestComments issues={issuesNodes} />
     </Layout>
   )
 }
