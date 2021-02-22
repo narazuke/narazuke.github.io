@@ -1,7 +1,7 @@
 ---
 title: cmakeをつかう
 created: 2021-02-20T10:23
-updated: 2021-02-22T12:17
+updated: 2021-02-22T12:32
 description: コンパイルを楽にしたいのでcmakeつかいます
 tag: [cmake,c++]
 author: [konnyaku]
