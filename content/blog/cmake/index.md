@@ -1,9 +1,9 @@
 ---
 title: cmakeをつかう
 created: 2021-02-20T10:23
-updated: 2021-02-22T12:32
+updated: 2021-02-22T13:18
 description: コンパイルを楽にしたいのでcmakeつかいます
-tag: [cmake,c++]
+tag: [cmake,cpp]
 author: [konnyaku]
 category: tech
 ---
@@ -44,14 +44,14 @@ add_executable(main_app main.cpp)
 |-build/
 ```
 3. buildフォルダ内でConfigureとGenerateを実行する
-```
+```shell:title=shell
 cmake ..
 ```
 `..`はCmakeList.txtの場所を示す
 ![](./configure.png)
 
 4. ビルドする
-```
+```shell:title=shell
 cmake --build . 
 ```
 `.`はbuildフォルダを示す
@@ -70,7 +70,7 @@ cmake --build .
 `find_package()`で外部ライブラリを探せる。
 CMakeLists.txtに`find_package(OpenCV 4.5.1)`という一文を追加したらちゃんと探せた。
 
-```shell
+```shell:title=shell
 -- Found OpenCV: /usr/local/Cellar/opencv/4.5.1_2 (found suitable version "4.5.1", minimum required is "4.5.1") 
 ```
 
