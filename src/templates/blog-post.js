@@ -14,33 +14,29 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  const { edges: relatedPostEdges } = data.relatedPosts
   let gitalkConfig = {
     id: post.fields.slug,
-    title: post.frontmatter.title,
+    title: post.frontmatter.title
   }
   let date = null
+  let randomArray = []
+  let relatedPostsHeader = null
   if (post.frontmatter.category === "diary") {
     date = post.frontmatter.created
   } else {
     date = post.frontmatter.updated
+    randomArray = randomSelect(data.relatedPosts.totalCount, 3)
+    relatedPostsHeader = <h5>関連記事</h5>
   }
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+      <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
+      <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <header>
           <small>
             <div className={`category ${post.frontmatter.category}`}>
-              <Link to={`/category/${post.frontmatter.category}/`}>
-                {post.frontmatter.category}
-              </Link>
+              <Link to={`/category/${post.frontmatter.category}/`}>{post.frontmatter.category}</Link>
             </div>
           </small>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
@@ -48,7 +44,7 @@ const BlogPostTemplate = ({ data, location }) => {
             <DateStr2Date dateStr={date} />
           </p>
           <div className="tag-list">
-            {post.frontmatter.tag?.map(tag => {
+            {post.frontmatter.tag?.map((tag) => {
               return (
                 <small>
                   <div className="tag">
@@ -59,14 +55,14 @@ const BlogPostTemplate = ({ data, location }) => {
             })}
           </div>
           <small className="profile-mini-list">
-            {post.frontmatter.author?.map(name => {
+            {post.frontmatter.author?.map((name) => {
               return (
                 <Link to={`/author/${name}/`} className="profile-mini">
                   <figure>
                     <Image
                       filename={"profile-pic-" + name + ".jpg"}
                       style={{
-                        borderRadius: `50%`,
+                        borderRadius: `50%`
                       }}
                       fixed={true}
                     />
@@ -78,10 +74,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </small>
         </header>
         <hr />
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
       </article>
       <nav className="blog-post-nav">
         <ul
@@ -90,7 +83,7 @@ const BlogPostTemplate = ({ data, location }) => {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0,
+            padding: 0
           }}
         >
           <li>
@@ -109,6 +102,18 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
+      <div className="related-posts">
+        {relatedPostsHeader}
+        {relatedPostEdges
+          .filter((_, index) => randomArray.includes(index))
+          .map(({ node }) => {
+            return (
+              <li>
+                <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+              </li>
+            )
+          })}
+      </div>
       <Gitalk options={gitalkConfig} />
     </Layout>
   )
@@ -117,11 +122,7 @@ const BlogPostTemplate = ({ data, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
+  query BlogPostBySlug($id: String!, $previousPostId: String, $nextPostId: String, $tagList: [String]) {
     site {
       siteMetadata {
         title
@@ -167,5 +168,40 @@ export const pageQuery = graphql`
         title
       }
     }
+    relatedPosts: allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___created], order: DESC }
+      filter: { frontmatter: { tag: { in: $tagList } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
   }
 `
+// 0以上arrayLength-1以下のnum個の要素を重複なしで取り出す
+function randomSelect(arrayLength, num) {
+  // [0, 1, 2, .... arrayLength-1]の配列を宣言
+  if (arrayLength < num) {
+    num = arrayLength
+  }
+  let serialArray = new Array(arrayLength).fill().map((_, i) => i)
+  let randomArray = []
+  while (randomArray.length < num && serialArray.length > 0) {
+    // 配列からランダムな要素を選ぶ
+    const rand = Math.floor(Math.random() * serialArray.length)
+    // 選んだ要素を別の配列に登録する
+    randomArray.push(serialArray[rand])
+    // もとの配列からは削除する
+    serialArray.splice(rand, 1)
+  }
+  return randomArray
+}
