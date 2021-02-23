@@ -40,12 +40,38 @@ const BlogIndex = ({ data, location }) => {
       <hr />
       <ol style={{ listStyle: `none` }}>
         {edges
-          .filter(
-            edge =>
-              edge.node.frontmatter.title.includes(word) ||
-              edge.node.frontmatter.description?.includes(word) ||
-              edge.node.frontmatter.tag.includes(word)
-          )
+          .filter(edge => {
+            let frontmatter = edge.node.frontmatter
+            let words = word.split(" ")
+            console.log(words)
+            return (
+              words.length === 0 ||
+              words.every(word => {
+                word = word.toLowerCase()
+                if (word.slice(0, 1) === "-") {
+                  word = word.slice(1)
+                  console.log(word)
+                  return (
+                    word === "" ||
+                    !(
+                      frontmatter.category.includes(word) ||
+                      frontmatter.title.toLowerCase().includes(word) ||
+                      frontmatter.description?.toLowerCase().includes(word) ||
+                      frontmatter.tag.some(tag =>
+                        tag.toLowerCase().includes(word)
+                      )
+                    )
+                  )
+                }
+                return (
+                  frontmatter.category.includes(word) ||
+                  frontmatter.title.toLowerCase().includes(word) ||
+                  frontmatter.description?.toLowerCase().includes(word) ||
+                  frontmatter.tag.some(tag => tag.toLowerCase().includes(word))
+                )
+              })
+            )
+          })
           .sort(function (a, b) {
             let atime, btime
             if (a.node.frontmatter.category === "diary") {
