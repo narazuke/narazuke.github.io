@@ -1,7 +1,7 @@
 ---
 title: WordPress所感
 created: 2021-02-11T15:48
-updated: 2021-02-23T14:27
+updated: 2021-02-23T16:21
 author: [nozzle]
 tag: [blog, impression]
 category: thought
