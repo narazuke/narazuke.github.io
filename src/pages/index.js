@@ -43,14 +43,12 @@ const BlogIndex = ({ data, location }) => {
           .filter(edge => {
             let frontmatter = edge.node.frontmatter
             let words = word.split(" ")
-            console.log(words)
             return (
               words.length === 0 ||
               words.every(word => {
                 word = word.toLowerCase()
                 if (word.slice(0, 1) === "-") {
                   word = word.slice(1)
-                  console.log(word)
                   return (
                     word === "" ||
                     !(
