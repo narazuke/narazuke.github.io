@@ -1,7 +1,7 @@
 ---
 title: xcode関連のerrorについて
 created: 2021-02-17T17:02
-updated: 2021-02-19T17:35
+updated: 2021-02-23T10:34
 description: 
 category: tech
 tag: [mac,xcode]
@@ -9,7 +9,7 @@ author: [konnyaku]
 ---
 
 
-[別の記事](https://narazuke.github.io/ximea-tutorial)でMacPortsをインストールしようと思ったら次のようなエラーが出た
+[別の記事](https://narazuke.github.io/ximea-tutorial)でMacPortsを使おうと思ったら次のようなエラーが出た
 
 MacPortsについては[MacPortsの紹介](https://qiita.com/tenomoto/items/66614f982de96641d662)を参考にした
 
@@ -41,7 +41,7 @@ Xcodeを入れ直してみる。
 Xcode関連を全部消してから入れ直したがだめだった。
 
 [macOS Big Sur Problems](https://trac.macports.org/wiki/BigSurProblems)に
-`Command-line tools for Xcode 12.2`を入れろと書いてあったのでやったがだめでした。
+`Command-line tools for Xcode 12.2`をdeveloperから入れろと書いてあったのでやったがだめでした。
 
 手詰まり。
 

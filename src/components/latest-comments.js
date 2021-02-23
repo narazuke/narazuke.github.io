@@ -16,10 +16,10 @@ function LatestComments({ issuesNodes }) {
           }
           if (commentsCount > 5) return null
           return (
-            <li className="comment-block">
+            <li className="comment-block" key={"comment-list"}>
               {commentsNodes.map(comment => {
                 return (
-                  <div>
+                  <div key={"comment-item" + comment.id}>
                     <div className="comment-main">
                       <div className="github-avatar">
                         <a

@@ -38,7 +38,7 @@ const PostColumnTemplate = ({ node }) => {
           <div className="tag-list">
             {node.frontmatter.tag?.map(tag => {
               return (
-                <small key={"post-list"}>
+                <small key={"post-list" + tag.id}>
                   <div className="tag">
                     <Link to={`/tag/${tag}/`}>{tag}</Link>
                   </div>
