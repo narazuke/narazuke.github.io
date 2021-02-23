@@ -19,9 +19,24 @@ const Category = ({ pageContext, data, location }) => {
     <Layout location={location} title={siteTitle}>
       <h2>{categoryHeader}</h2>
       <ol style={{ listStyle: `none` }}>
-        {edges.map(({ node }) => {
-          return <PostColumn node={node} />
-        })}
+        {edges
+          .sort(function (a, b) {
+            let atime, btime
+            if (a.node.frontmatter.category === "diary") {
+              atime = a.node.frontmatter.created
+            } else {
+              atime = a.node.frontmatter.updated
+            }
+            if (b.node.frontmatter.category === "diary") {
+              btime = b.node.frontmatter.created
+            } else {
+              btime = b.node.frontmatter.updated
+            }
+            return Date.parse(btime) - Date.parse(atime)
+          })
+          .map(({ node }) => {
+            return <PostColumn node={node} />
+          })}
       </ol>
       <Link to="/categorys">All categorys</Link>
     </Layout>

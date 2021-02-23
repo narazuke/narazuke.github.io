@@ -19,9 +19,24 @@ const Tags = ({ pageContext, data, location }) => {
     <Layout location={location} title={siteTitle}>
       <h2>{tagHeader}</h2>
       <ol style={{ listStyle: `none` }}>
-        {edges.map(({ node }) => {
-          return <PostColumn node={node} />
-        })}
+        {edges
+          .sort(function (a, b) {
+            let atime, btime
+            if (a.node.frontmatter.category === "diary") {
+              atime = a.node.frontmatter.created
+            } else {
+              atime = a.node.frontmatter.updated
+            }
+            if (b.node.frontmatter.category === "diary") {
+              btime = b.node.frontmatter.created
+            } else {
+              btime = b.node.frontmatter.updated
+            }
+            return Date.parse(btime) - Date.parse(atime)
+          })
+          .map(({ node }) => {
+            return <PostColumn node={node} />
+          })}
       </ol>
       <Link to="/tags">All tags</Link>
     </Layout>
