@@ -14,10 +14,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        postsRemark: allMarkdownRemark(
-          sort: { fields: [frontmatter___created], order: ASC }
-          limit: 10000
-        ) {
+        postsRemark: allMarkdownRemark(sort: { fields: [frontmatter___created], order: ASC }, limit: 10000) {
           edges {
             node {
               id
@@ -51,10 +48,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   )
 
   if (result.errors) {
-    reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
-      result.errors
-    )
+    reporter.panicOnBuild(`There was an error loading your blog posts`, result.errors)
     return
   }
 
@@ -67,8 +61,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (posts.length > 0) {
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].node.id
-      const nextPostId =
-        index === posts.length - 1 ? null : posts[index + 1].node.id
+      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].node.id
+      const category = post.node.frontmatter.category
+      const tagList = post.node.frontmatter.tag
+      console.log(tagList)
       createPage({
         path: post.node.fields.slug,
         component: blogPost,
@@ -76,40 +72,42 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: post.node.id,
           previousPostId,
           nextPostId,
-        },
+          category,
+          tagList
+        }
       })
     })
   }
 
   // {URL}/tag/hoge のページを作る
   const tags = result.data.tagsGroup.group
-  tags.forEach(tag => {
+  tags.forEach((tag) => {
     createPage({
       path: `/tag/${_.kebabCase(tag.fieldValue)}/`,
       component: tagTemplate,
       context: {
-        tag: tag.fieldValue,
-      },
+        tag: tag.fieldValue
+      }
     })
   })
   const authors = result.data.authorsGroup.group
-  authors.forEach(author => {
+  authors.forEach((author) => {
     createPage({
       path: `/author/${_.kebabCase(author.fieldValue)}/`,
       component: authorTemplate,
       context: {
-        author: author.fieldValue,
-      },
+        author: author.fieldValue
+      }
     })
   })
   const categories = result.data.categoriesGroup.group
-  categories.forEach(category => {
+  categories.forEach((category) => {
     createPage({
       path: `/category/${_.kebabCase(category.fieldValue)}/`,
       component: categoryTemplate,
       context: {
-        category: category.fieldValue,
-      },
+        category: category.fieldValue
+      }
     })
   })
 }
@@ -123,7 +121,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value
     })
   }
 }
