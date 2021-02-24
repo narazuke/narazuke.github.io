@@ -30,6 +30,34 @@ const BlogIndex = ({ data, location }) => {
       </Layout>
     )
   }
+  let searchedPosts = edges.filter(edge => {
+    let frontmatter = edge.node.frontmatter
+    let words = word.split(" ")
+    return (
+      words.length === 0 ||
+      words.every(word => {
+        word = word.toLowerCase()
+        if (word.slice(0, 1) === "-") {
+          word = word.slice(1)
+          return (
+            word === "" ||
+            !(
+              frontmatter.category.includes(word) ||
+              frontmatter.title.toLowerCase().includes(word) ||
+              frontmatter.description?.toLowerCase().includes(word) ||
+              frontmatter.tag.some(tag => tag.toLowerCase().includes(word))
+            )
+          )
+        }
+        return (
+          frontmatter.category.includes(word) ||
+          frontmatter.title.toLowerCase().includes(word) ||
+          frontmatter.description?.toLowerCase().includes(word) ||
+          frontmatter.tag.some(tag => tag.toLowerCase().includes(word))
+        )
+      })
+    )
+  })
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
@@ -39,37 +67,8 @@ const BlogIndex = ({ data, location }) => {
       <Search setWord={setWord} />
       <hr />
       <ol style={{ listStyle: `none` }}>
-        {edges
-          .filter(edge => {
-            let frontmatter = edge.node.frontmatter
-            let words = word.split(" ")
-            return (
-              words.length === 0 ||
-              words.every(word => {
-                word = word.toLowerCase()
-                if (word.slice(0, 1) === "-") {
-                  word = word.slice(1)
-                  return (
-                    word === "" ||
-                    !(
-                      frontmatter.category.includes(word) ||
-                      frontmatter.title.toLowerCase().includes(word) ||
-                      frontmatter.description?.toLowerCase().includes(word) ||
-                      frontmatter.tag.some(tag =>
-                        tag.toLowerCase().includes(word)
-                      )
-                    )
-                  )
-                }
-                return (
-                  frontmatter.category.includes(word) ||
-                  frontmatter.title.toLowerCase().includes(word) ||
-                  frontmatter.description?.toLowerCase().includes(word) ||
-                  frontmatter.tag.some(tag => tag.toLowerCase().includes(word))
-                )
-              })
-            )
-          })
+        {console.log(searchedPosts.length)}
+        {searchedPosts
           .sort(function (a, b) {
             let atime, btime
             if (a.node.frontmatter.category === "diary") {
