@@ -64,7 +64,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].node.id
       const category = post.node.frontmatter.category
       const tagList = post.node.frontmatter.tag
-      console.log(tagList)
       createPage({
         path: post.node.fields.slug,
         component: blogPost,

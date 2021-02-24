@@ -26,8 +26,10 @@ const BlogPostTemplate = ({ data, location }) => {
     date = post.frontmatter.created
   } else {
     date = post.frontmatter.updated
-    randomArray = randomSelect(data.relatedPosts.totalCount, 3)
-    relatedPostsHeader = <h5>関連記事</h5>
+    if (data.relatedPosts.totalCount - 1 > 0) {
+      randomArray = randomSelect(data.relatedPosts.totalCount, 3)
+      relatedPostsHeader = <h5>関連記事</h5>
+    }
   }
   return (
     <Layout location={location} title={siteTitle}>
@@ -105,7 +107,9 @@ const BlogPostTemplate = ({ data, location }) => {
       <div className="related-posts">
         {relatedPostsHeader}
         {relatedPostEdges
-          .filter((_, index) => randomArray.includes(index))
+          .filter(({ node }, index) => {
+            return randomArray.includes(index) && node.fields.slug !== post.fields.slug
+          })
           .map(({ node }) => {
             return (
               <li>

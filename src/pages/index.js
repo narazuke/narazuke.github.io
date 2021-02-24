@@ -5,88 +5,37 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Search from "../components/search"
 import SEO from "../components/seo"
-import PostColumn from "../components/post-column"
 import LatestComments from "../components/latest-comments"
-
-// import CategoriesMini from "../components/categories-mini"
+import Posts from "../components/posts"
+import Button from "../components/button"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { edges } = data.allMarkdownRemark
-  const [word, setWord] = useState("")
-  const {
-    nodes: issuesNodes,
-  } = data.githubData.data.organization.repository.issues
+  let [searchedPosts, setSearchedPosts] = useState(edges)
+  const { nodes: issuesNodes } = data.githubData.data.organization.repository.issues
   if (edges.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
         <SEO title="All posts" />
         <Bio />
         <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+          No blog posts found. Add markdown posts to "content/blog" (or the directory you specified for the
+          "gatsby-source-filesystem" plugin in gatsby-config.js).
         </p>
       </Layout>
     )
   }
-  let searchedPosts = edges.filter(edge => {
-    let frontmatter = edge.node.frontmatter
-    let words = word.split(" ")
-    return (
-      words.length === 0 ||
-      words.every(word => {
-        word = word.toLowerCase()
-        if (word.slice(0, 1) === "-") {
-          word = word.slice(1)
-          return (
-            word === "" ||
-            !(
-              frontmatter.category.includes(word) ||
-              frontmatter.title.toLowerCase().includes(word) ||
-              frontmatter.description?.toLowerCase().includes(word) ||
-              frontmatter.tag.some(tag => tag.toLowerCase().includes(word))
-            )
-          )
-        }
-        return (
-          frontmatter.category.includes(word) ||
-          frontmatter.title.toLowerCase().includes(word) ||
-          frontmatter.description?.toLowerCase().includes(word) ||
-          frontmatter.tag.some(tag => tag.toLowerCase().includes(word))
-        )
-      })
-    )
-  })
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
       <Link to="/tags">All tags</Link>
-      {/* <CategoriesMini data={data} /> */}
-      <Search setWord={setWord} />
+      <Button edges={edges} setSearchedPosts={setSearchedPosts} />
+      <Search edges={searchedPosts} setSearchedPosts={setSearchedPosts} />
+      {searchedPosts.length} 件
       <hr />
-      <ol style={{ listStyle: `none` }}>
-        {console.log(searchedPosts.length)}
-        {searchedPosts
-          .sort(function (a, b) {
-            let atime, btime
-            if (a.node.frontmatter.category === "diary") {
-              atime = a.node.frontmatter.created
-            } else {
-              atime = a.node.frontmatter.updated
-            }
-            if (b.node.frontmatter.category === "diary") {
-              btime = b.node.frontmatter.created
-            } else {
-              btime = b.node.frontmatter.updated
-            }
-            return Date.parse(btime) - Date.parse(atime)
-          })
-          .map(({ node }) => {
-            return <PostColumn key={"postcolumn-list"} node={node} />
-          })}
-      </ol>
+      <Posts nodes={searchedPosts} />
       <LatestComments issuesNodes={issuesNodes} />
     </Layout>
   )
@@ -133,10 +82,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___created], order: DESC }
-    ) {
+    allMarkdownRemark(limit: 2000, sort: { fields: [frontmatter___created], order: DESC }) {
       totalCount
       edges {
         node {

@@ -64,6 +64,11 @@
   --color-heading-black: black;
   --color-accent: #d1dce5;
   --color-link: #02243a;
+
+  --color-tech: #7f6cd8;
+  --color-diary: #2f9e35;
+  --color-thought: #e98b10;
+  --color-memo: #9e2f95;
 }
 
 /* HTML elements */
@@ -386,22 +391,22 @@ small a {
 .tech a {
   /* font-weight: var(--fontWeight-black); */
   color: #ffffff;
-  background-color: #7f6cd8;
+  background-color: var(--color-tech);
 }
 .diary a {
   /* font-weight: var(--fontWeight-black); */
   color: #ffffff;
-  background-color: #2f9e35;
+  background-color: var(--color-diary);
 }
 .thought a {
   /* font-weight: var(--fontWeight-black); */
   color: #ffffff;
-  background-color: #e98b10;
+  background-color: var(--color-thought);
 }
 .memo a {
   /* font-weight: var(--fontWeight-black); */
   color: #ffffff;
-  background-color: #9e2f95;
+  background-color: var(--color-memo);
 }
 svg {
   max-height: 100%;
@@ -501,4 +506,51 @@ table .gatsby-resp-image-wrapper {
 }
 .related-posts {
   list-style-type: none;
+}
+
+.category-tabs {
+  margin: 16px 0;
+}
+
+input[type="radio"] {
+  /* ブラウザのデフォルトのスタイルを削除 */
+  -webkit-appearance: none;
+  appearance: none;
+  /* レイアウトから無視 */
+  position: absolute;
+}
+
+input[type="radio"] + .tab {
+  position: relative;
+  display: inline-block;
+  border: solid 1px #ffffff;
+  min-width: 20%;
+  padding: 10px 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(240, 240, 240);
+}
+
+input[type="radio"]:checked + .tab {
+  background-color: rgb(5, 7, 119);
+  color: rgb(233, 233, 233);
+}
+
+input[type="radio"]:checked + .tech {
+  color: #ffffff;
+  background-color: var(--color-tech);
+}
+input[type="radio"]:checked + .diary {
+  color: #ffffff;
+  background-color: var(--color-diary);
+}
+input[type="radio"]:checked + .thought {
+  color: #ffffff;
+  background-color: var(--color-thought);
+}
+input[type="radio"]:checked + .memo {
+  color: #ffffff;
+  background-color: var(--color-memo);
+}
+label {
 }
