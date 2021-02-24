@@ -65,7 +65,6 @@ const BlogIndex = ({ data, location }) => {
       <Link to="/tags">All tags</Link>
       {/* <CategoriesMini data={data} /> */}
       <Search setWord={setWord} />
-      {temp.length}
       <hr />
       <ol style={{ listStyle: `none` }}>
         {console.log(searchedPosts.length)}
