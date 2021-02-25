@@ -30,13 +30,13 @@ function LatestComments({ issuesNodes }) {
                 diffTimeMin = Math.floor(diffTimeMs / 1000 / 60) % 60
                 diffTimeSec = Math.floor(diffTimeMs / 1000) % 60
                 if (diffTimeDay > 0) {
-                  diffTime = diffTimeDay + "days ago"
+                  diffTime = diffTimeDay + "日前"
                 } else if (diffTimeHour > 0) {
-                  diffTime = diffTimeHour + "hours ago"
+                  diffTime = diffTimeHour + "時間前"
                 } else if (diffTimeMin > 0) {
-                  diffTime = diffTimeMin + "minutes ago"
+                  diffTime = diffTimeMin + "分前"
                 } else {
-                  diffTime = diffTimeSec + "seconds ago"
+                  diffTime = diffTimeSec + "秒前"
                 }
                 return (
                   <div key={"comment-item" + comment.id}>
