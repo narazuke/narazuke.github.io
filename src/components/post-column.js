@@ -18,7 +18,7 @@ const PostColumnTemplate = ({ node }) => {
         <header>
           <small>
             <div className={`category ${node.frontmatter.category}`}>
-              <Link to={`/category/${node.frontmatter.category}/`}>{node.frontmatter.category}</Link>
+              <Link to={`/category/${node.frontmatter.category}`}>{node.frontmatter.category}</Link>
             </div>
           </small>
           <h2>
@@ -32,7 +32,7 @@ const PostColumnTemplate = ({ node }) => {
           <div className="tag-list">
             {node.frontmatter.tag?.map((tag) => {
               return (
-                <small key={"post-list" + tag.id}>
+                <small key={"post-list-" + tag}>
                   <div className="tag">
                     <Link to={`/tag/${tag}/`}>{tag}</Link>
                   </div>

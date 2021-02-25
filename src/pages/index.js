@@ -3,11 +3,10 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import Search from "../components/search"
 import SEO from "../components/seo"
 import LatestComments from "../components/latest-comments"
 import Posts from "../components/posts"
-import Button from "../components/button"
+import Filter from "../components/filter"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -31,8 +30,7 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="All posts" />
       <Bio />
       <Link to="/tags">All tags</Link>
-      <Button edges={edges} setSearchedPosts={setSearchedPosts} />
-      <Search edges={searchedPosts} setSearchedPosts={setSearchedPosts} />
+      <Filter edges={edges} setSearchedPosts={setSearchedPosts} />
       {searchedPosts.length} 件
       <hr />
       <Posts nodes={searchedPosts} />
@@ -63,6 +61,7 @@ export const pageQuery = graphql`
           repository {
             issues {
               nodes {
+                id
                 comments {
                   totalCount
                   nodes {

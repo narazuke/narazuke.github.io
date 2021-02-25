@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 
 function Button(props) {
+  const [category, setCategory] = useState("")
   const handleClick = (category) => {
+    setCategory(category)
     let searchedPosts = props.edges.filter((edge) => {
       return edge.node.frontmatter.category.includes(category)
     })
