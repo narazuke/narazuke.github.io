@@ -30,11 +30,10 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
-      <Link to="/tags">All tags</Link>
-      <Button edges={edges} setSearchedPosts={setSearchedPosts} />
-      <Search edges={searchedPosts} setSearchedPosts={setSearchedPosts} />
-      {searchedPosts.length} 件
+      <Button edges={edges} searchedPosts={searchedPosts} setSearchedPosts={setSearchedPosts} />
+      <Search edges={edges} searchedPosts={searchedPosts} setSearchedPosts={setSearchedPosts} />
       <hr />
+      <Link to="/tags">All tags</Link>
       <Posts nodes={searchedPosts} />
       <LatestComments issuesNodes={issuesNodes} />
     </Layout>

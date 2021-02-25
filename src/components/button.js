@@ -10,7 +10,7 @@ function Button(props) {
   return (
     <div className="category-tabs">
       <label>
-        <input type="radio" name="tab" onChange={handleClick.bind(this, "")} />
+        <input type="radio" name="tab" defaultChecked onChange={handleClick.bind(this, "")} />
         <div className="tab all">all</div>
       </label>
       <label>

@@ -524,8 +524,8 @@ input[type="radio"] + .tab {
   position: relative;
   display: inline-block;
   border: solid 1px #ffffff;
-  min-width: 20%;
-  padding: 10px 10px;
+  width: 20%;
+  padding: 10px 2.5%;
   text-align: center;
   cursor: pointer;
   background-color: rgb(240, 240, 240);
@@ -552,5 +552,58 @@ input[type="radio"]:checked + .memo {
   color: #ffffff;
   background-color: var(--color-memo);
 }
-label {
+input[name="word"] {
+  padding: 10px 15px; /*ボックスを大きくする*/
+  font-size: var(--fontSize-1);
+  font-family: var(--fontFamily-sans);
+  box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+  min-width: 95%;
+  border-radius: 3px; /*ボックス角の丸み*/
+  border: 2px solid #ddd; /*枠線*/
+  box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+
+input[name="word"]:focus {
+  box-shadow: 0 0 3px 0 var(--color-primary);
+  border: 2px solid #fff !important;
+  outline: 0;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  margin: 0;
+  width: 85%;
+}
+
+.search-info {
+  color: var(--color-text-light);
+  display: flex;
+  align-items: baseline;
+  text-align: right;
+  width: 15%;
+}
+.search-info * {
+  text-align: right;
+}
+.search-info-num {
+  color: var(--color-primary);
+  font-size: var(--fontSize-4);
+  margin-right: 10px;
+}
+
+.post-date {
+  display: flex;
+}
+
+.main-date {
+  color: var(--color-text);
+  margin-right: 10px;
+}
+.sub-date {
+  color: rgb(172, 172, 172);
+  margin-right: 10px;
 }

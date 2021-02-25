@@ -19,14 +19,18 @@ const BlogPostTemplate = ({ data, location }) => {
     id: post.fields.slug,
     title: post.frontmatter.title
   }
-  let date = null
+  let date,
+    subDate = null
   let randomArray = []
   let relatedPostsHeader = null
   if (post.frontmatter.category === "diary") {
     date = post.frontmatter.created
+    subDate = null
   } else {
     date = post.frontmatter.updated
-    if (data.relatedPosts.totalCount - 1 > 0) {
+    subDate = post.frontmatter.created
+    // 日記ではない、同タグの記事が他に1以上ある記事に「関連記事」を表示する
+    if (data.relatedPosts.totalCount > 1) {
       randomArray = randomSelect(data.relatedPosts.totalCount, 3)
       relatedPostsHeader = <h5>関連記事</h5>
     }
@@ -43,7 +47,16 @@ const BlogPostTemplate = ({ data, location }) => {
           </small>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>
-            <DateStr2Date dateStr={date} />
+            <div className="post-date">
+              {subDate ? (
+                <span className="sub-date">
+                  <DateStr2Date dateStr={subDate} />
+                </span>
+              ) : null}
+              <span className="main-date">
+                <DateStr2Date dateStr={date} />
+              </span>
+            </div>
           </p>
           <div className="tag-list">
             {post.frontmatter.tag?.map((tag) => {
