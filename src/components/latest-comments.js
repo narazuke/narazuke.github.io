@@ -17,7 +17,7 @@ function LatestComments({ issuesNodes }) {
           }
           if (commentsCount > 5) return null
           return (
-            <li className="comment-block" key={"comment-list"}>
+            <li className="comment-block" key={"comment-list-" + issue.id}>
               {commentsNodes.map((comment) => {
                 let diffTimeMs = currentTimeMs - Date.parse(comment.updatedAt)
                 let diffTime,
