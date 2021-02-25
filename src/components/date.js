@@ -9,22 +9,22 @@ const DateStr2Date = ({ dateStr }) => {
           year: "numeric",
           month: "numeric",
           day: "numeric",
-          timeZone: "Asia/Tokyo",
+          timeZone: "Asia/Tokyo"
         })
         .replace(/\//g, "-")}{" "}
       {date
         .toLocaleString("en", {
           weekday: "short",
-          timeZone: "Asia/Tokyo",
+          timeZone: "Asia/Tokyo"
         })
         .replace(/\//g, "-")}{" "}
-      {date
+      {/* {date
         .toLocaleString("ja", {
           hour: "numeric",
           minute: "numeric",
           timeZone: "Asia/Tokyo",
         })
-        .replace(/\//g, "-")}
+        .replace(/\//g, "-")} */}
     </div>
   )
 }

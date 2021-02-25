@@ -32,17 +32,17 @@ const Bio = () => {
 
   return (
     <div className="bio" style={{ margin: "auto" }}>
-      {authors.map(author => {
+      {authors.map((author) => {
         const name = author.name
         const src_path = "profile-pic-" + name + ".jpg"
         return (
-          <div key={'bio-list'} style={{ width: "50%" }}>
+          <div key={"bio-list-" + name} style={{ width: "50%" }}>
             <div style={{ width: "100px" }}>
               <Link to={`/author/${name}/`}>
                 <Image
                   filename={src_path}
                   style={{
-                    borderRadius: `50%`,
+                    borderRadius: `50%`
                   }}
                 />
               </Link>
@@ -52,9 +52,7 @@ const Bio = () => {
                 <strong>{author.name}</strong> {author?.summary || null}
                 {` `}
                 <br />
-                <a href={`https://github.com/${author?.social?.github || ``}`}>
-                  Github
-                </a>
+                <a href={`https://github.com/${author?.social?.github || ``}`}>Github</a>
               </p>
             )}
           </div>

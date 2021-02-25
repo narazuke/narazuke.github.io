@@ -36,10 +36,17 @@ export default function Search(props) {
   }
 
   return (
-    <div>
-      <form>
-        <input name="word" defaultValue="" ref={register} onChange={handleSubmit(onSubmit)} />
-      </form>
+    <div className="search">
+      <div className="search-box">
+        <form>
+          <input name="word" defaultValue="" ref={register} placeholder="Search" onChange={handleSubmit(onSubmit)} />
+        </form>
+      </div>
+      <div className="search-info">
+        <span className="search-info-num">{props.searchedPosts.length} </span>
+        {` `}
+        <span>{props.searchedPosts.length === 1 ? "Post" : "Posts"}</span>
+      </div>
     </div>
   )
 }

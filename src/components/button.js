@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 
 function Button(props) {
+  const [category, setCategory] = useState("")
   const handleClick = (category) => {
+    setCategory(category)
     let searchedPosts = props.edges.filter((edge) => {
       return edge.node.frontmatter.category.includes(category)
     })
@@ -10,7 +12,7 @@ function Button(props) {
   return (
     <div className="category-tabs">
       <label>
-        <input type="radio" name="tab" onChange={handleClick.bind(this, "")} />
+        <input type="radio" name="tab" defaultChecked onChange={handleClick.bind(this, "")} />
         <div className="tab all">all</div>
       </label>
       <label>

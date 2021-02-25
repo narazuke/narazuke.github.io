@@ -14,17 +14,11 @@ const PostColumnTemplate = ({ node }) => {
   }
   return (
     <li className="post-list" key={node.fields.slug}>
-      <article
-        className="post-list-item"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+      <article className="post-list-item" itemScope itemType="http://schema.org/Article">
         <header>
           <small>
             <div className={`category ${node.frontmatter.category}`}>
-              <Link to={`/category/${node.frontmatter.category}/`}>
-                {node.frontmatter.category}
-              </Link>
+              <Link to={`/category/${node.frontmatter.category}`}>{node.frontmatter.category}</Link>
             </div>
           </small>
           <h2>
@@ -36,9 +30,9 @@ const PostColumnTemplate = ({ node }) => {
             <DateStr2Date dateStr={date} />
           </small>
           <div className="tag-list">
-            {node.frontmatter.tag?.map(tag => {
+            {node.frontmatter.tag?.map((tag) => {
               return (
-                <small key={"post-list" + tag.id}>
+                <small key={"post-list-" + tag}>
                   <div className="tag">
                     <Link to={`/tag/${tag}/`}>{tag}</Link>
                   </div>
@@ -50,20 +44,20 @@ const PostColumnTemplate = ({ node }) => {
         <section>
           <p
             dangerouslySetInnerHTML={{
-              __html: node.frontmatter.description || node.excerpt,
+              __html: node.frontmatter.description || node.excerpt
             }}
             itemProp="description"
           />
         </section>
-        {node.frontmatter.author?.map(name => {
+        {node.frontmatter.author?.map((name) => {
           return (
-            <small key={"author-list"}>
+            <small key={"author-list-" + name}>
               <Link to={`/author/${name}/`} className="profile-mini">
                 <figure>
                   <Image
                     filename={"profile-pic-" + name + ".jpg"}
                     style={{
-                      borderRadius: `50%`,
+                      borderRadius: `50%`
                     }}
                     fixed={true}
                   />

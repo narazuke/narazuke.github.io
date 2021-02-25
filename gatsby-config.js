@@ -8,34 +8,34 @@ module.exports = {
         name: `nozzle`,
         summary: `who lives in gummaken.`,
         social: {
-          github: "nozzlex3",
-        },
+          github: "nozzlex3"
+        }
       },
       {
         name: `konnyaku`,
         summary: `who is known as Siege Sukosuko Samurai.`,
         social: {
-          github: "wabetarou",
-        },
-      },
+          github: "wabetarou"
+        }
+      }
     ],
     description: `narazuke saiko-`,
-    siteUrl: `https://narazuke.github.io`,
+    siteUrl: `https://narazuke.github.io`
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
+        name: `blog`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
+        name: `assets`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -46,34 +46,34 @@ module.exports = {
             options: {
               maxWidth: 630,
               backgroundColor: `none`,
-              wrapperStyle: `overflow: visible`,
-            },
+              wrapperStyle: `overflow: visible`
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
           },
           `gatsby-remark-code-titles`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-        ],
-      },
+          `gatsby-remark-smartypants`
+        ]
+      }
     },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-sharp`,
       options: {
-        checkSupportedExtensions: false,
-      },
+        checkSupportedExtensions: false
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-189619597-1`,
-      },
+        trackingId: `UA-189619597-1`
+      }
     },
     {
       resolve: "gatsby-plugin-gitalk",
@@ -88,9 +88,9 @@ module.exports = {
           createIssueManually: false,
           distractionFreeMode: false,
           enableHotKey: true,
-          proxy: `${secret.proxy}`,
-        },
-      },
+          proxy: `${secret.proxy}`
+        }
+      }
     },
     `gatsby-plugin-react-helmet-async`,
     `gatsby-plugin-twitter`,
@@ -113,6 +113,7 @@ module.exports = {
             repository(name: "narazuke.github.io") {
               issues(orderBy: {field:UPDATED_AT, direction: DESC}, last: 100) {
                 nodes {
+                  id
                   comments(last: 1, orderBy: {field: UPDATED_AT, direction: ASC}) {
                     totalCount
                     nodes {
@@ -131,14 +132,14 @@ module.exports = {
               }
             }
           }
-        }`,
-      },
-    },
+        }`
+      }
+    }
 
     // variables: defaults to variables needed for a search query
     // variables: {
     //   q: "author:nozzlex3 sort:comments",
     //   nFirst: 2,
     // },
-  ],
+  ]
 }
