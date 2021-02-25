@@ -20,7 +20,7 @@ const Posts = ({ nodes }) => {
             return Date.parse(btime) - Date.parse(atime)
           })
           .map(({ node }) => {
-            return <PostColumn key={"postcolumn-list"} node={node} />
+            return <PostColumn key={"postcolumn-list-" + node.fields.slug} node={node} />
           })}
       </ol>
     </div>
