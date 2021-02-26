@@ -1,8 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import DateStr2Date from "../components/date"
-
 function LatestComments({ issuesNodes }) {
   let commentsCount = 0
   let currentTimeMs = Date.now()
