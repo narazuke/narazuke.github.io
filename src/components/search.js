@@ -63,7 +63,7 @@ export default function Search(props) {
       </div>
       <div className="category-tabs">
         <label>
-          <input type="radio" name="tab" onChange={() => setCategory("")} />
+          <input type="radio" name="tab" onChange={() => setCategory("")} defaultChecked />
           <div className="tab all">all</div>
         </label>
         <label>
