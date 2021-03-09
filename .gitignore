@@ -73,3 +73,7 @@ yarn-error.log
 
 # protect clientSecret
 secret.json
+
+# lock
+yarn.lock
+package-lock.json
