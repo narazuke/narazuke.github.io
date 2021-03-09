@@ -1,7 +1,7 @@
 ---
 title: 日記
 created: 2021-03-09T23:20
-updated: 2021-03-09T23:23
+updated: 2021-03-09T23:36
 description: youtubeのリンクつき
 category: diary
 tag: []
@@ -13,4 +13,4 @@ author: [konnyaku]
 まずはこの動画に出てくる単語を覚えてから
 youtube の中国語動画を見ようかなって思う
 
-`youtube:https://www.youtube.com/watch?v=vZK6O9ReEu4`
+`youtube:https://www.youtube.com/embed/vZK6O9ReEu4`
