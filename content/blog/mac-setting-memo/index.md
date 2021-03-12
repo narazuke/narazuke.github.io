@@ -1,7 +1,7 @@
 ---
 title: M1 Mac環境構築メモ
 created: 2021-03-10T14:27
-updated: 2021-03-10T22:09
+updated: 2021-03-13T08:12
 author: [nozzle]
 tag: [mac, memo]
 category: tech
@@ -184,6 +184,15 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 poetry の使い方とかもメモしたいけど、とりあえずインストール方法と.zshrc の追記内容に留める。
 
+### プロジェクト内に仮想環境フォルダを作る
+
+```bash:title=zsh
+poetry config virtualenvs.in-project true
+```
+
+もう仮想環境作っちゃってしまった人は、
+`poetry config virtualenvs.path`で仮想環境の保存場所を調べて、そのディレクトリごと消せばいい。
+
 ### トラブル：poetry add opencv-python するとエラーを吐く
 
 #### エラー文
@@ -312,8 +321,19 @@ Host hoge
 
 ## VS Code
 
-VS Code はまだ Apple Silicon に対応していないが、Insiders 版が対応している。  
-とはいえ、Insiders 版にしなくても支障がないと思われます。
+(2021 年 3 月 13 日追記)
+
+> We are happy to announce our first release of stable Apple Silicon builds this iteration. Users on Macs with M1 chips can now use VS Code without emulation with Rosetta, and will notice better performance and longer battery life when running VS Code.
+
+引用元：[February 2021 (version 1.54) | Visual Studio Code](https://code.visualstudio.com/updates/v1_54)
+
+2021 年 2 月のアップデートで Apple Silicon に対応した VSCode が入手できる。  
+起動したら`Cmd+Shift+p`で`code`と入力して、ターミナルに`code`コマンドを導入しよう。
+
+(追記おわり)
+
+~~VS Code はまだ Apple Silicon に対応していないが、Insiders 版が対応している。  
+とはいえ、Insiders 版にしなくても支障がないと思われます。~~
 
 どうしても Insiders 版を使いたい人は以下からダウンロードできる。
 
