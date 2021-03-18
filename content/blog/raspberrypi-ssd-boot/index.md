@@ -1,7 +1,7 @@
 ---
 title: SDカードなしでRaspberry Pi 4B を SSDでUSB bootする
 created: 2021-03-18T11:03
-updated: 2021-03-18T11:45
+updated: 2021-03-18T17:36
 tag: [raspberrypi]
 author: [nozzle]
 description: SSDが余っててしょうがないあなたに...
@@ -133,3 +133,5 @@ SSD
 ## 経緯
 
 raspi 4B 買ったので新しいことに挑戦するなら今しかないと思ったためです
+
+Reposted from nozzlog, Written on 2020-12-05)
