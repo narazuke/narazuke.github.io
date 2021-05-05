@@ -2,7 +2,7 @@
 title: 日記
 author: [nozzle]
 created: 2021-04-20T08:54
-updated: 2021-04-20T08:54
+updated: 2021-05-02T12:02
 tag: [生活記録]
 description: ご無沙汰
 category: diary
@@ -10,7 +10,7 @@ category: diary
 
 ## 早起き
 7:30に起きました。徐々に早くしていきたい。  
-![](./01.jpg)
+![](./01.JPG)
 
 ## 散歩
 最近まじで散歩はやってない。  
