@@ -2,7 +2,7 @@
 title: 日記
 author: [nozzle]
 created: 2021-05-01T23:32
-updated: 2021-05-01T23:33
+updated: 2021-05-02T12:02
 tag: [生活記録]
 description: ご無沙汰
 category: diary
@@ -10,7 +10,7 @@ category: diary
 
 ## 早起き
 6:41に起きました。おはスタに間に合います  
-![](./01.jpg)
+![](./01.JPG)
 
 ## 散歩
 散歩に全然いけてない理由をコロナのせいにしてもいい？  
