@@ -1,7 +1,7 @@
 ---
-title: 雑感 壱の型
+title: 雑感 一張羅
 created: 2021-04-13T22:08
-updated: 2021-05-07T20:56
+updated: 2021-04-13T22:08
 description: ガム, Vtuberっぽい言葉, サブスクリプション
 category: thought
 tag: [雑感]
