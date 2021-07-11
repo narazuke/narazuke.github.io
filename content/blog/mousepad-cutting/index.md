@@ -2,13 +2,14 @@
 title: でかいマウスパッドを買って, それを切る
 author: [nozzle]
 created: 2021-07-11T11:23
-updated: 2021-07-11T23:19
+updated: 2021-07-11T23:33
 tag: [review]
 description: SteelSeries QcK Lサイズを切ります
 category: thought
 ---
 ## 結論
-![](01.jpg)
+
+![](./01.jpg)
 _どりゃ！！！！！_
 
 
