@@ -1,7 +1,7 @@
 ---
 title: 中国語メモ
 created: 2021-02-14 16:40
-updated: 2021-03-09T23:06
+updated: 2021-08-15T14:37
 description: 単語や熟語の拼音と意味をまとめる
 tag: [language, chinese, memo]
 author: [konnyaku]
@@ -46,6 +46,8 @@ category: memo
 |    處理    |    chǔlǐ     | 処理する、解決する |
 |     過     |     guò      |       過ぎる       |
 |    珍惜    |    zhēnxī    |     大切にする     |
+|     贏     |     yíng     |        勝つ        |
+|    成為    |   chéngwéi   |      …になる       |
 
 ## 形容詞、副詞
 
