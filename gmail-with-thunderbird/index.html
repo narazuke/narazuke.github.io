@@ -1,0 +1,730 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.44e4a7548377a416eb4a.css" id="gatsby-global-css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}
+
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden]{display:none}:root{--maxWidth-none:"none";--maxWidth-xs:20rem;--maxWidth-sm:24rem;--maxWidth-md:28rem;--maxWidth-lg:32rem;--maxWidth-xl:36rem;--maxWidth-2xl:42rem;--maxWidth-3xl:48rem;--maxWidth-4xl:56rem;--maxWidth-full:"100%";--maxWidth-wrapper:var(--maxWidth-2xl);--spacing-px:"1px";--spacing-0:0;--spacing-1:0.25rem;--spacing-2:0.5rem;--spacing-3:0.75rem;--spacing-4:1rem;--spacing-5:1.25rem;--spacing-6:1.5rem;--spacing-8:2rem;--spacing-10:2.5rem;--spacing-12:3rem;--spacing-16:4rem;--spacing-20:5rem;--spacing-24:6rem;--spacing-32:8rem;--fontFamily-sans:-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif;--font-body:var(--fontFamily-sans);--font-heading:var(--fontFamily-sans);--fontWeight-normal:400;--fontWeight-medium:500;--fontWeight-semibold:600;--fontWeight-bold:700;--fontWeight-extrabold:800;--fontWeight-black:900;--fontSize-root:16px;--lineHeight-none:1;--lineHeight-tight:1.1;--lineHeight-normal:1.5;--lineHeight-relaxed:1.625;--fontSize-0:0.833rem;--fontSize-1:1rem;--fontSize-2:1.2rem;--fontSize-3:1.44rem;--fontSize-4:1.728rem;--fontSize-5:2.074rem;--fontSize-6:2.488rem;--fontSize-7:2.986rem;--color-primary:#005b99;--color-text:#2e353f;--color-text-light:#4f5969;--color-heading:#1a202c;--color-heading-black:#000;--color-accent:#d1dce5;--color-link:#02243a;--color-tech:#7f6cd8;--color-diary:#2f9e35;--color-thought:#e98b10;--color-memo:#9e2f95}*,:after,:before{box-sizing:border-box}html{line-height:var(--lineHeight-normal);font-size:var(--fontSize-root);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{font-family:var(--font-body);font-size:var(--fontSize-1);color:var(--color-text)}footer{padding:var(--spacing-6) var(--spacing-0);color:#7d8592}hr{background:var(--color-accent);height:1px;border:0}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);margin-top:var(--spacing-12);margin-bottom:var(--spacing-6);line-height:var(--lineHeight-tight);letter-spacing:-.025em}h2,h3,h4,h5,h6{color:var(--color-heading)}h1,h2,h3,h4,h5,h6{font-weight:var(--fontWeight-bold)}h1{font-size:var(--fontSize-6);color:var(--color-heading-black)}h2{font-size:var(--fontSize-5)}h3{font-size:var(--fontSize-4)}h4{font-size:var(--fontSize-3)}h5{font-size:var(--fontSize-2)}h6{font-size:var(--fontSize-1)}h1>a,h2>a,h3>a,h4>a,h5>a,h6>a{color:inherit;text-decoration:none}p{line-height:var(--lineHeight-relaxed);--baseline-multiplier:0.179;--x-height-multiplier:0.35;margin:var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0)}ol,p,ul{padding:var(--spacing-0)}ol,ul{margin-left:var(--spacing-0);margin-right:var(--spacing-0);margin-bottom:var(--spacing-8);list-style-position:outside;list-style-image:none}ol li,ul li{margin-left:var(--spacing-12);padding-left:var(--spacing-0);margin-bottom:calc(var(--spacing-8)/2)}.post-list{margin-left:0}li>p{margin-bottom:calc(var(--spacing-8)/2)}li :last-child{margin-bottom:var(--spacing-0)}li>ul{margin-left:var(--spacing-8);margin-top:calc(var(--spacing-8)/2)}blockquote{color:var(--color-text-light);margin-left:calc(var(--spacing-6)*-1);margin-right:var(--spacing-8);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);border-left:var(--spacing-1) solid var(--color-primary);font-size:var(--fontSize-2);font-style:italic;margin-bottom:var(--spacing-8)}blockquote>:last-child{margin-bottom:var(--spacing-0)}blockquote>ol,blockquote>ul{list-style-position:inside}table{width:100%;margin-bottom:var(--spacing-8);border-spacing:.25rem}table thead tr th{border-bottom:1px solid var(--color-accent);background-color:#bbb}td{background-color:#eee}a{color:var(--color-primary);text-decoration:none}a:hover{opacity:.9}a:focus,a:hover{text-decoration:none}small a{color:var(--color-text-light)}.global-wrapper{margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5)}.global-wrapper[data-is-root-path=true] .bio{margin-bottom:var(--spacing-20)}.global-header{margin-bottom:var(--spacing-12)}.main-heading{font-size:var(--fontSize-7);margin:0}.post-list-item{margin-bottom:var(--spacing-8);margin-top:var(--spacing-8)}.post-list-item p{margin-bottom:var(--spacing-0)}.post-list-item h2{font-size:var(--fontSize-4);color:var(--color-primary);margin-bottom:var(--spacing-2);margin-top:var(--spacing-0)}.post-list-item header{margin-bottom:var(--spacing-4)}.header-link-home{font-weight:var(--fontWeight-bold);font-family:var(--font-heading);text-decoration:none;font-size:var(--fontSize-2)}.bio{display:flex;margin-bottom:var(--spacing-16)}.bio-avatar,.bio p{margin-bottom:var(--spacing-0)}.bio-avatar{margin-right:var(--spacing-4);min-width:50px;border-radius:100%}.blog-post header h1{margin:var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0)}.blog-post header p{font-size:var(--fontSize-2);font-family:var(--font-heading)}.blog-post-nav ul{margin:var(--spacing-0)}.gatsby-highlight{margin-bottom:var(--spacing-8)}@media (max-width:42rem){blockquote{padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);margin-left:var(--spacing-0)}ol,ul{list-style-position:inside}}.tag-list{display:flex;height:var(--fontSize-1);padding-bottom:30px}.tag{display:flex;vertical-align:middle;color:#333;background-color:#eee;border-radius:10px;padding:0 5px;margin-right:10px;font-size:var(--fontSize-1)}.category{padding-bottom:8px}.category a{margin-bottom:15px;vertical-align:middle;color:#fff;background-color:#7f6cd8;border-radius:3px;padding:1px 5px;margin-right:10px;font-size:var(--fontSize-1)}.tech a{color:#fff;background-color:var(--color-tech)}.diary a{color:#fff;background-color:var(--color-diary)}.thought a{color:#fff;background-color:var(--color-thought)}.memo a{color:#fff;background-color:var(--color-memo)}svg{max-height:100%;width:auto}.profile-mini{display:inline-flex;align-items:center;margin-right:10px}.profile-mini figure{margin:10px 10px 10px 5px}img[alt*="--arknights-logo"]{padding:10px}img[alt*="--reverse"]{transform:scaleX(-1)}img[alt*="--my-padding"]{padding:10% 25%}img[alt*="--my-margin"]{margin:15%!important}table .gatsby-resp-image-wrapper{max-height:150px}.gatsby-resp-image-image{-o-object-fit:contain;object-fit:contain}.gatsby-code-title{background:rgba(214,209,206,.7058823529411765);color:var(--color-text-light);margin:0 0 -10px;padding:3px 10px;font-size:var(--fontSize-0);display:table;border-radius:4px 4px 0 0;font-family:var(--fontFamily-sans)}.comments-list li{list-style:none}.comment-block a{color:var(--color-text-light)}.comment-body{font-size:var(--fontSize-1);font-weight:var(--fontWeight-bold);margin:0}.comment-info{font-size:var(--fontSize-0);font-weight:var(--fontWeight-normal);margin:0;display:flex}.github-avatar img{width:60px;margin-right:10px}.comment-main{display:flex;margin:3px 0}.categories-mini,.footer-info{display:flex}.footer-info a{text-align:right;font-weight:var(--fontWeight-normal);margin:5px 10px;font-size:var(--fontSize-0);color:#bfc7d4}.related-posts{list-style-type:none}.category-tabs{margin:16px 0}input[type=radio]{-webkit-appearance:none;-moz-appearance:none;appearance:none;position:absolute}input[type=radio]+.tab{position:relative;display:inline-block;border:1px solid #fff;width:20%;padding:10px 2.5%;text-align:center;cursor:pointer;background-color:#f0f0f0}input[type=radio]:checked+.tab{background-color:#050777;color:#e9e9e9}input[type=radio]:checked+.tech{color:#fff;background-color:var(--color-tech)}input[type=radio]:checked+.diary{color:#fff;background-color:var(--color-diary)}input[type=radio]:checked+.thought{color:#fff;background-color:var(--color-thought)}input[type=radio]:checked+.memo{color:#fff;background-color:var(--color-memo)}input[name=word]{padding:10px 15px;font-size:var(--fontSize-1);font-family:var(--fontFamily-sans);min-width:95%;border-radius:3px;border:2px solid #ddd;box-sizing:border-box}input[name=word]:focus{box-shadow:0 0 3px 0 var(--color-primary);border:2px solid #fff!important;outline:0}.search{display:flex;justify-content:center}.search-box{margin:0;width:85%}.search-info{color:var(--color-text-light);display:flex;align-items:baseline;width:15%}.search-info,.search-info *{text-align:right}.search-info-num{color:var(--color-primary);font-size:var(--fontSize-4);margin-right:10px}.post-date{display:flex}.main-date{color:var(--color-text);margin-right:10px}.sub-date{color:#acacac;margin-right:10px}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:octicons-link;src:url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format("woff")}.markdown-body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body .pl-c{color:#6a737d}.markdown-body .pl-c1,.markdown-body .pl-s .pl-v{color:#005cc5}.markdown-body .pl-e,.markdown-body .pl-en{color:#6f42c1}.markdown-body .pl-s .pl-s1,.markdown-body .pl-smi{color:#24292e}.markdown-body .pl-ent{color:#22863a}.markdown-body .pl-k{color:#d73a49}.markdown-body .pl-pds,.markdown-body .pl-s,.markdown-body .pl-s .pl-pse .pl-s1,.markdown-body .pl-sr,.markdown-body .pl-sr .pl-cce,.markdown-body .pl-sr .pl-sra,.markdown-body .pl-sr .pl-sre{color:#032f62}.markdown-body .pl-smw,.markdown-body .pl-v{color:#e36209}.markdown-body .pl-bu{color:#b31d28}.markdown-body .pl-ii{color:#fafbfc;background-color:#b31d28}.markdown-body .pl-c2{color:#fafbfc;background-color:#d73a49}.markdown-body .pl-c2:before{content:"^M"}.markdown-body .pl-sr .pl-cce{font-weight:700;color:#22863a}.markdown-body .pl-ml{color:#735c0f}.markdown-body .pl-mh,.markdown-body .pl-mh .pl-en,.markdown-body .pl-ms{font-weight:700;color:#005cc5}.markdown-body .pl-mi{font-style:italic;color:#24292e}.markdown-body .pl-mb{font-weight:700;color:#24292e}.markdown-body .pl-md{color:#b31d28;background-color:#ffeef0}.markdown-body .pl-mi1{color:#22863a;background-color:#f0fff4}.markdown-body .pl-mc{color:#e36209;background-color:#ffebda}.markdown-body .pl-mi2{color:#f6f8fa;background-color:#005cc5}.markdown-body .pl-mdr{font-weight:700;color:#6f42c1}.markdown-body .pl-ba{color:#586069}.markdown-body .pl-sg{color:#959da5}.markdown-body .pl-corl{text-decoration:underline;color:#032f62}.markdown-body .octicon{display:inline-block;vertical-align:text-top;fill:currentColor}.markdown-body a{background-color:transparent;-webkit-text-decoration-skip:objects}.markdown-body a:active,.markdown-body a:hover{outline-width:0}.markdown-body strong{font-weight:inherit;font-weight:bolder}.markdown-body h1{margin:.67em 0}.markdown-body img{border-style:none}.markdown-body svg:not(:root){overflow:hidden}.markdown-body code,.markdown-body kbd,.markdown-body pre{font-family:monospace,monospace;font-size:1em}.markdown-body hr{box-sizing:content-box;overflow:visible}.markdown-body input{font:inherit;margin:0;overflow:visible}.markdown-body [type=checkbox]{box-sizing:border-box;padding:0}.markdown-body *{box-sizing:border-box}.markdown-body input{font-family:inherit;font-size:inherit;line-height:inherit}.markdown-body a{color:#0366d6;text-decoration:none}.markdown-body a:hover{text-decoration:underline}.markdown-body strong{font-weight:600}.markdown-body hr{height:0;margin:15px 0;overflow:hidden;background:transparent;border-bottom:1px solid #dfe2e5}.markdown-body hr:after,.markdown-body hr:before{display:table;content:""}.markdown-body hr:after{clear:both}.markdown-body table{border-spacing:0;border-collapse:collapse}.markdown-body td,.markdown-body th{padding:0}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:0;margin-bottom:0}.markdown-body h1{font-size:32px;font-weight:600}.markdown-body h2{font-size:24px;font-weight:600}.markdown-body h3{font-size:20px;font-weight:600}.markdown-body h4{font-size:16px;font-weight:600}.markdown-body h5{font-size:14px;font-weight:600}.markdown-body h6{font-size:12px;font-weight:600}.markdown-body p{margin-top:0;margin-bottom:10px}.markdown-body blockquote{margin:0}.markdown-body ol,.markdown-body ul{padding-left:0;margin-top:0;margin-bottom:0}.markdown-body ol ol,.markdown-body ul ol{list-style-type:lower-roman}.markdown-body ol ol ol,.markdown-body ol ul ol,.markdown-body ul ol ol,.markdown-body ul ul ol{list-style-type:lower-alpha}.markdown-body dd{margin-left:0}.markdown-body code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px}.markdown-body pre{margin-top:0;margin-bottom:0;font:12px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace}.markdown-body .octicon{vertical-align:text-bottom}.markdown-body .pl-0{padding-left:0!important}.markdown-body .pl-1{padding-left:4px!important}.markdown-body .pl-2{padding-left:8px!important}.markdown-body .pl-3{padding-left:16px!important}.markdown-body .pl-4{padding-left:24px!important}.markdown-body .pl-5{padding-left:32px!important}.markdown-body .pl-6{padding-left:40px!important}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e1e4e8;border:0}.markdown-body blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd{font-size:11px;border:1px solid #c6cbd1;border-bottom-color:#959da5;box-shadow:inset 0 -1px 0 #959da5}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eaecef}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#6a737d}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto}.markdown-body table th{font-weight:600}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #dfe2e5}.markdown-body table tr{background-color:#fff;border-top:1px solid #c6cbd1}.markdown-body table tr:nth-child(2n){background-color:#f6f8fa}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body code{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px}.markdown-body code:after,.markdown-body code:before{letter-spacing:-.2em;content:"\A0"}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}.markdown-body pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before{content:normal}.markdown-body .full-commit .btn-outline:not(:disabled):hover{color:#005cc5;border-color:#005cc5}.markdown-body kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:1px solid #d1d5da;border-bottom-color:#c6cbd1;border-radius:3px;box-shadow:inset 0 -1px 0 #c6cbd1}.markdown-body :checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}.markdown-body .task-list-item{list-style-type:none}.markdown-body .task-list-item+.task-list-item{margin-top:3px}.markdown-body .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}.markdown-body hr{border-bottom-color:#eee}.gt-container{font-size:16px}.gt-container,.gt-container *{box-sizing:border-box}.gt-container a{color:#6190e8}.gt-container a:hover{color:#81a6ed;border-color:#81a6ed}.gt-container a.is--active{color:#333;cursor:default!important}.gt-container a.is--active:hover{color:#333}.gt-container .hide{display:none!important}.gt-container .gt-svg{display:inline-block;width:1em;height:1em;vertical-align:sub}.gt-container .gt-svg svg{width:100%;height:100%;fill:#6190e8}.gt-container .gt-ico{display:inline-block}.gt-container .gt-ico-text{margin-left:.3125em}.gt-container .gt-ico-github,.gt-container .gt-ico-github .gt-svg{width:100%;height:100%}.gt-container .gt-ico-github svg{fill:inherit}.gt-container .gt-spinner{position:relative}.gt-container .gt-spinner:before{content:"";box-sizing:border-box;position:absolute;top:3px;width:.75em;height:.75em;margin-top:-.1875em;margin-left:-.375em;border-radius:50%;border:1px solid #fff;border-top-color:#6190e8;animation:gt-kf-rotate .6s linear infinite}.gt-container .gt-loader{position:relative;border:1px solid #999;animation:gt-kf-rotate 1.5s ease infinite;display:inline-block;font-style:normal;width:1.75em;height:1.75em;line-height:1.75em;border-radius:50%}.gt-container .gt-loader:before{content:"";position:absolute;display:block;top:0;left:50%;margin-top:-.1875em;margin-left:-.1875em;width:.375em;height:.375em;background-color:#999;border-radius:50%}.gt-container .gt-avatar{display:inline-block;width:3.125em;height:3.125em}@media (max-width:479px){.gt-container .gt-avatar{width:2em;height:2em}}.gt-container .gt-avatar img{width:100%;height:auto;border-radius:3px}.gt-container .gt-avatar-github{width:3em;height:3em;cursor:pointer}@media (max-width:479px){.gt-container .gt-avatar-github{width:1.875em;height:1.875em}}.gt-container .gt-btn{padding:.75em 1.25em;display:inline-block;line-height:1;text-decoration:none;white-space:nowrap;cursor:pointer;border:1px solid #6190e8;border-radius:5px;background-color:#6190e8;color:#fff;outline:none;font-size:.75em}.gt-container .gt-btn-text{font-weight:400}.gt-container .gt-btn-loading{position:relative;margin-left:.5em;display:inline-block;width:.75em;height:1em;vertical-align:top}.gt-container .gt-btn.is--disable{cursor:not-allowed;opacity:.5}.gt-container .gt-btn-login{margin-right:0}.gt-container .gt-btn-preview{background-color:#fff;color:#6190e8}.gt-container .gt-btn-preview:hover{background-color:#f2f2f2;border-color:#81a6ed}.gt-container .gt-btn-public:hover{background-color:#81a6ed;border-color:#81a6ed}.gt-container .gt-error{text-align:center;margin:.625em;color:#ff3860}.gt-container .gt-initing{padding:1.25em 0;text-align:center}.gt-container .gt-initing-text{margin:.625em auto;font-size:92%}.gt-container .gt-no-init{padding:1.25em 0;text-align:center}.gt-container .gt-link{border-bottom:1px dotted #6190e8}.gt-container .gt-link-counts,.gt-container .gt-link-project{text-decoration:none}.gt-container .gt-meta{margin:1.25em 0;padding:1em 0;border-bottom:1px solid #e9e9e9;font-size:1em;position:relative;z-index:10}.gt-container .gt-meta:after,.gt-container .gt-meta:before{content:" ";display:table}.gt-container .gt-meta:after{clear:both}.gt-container .gt-counts{margin:0 .625em 0 0}.gt-container .gt-user{float:right;margin:0;font-size:92%}.gt-container .gt-user-pic{width:16px;height:16px;vertical-align:top;margin-right:.5em}.gt-container .gt-user-inner{display:inline-block;cursor:pointer}.gt-container .gt-user .gt-ico{margin:0 0 0 .3125em}.gt-container .gt-user .gt-ico svg{fill:inherit}.gt-container .gt-user .is--poping .gt-ico svg{fill:#6190e8}.gt-container .gt-version{color:#a1a1a1;margin-left:.375em}.gt-container .gt-copyright{margin:0 .9375em .5em;border-top:1px solid #e9e9e9;padding-top:.5em}.gt-container .gt-popup{position:absolute;right:0;top:2.375em;background:#fff;display:inline-block;border:1px solid #e9e9e9;padding:.625em 0;font-size:.875em;letter-spacing:.5px}.gt-container .gt-popup .gt-action{cursor:pointer;display:block;margin:.5em 0;padding:0 1.125em;position:relative;text-decoration:none}.gt-container .gt-popup .gt-action.is--active:before{content:"";width:.25em;height:.25em;background:#6190e8;position:absolute;left:.5em;top:.4375em}.gt-container .gt-header{position:relative;display:flex}.gt-container .gt-header-comment{flex:1 1;margin-left:1.25em}@media (max-width:479px){.gt-container .gt-header-comment{margin-left:.875em}}.gt-container .gt-header-textarea{padding:.75em;display:block;box-sizing:border-box;width:100%;min-height:5.125em;max-height:15em;border-radius:5px;border:1px solid rgba(0,0,0,.1);font-size:.875em;word-wrap:break-word;resize:vertical;background-color:#f6f6f6;outline:none;transition:all .25s ease}.gt-container .gt-header-textarea:hover{background-color:#fbfbfb}.gt-container .gt-header-preview{padding:.75em;border-radius:5px;border:1px solid rgba(0,0,0,.1);background-color:#f6f6f6}.gt-container .gt-header-controls{position:relative;margin:.75em 0 0}.gt-container .gt-header-controls:after,.gt-container .gt-header-controls:before{content:" ";display:table}.gt-container .gt-header-controls:after{clear:both}@media (max-width:479px){.gt-container .gt-header-controls{margin:0}}.gt-container .gt-header-controls-tip{font-size:.875em;color:#6190e8;text-decoration:none;vertical-align:sub}@media (max-width:479px){.gt-container .gt-header-controls-tip{display:none}}.gt-container .gt-header-controls .gt-btn{float:right;margin-left:1.25em}@media (max-width:479px){.gt-container .gt-header-controls .gt-btn{float:none;width:100%;margin:.75em 0 0}}.gt-container:after{content:"";position:fixed;bottom:100%;left:0;right:0;top:0;opacity:0}.gt-container.gt-input-focused{position:relative}.gt-container.gt-input-focused:after{content:"";position:fixed;bottom:0;left:0;right:0;top:0;background:#000;opacity:.6;transition:opacity .3s,bottom 0s;z-index:9999}.gt-container.gt-input-focused .gt-header-comment{z-index:10000}.gt-container .gt-comments{padding-top:1.25em}.gt-container .gt-comments-null{text-align:center}.gt-container .gt-comments-controls{margin:1.25em 0;text-align:center}.gt-container .gt-comment{position:relative;padding:.625em 0;display:flex}.gt-container .gt-comment-content{flex:1 1;margin-left:1.25em;padding:.75em 1em;background-color:#f9f9f9;overflow:auto;transition:all .25s ease}.gt-container .gt-comment-content:hover{box-shadow:0 .625em 3.75em 0 #f4f4f4}@media (max-width:479px){.gt-container .gt-comment-content{margin-left:.875em;padding:.625em .75em}}.gt-container .gt-comment-header{margin-bottom:.5em;font-size:.875em;position:relative}.gt-container .gt-comment-block-1{float:right;height:1.375em;width:2em}.gt-container .gt-comment-block-2{float:right;height:1.375em;width:4em}.gt-container .gt-comment-username{font-weight:500;color:#6190e8;text-decoration:none}.gt-container .gt-comment-username:hover{text-decoration:underline}.gt-container .gt-comment-date,.gt-container .gt-comment-text{margin-left:.5em;color:#a1a1a1}.gt-container .gt-comment-edit,.gt-container .gt-comment-like,.gt-container .gt-comment-reply{position:absolute;height:1.375em}.gt-container .gt-comment-edit:hover,.gt-container .gt-comment-like:hover,.gt-container .gt-comment-reply:hover{cursor:pointer}.gt-container .gt-comment-like{top:0;right:2em}.gt-container .gt-comment-edit,.gt-container .gt-comment-reply{top:0;right:0}.gt-container .gt-comment-body{color:#333!important}.gt-container .gt-comment-body .email-hidden-toggle a{display:inline-block;height:12px;padding:0 9px;font-size:12px;font-weight:600;line-height:6px;color:#444d56;text-decoration:none;vertical-align:middle;background:#dfe2e5;border-radius:1px}.gt-container .gt-comment-body .email-hidden-toggle a:hover{background-color:#c6cbd1}.gt-container .gt-comment-body .email-hidden-reply{display:none;white-space:pre-wrap}.gt-container .gt-comment-body .email-hidden-reply .email-signature-reply{padding:0 15px;margin:15px 0;color:#586069;border-left:4px solid #dfe2e5}.gt-container .gt-comment-body .email-hidden-reply.expanded{display:block}.gt-container .gt-comment-admin .gt-comment-content{background-color:#f6f9fe}@keyframes gt-kf-rotate{0%{transform:rotate(0)}to{transform:rotate(1turn)}}</style><meta name="generator" content="Gatsby 2.32.0"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><title data-rh="true"></title><link as="script" rel="preload" href="/webpack-runtime-6748bc434ffb10bd9899.js"/><link as="script" rel="preload" href="/framework-ddff9c6a94258f6c8286.js"/><link as="script" rel="preload" href="/app-384e79405ac4fe4c628c.js"/><link as="script" rel="preload" href="/styles-474c0340beb1ced255f1.js"/><link as="script" rel="preload" href="/41aca86e-5aa0f0ae7141e29509ae.js"/><link as="script" rel="preload" href="/6e7787752c915607ab3ee062844ac41c9817ded6-096af00c44d2c76a1b89.js"/><link as="script" rel="preload" href="/cd7d5f864fc9e15ed8adef086269b0aeff617554-1d6e38894652b6629bac.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-6b3fe3ee87a964fe2f9d.js"/><link as="fetch" rel="preload" href="/page-data/gmail-with-thunderbird/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3284037645.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/500847697.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">NARAZUKE</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><small><div class="category tech"><a href="/category/tech/">tech</a></div></small><h1 itemProp="headline">ThunderbirdでGmailを自動分類する</h1><p><div class="post-date"><span class="sub-date"><div>2021-9-21<!-- --> <!-- -->Tue<!-- --> </div></span><span class="main-date"><div>2021-9-22<!-- --> <!-- -->Wed<!-- --> </div></span></div></p><div class="tag-list"><small><div class="tag"><a href="/tag/gmail/">gmail</a></div></small><small><div class="tag"><a href="/tag/thunderbird/">thunderbird</a></div></small></div><small class="profile-mini-list"><a class="profile-mini" href="/author/nozzle/"><figure><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:30px;height:30px"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIEA//EABcBAAMBAAAAAAAAAAAAAAAAAAABAgT/2gAMAwEAAhADEAAAAdDN0x3sSk42J0Ef/8QAGhABAAIDAQAAAAAAAAAAAAAAAQIRAAMhEP/aAAgBAQABBQJaITJYdzYdC4lBXv8A/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFhEBAQEAAAAAAAAAAAAAAAAAEQEg/9oACAECAQE/ASGP/8QAHBAAAQQDAQAAAAAAAAAAAAAAAAEREiECECAy/9oACAEBAAY/AitelRyOLRK4/8QAGxAAAwEBAQEBAAAAAAAAAAAAAAERITFBUXH/2gAIAQEAAT8hss0Uc+nSeDWnc13EjkBXP0yEiNu155RC4f/aAAwDAQACAAMAAAAQYPC+/8QAFhEAAwAAAAAAAAAAAAAAAAAAESAh/9oACAEDAQE/EKU//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEREP/aAAgBAgEBPxCFFQ8//8QAHhABAAICAwADAAAAAAAAAAAAAQARITFBUWEQcZH/2gAIAQEAAT8Q0zjV6v3o9hCCAbGG+B5qMHYp+5XIk/OgOW6hKQILajCwUluoKiCecIMLIvg//9k=" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/83d40f6d6635d95a730418eeee3e62c7/cc786/profile-pic-nozzle.jpg 1x,
+/static/83d40f6d6635d95a730418eeee3e62c7/06d5e/profile-pic-nozzle.jpg 1.5x,
+/static/83d40f6d6635d95a730418eeee3e62c7/c28c8/profile-pic-nozzle.jpg 2x" /><img loading="lazy" width="30" height="30" srcset="/static/83d40f6d6635d95a730418eeee3e62c7/cc786/profile-pic-nozzle.jpg 1x,
+/static/83d40f6d6635d95a730418eeee3e62c7/06d5e/profile-pic-nozzle.jpg 1.5x,
+/static/83d40f6d6635d95a730418eeee3e62c7/c28c8/profile-pic-nozzle.jpg 2x" src="/static/83d40f6d6635d95a730418eeee3e62c7/cc786/profile-pic-nozzle.jpg" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div></figure><div>nozzle</div></a></small></header><hr/><section itemProp="articleBody"><h2>最終目標</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 472px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4e13c340067445020baa52c6bc55a1d6/3c5de/01.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.72151898734178%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVQoz31TaXOiUBDkJ+1GIzceqIDihVEEQRCUI2LWaJKVrc1VlXzKh/3L20jV1hqTVDVTUNP9pmfmQVQ6NuM+9zTr5226Wm3i6CoMkuvN3dV6d7Pbry5/rJNrbx76XhRHa5apUGSZpnIIBFdV6Y7fH5qu4y8WcbC8NA1nottAFCbOzMfn6MJE1Mc2Q/9TZiDIc5YtMetkA3aaPjw9vg41vdsZIhYL9PdvZOGMLhYYROB/ZSZmmaogNGzLU+Rus9FW2/1aVaqUGwJfZ+jKMcrvxSDJUgcOux2tUVcUWa1Wm4UzKi9IkcIXIMSaVBdlWVKtqWsaM7idmo4xsfE+0S2p2Ub2BMoBMoE0lPDpzDzfD0zD3m7vMGdMLo4SpGBHaqqgnSLrGe6npouB3d6kT48v6f5+uYiNyaxRb81svy62QADtGBVEInfvOstBf+y6y7kb6GNLG+iK3BNritoe8JxIlnis96TncibGMbgJWOZoZL69/UlWm8NuKLLEnRdZEN4NOb8h2bTxUCSPO9Bu9VHc98Je94LnavD84Xo+EFvWXNP0X+nD/e/noWbgIG8eCLz4SdkjseAdCkKGOUXhmmNr6DNnfC3OuscPMNQmsI2x77Z7bO4gzkmfofwXMJLwq9GG4nMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="01"
+        title="01"
+        src="/static/4e13c340067445020baa52c6bc55a1d6/3c5de/01.png"
+        srcset="/static/4e13c340067445020baa52c6bc55a1d6/c26ae/01.png 158w,
+/static/4e13c340067445020baa52c6bc55a1d6/6bdcf/01.png 315w,
+/static/4e13c340067445020baa52c6bc55a1d6/3c5de/01.png 472w"
+        sizes="(max-width: 472px) 100vw, 472px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>メルマガが自動的に “magazine” フォルダに分類されるようにする。</p>
+<h2>基礎知識</h2>
+<h3>エイリアスとは</h3>
+<ul>
+<li>example@gmail.com</li>
+<li>example+hoge@gmail.com</li>
+<li>example+foo@gmail.com</li>
+<li>example+bar@gmail.com</li>
+<li>example+piyo@gmail.com</li>
+</ul>
+<p>これらは一見、全て違うメールアドレスに見えるが、どのアドレスにメールを送信しても、“example@gmail.com”にメールが届くようになっている。<br>
+この機能はエイリアス機能と呼ばれている。</p>
+<p>エイリアスのアドレスの作り方は、アカウント作成時に作ったプレーンな Gmail アドレスの”@“の前に”+“を置いて、適当な文字列をつなげる。</p>
+<h3>エイリアスの利点</h3>
+<h4>#1 サブアカウント作成</h4>
+<p>例えば Twitter で、メインのアカウントとは別にサブアカウントが欲しい状況を想定しよう。本来、新規アカウントを開設するには、メインアカウントで使っていたアドレスとは別のアドレスを用意しなければならない。<br>
+しかし、このエイリアス機能を使えば、メインのアドレスに”+hoge”を付けるだけで新しいアカウントとして登録できる。</p>
+<h4>#2 フォルダ分類</h4>
+<p>用途によって登録するメールアドレスのエイリアスを使い分けると、宛先によってメールをフィルタすることが可能になる。
+例をあげよう。</p>
+<ul>
+<li>example+contact@gmail.com (連絡用)</li>
+<li>example+finance@gmail.com (銀行, クレジットカード系)</li>
+<li>example+game@gmail.com (PSN, Steam のアカウント)</li>
+<li>example+subscribe@gmail.com (定期購読サービス)</li>
+<li>example+temp@gmail.com (仮登録したサービス)</li>
+</ul>
+<p>このように、用途によってエイリアスを使い分ける。すると、どの宛先に送信されたメールかによって自動でラベルづけを行うことができる。<br>
+メールにつけられたラベルは、他のメールソフトではフォルダとして認識することができる。</p>
+<p>つまり、</p>
+<ul>
+<li>contact</li>
+<li>finance</li>
+<li>game</li>
+<li>subscribe</li>
+<li>temp</li>
+</ul>
+<p>というフォルダが、受信 BOX とは別にメールソフト上に作られる。</p>
+<p>銀行からのメールなどの重要なメールは”finance”フォルダで一元で管理することができる。これなら、重要なメールが広告のメールに埋もれることなく、簡単に確認することができる。</p>
+<p>今回は、このエイリアスによったフォルダわけに焦点を置いて説明していく。</p>
+<h2>エイリアスによるフィルタリング設定</h2>
+<h3>フィルターの作成</h3>
+<p>実際にメールマガジンをフィルタリングしてみよう。</p>
+<p>今回、フィルタリング設定は WEB ブラウザで行う。ブラウザから<a href="https://mail.google.com">Gmail</a>にアクセスしよう。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/462e81c9f67ff8cc9e8b727f04c27e2f/49832/02.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 68.35443037974683%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB5ElEQVQoz0VSCZKgIAz0/78cReWS+xBE3QZ3aqiUBkgnnQ6T2Rfr1Hs/51mM9UIq60IIKcTcDc5nMfuQrPO1VvjZq2rpFEq97vt936u1s2Bz3Q9SPe1u7cZ6YG24uMo5wzmxypmSn9JKbm/fM7Xgi5JX8C2EljMCaqkfLKWUxwm2PdnzeG/aKSa1b9m5t10lZ6PUSla678F7cUh5HP9NqUMpLsShtY/Bh8CECLlM2LdBu9RqnNsZo0I474HhUgopKWPwj0OJkcWiqLOUS5PuCeKATAeXoo1hXGhjQ0xSaWCApJwNmORS4NaFDgYRSDOBnPce4HrVQ6t127U1ISVCxbptZN0WQradzevPRvd5IcroHhAjIJPWGnoM2kUZg1ZxF1PCOTijFOutKqVBpLftOm0HATvYaoEfBAQYQegTxGJOyALYTulMlo3Sz8cXjwDZv3pTu+o7FqaPU8o5KqAyhITPOMf302xnnGwbGv6rjLkB9oFBG2rjC7D41GIgLsEWOqM+bjEnPQI6GI8qplyv1gVTqg8wxgHutGF9WpwjV0/HOUYFMF5NB7uQrc8unH3O1oInooFHBJj38QjBeT/FOer3ytb+0oZUpXyPBJLOhPzMMyJ6osFWDjrLSlAWHeEKSeMY1T9q1Bmn5tzU+gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="02"
+        title="02"
+        src="/static/462e81c9f67ff8cc9e8b727f04c27e2f/f058b/02.png"
+        srcset="/static/462e81c9f67ff8cc9e8b727f04c27e2f/c26ae/02.png 158w,
+/static/462e81c9f67ff8cc9e8b727f04c27e2f/6bdcf/02.png 315w,
+/static/462e81c9f67ff8cc9e8b727f04c27e2f/f058b/02.png 630w,
+/static/462e81c9f67ff8cc9e8b727f04c27e2f/40601/02.png 945w,
+/static/462e81c9f67ff8cc9e8b727f04c27e2f/78612/02.png 1260w,
+/static/462e81c9f67ff8cc9e8b727f04c27e2f/49832/02.png 2374w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+<em><a href="https://mail.google.com">Gmail</a></em></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/0abafcc719d6fcb191dc5d6adae21dbf/fe720/03.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 9.49367088607595%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAIAAADXZGvcAAAACXBIWXMAABYlAAAWJQFJUiTwAAAASUlEQVQI14XHPQqAMAwG0N7/Xg7OgojiKv60NCb5knTTEyi85SVV5FLplm0/zivDXGHfAKN5qn2XPELkrRMxs7q3XxFN1oXH4QER4HG5/V8xwwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="03"
+        title="03"
+        src="/static/0abafcc719d6fcb191dc5d6adae21dbf/f058b/03.png"
+        srcset="/static/0abafcc719d6fcb191dc5d6adae21dbf/c26ae/03.png 158w,
+/static/0abafcc719d6fcb191dc5d6adae21dbf/6bdcf/03.png 315w,
+/static/0abafcc719d6fcb191dc5d6adae21dbf/f058b/03.png 630w,
+/static/0abafcc719d6fcb191dc5d6adae21dbf/40601/03.png 945w,
+/static/0abafcc719d6fcb191dc5d6adae21dbf/78612/03.png 1260w,
+/static/0abafcc719d6fcb191dc5d6adae21dbf/fe720/03.png 1448w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>開けたら、上部の検索欄の右にある、検索オプションを押す。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7eadd5539894005663a1a6142b86f070/a8a6f/04.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAABYlAAAWJQFJUiTwAAABDElEQVQoz52TTU7EMAyFc2OOwhFYcgF2LLkAEgdgwQ5VQ36apInTKV/roeoUZkBYVevE7/nZTmpEJOU8DEPXdTHGaZqOfzDwfd8byEMp4zji8J7O7RK5tVZKMXxIwxporRW/fBlL0v1IBgxxVsZUh0qstc65w2LeexBXxM+Uv9uVtk/KkH+FXlRmyHT4TzJMbZsmaZWe17Hv5k+NepxtsbnsEHrn/Ye1BDTLmn437TUUQgA5k2NMGsg5s5tS2s1vyycbTxU5KSNIwXA4KvgsKY/6SbQqbxPpm5DRk1TQFsr+tmH8nMtR8stbubk/3D56aaPhGmn3slSizs7HuG/8AlLS63u+e3IPz75W+QSYI/wZqTzTLgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="04"
+        title="04"
+        src="/static/7eadd5539894005663a1a6142b86f070/f058b/04.png"
+        srcset="/static/7eadd5539894005663a1a6142b86f070/c26ae/04.png 158w,
+/static/7eadd5539894005663a1a6142b86f070/6bdcf/04.png 315w,
+/static/7eadd5539894005663a1a6142b86f070/f058b/04.png 630w,
+/static/7eadd5539894005663a1a6142b86f070/40601/04.png 945w,
+/static/7eadd5539894005663a1a6142b86f070/78612/04.png 1260w,
+/static/7eadd5539894005663a1a6142b86f070/a8a6f/04.png 1516w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>次に、“To”の欄にフィルタリングしたいアドレスを入力する。今回は僕が使用しているアドレス、“chibaso321@gmail.com”のエイリアスである”chibaso321+magazine@gmail.com”を使う。<br>
+入力し終えたら「フィルタを作成」を押す。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f624a1b21132d34cb663c49abc7c3397/2a333/05.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 79.74683544303798%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAIAAACZeshMAAAACXBIWXMAABYlAAAWJQFJUiTwAAABg0lEQVQoz41SyU7DMBDNX/IDHPgkjgip4hs4gDiVUzkgAYc2BCpVwvGSxXa8JE15idvShqjqk+N4meeZeTORVJoQliTL+TxOvpaLOJkv4vgzIYQqZQqpSqkPR1GqlPKUsnXbRsZapXSeF5QyzgUXAjNjvJTK+do6PxzWVZXBqOs6wue9d85lWc45Vx0kXjDGbE6iaZoITJhnWQbrqqqstaaH1vosspSSUlqWJfbtDuv1+lzP8CmE6Lz1TNwF/h7hcIQMDvh5nnORe1/jIQSC7Z5f9xgh4xTWaZoiW1EayE5+yGq1IoR00vVARs7Zcc+4gyuQfaf5EEVRTKfPk8ndbPYS0vkjo0h4Gwljhh1SaP4BIcAA7TCqtoJn1Bn8kOrmDByFrXUFPioMhXB4aLevX7fejW3YPZmBGWqGLVoNC1ydqPZW7dBPva4KsoU+g1R4YhDCkAw76DTaBkemfQQP7/biml3e8Ktb/s1cFFy5Hn4MoUPw37T1ktr7V/n4pp4+VCbtL0Z0nMtb+yBEAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="05"
+        title="05"
+        src="/static/f624a1b21132d34cb663c49abc7c3397/f058b/05.png"
+        srcset="/static/f624a1b21132d34cb663c49abc7c3397/c26ae/05.png 158w,
+/static/f624a1b21132d34cb663c49abc7c3397/6bdcf/05.png 315w,
+/static/f624a1b21132d34cb663c49abc7c3397/f058b/05.png 630w,
+/static/f624a1b21132d34cb663c49abc7c3397/40601/05.png 945w,
+/static/f624a1b21132d34cb663c49abc7c3397/78612/05.png 1260w,
+/static/f624a1b21132d34cb663c49abc7c3397/2a333/05.png 1484w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>ラベルを付ける: ラベルを選択 -> 新しいラベル…
+を押す。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/16f215b6e8f1d2f59cee4ce220ebd506/73caa/06.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.26582278481012%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAABYlAAAWJQFJUiTwAAABTElEQVQoz4WRwUrDQBRF812u3fkl/oOCX+BCkG6sTBsrQsBNpMYiSGmE2tggCILgwiqkmE0zM0lmJpNYb5K2IMV6FsPw5t53816MRqMxGLi+77vDsTv0Hzx/OPL7948jb/wXEHueRwgxTPOMRjQMwzzPOKecMynFfCNZlimlOp1OaWaMUUqFEJzz2SzCqTMtpYKoKIrvNVCUUtZmE+ogCKbTKauI4zhJEkoZ6kjIfgMbwrXWpbndNiF9r6gNtR+ibA1VmRG+MBPSStMUapxwRlGEEXDBFKtYtUQqlVTJKJbmVquNap7nuiJfgvsqUC/eMGuSfgVzleCxTiZQotn6YurdlusRIhFyLuODk9et/bftvZfnp4llXRhogJzN/waNi/JbRbf/eXQ5IfZHGDLLOjeazaZt29f/4ThO13H6dz339mo0uDk8tXd2j38AehoVDLtHdroAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="06"
+        title="06"
+        src="/static/16f215b6e8f1d2f59cee4ce220ebd506/f058b/06.png"
+        srcset="/static/16f215b6e8f1d2f59cee4ce220ebd506/c26ae/06.png 158w,
+/static/16f215b6e8f1d2f59cee4ce220ebd506/6bdcf/06.png 315w,
+/static/16f215b6e8f1d2f59cee4ce220ebd506/f058b/06.png 630w,
+/static/16f215b6e8f1d2f59cee4ce220ebd506/40601/06.png 945w,
+/static/16f215b6e8f1d2f59cee4ce220ebd506/73caa/06.png 1110w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>新しいラベル名を入力する。ラベル名はのちにフォルダ名となるため、分かりやすい名前が良い。もしこだわりがなければ、エイリアスに使った文字列を推奨する。下の欄は空欄で OK。「作成」を押して、「フィルタを作成」を押したら完成である。</p>
+<p>このフィルタは、“chibaso321+magazine@gmail.com”宛てのメールを受信するたびに、“magazine”のラベルを付けるフィルタである。</p>
+<h3>実践編</h3>
+<p>実際にメルマガを登録して、メールをフィルタリングしてみよう。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/2283e62cd93f6af009c9e92e0fb75977/d53ff/07.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 44.30379746835443%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAABYlAAAWJQFJUiTwAAABEklEQVQoz4WRyXKDQAxE+f//cpybc+BiCLjYwYaw71ueR8TlW7oKIUbq7pHQdoWyLNM0LYoiy7IkSYIgIHqe5zhOlqV5XpDTU9d1nudN0whL29QrV7S7QhiGtm37vm+a5vVqoELJsmxocRxTwuYgL8uyruswDKg+Hg9ax3GkwOG+P5UXBZJBYX+DxlW7rnMc93L5Op8/T6cPwzD5TJI7Dj8KOBOjKOJeorttT11tnmfJlNUuVnLyLzShvZYBqqriU3LuxXratm0UKBGlE5YmGsxJ4Xa76brOSmTVwLIs+Qui3vc9cZqm49o8ZKyKJbNMuoVMTnRd91sBXbSYmRPmx+lwhiyTv8Ze//A+vDQQWYqY/wL0x/880BK8JAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="07"
+        title="07"
+        src="/static/2283e62cd93f6af009c9e92e0fb75977/f058b/07.png"
+        srcset="/static/2283e62cd93f6af009c9e92e0fb75977/c26ae/07.png 158w,
+/static/2283e62cd93f6af009c9e92e0fb75977/6bdcf/07.png 315w,
+/static/2283e62cd93f6af009c9e92e0fb75977/f058b/07.png 630w,
+/static/2283e62cd93f6af009c9e92e0fb75977/40601/07.png 945w,
+/static/2283e62cd93f6af009c9e92e0fb75977/d53ff/07.png 1068w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>宛て先は、“chibaso321+magazine@gmail.com”となっているのが分かる。</p>
+<p>適当なサイトを見つけたので登録する。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f1a30fa0c5512c80b58c1512f33e3a88/de0bd/08.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 33.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAABYlAAAWJQFJUiTwAAABG0lEQVQY01VQSW7DMAz0/5+XY4sCTRzXsRZqX0gtLt2cSowkCqMhR1xguztvRu+tNWM9gNHapFxizDH9Q4jZukBEMcZSCcXHEiu1MeZ5zjlKrUit9zHnyesdTI7rcvbecy5jjFJqI3IhLFUcM6dZ8qiFnB2IszcG01yGz/MvELGwqNZxVRrcMJqvJR0vdHbWMmtlsV7Xz9stSNERj+MAgH3fORFCcG6MyTmzjRCC1Ho5pEIirs3uCuEh5fe6plKQcH+9hJTP53a/P35+dud94N9eFFkLD5EWrRS7YzE1st6xQAOknFzwQknuKJVSAAyh1GN9GmtjTmDABhZrnVK6xNcM/NVq28AaHwK/ZqMM/XZsHe8+Rh6VcY6n8gtl/49rt2HTjQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="08"
+        title="08"
+        src="/static/f1a30fa0c5512c80b58c1512f33e3a88/f058b/08.png"
+        srcset="/static/f1a30fa0c5512c80b58c1512f33e3a88/c26ae/08.png 158w,
+/static/f1a30fa0c5512c80b58c1512f33e3a88/6bdcf/08.png 315w,
+/static/f1a30fa0c5512c80b58c1512f33e3a88/f058b/08.png 630w,
+/static/f1a30fa0c5512c80b58c1512f33e3a88/40601/08.png 945w,
+/static/f1a30fa0c5512c80b58c1512f33e3a88/78612/08.png 1260w,
+/static/f1a30fa0c5512c80b58c1512f33e3a88/de0bd/08.png 2238w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>受信トレイにメールがあるが、本文の前に<code class="language-text">maganize</code>と付いているのが見える。フィルタによってラベル付けが成功したようだ。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7f1c37f4fafe210088388ef6508fbf1e/8d9a9/09.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 32.911392405063296%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA1UlEQVQY05VQa2/DIAzk///ESZ20rtUSAolJbDCvZNdGm7R96wksC+7OD+PvH7RSb721Zif/ebsPo2VJG0fE3yMxhZUpbLXWbWPNRe2biblAuD8RY2QWkVhr673XB1oppT2Rc8YXEkWWdRUxy7Kg6HEcJ9v7+XJ5hwFI0zTN8zwMg7V2HEfvPcgpJdDQS9cvE4jgBDEqQxBCABvOyImImaGH2DmnqnhEDVy0I1GMcx5OxyvY90e0azfX6w1zpqSnxTn8D+kP/jlgVQa7JQrYHnbzYv3+DRE5l1yWBQGJAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="09"
+        title="09"
+        src="/static/7f1c37f4fafe210088388ef6508fbf1e/f058b/09.png"
+        srcset="/static/7f1c37f4fafe210088388ef6508fbf1e/c26ae/09.png 158w,
+/static/7f1c37f4fafe210088388ef6508fbf1e/6bdcf/09.png 315w,
+/static/7f1c37f4fafe210088388ef6508fbf1e/f058b/09.png 630w,
+/static/7f1c37f4fafe210088388ef6508fbf1e/40601/09.png 945w,
+/static/7f1c37f4fafe210088388ef6508fbf1e/78612/09.png 1260w,
+/static/7f1c37f4fafe210088388ef6508fbf1e/8d9a9/09.png 2244w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>左サイドの”magazine”を押して、該当するメールだけを閲覧することもできる。</p>
+<h2>Thunderbird</h2>
+<h3>Gmail アカウントを Thunderbird に追加する</h3>
+<p>省略する。<br>
+ちなみに「省略」という意味で「割愛」という言葉を使うのは誤用である。各自調べて見て欲しい。</p>
+<h3>Gmail との連携</h3>
+<p>Thunderbird において、Gmail のラベルの代わりになる機能が、「タグ」である。ラベルがそのままタグになれば便利なのだが、残念ながらそういう移行はできない。しかし、特定のラベルが付けられたメールフォルダを閲覧することができる。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 474px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/405937dfd10a19d838698413a07f4bd7/5595f/10.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 93.67088607594937%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAABYlAAAWJQFJUiTwAAACVklEQVQ4y4WTCY+aUBSF/UVtdURxYRfcEHEDBAUXQHAbdaZqa9s0aZP+7R61HbVomtyQB7xz77vfPS8msCKnODnjY71hzqYLzw0tczAa+q4bhsHS92d2f+y5U61jjYYTta6lU1SGZDIknc2wMY4pUMVOthFquhP4s2n4HEwW7jhwbNf3puv1djwKfG9mdh2kUOsdMk2fxMxRjBfiiRRZceh4qPlp/3W12ipKS642qhX1/TsiEU/HP6STTxksiGT2rPwjPq94vmTofbmqNhuaXG1KYhXB0GIuy2LTVTA3YlSmKaHZ0AeOWyrKAl8UCxVJLKdTeSKZu979T1wqH4tzRfRp6FZD1RbzNZixjHgCw9xNcS2mU0S+a9igKhbKq+dXkMtluadEBkdIEbk3Tm/7L2LkhrjV1HvWAGxfX/abzXa5eAFCYAPqglD+O6R7YnSo1Fp1pa11TIwUgk7bBHPIoKfywm1x+qZnJDa7tqH3DKMP5oCPFDhIpayCBctI/6ncbnWBHQFX4QiiWD3XpPI8+ofgkZiFDVotQ9OsiT8/HL6jW8ys1xviibwR2rdigEWfOGpNbgL7Zr0tSjV8fDDniFjXLNN0OFbCmT1vWpTkaz8+FJ/7sfsjTAs9O/YY9sTF2O++YIE5R3xySxsBh2BaeKJVmiowdAHFgSrikIvDjj/INAUqqAzgu93h549fPFdKxEnY66S8E0exwJfQJEZimQ6U0GPa/d4IE67JKgwPk2BPNPA9hpskiRW4YrlY9XvDMJgfPn/DxZhNlzAMfF4u1bAnGpWy8hv5H0A10gBPZAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="10"
+        title="10"
+        src="/static/405937dfd10a19d838698413a07f4bd7/5595f/10.png"
+        srcset="/static/405937dfd10a19d838698413a07f4bd7/c26ae/10.png 158w,
+/static/405937dfd10a19d838698413a07f4bd7/6bdcf/10.png 315w,
+/static/405937dfd10a19d838698413a07f4bd7/5595f/10.png 474w"
+        sizes="(max-width: 474px) 100vw, 474px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>Thunderbird を開くと、先ほど追加したラベルがフォルダとして現れているはずだ。現れない人は一旦 Thunderbird を再起動しよう。</p>
+<p>これだけでもう便利だが、ラベルがついたメールフォルダが、受信トレイと同じ階層にいるのはちょっと違和感がある。下書きや送信済みメールの方が本来重要なフォルダなのに、“magazine”の方が階層が上なのもおかしい。</p>
+<h3>Thunderbird の設定の見直し</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/44ffd3ca6536f490185d84665242249e/b6425/11.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 69.62025316455697%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAABYlAAAWJQFJUiTwAAACDklEQVQoz3VS226bQBT0XzT4hrmbXVjuYIPBXGxwnDp27CZKqz5X6mPV/kqf+tL+aQfjpnWkSqPVgnbOzJlzemVzevrwqWreZdVBVZmmUN+bCxNt0J8MB+JwIACDfgvuhu9z3c8Levnn79svP3bffjZffxEnt003jvNltk7iUp9aokBkiSoyJbrtOjPTcEdD6S95kZQPD8/5sp5FmaoYAJ469sxz5wb1JJFIIp3wKj9WRGEKR1fKaVLu7o6bZp9ntaqYKJEuSosFIMgSEYX2dWe7wxWZEisKE0JMQixVoY4VMNOH7FRjsAojr/q8IqsKsW3foJYsaVPiFav7eL40DQ98NAlxGP4veZmtnh4/3jb7sqidIHdnazJlnjsL/CQKsyhcGNSF+CvDF3I8z++2hyJv0qRgVqTTAKPyvRiG4RwWcEFUiOCFMzrjkvZh/7iqtlW5Qby2u6iKDSpCEDSciIASRxL1FzLHCdzZSA+ap+Nzlq7QJDM9fiRDDSFjJTrA85XtvsBkQkQNlx4mfDq+r8pbDAkTgppthdBBTpjqeCRjK/5dDHDmxPJU0pKxTPDc1PeoYtthEudNvYMRx46wYWgVe/pH/HLh3oz7N3xrOwpT0Or1WxC6DQuDpGNizmgBsZ33DNC7UxT1Nj8ow22WVklcoAqYsAoO0R1mttsCWCxEI+fPAHeUs5ivqSZS+A2CtJG8IbWIWwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="11"
+        title="11"
+        src="/static/44ffd3ca6536f490185d84665242249e/f058b/11.png"
+        srcset="/static/44ffd3ca6536f490185d84665242249e/c26ae/11.png 158w,
+/static/44ffd3ca6536f490185d84665242249e/6bdcf/11.png 315w,
+/static/44ffd3ca6536f490185d84665242249e/f058b/11.png 630w,
+/static/44ffd3ca6536f490185d84665242249e/40601/11.png 945w,
+/static/44ffd3ca6536f490185d84665242249e/78612/11.png 1260w,
+/static/44ffd3ca6536f490185d84665242249e/b6425/11.png 2336w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>「ツール」 -> 「アカウント設定」を開き、「サーバー設定」のタブを開く。
+そして「詳細」を押す。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/081a9be183930cbe8a16b942c6f14d97/75a80/12.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 101.8987341772152%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAABYlAAAWJQFJUiTwAAADIUlEQVQ4y4VUyZLiVhDsY8c0uwaBJCSwptG+IdCC9gUEArrpHk+Hb/MR44P9Uz76/5wgHMzBEY7IKEC8rMrKKr0HhpnSNEdRLE2x4zFDklS/P+z3Pnc7g16XeHx8+vSp1en0gF5vgNhqdZ6e2s2TB3Yy5VheVUxDtxXZkERtyn35wot4oqmW5wbzZ4ljf5lyPCLH8bPLv8IlUbv7gATtdleWdABMRKQwjWUUZkmcv52/2QtPlgxdsxugxmrpDwafwXrguNloRCmyHgYpkCRluE5Q0Fn67srXNassqjzdGPpCljQcQ5RE/UaeTmcMw2mKWWTbKMzTdHPhh7nrBm58TLdfo+JsuaVqxaK2loxQNQNFAnl4IfP8M00zS9P52J5Onn9w/drxjp5fOZ6XvJSH3/RV/qz6khFdEatWeCejdaLfF40gPX7fl5XvRoEfQ3kcZrvqkGdb9C/LhvIvGlNusjGeMTlSrNDffGRJvtnUSVygeRhWbeuX0/u2rPEzTco0KXwvKvIK6fp94kKeTLgJzci656WnOIjX/gXCXIExpgF7LQwMDl+xuMLGFG+VKYoBVFl3V66zWmdpidyH+qUsdqqyWPtpHBWqYjRZmniXPZvxLDvDI9+LXSdAk5tyf6jPZbHHVEHGCJqFaaBrizsZcx6PaOjZ707BOkF79f7l/Prr+9sHGkar1fawtP3reiwBkO+yGYbl+bkkaSgLqafjGxYI63lt1REFUxJNxAayZDWG38jD4YhjZ1hMZ+WjCPiIcZTjkKrYOP0z4ALK3mUTxBDrKQqqvXCzdIMJoW2QNRXnFv9DhtXYE0FQ1l6YxjkMx5Kg2111FOaaKOiiYAAQDyggqz8Z9tRqY9ekuaRHZzd99Vbe2k+a5qF/V522mzrPKujC8BVBknleFpXbekI2PiRRVU1fNz1Tty3TWdoebANhabv4cqhfD4e3PMmW7z+C3//Sg2O/02njMhiPadwH6AR7olwAM43m9W7ecNgOLzZlXSSZ8+2P6M+/reh10O1eyCQ5xrQoajIiqdGI/k8QBAmdBDEicT+1Hskh2esRuEn+AXr5zn4LXde+AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="12"
+        title="12"
+        src="/static/081a9be183930cbe8a16b942c6f14d97/f058b/12.png"
+        srcset="/static/081a9be183930cbe8a16b942c6f14d97/c26ae/12.png 158w,
+/static/081a9be183930cbe8a16b942c6f14d97/6bdcf/12.png 315w,
+/static/081a9be183930cbe8a16b942c6f14d97/f058b/12.png 630w,
+/static/081a9be183930cbe8a16b942c6f14d97/40601/12.png 945w,
+/static/081a9be183930cbe8a16b942c6f14d97/75a80/12.png 1134w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>IMAP サーバーディレクトリーという項目が空になっているはずなので、”[Gmail]“と入力する。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 428px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b0436caefd8600a115ffbc0bf9295f8a/47730/13.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 82.91139240506328%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAABYlAAAWJQFJUiTwAAACTElEQVQ4y4VTaW/aUBDkBzVqucxpG2ODT2xOYwM2p4FwhBBQQ0zaJJUSqaFN2kr9Hql/tFNSFCKglVbPz887b3Zm1x4hrZDWkq65Rrm2dK9PJ/Pj/kmvO5ydLWazxXx+MR5NcXI2fV8x673uyOkMImF6HZSHSaRjcp3K9SqG1ekMHGeAjEa9gzAM+7g/BgznzWa3WgF4aNvtF3A4RAW9hKZojnNsGJbrXi3OL4sFM6Pks1opQaeP3vh83pDPGw74I953fzYv4GgkQRCUwKuthpPPlUFoW22RVxU5LwoqTXHIi0UZpEUj9PP6ChwMxEAyHk8LeaNudx4efsxnC5pKBfxR1LVJ3Q3Kg0eIINmkqOs1SdRSnAxm3AJOIkji62H8GhwOkeAZDSdlvfrp5u7u9vPl8spdfOg6g2LB0EtVq9YCwSEwFY8xSGISvGnYeqmSy+qaWhT4DM7RDmz2g2EAEYxLoooOw+R2qwdwrdpEVzrtPrwALe4NBqJbVr0uGy2BzhQnyVIWAeXY8+kMABTJgXyf8g2YItnR8FTN5Ferxy+rx1aziz63W/2MUgDnAc82msk4i4JBCH4ILhWrOAEn1v+7TcaTN9e3kpitmg3Lat/ff1Xk3NujQIiI70jd6TPHSqZpJxkeJmPO2KQgS5qmFqB8n89bYExSVtPxS2hasazXMCTplDwcTNyLj5Dg90Wfpe2GB5NExhlZhlATpfZ742bTSdAcOgwXIQcJW8Gu4++rJ8WJeK/brfn8HEP29PTr+7efopBhkzzHCv+O38RaKGo2whSsAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="13"
+        title="13"
+        src="/static/b0436caefd8600a115ffbc0bf9295f8a/47730/13.png"
+        srcset="/static/b0436caefd8600a115ffbc0bf9295f8a/c26ae/13.png 158w,
+/static/b0436caefd8600a115ffbc0bf9295f8a/6bdcf/13.png 315w,
+/static/b0436caefd8600a115ffbc0bf9295f8a/47730/13.png 428w"
+        sizes="(max-width: 428px) 100vw, 428px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>こうすると、IMAP の[Gmail]フォルダの中のみを参照するようになる。“magazine”は消えるが、“受信トレイ”は残る。</p>
+<h3>Gmail の設定の見直し</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/362f8e301f4b24cf84106acee4fe853c/7f2ab/14.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAABYlAAAWJQFJUiTwAAABjElEQVQoz21S2W7CMBD0/39gpUqoiCQtOIfjI17fTicx0JeuECzyzuU189Yt411vZt93S26VSghpNiLy9vVBT+5olN5STETOOfKiY46sj2mvFeBt27QxpdSccyklvyqdhd/WYyzEaL1jxhi5ynoWxg3FjYJ3znsfgi8YPrExxhOfQwjQhUCNE1NKaa3rqQw1+MEERgHZKA732fm4/1PVuMzgYZomwBpYStV6lKF07bkP6Tle23dtSpIyE0IA344Bg49yeDqO4X0VAtbQwwsC4hS38eKqDJ6ttcjT/hNZ2G7H1ud++EFI9CkX7ALZ/3wDvEqplXpnBtHbNoVyf4z55M11H+fVGN2O2jqY+Bnm/ubF/LKtQnjSG5e+rjdc9KFc9tvAkfHJS4QgzK+L4Q89cpBBH8pv23gYfBwRtdmelxXU3rtzKf4A4w7a0pvyeFa7JOwZCqADKdaOMWDwuqLWpBWWzhCYc46hgz7ly+XSdd08z4jXD/ePC5+W4yEsy9J/c7GqRaju87ryB0L/AhzSt7ze89+RAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="14"
+        title="14"
+        src="/static/362f8e301f4b24cf84106acee4fe853c/f058b/14.png"
+        srcset="/static/362f8e301f4b24cf84106acee4fe853c/c26ae/14.png 158w,
+/static/362f8e301f4b24cf84106acee4fe853c/6bdcf/14.png 315w,
+/static/362f8e301f4b24cf84106acee4fe853c/f058b/14.png 630w,
+/static/362f8e301f4b24cf84106acee4fe853c/40601/14.png 945w,
+/static/362f8e301f4b24cf84106acee4fe853c/78612/14.png 1260w,
+/static/362f8e301f4b24cf84106acee4fe853c/7f2ab/14.png 2236w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>左のバーの「ラベルの管理」からフォルダ分けしたいラベルを編集する。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d8743f5a6b16733046e1e618c277b22f/b94e3/15.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAABYlAAAWJQFJUiTwAAABcElEQVQoz32R3UvCUBjG91d12f/VdVfd1vyYCvMib6TmloFFGYGiUwZBNSJFU9TpPtV9evbZO0UhxX68vBzO2XOe9zzDCIIol8ssy7ZarXa7zXEc9Oaa6mvj8emFYe5qtXqTbe6Aj+v1ej6fx3Acl2XZtm1d1xVF4XleEIQoisIwjI7g+/5qtcpmcxg4q6rieZ5pGqZpwkXQN+JjBEEAZiRJYpkMIcyk/lj+7Ax7I2ki6wNBHYmLueWphntY8hIFYYTQqlAoYLlsdixIncH04/uH7w75zvD9q9cdTJWlMzfdvdLMWOz5kYsQjAzOGVmSLMvSdWPT16XD8M4hMK5lwKMQQolEMg5MFMVNDECwxT8ANh3kLnTbDWJxKpWKnVVVBTGc7QWzyRYWYGlYdhR5Z7eLk/PJ6YXI9Qwyl47T1jTt/3+zPo17o+9fs87Nmzebo3QyAeJMsVikaZqiqNJfqC27nYf7UrXCPFdopkRdXuG/v0gNQgpYmfkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="15"
+        title="15"
+        src="/static/d8743f5a6b16733046e1e618c277b22f/f058b/15.png"
+        srcset="/static/d8743f5a6b16733046e1e618c277b22f/c26ae/15.png 158w,
+/static/d8743f5a6b16733046e1e618c277b22f/6bdcf/15.png 315w,
+/static/d8743f5a6b16733046e1e618c277b22f/f058b/15.png 630w,
+/static/d8743f5a6b16733046e1e618c277b22f/40601/15.png 945w,
+/static/d8743f5a6b16733046e1e618c277b22f/b94e3/15.png 1126w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>これを、”[Gmail]/labels/magazine”とする。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 444px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/aef82caddd5b57e1b1500f750625e50b/9b7bd/16.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 98.10126582278481%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAABYlAAAWJQFJUiTwAAACf0lEQVQ4y31Ta1PaUBTkH1WqIUDIE/IiLxJICAnhIQZRR0AFVCi+sOVDp53pP+4ysVYHZWa5c4G7d8/uOTelqYbgDrKdZzeIVw+r+/vn6eR2Np3Pb++wrn/8XD2tF/O7+e392en4bvnUbh0RB1Q+x+aybIrKsXlaLsieUw3sihdFvW4nrlUbimxIolaxXAB7WdIlUVcVi+fkLMmAuSHjQxIUR/MX42nU7F7PFtBsBl3b8hp+xHPS13Q2QxQyBJWsZIZOmC/kDXLccf/MtuuO7Z8MzoNGGwqoDaDyXD7HvRLeIiGjDObyYubYda1cgbHxaFKg+EQTDrHuILMoxq01HKd+2D3ux6fIptOOcVdZtXTNLqsV8JOQPiBnSToM2sgGtNFoMh7NDrt9zw0QFVI0dOet1W0y04p6hm7jCkTt1gJ8rXtNWTKgj5XMFHaR46MTKKuqhQ4BELSMqsArdsVFn3Ypw1IYdECezRar1bofn4klrRl2QUvvkR8y3ymHYcc0q7iiGXZQKsdKqmJixV/bUb0jEwQ1uboJGi3PDcOg9fvXHwzJ3pfM6zDtIlN5HoKJFMeK2DB0Ec3/TPOFnCFoEJAK2msajlhUdd2WJQ3Ne53HLLnxtY2UwMsY4KIgl1XT9yPfb2IwTKOajAc2YqmMAzi2jZQi64Cq6Awt9Hr94fkY9S+/PTw+fB8NL2+uF63osFRUVMVITr5FCt7oglAUFLxETFLDb4EMWYQHI1rZgm2WKeHYNlIoHa6wa7d7huHgxaJPCKzuhfERUqge7OeTXn7gORlslhExzJZZQ8HL5SP87KdzeE+fjcf/VoEMZRQM8unJcDA4R0L48V+fmM/wF6s+VPfDtqoLAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="16"
+        title="16"
+        src="/static/aef82caddd5b57e1b1500f750625e50b/9b7bd/16.png"
+        srcset="/static/aef82caddd5b57e1b1500f750625e50b/c26ae/16.png 158w,
+/static/aef82caddd5b57e1b1500f750625e50b/6bdcf/16.png 315w,
+/static/aef82caddd5b57e1b1500f750625e50b/9b7bd/16.png 444w"
+        sizes="(max-width: 444px) 100vw, 444px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>受信トレイと同じ階層に”labels”フォルダが現れ、その下の階層に”magazine”フォルダができた。もちろん、このフォルダにはさきほどラベル付けしたメールが格納されている。</p>
+<h3>受信したいフォルダを選択する</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e19f31e593b79448a5ad67a6acad8a95/2a08f/17.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 68.35443037974683%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB0ElEQVQoz4WSXY/SQBSGe+eVF0bo99dMaUsp2y1FurSUQrUQ+SoUEb1AEzcmqxfe6oX/xd/q2zSS1Y1s8uRkzuSc9505M4wkKYqiAV03KDVrsNZ0WkWNappxD3qGEIMRBMm2HdO0fT8cvIj7QdQPhm3b0zWL6Dag1PkHw+hQYqmqzsBTVYksq7KkCbwq8ApQZGIYtkFtFEmS9hdihSgoVTOceV7E4SVJFkUZkWU5x3H3+0NZ7tfrArocJ6Cmpq5HrJrzfB4Nk34QjuI0CAbXXs+gptlqWybuUsUWjmBYdQSqQjCLWpEpy+PXL9/eH0/LxW4+W81nazDLV2f+bK7K3btZvuz5IVLH8ZpNllm8Lj6cbrfFYZLm0XASR9P/sVqWKMA4N5uD5/UbjSazXGxvP91B+CZMomF6AdjE0cQyXf96oOsmy/JMsXnz4/vP7fbtOHkF4Qek53Wx2Y/ijJCWKCqgas6yebk7JqMMqped03GOGkwLbZh21XwTjgF24yiD8AOm99MEztTieEmonbuu710FV93eo7gdr9PxFZ7lnj4RGs9YPBWe61FgIgpyFx5thxt/lk+/uPSObTxnzl/nMrikTkyqEd6d8vFHzn3JNdnfuwWVKFca3wsAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="17"
+        title="17"
+        src="/static/e19f31e593b79448a5ad67a6acad8a95/f058b/17.png"
+        srcset="/static/e19f31e593b79448a5ad67a6acad8a95/c26ae/17.png 158w,
+/static/e19f31e593b79448a5ad67a6acad8a95/6bdcf/17.png 315w,
+/static/e19f31e593b79448a5ad67a6acad8a95/f058b/17.png 630w,
+/static/e19f31e593b79448a5ad67a6acad8a95/40601/17.png 945w,
+/static/e19f31e593b79448a5ad67a6acad8a95/78612/17.png 1260w,
+/static/e19f31e593b79448a5ad67a6acad8a95/2a08f/17.png 1422w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+「ファイル」->「購読」から Thunderbird に表示するフォルダを選択する。スター付きや重要は不要なのでチェックマークを外す。</p>
+<h3>表示するフォルダを並び替える</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f637f269947cb5fa505e79b54033d8f4/68638/18.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 34.177215189873415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAABYlAAAWJQFJUiTwAAABFklEQVQY04WQTU7DMBCFc202CHEANiDuwQHYARtAogWUqm3iJm1+mjYl8V/ssceuaQUsWHT0aWSP5un5OaKU1vW6KKtd207ieDwaLQjx3jvn/KmKAEAwKvpWKugY7yinYsDTwoNYg9WCDdu8134j7U5hI1AAHsy/QXR/OGcRAyY056K26z+zNKMurmi6EZO1qL4kaCMHkINW2hjrwFjvfMGWV29nN+OL2/fL69H5fX4XKTBt183S7COeTeckIXlClqtVSRb5dJasijJEAIOIvlf0uXp4qR9f66dwIN08Cum0hqrIm6ZZVk29bXrOhFTBlouBcxmcj9h/PxGFkbHWAlNacW2ZEuHRYWjRH/uv2FiEsPhDuO4BVEGNpepj7+kAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="18"
+        title="18"
+        src="/static/f637f269947cb5fa505e79b54033d8f4/f058b/18.png"
+        srcset="/static/f637f269947cb5fa505e79b54033d8f4/c26ae/18.png 158w,
+/static/f637f269947cb5fa505e79b54033d8f4/6bdcf/18.png 315w,
+/static/f637f269947cb5fa505e79b54033d8f4/f058b/18.png 630w,
+/static/f637f269947cb5fa505e79b54033d8f4/40601/18.png 945w,
+/static/f637f269947cb5fa505e79b54033d8f4/78612/18.png 1260w,
+/static/f637f269947cb5fa505e79b54033d8f4/68638/18.png 1510w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>「ツール」 -> 「アドオンとテーマ」-> 「アドオンを探す」欄に”Manually sort folders”を入力して検索。<br>
+検索結果が出るので「Thunderbird に追加」を押す。</p>
+<p>Thunderbird を再起動してアドオンを有効化する。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/05ad4492ed9c20b216db2609751e625c/121b3/19.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 84.81012658227847%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAABYlAAAWJQFJUiTwAAACyklEQVQ4y42TW08TQRTH+xGEWC7S7m732u623V623Xbv2213222LvWCBXgTiiwlPSqKJkQcjwWDihxCwYqIileKDiZ/NsxQK4UUnv5w9c2b+MztnzvjWNKOgmYqkKZKqq4YqawXDajXbD5cbzUar3Vp51F7trfcrjitLqqbopmHBnLwoSTnZx5JhGiPDOC3waS2vKjkZ1qrYFVM1q0610+4MugNga2Mrm8pqkrbSWIGZIAGhDz5SJq/lFEWUDVnP8IKYymb4dE4QIZJNZhJcXM7mk9EExIEEx6s5BSYwIcoHexYNy7FsoOZU5ayk5BSYEQtzPBvjI7Eow8UvbYzhwLJUBJaDCAi9nXkunuZTQkIQkkKcjYcCGIkSFEaSGAFQIRL8KXSIglGWjlyJZVGSRVkRFRggEBwigfmluRn//Ozc/CxY/wI4M4B/wty9+8GFAIUSPgan0ymhaJWSiSRFUgASQF7uvPj65dvRx6Ph8fDT4fD40HNOhidTPg9PCqoJYoqmWV23DEOnGZogiWAwuLm5cfBhb+/N/s6z528Pdt/tv99+ut3trA/W+4O1Xm+1u9F7DGnz0SESRXFVNV3X5TiOJMnFhcWybW8+6fbW+q3lZq/v3VbdrVuqCan10AtOoQQJ98QYRsiybtslHMcxDPP7/buvXv/5/efs++nF+Xh0Ovpx6fwaX4Adn4/PRz9HZyOnYE/EuAiXbOg4TiAIEggEDNVYduu2WWrWmyWzWNSteqUGlIt22bKhlvKCmE0IIKZQFEUuG5x24nBUJEazUZoFJ8qwHvQNcOFQBRGC8cQTIXLdYC3vPv+FV2HX4puGIiicBcamQD1cQTBT/7/EsAm+hIYeIGCxxSARDHndJRTinpjA8DvcVnI0Wy5WIHO1cq3T6piK4dpu3V2GOvceBhz9Drf/DTLkFJyqU3OK5Ua9Ca/S9rrVWDj6F6uD5lJgylxqAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="19"
+        title="19"
+        src="/static/05ad4492ed9c20b216db2609751e625c/f058b/19.png"
+        srcset="/static/05ad4492ed9c20b216db2609751e625c/c26ae/19.png 158w,
+/static/05ad4492ed9c20b216db2609751e625c/6bdcf/19.png 315w,
+/static/05ad4492ed9c20b216db2609751e625c/f058b/19.png 630w,
+/static/05ad4492ed9c20b216db2609751e625c/40601/19.png 945w,
+/static/05ad4492ed9c20b216db2609751e625c/121b3/19.png 1070w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>「ツール」->「フォルダの並べかえ」でいい感じに並び替える。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 472px; overflow: visible"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4e13c340067445020baa52c6bc55a1d6/3c5de/01.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.72151898734178%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVQoz31TaXOiUBDkJ+1GIzceqIDihVEEQRCUI2LWaJKVrc1VlXzKh/3L20jV1hqTVDVTUNP9pmfmQVQ6NuM+9zTr5226Wm3i6CoMkuvN3dV6d7Pbry5/rJNrbx76XhRHa5apUGSZpnIIBFdV6Y7fH5qu4y8WcbC8NA1nottAFCbOzMfn6MJE1Mc2Q/9TZiDIc5YtMetkA3aaPjw9vg41vdsZIhYL9PdvZOGMLhYYROB/ZSZmmaogNGzLU+Rus9FW2/1aVaqUGwJfZ+jKMcrvxSDJUgcOux2tUVcUWa1Wm4UzKi9IkcIXIMSaVBdlWVKtqWsaM7idmo4xsfE+0S2p2Ub2BMoBMoE0lPDpzDzfD0zD3m7vMGdMLo4SpGBHaqqgnSLrGe6npouB3d6kT48v6f5+uYiNyaxRb81svy62QADtGBVEInfvOstBf+y6y7kb6GNLG+iK3BNritoe8JxIlnis96TncibGMbgJWOZoZL69/UlWm8NuKLLEnRdZEN4NOb8h2bTxUCSPO9Bu9VHc98Je94LnavD84Xo+EFvWXNP0X+nD/e/noWbgIG8eCLz4SdkjseAdCkKGOUXhmmNr6DNnfC3OuscPMNQmsI2x77Z7bO4gzkmfofwXMJLwq9GG4nMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="01"
+        title="01"
+        src="/static/4e13c340067445020baa52c6bc55a1d6/3c5de/01.png"
+        srcset="/static/4e13c340067445020baa52c6bc55a1d6/c26ae/01.png 158w,
+/static/4e13c340067445020baa52c6bc55a1d6/6bdcf/01.png 315w,
+/static/4e13c340067445020baa52c6bc55a1d6/3c5de/01.png 472w"
+        sizes="(max-width: 472px) 100vw, 472px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>いい感じになった。</p>
+<h2>まとめ</h2>
+<p>すでに登録済みのサービスを+hoge 化させるのは面倒だが、自分でタグ付けやフォルダ分類しなくても、重要なメールが一つのフォルダでまとまってくれているのは嬉しい。<br>
+この記事を作る際、画像を多めに貼ってわかりやすくなるように努めた。VSCode の拡張機能に<a href="https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image">Paste Image</a>があって、スクショして Markdown に貼り付けるだけで画像が保存されるのがとても便利だった。</p></section></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/about-dictionary/">← <!-- -->辞書のはなし</a></li><li></li></ul></nav><div class="related-posts"></div></main><footer class="global-footer">(c) 2021 <!-- -->NARAZUKE<div class="footer-info"><a href="/about">about</a><a href="/privacy-policy">privacy policy</a></div></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-189619597-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/gmail-with-thunderbird/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-39e793ba5020a71d3643.js"],"app":["/app-384e79405ac4fe4c628c.js"],"component---src-pages-404-js":["/component---src-pages-404-js-112e3c6203d92c0e06e3.js"],"component---src-pages-about-js":["/component---src-pages-about-js-990e2c50654e2191d00b.js"],"component---src-pages-author-js":["/component---src-pages-author-js-f2d446997fe073c2349d.js"],"component---src-pages-index-js":["/component---src-pages-index-js-89bb141524a1316d5548.js"],"component---src-pages-privacy-policy-js":["/component---src-pages-privacy-policy-js-1626ef3c2c09e85db96c.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-927e50288df2a08014f1.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-1ed26f201af2a2767015.js"],"component---src-templates-author-js":["/component---src-templates-author-js-a2bdfcbef1021c6d131b.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-6b3fe3ee87a964fe2f9d.js"],"component---src-templates-category-js":["/component---src-templates-category-js-b0d32ac2680971e3baf5.js"],"component---src-templates-tags-js":["/component---src-templates-tags-js-74b3767e9d428c924370.js"]};/*]]>*/</script><script src="/polyfill-39e793ba5020a71d3643.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-6b3fe3ee87a964fe2f9d.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-1d6e38894652b6629bac.js" async=""></script><script src="/6e7787752c915607ab3ee062844ac41c9817ded6-096af00c44d2c76a1b89.js" async=""></script><script src="/41aca86e-5aa0f0ae7141e29509ae.js" async=""></script><script src="/styles-474c0340beb1ced255f1.js" async=""></script><script src="/app-384e79405ac4fe4c628c.js" async=""></script><script src="/framework-ddff9c6a94258f6c8286.js" async=""></script><script src="/webpack-runtime-6748bc434ffb10bd9899.js" async=""></script></body></html>
