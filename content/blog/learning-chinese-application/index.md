@@ -1,12 +1,23 @@
 ---
 title: 中国語勉強支援ツールのアルゴリズム構想
 created: 2021-11-07T20:01
-updated: 2021-11-07T20:11
+updated: 2021-11-07T20:25
 description: Github上に数式を載せられないのでここに載せる
 category: memo
 tag: []
 author: [konnyaku]
 ---
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+ tex2jax: {
+ inlineMath: [['$', '$'] ],
+ displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+ }
+ });
+</script>
 
 Github 上に数式を載せられないので代わりにここで載せる。
 
