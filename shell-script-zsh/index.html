@@ -33,14 +33,14 @@ compinit
 FPATH=&quot;$HOME/.completion:$FPATH&quot;
 autoload -Uz _mycommand
 compdef _mycommand mycommand</code></pre></div>
-<p>`<code class="language-text"></code>zsh:title=~/.completion/_mycommand</p>
-<h1>compdef mycommand</h1>
-<p>function _mycommand {
-_values : ‘foo’ ‘bar’
-}</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">```shell:title=ターミナル
-$ mycommand [TAB]
-# 'foo'と'bar'が補完できる</code></pre></div>
+<div class="gatsby-code-title">HOME/.completion/_mycommand</div>
+<div class="gatsby-highlight" data-language="zsh"><pre class="language-zsh"><code class="language-zsh">#compdef mycommand
+function _mycommand {
+    _values : &#39;foo&#39; &#39;bar&#39;
+}</code></pre></div>
+<div class="gatsby-code-title">ターミナル</div>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">$ mycommand <span class="token punctuation">[</span>TAB<span class="token punctuation">]</span>
+<span class="token comment"># 'foo'と'bar'が補完できる</span></code></pre></div>
 <p>`<code class="language-text"></code>linux:title=~/.completion/_mycommand</p>
 <h1>compdef mycommand</h1>
 <p>function _mycommand {
