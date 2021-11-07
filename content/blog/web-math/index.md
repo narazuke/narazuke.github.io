@@ -1,7 +1,7 @@
 ---
 title: web 上 で tex の数学記法を使う
 created: 2021-11-07T19:16
-updated: 2021-11-07T19:55
+updated: 2021-11-07T19:59
 description: javascript を使う
 category: tech
 tag: [web, tex]
@@ -40,7 +40,7 @@ author: [konnyaku]
 
 ```md
 $F = ma$
-$$V = RC$$
+$$V = RI$$
 ```
 
 $F = ma$
