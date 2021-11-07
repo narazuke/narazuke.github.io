@@ -1,3 +1,13 @@
+---
+title: web 上 で tex の数学記法を使う
+created: 2021-11-07T19:16
+updated: 2021-11-07T19:55
+description: javascript を使う
+category: tech
+tag: [web, tex]
+author: [konnyaku]
+---
+
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 <script type="text/x-mathjax-config">
@@ -8,18 +18,6 @@
  }
  });
 </script>
-
----
-
-title: markdown で tex の数学記法を使う
-created: 2021-11-07T19:16
-updated: 2021-11-07T19:28
-description: javascript を使う
-category: tech
-tag: [markdown, tex]
-author: [konnyaku]
-
----
 
 実験も兼ねてやってみる
 
