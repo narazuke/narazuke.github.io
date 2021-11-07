@@ -1,7 +1,7 @@
 ---
 title: シェルスクリプトで自作コマンドを作る
 created: 2021-09-13T15:49
-updated: 2021-09-26T13:21
+updated: 2021-11-07T20:16
 description: 自作コマンドの補完もする
 category: tech
 tag: [shell, zsh]
@@ -42,31 +42,28 @@ $ mycommand
 
 ## 自作コマンドに対する補完
 
-```zsh:title="zshrc"
+```zsh:title=zshrc
 autoload -Uz compinit
 compinit
-
 FPATH="$HOME/.completion:$FPATH"
 autoload -Uz _mycommand
 compdef _mycommand mycommand
 ```
 
-```zsh:title="~/.completion/_mycommand"
+```zsh:title=~/.completion/_mycommand
 #compdef mycommand
-
 function _mycommand {
     _values : 'foo' 'bar'
 }
 ```
 
-```shell:title="ターミナル"
+```shell:title=ターミナル
 $ mycommand [TAB]
 # 'foo'と'bar'が補完できる
 ```
 
-```linux:title="~/.completion/_mycommand"
+```linux:title=~/.completion/_mycommand
 #compdef mycommand
-
 function _mycommand {
     local -a var
     var=($(ls ~/hogehoge))
@@ -74,7 +71,7 @@ function _mycommand {
 }
 ```
 
-```shell:title="ターミナル"
+```shell:title=ターミナル
 $ mycommand [TAB]
 # hogehoge 以下の dir 名または file 名で補完できる
 ```
