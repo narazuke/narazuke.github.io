@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 
 import "@suziwen/gitalk/dist/gitalk.css"
 import Gitalk from "gatsby-plugin-gitalk"
+import "katex/dist/katex.min.css"
 
 import DateStr2Date from "../components/date"
 
