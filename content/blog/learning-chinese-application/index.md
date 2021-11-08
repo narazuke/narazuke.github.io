@@ -1,10 +1,10 @@
 ---
 title: 中国語勉強支援ツールのアルゴリズム構想
 created: 2021-11-07T20:01
-updated: 2021-11-07T20:35
+updated: 2021-11-08T18:26
 description: Github上に数式を載せられないのでここに載せる
 category: memo
-tag: []
+tag: [learning-chinese-application]
 author: [konnyaku]
 ---
 
