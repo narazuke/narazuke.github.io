@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import LatestComments from "../components/latest-comments"
+// import LatestComments from "../components/latest-comments"
 import Posts from "../components/posts"
 import Search from "../components/search"
 
@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { edges } = data.allMarkdownRemark
   let [searchedPosts, setSearchedPosts] = useState(edges)
-  const { nodes: issuesNodes } = data.githubData.data.organization.repository.issues
+  // const { nodes: issuesNodes } = data.githubData.data.organization.repository.issues
   if (edges.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -32,12 +32,39 @@ const BlogIndex = ({ data, location }) => {
       <Search edges={edges} setSearchedPosts={setSearchedPosts} />
       <hr />
       <Posts nodes={searchedPosts} />
-      <LatestComments issuesNodes={issuesNodes} />
+      {/* <LatestComments issuesNodes={issuesNodes} /> */}
     </Layout>
   )
 }
 
 export default BlogIndex
+
+// githubData {
+//   data {
+//     organization {
+//       repository {
+//         issues {
+//           nodes {
+//             id
+//             comments {
+//               totalCount
+//               nodes {
+//                 body
+//                 updatedAt
+//                 author {
+//                   login
+//                   avatarUrl
+//                 }
+//               }
+//             }
+//             body
+//             title
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 export const pageQuery = graphql`
   query {
@@ -49,32 +76,6 @@ export const pageQuery = graphql`
           summary
           social {
             github
-          }
-        }
-      }
-    }
-    githubData {
-      data {
-        organization {
-          repository {
-            issues {
-              nodes {
-                id
-                comments {
-                  totalCount
-                  nodes {
-                    body
-                    updatedAt
-                    author {
-                      login
-                      avatarUrl
-                    }
-                  }
-                }
-                body
-                title
-              }
-            }
           }
         }
       }
