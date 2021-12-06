@@ -1,14 +1,14 @@
 ---
 title: Spotify所感
 created: 2021-10-01T10:18
-updated: 2021-12-01T16:29
+updated: 2021-12-06T21:56
 description: よさげ
 category: thought
 tag: [spotify,software]
 author: [nozzle]
 ---
 
-## Spotifyのダイマ  
+## Spotifyのステマ  
 ![](spotify_logo.png)
 
 Spotifyは、月額で音楽聴き放題になるサブスクリプションの一つです。  
