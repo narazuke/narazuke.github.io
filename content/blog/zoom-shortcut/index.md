@@ -1,7 +1,7 @@
 ---
 title: 特定のzoomへのショートカットを作る
 created: 2021-10-01T11:13
-updated: 2021-10-01T12:39
+updated: 2021-10-05T11:07
 description: ブラウザ経由しません
 category: tech
 tag: [zoom,software,windows]
@@ -15,7 +15,7 @@ author: [nozzle]
 * **password**: hogehoge  
 
 ### 方法
-
+#### Windows
 1. デスクトップ右クリック 
 2. 新規作成 -> ショートカット
 ![](create_shortcut_file.png)  
@@ -45,6 +45,9 @@ author: [nozzle]
 
 8. 完成
 ![](complete.png)
+
+#### Mac
+
 
 ## 参考
 [Shortcut to Zoom | zzzzBov](https://zzzzbov.com/blag/shortcut-to-zoom)

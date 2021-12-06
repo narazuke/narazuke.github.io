@@ -1,7 +1,7 @@
 ---
 title: Spotify所感
 created: 2021-10-01T10:18
-updated: 2021-10-01T20:30
+updated: 2021-12-01T16:29
 description: よさげ
 category: thought
 tag: [spotify,software]
@@ -18,6 +18,7 @@ Spotifyは、月額で音楽聴き放題になるサブスクリプションの�
 
 
 ### Amazon Music Unlimited
+![](amazon_music.png)
 #### いいところ
 * **Alexaとの連携ができる**
   ![](amazon_music_app.png)
@@ -33,6 +34,7 @@ Spotifyは、月額で音楽聴き放題になるサブスクリプションの�
 
 
 ### Apple Music
+![](apple_music_logo.png)
 #### いいところ
 * **ミニプレーヤーがある**
     ![](itunes_mini_player.png)
@@ -40,7 +42,7 @@ Spotifyは、月額で音楽聴き放題になるサブスクリプションの�
     デスクトップの片隅にちょこんと置いておくには便利です。
 
 * **ミュージックビデオが見れる**
-    ![](music_video.png)
+    ![](apple_music_video.png)
     これもApple Musicならではの利点。全アーティストが全てのミュージックビデオを解禁しているわけではないので注意がいるが、一部でも視聴できる機能があるだけで差別化できててすごい。
 
 #### わるいところ
