@@ -1,6 +1,6 @@
 // const secret = require("./secret.json")
-const secret2 = require("tmp")
-const tmp2 = require("heroku")
+const tmp = require("tmp")
+const tmp2 = require("tmp2")
 
 module.exports = {
   siteMetadata: {
@@ -97,7 +97,7 @@ module.exports = {
         config: {
           clientID: "837629045eb9da51e9f1",
           // clientSecret: `${secret.clientSecret}`,
-          clinetSecret: `${secret2}`,
+          clinetSecret: `${tmp}`,
           repo: "narazuke.github.io",
           owner: "narazuke",
           admin: ["wabetarou", "nozzlex3"],
