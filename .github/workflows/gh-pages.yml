@@ -19,6 +19,6 @@ jobs:
       - name: npm install
         run: npm install
       - name: gatsby build
-        run: gatsby build
+        run: yarn build
       - name: gh-pages
         run: gh-pages -u \"narapickle <narapickle@gmail.com>\" -d public -b master
