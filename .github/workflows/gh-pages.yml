@@ -13,4 +13,4 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: merged
-        run: gatsby build && gh-pages -u \"narapickle <narapickle@gmail.com>\" -d public -b master
+        run: npm install && gatsby build && gh-pages -u \"narapickle <narapickle@gmail.com>\" -d public -b master
