@@ -1,4 +1,5 @@
 const secret = require("./secret.json")
+const secret2 = require("tmp")
 
 module.exports = {
   siteMetadata: {
@@ -94,7 +95,8 @@ module.exports = {
       options: {
         config: {
           clientID: "837629045eb9da51e9f1",
-          clientSecret: `${secret.clientSecret}`,
+          // clientSecret: `${secret.clientSecret}`,
+          clinetSecret: `${secret2}`,
           repo: "narazuke.github.io",
           owner: "narazuke",
           admin: ["wabetarou", "nozzlex3"],

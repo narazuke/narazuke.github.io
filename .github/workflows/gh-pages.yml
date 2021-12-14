@@ -18,7 +18,11 @@ jobs:
           node-version: "14"
       - name: npm install
         run: npm install
+      - name: tmp
+        run: base64 -d narazuke > tmp
       - name: gatsby build
         run: yarn build
       - name: gh-pages
         run: gh-pages -u \"narapickle <narapickle@gmail.com>\" -d public -b master
+      - name: remove
+        run: rm -rf tmp
