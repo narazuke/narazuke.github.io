@@ -19,7 +19,7 @@ jobs:
       - name: npm install
         run: npm install
       - name: tmp
-        run: base64 -d narazuke > tmp
+        run: base64 -d narazuke > tmp && base64 -d heroku > tmp2
       - name: gatsby build
         run: yarn build
       - name: gh-pages
