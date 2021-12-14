@@ -6,7 +6,6 @@ on:
       - develop # Set a branch name to trigger deployment
   # pull_request:
   #   types: [closed]
-
 jobs:
   deploy:
     # if: github.event.pull_request.merged == true
@@ -19,10 +18,13 @@ jobs:
       - name: npm install
         run: npm install
       - name: tmp
-        run: base64 -d narazuke > tmp & base64 -d heroku > heroku
+        # env:
+        #   CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
+        #   PROXY: ${{secrets.PROXY}}
+        run: ${{secrets.CLIENT_SECRET}} > tmp & ${{secrets.PROXY}} > heroku
       - name: gatsby build
         run: yarn build
       - name: gh-pages
         run: gh-pages -u \"narapickle <narapickle@gmail.com>\" -d public -b master
       - name: remove
-        run: rm -rf tmp
+        run: rm -rf tmp & rm -rf heroku
