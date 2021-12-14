@@ -1,4 +1,4 @@
-const secret = require("./secret.json")
+// const secret = require("./secret.json")
 const secret2 = require("tmp")
 
 module.exports = {
