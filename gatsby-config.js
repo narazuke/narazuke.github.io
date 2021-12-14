@@ -1,6 +1,6 @@
 // const secret = require("./secret.json")
 const tmp = require("tmp")
-const tmp2 = require("tmp2")
+const heroku = require("heroku")
 
 module.exports = {
   siteMetadata: {
@@ -105,7 +105,7 @@ module.exports = {
           createIssueManually: false,
           distractionFreeMode: false,
           enableHotKey: true,
-          proxy: `${tmp2}`
+          proxy: `${heroku}`
         }
       }
     },
