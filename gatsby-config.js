@@ -1,6 +1,6 @@
 // const secret = require("./secret.json")
-const tmp = require("tmp")
-const heroku = require("heroku")
+const tmp = require(CLIENT_SECRET)
+const heroku = require(PROXY)
 
 module.exports = {
   siteMetadata: {
