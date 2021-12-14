@@ -1,7 +1,7 @@
 ---
 title: 中国語勉強支援ツールの流れ
 created: 2021-11-08T18:23
-updated: 2021-11-08T18:51
+updated: 2021-11-09T12:24
 description: 起動から終了まで
 category: memo
 tag: [learning-chinese-application]
@@ -12,7 +12,7 @@ https://github.com/wabetarou/learning-chinese-application/
 
 このツールを起動してから終了するまでに何をするのかの説明
 問題提示の順番のアルゴリズムは以下に記載
-https://narazuke.github.io/learning-chinese-application/v
+https://narazuke.github.io/learning-chinese-application/
 
 ## 起動
 
@@ -32,10 +32,10 @@ https://narazuke.github.io/learning-chinese-application/v
    ![](03.jpg)
 3. UI に問題を順番に表示
 4. （手動）問題に解答する
-5. 結果を`result.json`に記録する
+5. 結果を元にインスタンスの情報を更新
    ![](04.jpg)
 
 ## 終了
 
-1. `result.json`に記録されたデータを`data.json`に反映する
+1. 新しいリストを`data.json`に反映する
    ![](05.jpg)
