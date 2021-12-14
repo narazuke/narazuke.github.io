@@ -72,7 +72,7 @@ yarn-error.log
 *.ai
 
 # github action
-.github/workflows/
+# .github/workflows/
 
 # protect clientSecret
 secret.json
