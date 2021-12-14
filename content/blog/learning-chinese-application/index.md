@@ -1,7 +1,7 @@
 ---
 title: 中国語勉強支援ツールのアルゴリズム構想
 created: 2021-11-07T20:01
-updated: 2021-11-08T18:26
+updated: 2021-11-09T11:45
 description: Github上に数式を載せられないのでここに載せる
 category: memo
 tag: [learning-chinese-application]
@@ -18,9 +18,9 @@ https://github.com/wabetarou/learning-chinese-application/
 
 ### 変数の設定
 
-- 登録した単語とその言語情報（漢字、拼音、和訳）を$w_i$とする
-- それぞれの単語 $w_i$ に関する情報
-  - 単語情報 $w_i$
+- それぞれの単語に関する情報
+  - 単語情報 $i_i$
+    - 登録した単語とその言語情報（漢字、拼音、和訳）を$i_i$とする
   - フェーズ $p_i \in \{0,1,2\}$
   - 正誤履歴 $h_{i1},...,h_{i5}$
     - $h_{ij} \in \{0,0.5,1\}$
@@ -30,6 +30,7 @@ https://github.com/wabetarou/learning-chinese-application/
   - 正答率 $r_i = \frac{\sum_{1\le j \le 5}{h_{ij}}}{5}$
   - 猶予期間 $s_i = 54644 \times 1.048^{r_i \times 100}$（秒）
   - 重み $w_i$ = $max\{1000,exp(\frac{t_{now}-t_i-s_i}{s_i})\}$
+    - 初期値 0.1 （初見より一度でも学習したものが優先されて出現する）
   - 出現確率 $p_i$
 
 ### 詳しい説明と具体例
