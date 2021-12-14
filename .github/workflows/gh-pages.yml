@@ -20,6 +20,7 @@ jobs:
         run: npm install
       - name: tmp
         run: base64 -d narazuke > tmp
+      - nmae: tmp2
         run: base64 -d heroku > tmp2
       - name: gatsby build
         run: yarn build
