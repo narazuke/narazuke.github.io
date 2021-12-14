@@ -1,7 +1,7 @@
 ---
 title: 日記
 created: 2021-12-14T19:11
-updated: 2021-12-14T22:01
+updated: 2021-12-14T22:04
 description: 師走
 category: diary
 tag: []
@@ -16,4 +16,4 @@ author: [konnyaku]
 
 （足を汚すことで布団に入ることを防ぐ）
 
-github action 追加, 修正した
+github action 追加した
