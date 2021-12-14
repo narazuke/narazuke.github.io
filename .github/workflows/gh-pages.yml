@@ -1,5 +1,6 @@
 name: GitHub Pages
 
+<<<<<<< HEAD
  on:
    push:
      branches:
@@ -14,3 +15,19 @@ name: GitHub Pages
      steps:
        - name: merged
          run: npm install && gatsby build && gh-pages -u \"narapickle <narapickle@gmail.com>\" -d public -b master
+=======
+on:
+  push:
+    branches:
+      - develop # Set a branch name to trigger deployment
+  pull_request:
+    types: [closed]
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: macos-latest
+    steps:
+      - name: merged
+        run: npm install && gatsby build && gh-pages -u \"narapickle <narapickle@gmail.com>\" -d public -b master
+>>>>>>> develop
