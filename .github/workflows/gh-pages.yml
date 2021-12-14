@@ -12,5 +12,13 @@ jobs:
     # if: github.event.pull_request.merged == true
     runs-on: macos-latest
     steps:
-      - name: merged
-        run: npm install && gatsby build && gh-pages -u \"narapickle <narapickle@gmail.com>\" -d public -b master
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: npm install
+        run: npm install
+      - name: gatsby build
+        run: gatsby build
+      - name: gh-pages
+        run: gh-pages -u \"narapickle <narapickle@gmail.com>\" -d public -b master
