@@ -4,12 +4,12 @@ on:
   push:
     branches:
       - develop # Set a branch name to trigger deployment
-  pull_request:
-    types: [closed]
+  # pull_request:
+  #   types: [closed]
 
 jobs:
   deploy:
-    if: github.event.pull_request.merged == true
+    # if: github.event.pull_request.merged == true
     runs-on: macos-latest
     steps:
       - name: merged
