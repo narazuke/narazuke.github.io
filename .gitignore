@@ -71,6 +71,9 @@ yarn-error.log
 # nozzle
 *.ai
 
+# github action
+.github/workflows/
+
 # protect clientSecret
 secret.json
 
