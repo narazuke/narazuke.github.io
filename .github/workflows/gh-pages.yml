@@ -17,11 +17,8 @@ jobs:
           node-version: "14"
       - name: npm install
         run: npm install
-      - name: tmp
-        # env:
-        #   CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
-        #   PROXY: ${{secrets.PROXY}}
-        run: ${{secrets.CLIENT_SECRET}} > tmp & ${{secrets.PROXY}} > heroku
+      - name: export
+        uses: ./.github/actions/export-secret
       - name: gatsby build
         run: yarn build
       - name: gh-pages
