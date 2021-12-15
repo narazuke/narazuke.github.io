@@ -1,4 +1,3 @@
-// const secret = require("./secret.json")
 const secrets = require("./.github/actions/export-secret/index.js")
 
 module.exports = {
