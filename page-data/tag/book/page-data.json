@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tag/book/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"NARAZUKE","author":[{"name":"nozzle","summary":"who lives in gummaken.","social":{"github":"nozzlex3"}},{"name":"konnyaku","summary":"who is known as Siege Sukosuko Samurai.","social":{"github":"wabetarou"}}]}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/favorite-book/"},"frontmatter":{"title":"好きな本","description":"増えたら随時更新するかも","created":"2021-02-10T21:48","updated":"2021-02-15T18:00","tag":["book"],"author":["nozzle"],"category":"thought"}}}]}},"pageContext":{"tag":"book"}},
+    "staticQueryHashes": ["3284037645"]}

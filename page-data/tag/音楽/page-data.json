@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tag/音楽/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"NARAZUKE","author":[{"name":"nozzle","summary":"who lives in gummaken.","social":{"github":"nozzlex3"}},{"name":"konnyaku","summary":"who is known as Siege Sukosuko Samurai.","social":{"github":"wabetarou"}}]}},"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/noz20210731/"},"frontmatter":{"title":"日記","description":"SUNBURST買いました","created":"2021-07-31T16:15","updated":"2021-07-31T17:53","tag":["音楽","review"],"author":["nozzle"],"category":"diary"}}},{"node":{"fields":{"slug":"/noz20210406/"},"frontmatter":{"title":"日記","description":"今日はちょっと寒い","created":"2021-04-06T12:02","updated":"2021-07-31T15:00","tag":["音楽"],"author":["nozzle"],"category":"diary"}}}]}},"pageContext":{"tag":"音楽"}},
+    "staticQueryHashes": ["3284037645"]}

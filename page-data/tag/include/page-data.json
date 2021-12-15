@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tag/include/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"NARAZUKE","author":[{"name":"nozzle","summary":"who lives in gummaken.","social":{"github":"nozzlex3"}},{"name":"konnyaku","summary":"who is known as Siege Sukosuko Samurai.","social":{"github":"wabetarou"}}]}},"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/cpp-option/"},"frontmatter":{"title":"c++のoptionについて","description":"調べるの時間かかったので忘れないようにメモ","created":"2021-02-28T18:15","updated":"2021-03-02T17:10","tag":["cpp","include","option","mac"],"author":["konnyaku"],"category":"tech"}}},{"node":{"fields":{"slug":"/cpp-memo/"},"frontmatter":{"title":"c++のoptionについて","description":"調べるの時間かかったので忘れないようにメモ","created":"2021-02-28T18:15","updated":"2021-03-02T17:10","tag":["cpp","include","option","mac"],"author":["konnyaku"],"category":"tech"}}}]}},"pageContext":{"tag":"include"}},
+    "staticQueryHashes": ["3284037645"]}

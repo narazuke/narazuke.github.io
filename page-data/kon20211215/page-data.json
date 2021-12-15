@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-post-js",
+    "path": "/kon20211215/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"NARAZUKE","author":[{"name":"nozzle","summary":"who lives in gummaken.","social":{"github":"nozzlex3"}},{"name":"konnyaku","summary":"who is known as Siege Sukosuko Samurai.","social":{"github":"wabetarou"}}]}},"markdownRemark":{"id":"96e5a9bf-1289-52e1-b812-9525fe5eb844","excerpt":"今朝はスクワットしてません github action 修正中…","html":"<p>今朝はスクワットしてません</p>\n<p>github action 修正中…</p>","fields":{"slug":"/kon20211215/"},"frontmatter":{"title":"日記","created":"2021-12-15T13:53","updated":"2021-12-15T13:54","description":"師走","tag":[],"author":["konnyaku"],"category":"diary"}},"previous":{"fields":{"slug":"/kon20211214/"},"frontmatter":{"title":"日記"}},"next":null,"relatedPosts":{"totalCount":0,"edges":[]}},"pageContext":{"id":"96e5a9bf-1289-52e1-b812-9525fe5eb844","previousPostId":"effcf13c-43e6-5432-a18f-aeb4a7622241","nextPostId":null,"category":"diary","tagList":[]}},
+    "staticQueryHashes": ["3284037645","500847697"]}

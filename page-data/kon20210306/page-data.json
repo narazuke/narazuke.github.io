@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-post-js",
+    "path": "/kon20210306/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"NARAZUKE","author":[{"name":"nozzle","summary":"who lives in gummaken.","social":{"github":"nozzlex3"}},{"name":"konnyaku","summary":"who is known as Siege Sukosuko Samurai.","social":{"github":"wabetarou"}}]}},"markdownRemark":{"id":"971c0d77-ca37-57b4-943b-c09fe3358736","excerpt":"我是光派 私はヒカリ派です","html":"<p>我是光派</p>\n<font color=\"#ffffff\">\n<p>私はヒカリ派です</p>\n</font>","fields":{"slug":"/kon20210306/"},"frontmatter":{"title":"日記","created":"2021-03-06T20:00","updated":"2021-03-06T20:03","description":"ほむひか","tag":[],"author":["konnyaku"],"category":"diary"}},"previous":{"fields":{"slug":"/kon20210305/"},"frontmatter":{"title":"日記"}},"next":{"fields":{"slug":"/kon20210307/"},"frontmatter":{"title":"日記"}},"relatedPosts":{"totalCount":0,"edges":[]}},"pageContext":{"id":"971c0d77-ca37-57b4-943b-c09fe3358736","previousPostId":"4431db0f-a1d1-5e17-a781-ff2472c8b5c1","nextPostId":"cf11769b-898a-5b61-9755-514f4e9b3a3b","category":"diary","tagList":[]}},
+    "staticQueryHashes": ["3284037645","500847697"]}

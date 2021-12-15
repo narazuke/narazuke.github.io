@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tag/smabro/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"NARAZUKE","author":[{"name":"nozzle","summary":"who lives in gummaken.","social":{"github":"nozzlex3"}},{"name":"konnyaku","summary":"who is known as Siege Sukosuko Samurai.","social":{"github":"wabetarou"}}]}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/smabro-sp-shulk/"},"frontmatter":{"title":"シュルクのコンボ","description":null,"created":"2021-02-21T16:07","updated":"2021-02-21T16:31","tag":["game","smabro"],"author":["konnyaku"],"category":"memo"}}}]}},"pageContext":{"tag":"smabro"}},
+    "staticQueryHashes": ["3284037645"]}
