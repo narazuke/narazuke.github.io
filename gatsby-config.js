@@ -1,6 +1,5 @@
 // const secret = require("./secret.json")
-const tmp = require(CLIENT_SECRET)
-const heroku = require(PROXY)
+const secrets = require("./.github/actions/export-secret/index.js")
 
 module.exports = {
   siteMetadata: {
@@ -97,7 +96,7 @@ module.exports = {
         config: {
           clientID: "837629045eb9da51e9f1",
           // clientSecret: `${secret.clientSecret}`,
-          clinetSecret: `${tmp}`,
+          clinetSecret: `${secrets.CLIENT_SECRET}`,
           repo: "narazuke.github.io",
           owner: "narazuke",
           admin: ["wabetarou", "nozzlex3"],
@@ -105,7 +104,7 @@ module.exports = {
           createIssueManually: false,
           distractionFreeMode: false,
           enableHotKey: true,
-          proxy: `${heroku}`
+          proxy: `${secrets.PROXY}`
         }
       }
     },

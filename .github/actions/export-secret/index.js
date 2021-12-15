@@ -1,2 +1,6 @@
-export default CLIENT_SECRET = process.env.CLIENT_SECRET
-export default PROXY = process.env.PROXY
+const secrets = {
+  CLIENT_SECRET: process.env.CLIENT_SECRET,
+  PROXY: process.env.PROXY
+}
+
+module.exports = secrets
