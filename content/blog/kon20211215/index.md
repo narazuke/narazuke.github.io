@@ -1,7 +1,7 @@
 ---
-title: 日記
+title: 自動デプロイ機能追加
 created: 2021-12-15T13:53
-updated: 2021-12-15T14:38
+updated: 2021-12-15T14:51
 description: 師が走る
 category: diary
 tag: []
@@ -17,3 +17,5 @@ develop ブランチ上で記事追加して push するだけで自動デプロ
 github action 便利すぎる
 
 最高
+
+導入の仕方はいつか記事にするかも…？しないかも…
