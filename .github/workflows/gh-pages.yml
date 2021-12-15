@@ -25,4 +25,7 @@ jobs:
       - name: gatsby build
         run: yarn build
       - name: gh-pages
-        run: gh-pages -d public -b master
+        uses: peaceiris/action-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
