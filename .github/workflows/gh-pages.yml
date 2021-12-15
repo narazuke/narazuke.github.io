@@ -25,6 +25,4 @@ jobs:
       - name: gatsby build
         run: yarn build
       - name: gh-pages
-        run: gh-pages -u \"narapickle <narapickle@gmail.com>\" -d public -b master
-      - name: remove
-        run: rm -rf tmp & rm -rf heroku
+        run: gh-pages -d public -b master
