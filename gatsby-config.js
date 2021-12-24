@@ -1,4 +1,4 @@
-const secret = require("./secret.json")
+const secrets = require("./.github/actions/export-secret/index.js")
 
 module.exports = {
   siteMetadata: {
@@ -94,7 +94,8 @@ module.exports = {
       options: {
         config: {
           clientID: "837629045eb9da51e9f1",
-          clientSecret: `${secret.clientSecret}`,
+          // clientSecret: `${secret.clientSecret}`,
+          clinetSecret: `${secrets.CLIENT_SECRET}`,
           repo: "narazuke.github.io",
           owner: "narazuke",
           admin: ["wabetarou", "nozzlex3"],
@@ -102,7 +103,7 @@ module.exports = {
           createIssueManually: false,
           distractionFreeMode: false,
           enableHotKey: true,
-          proxy: `${secret.proxy}`
+          proxy: `${secrets.PROXY}`
         }
       }
     },

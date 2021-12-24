@@ -1,0 +1,32 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - develop # Set a branch name to trigger deployment
+  # pull_request:
+  #   types: [closed]
+jobs:
+  deploy:
+    # if: github.event.pull_request.merged == true
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: npm install
+        run: npm install
+      - name: export
+        env:
+          CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
+          PROXY: ${{secrets.PROXY}}
+        uses: ./.github/actions/export-secret
+      - name: gatsby build
+        run: yarn build
+      - name: gh-pages
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: master
+          publish_dir: ./public

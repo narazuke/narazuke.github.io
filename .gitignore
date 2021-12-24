@@ -72,6 +72,9 @@ yarn-error.log
 *.ai
 *bak
 
+# github action
+# .github/workflows/
+
 # protect clientSecret
 secret.json
 
