@@ -70,6 +70,7 @@ yarn-error.log
 
 # nozzle
 *.ai
+*bak
 
 # github action
 # .github/workflows/
