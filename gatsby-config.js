@@ -93,9 +93,8 @@ module.exports = {
       resolve: "gatsby-plugin-gitalk",
       options: {
         config: {
-          clientID: "837629045eb9da51e9f1",
-          // clientSecret: `${secret.clientSecret}`,
-          clinetSecret: `${secrets.CLIENT_SECRET}`,
+          clientID: `${secret.clientID}`,
+          clientSecret: `${secret.clientSecret}`,
           repo: "narazuke.github.io",
           owner: "narazuke",
           admin: ["wabetarou", "nozzlex3"],
