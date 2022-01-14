@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tag/業務連絡/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"NARAZUKE","author":[{"name":"nozzle","summary":"who lives in gummaken.","social":{"github":"nozzlex3"}},{"name":"konnyaku","summary":"who is known as Siege Sukosuko Samurai.","social":{"github":"wabetarou"}}]}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/kon20220114/"},"frontmatter":{"title":"gitalkに関するバグ修正の報告","description":"あけおめ","created":"2022-01-14T12:32","updated":"2022-01-14T12:41","tag":["バグ修正","業務連絡"],"author":["konnyaku"],"category":"diary"}}}]}},"pageContext":{"tag":"業務連絡"}},
+    "staticQueryHashes": ["3284037645"]}
