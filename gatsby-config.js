@@ -101,8 +101,7 @@ module.exports = {
           pagerDirection: "first",
           createIssueManually: false,
           distractionFreeMode: false,
-          enableHotKey: true,
-          proxy: `${secrets.PROXY}`
+          enableHotKey: true
         }
       }
     },
