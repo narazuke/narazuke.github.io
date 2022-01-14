@@ -1,4 +1,4 @@
-const secret = require("./secret.json")
+const secrets = require("./.github/actions/export-secret/index.js")
 
 module.exports = {
   siteMetadata: {
@@ -102,7 +102,7 @@ module.exports = {
           createIssueManually: false,
           distractionFreeMode: false,
           enableHotKey: true,
-          proxy: `${secret.proxy}`
+          proxy: `${secrets.PROXY}`
         }
       }
     },

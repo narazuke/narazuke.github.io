@@ -607,3 +607,7 @@ input[name="word"]:focus {
   color: rgb(172, 172, 172);
   margin-right: 10px;
 }
+
+img[alt*="--hidden"] {
+  visibility: hidden;
+}
