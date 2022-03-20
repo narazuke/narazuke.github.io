@@ -1,7 +1,7 @@
 ---
 title: 自由時間をどう過ごすか
 created: 2022-03-15T22:18
-updated: 2022-03-20T14:19
+updated: 2022-03-20T14:31
 description: 楽しく有意義に過ごすために
 category: memo
 tag: [スケジュール]
@@ -57,13 +57,14 @@ author: [konnyaku]
 
 - 自作 PC 買う
 - Twitter 画像解析
+- 北アルプスの紹介
+- 登山の予定を立てる
 - lateral 2D tracker モデル化
 - luminous-hair HP の改善
 - ゴルフの練習
 - 運転の練習
 - 料理
 - イラスト
-- 登山
 - …
 
 とりあえず Twitter 画像解析から手を付ける。
