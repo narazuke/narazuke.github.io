@@ -81,3 +81,6 @@ secret.json
 # lock
 yarn.lock
 package-lock.json
+
+# snippet
+narazuke.code-snippets
