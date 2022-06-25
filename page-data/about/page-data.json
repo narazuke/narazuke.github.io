@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-about-js",
-    "path": "/about/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"NARAZUKE"}}},"pageContext":{}},
-    "staticQueryHashes": ["500847697"]}
+{"componentChunkName":"component---src-pages-about-js","path":"/about/","result":{"data":{"site":{"siteMetadata":{"title":"NARAZUKE"}}},"pageContext":{}},"staticQueryHashes":["500847697"]}

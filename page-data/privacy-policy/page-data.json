@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-privacy-policy-js",
-    "path": "/privacy-policy/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"NARAZUKE"}}},"pageContext":{}},
-    "staticQueryHashes": ["500847697"]}
+{"componentChunkName":"component---src-pages-privacy-policy-js","path":"/privacy-policy/","result":{"data":{"site":{"siteMetadata":{"title":"NARAZUKE"}}},"pageContext":{}},"staticQueryHashes":["500847697"]}
