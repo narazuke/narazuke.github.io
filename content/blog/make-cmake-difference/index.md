@@ -1,7 +1,7 @@
 ---
 title: CMakeとMakefileの違い
 created: 2022-07-10T20:58
-updated: 2022-07-13T23:04
+updated: 2022-07-17T20:13
 description: c++のプログラムを一から作るときに作るやつ
 category: tech
 tag: [cpp, make, cmake]
@@ -41,7 +41,7 @@ make main
 
 ## CMake
 
-C++ではいろんなライブラリやフレームワークを使うこともあります。しかし C++のコンパイラは OS に依存して複数のコンパイラが存在していて、オプションなどの仕様が異なります。そのため Makefile も OS ごとに書き換えなければいけません。それを代わりにやってくれるのが CMake です（便利！！！）。CMake をした後には実行ファイルや Makefile が作られます。
+C++ではいろんなライブラリやフレームワークを使うこともあります。しかし C++のコンパイラは OS に依存して複数のコンパイラが存在していて、オプションなどの仕様が異なります。そのため Makefile も OS ごとに書き換えなければいけません。それを代わりにやってくれるのが CMake です（便利！！！）。CMake をした後には実行ファイルや Makefile が作られます。ディレクトリ構造など使い方については[cmake をつかう](https://narazuke.github.io/cmake/)や[c++について詳しく](https://narazuke.github.io/cpp-directory-structure/)をご覧ください。
 
 ## 参考文献
 
