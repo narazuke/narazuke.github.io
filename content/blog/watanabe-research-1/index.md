@@ -1,7 +1,7 @@
 ---
 title: 画像による位置推定システム
 created: 2022-08-06T15:36
-updated: 2022-08-06T23:43
+updated: 2022-08-06T23:44
 description: 論文読み
 category: tech
 tag: [論文, 画像処理]
@@ -63,7 +63,6 @@ https://www.hindawi.com/journals/wcmc/2021/3279059/
 - image-based localization の手順
   1. 深度付きの画像データセット収集
      - RGB-D カメラで RGB と奥行きを取る(カメラの姿勢と三次元点群もとる)
-     - a
   1. カメラ写真とデータセットとの比較
   1. 最も類似した画像に対して特徴点抽出とマッチング
      - それぞれの特徴点同士でハミング距離を計算
