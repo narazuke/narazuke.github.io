@@ -83,4 +83,4 @@ yarn.lock
 package-lock.json
 
 # snippet
-.vscode/narazuke.code-snippets
+.vscode/*
