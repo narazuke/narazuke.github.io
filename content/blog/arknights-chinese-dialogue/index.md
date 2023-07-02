@@ -1,7 +1,7 @@
 ---
 title: アークナイツ中国語台詞まとめ
 created: 2022-03-30T23:01
-updated: 2022-07-01T10:31
+updated: 2023-07-01T10:31
 description: よく聞く台詞をまとめてみた
 author: [konnyaku]
 tag: [game, arknights, chinese]
